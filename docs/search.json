@@ -1,0 +1,723 @@
+[
+  {
+    "objectID": "labs/lab-0.html",
+    "href": "labs/lab-0.html",
+    "title": "Lab 0 - Hello R!",
+    "section": "",
+    "text": "This lab will introduce you to the course computing workflow. The main goal is to reinforce our demo of R and RStudio, which we will be using throughout the course both to learn the statistical concepts discussed in the course and to analyze real data and come to informed conclusions.\nAn additional goal is to reinforce Git and GitHub, the collaboration and version control system that we will be using throughout the course.\nAs the labs progress, you are encouraged to explore beyond what the labs dictate; a willingness to experiment will make you a much better programmer. Before we get to that stage, however, you need to build some basic fluency in R. Today we begin with the fundamental building blocks of R and RStudio: the interface, reading in data, and basic commands.\nTo make versioning simpler, this and the next lab are solo labs. In the future, you’ll learn about collaborating on GitHub and producing a single lab report for your lab team, but for now, concentrate on getting the basics down.\nBy the end of the lab, you will…"
+  },
+  {
+    "objectID": "labs/lab-0.html#log-in-to-rstudio",
+    "href": "labs/lab-0.html#log-in-to-rstudio",
+    "title": "Lab 0 - Hello R!",
+    "section": "Log in to RStudio",
+    "text": "Log in to RStudio\n\nGo to https://rstudio-workbench.infosci.cornell.edu and log in with your Cornell NetID and Password.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. You should now see an RStudio session.\n\n\n\n\n\n\n\nWarning\n\n\n\nIf this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+  },
+  {
+    "objectID": "labs/lab-0.html#set-up-your-ssh-key",
+    "href": "labs/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0 - Hello R!",
+    "section": "Set up your SSH key",
+    "text": "Set up your SSH key\nYou will authenticate GitHub using SSH. Below are an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nType credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. It will begin with “ssh-rsa….” and look something like this:\n$key\n[1] \"/home/bcs88/.ssh/id_rsa\"\n\n$pubkey\n[1] \"ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJYmJeave083exQwYcIqZJk/Y1mgPxdcTYCTWLL+6mlhN9MM3enjDqb2eZvVJ0JK29NYL1++DTqY/saP08IlswNIMntwaWFDNx42yLsuFrWiPqzm9hWWnRcor/d+4zTrcSIEvfAAnLsYkagNqurrCf2taO62YRepTgxErLvLOG10qn4LKhNfT+PTqdPq2Mr88jXQYYrRxGnOV6oVYf6PurKkiooTsKYxVtJWai8Ek9fhK2y5vaQd5yP0H/3Hbw8Mn+rB+O8Yj6/oQKGBCgxkDB4Aw7T91DkIXlHppneO683Y54WvUftJYvSVsnyt/XuNjvXNAir0+kHETLM32uzH6L\"\nCopy the entire string of characters (not including the quotation marks) and paste them into the settings page on GitHub. Give the key an informative title such as “INFO 2950 RStudio Workbench”. Click “Add SSH key.”"
+  },
+  {
+    "objectID": "labs/lab-0.html#configure-git",
+    "href": "labs/lab-0.html#configure-git",
+    "title": "Lab 0 - Hello R!",
+    "section": "Configure Git",
+    "text": "Configure Git\nThere is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package. Type the following lines of code in the console in RStudio filling in your name and the email address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n  )\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"Benjamin Soltoff\", \n  user.email = \"soltoffbc@cornell.edu\"\n  )\n\n\n\n\n\n\n\nNote\n\n\n\nuser.email does not have to match your Cornell email address, though it would be conventional.\n\n\nYou are now ready interact with GitHub via RStudio!"
+  },
+  {
+    "objectID": "labs/lab-0.html#clone-the-repo-start-new-rstudio-project",
+    "href": "labs/lab-0.html#clone-the-repo-start-new-rstudio-project",
+    "title": "Lab 0 - Hello R!",
+    "section": "Clone the repo & start new RStudio project",
+    "text": "Clone the repo & start new RStudio project\n\nGo to the course organization at https://github.coecis.cornell.edu/info2950-s23 organization on GitHub. Click on the repo with the prefix lab-0. It contains the starter documents you need to complete the lab.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛ Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-0-datasaurus.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab."
+  },
+  {
+    "objectID": "labs/lab-0.html#r-and-r-studio",
+    "href": "labs/lab-0.html#r-and-r-studio",
+    "title": "Lab 0 - Hello R!",
+    "section": "R and R Studio",
+    "text": "R and R Studio\nBelow are the components of the RStudio IDE.\nTODO: Update these images with ones from RStudio Workbench\n\nBelow are the components of a Quarto (.qmd) file."
+  },
+  {
+    "objectID": "labs/lab-0.html#yaml",
+    "href": "labs/lab-0.html#yaml",
+    "title": "Lab 0 - Hello R!",
+    "section": "YAML",
+    "text": "YAML\nThe top portion of your R Markdown file (between the three dashed lines) is called YAML. It stands for “YAML Ain’t Markup Language”. It is a human friendly data serialization standard for all programming languages. All you need to know is that this area is called the YAML (we will refer to it as such) and that it contains meta information about your document.\n\n\n\n\n\n\nImportant\n\n\n\nOpen the Quarto (.qmd) file in your project, change the author name to your name, and render the document. Examine the rendered document."
+  },
+  {
+    "objectID": "labs/lab-0.html#committing-changes",
+    "href": "labs/lab-0.html#committing-changes",
+    "title": "Lab 0 - Hello R!",
+    "section": "Committing changes",
+    "text": "Committing changes\nNow, go to the Git pane in your RStudio instance. This will be in the top right hand corner in a separate tab.\nIf you have made changes to your Quarto (.qmd) file, you should see it listed here. Click on it to select it in this list and then click on Diff. This shows you the difference between the last committed state of the document and its current state including changes. You should see deletions in red and additions in green.\nIf you’re happy with these changes, we’ll prepare the changes to be pushed to your remote repository. First, stage your changes by checking the appropriate box on the files you want to prepare. Next, write a meaningful commit message (for instance, “updated author name”) in the Commit message box. Finally, click Commit. Note that every commit needs to have a commit message associated with it.\nYou don’t have to commit after every change, as this would get quite tedious. You should commit states that are meaningful to you for inspection, comparison, or restoration.\nIn the first few assignments we will tell you exactly when to commit and in some cases, what commit message to use. As the semester progresses we will let you make these decisions.\nNow let’s make sure all the changes went to GitHub. Go to your GitHub repo and refresh the page. You should see your commit message next to the updated files. If you see this, all your changes are on GitHub and you’re good to go!"
+  },
+  {
+    "objectID": "labs/lab-0.html#push-changes",
+    "href": "labs/lab-0.html#push-changes",
+    "title": "Lab 0 - Hello R!",
+    "section": "Push changes",
+    "text": "Push changes\nNow that you have made an update and committed this change, it’s time to push these changes to your repo on GitHub.\nIn order to push your changes to GitHub, you must have staged your commit to be pushed. Click on Push."
+  },
+  {
+    "objectID": "labs/lab-0.html#data-visualization-and-summary",
+    "href": "labs/lab-0.html#data-visualization-and-summary",
+    "title": "Lab 0 - Hello R!",
+    "section": "Data visualization and summary",
+    "text": "Data visualization and summary\n\nPlot x vs. y for the dino dataset. Then, calculate the correlation coefficient between x and y for this dataset.\n\nBelow is the code you will need to complete this exercise. Basically, the answer is already given, but you need to include relevant bits in your document and successfully render it and view the results.\nStart with the datasaurus_dozen and pipe it into the filter function to filter for observations where dataset == \"dino\". Store the resulting filtered data frame as a new data frame called dino_data.\n\ndino_data <- datasaurus_dozen |>\n  filter(dataset == \"dino\")\n\nThere is a lot going on here, so let’s slow down and unpack it a bit.\nFirst, the pipe operator: |>, takes what comes before it and sends it as the first argument to what comes after it. So here, we’re saying filter the datasaurus_dozen data frame for observations where dataset == \"dino\".\nSecond, the assignment operator: <-, assigns the name dino_data to the filtered data frame.\nNext, we need to visualize these data. We will use the ggplot function for this. Its first argument is the data you’re visualizing. Next we define the aesthetic mappings. In other words, the columns of the data that get mapped to certain aesthetic features of the plot, e.g. the x axis will represent the variable called x and the y axis will represent the variable called y. Then, we add another layer to this plot where we define which geometric shapes we want to use to represent each observation in the data. In this case we want these to be points, hence geom_point.\n\nggplot(data = dino_data, mapping = aes(x = x, y = y)) +\n  geom_point()\n\nFor the second part of this exercise, we need to calculate a summary statistic: the correlation coefficient. Correlation coefficient, often referred to as \\(r\\) in statistics, measures the linear association between two variables. You will see that some of the pairs of variables we plot do not have a linear relationship between them. This is exactly why we want to visualize first: visualize to assess the form of the relationship, and calculate \\(r\\) only if relevant. In this case, calculating a correlation coefficient really doesn’t make sense since the relationship between x and y is definitely not linear (it’s dinosaurial)!\nFor illustrative purposes only, let’s calculate the correlation coefficient between x and y.\n\n\n\n\n\n\nNote\n\n\n\nStart with `dino_data` and calculate a summary statistic that we will call `r` as the `cor`relation between `x` and `y`.\n\n\n\ndino_data |>\n  summarize(r = cor(x, y))\n\n\nThis is a good place to pause, render, and commit changes with the commit message “Added answer for Ex 2.”\nThen, push these changes when you’re done.\n\n\nPlot x vs. y for the circle dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between x and y for this dataset. How does this value compare to the r of dino?\n\n\nThis is another good place to pause, render, and commit changes with the commit message “Added answer for Ex 3.”\nThen, push these changes when you’re done.\n\n\nPlot x vs. y for the star dataset. You can (and should) reuse code we introduced above, just replace the dataset name with the desired dataset. Then, calculate the correlation coefficient between x and y for this dataset. How does this value compare to the r of dino?\n\n\nYou should pause again, render, commit changes with the commit message “Added answer for Ex 4”.\nThen, push.\n\n\nFinally, let’s plot all datasets at once. In order to do this we will make use of faceting, given by the code below:\n\n\n\n\n\n\n\nNote\n\n\n\nFacet by the dataset variable, placing the plots in a 3 column grid, and don’t add a legend.\n\n\n\nggplot(datasaurus_dozen, aes(x = x, y = y, color = dataset))+\n  geom_point()+\n  facet_wrap(facets = vars(dataset), ncol = 3) +\n  theme(legend.position = \"none\")\n\nAnd we can use the group_by function to generate all the summary correlation coefficients. We’ll go through these functions in a couple of weeks when we learn about data wrangling.\n\ndatasaurus_dozen |>\n  group_by(dataset) |>\n  summarize(r = cor(x, y)) \n\nInclude the faceted plot and the summary of the correlation coefficients in your lab write-up by including relevant code in R chunks (and give them appropriate labels). In the narrative below the code chunks, briefly comment on what you notice about the plots and the correlations between x and y values within each of them (one or two sentences is fine!).\n\nYou should pause again, render, commit changes with the commit message “Added answer for Ex 5”.\nThen, push.\n\nYou’re done with the data analysis exercises, but we’d like to do one more thing to customize the look of the report."
+  },
+  {
+    "objectID": "labs/lab-0.html#resize-your-figures",
+    "href": "labs/lab-0.html#resize-your-figures",
+    "title": "Lab 0 - Hello R!",
+    "section": "Resize your figures",
+    "text": "Resize your figures\nWe can customize the output from a particular R chunk by including options in the header that will override any global settings.\n\nIn the R chunks you wrote for Exercises 2-5, customize the settings by modifying the options in the R chunks used to create those figures.\n\nFor Exercises 2, 3, and 4, we want square figures. We can use fig-height and fig-width in the options to adjust the height and width of figures. Modify the chunks in Exercises 2-4 to be as follows:\n\n```{r}\n#| label: ex2-chunk-label\n#| fig-height: 5\n#| fig-width: 5\n\n# Your code that created the figure\n```\n\nFor Exercise 5, modify your figure to have fig-height of 10 and fig-width of 6.\nNow, save and render.\nOnce you’ve created this PDF file, you’re done!\n\nCommit all remaining changes with the commit message “Done with Lab 0!”.\nThen push."
+  },
+  {
+    "objectID": "course-links.html",
+    "href": "course-links.html",
+    "title": "Useful links",
+    "section": "",
+    "text": "RStudio Workbench\n🔗 on RStudio Workbench\n\n\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradescope\n🔗 on Gradescope\n\n\nGradebook\n🔗 Canvas\n\n\nOffice hours\n🔗 on TODO\n\n\nTextbooks\n🔗 R for Data Science\n🔗 Introduction to Modern Statistics\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org"
+  },
+  {
+    "objectID": "prepare/01-31.html",
+    "href": "prepare/01-31.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.5 - 2.10"
+  },
+  {
+    "objectID": "prepare/01-24.html",
+    "href": "prepare/01-24.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "Log in to Cornell’s GitHub at https://github.coecis.cornell.edu/."
+  },
+  {
+    "objectID": "prepare/01-26.html",
+    "href": "prepare/01-26.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nR for Data Science (R4DS): Chp 1 - Introduction\nIntroduction to Modern Statistics (IMS): Chp 1 - Hello data\nThe syllabus!\n\n⌨️ Do:\n\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an accounted created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+  },
+  {
+    "objectID": "prepare/01-27.html",
+    "href": "prepare/01-27.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.1 and 2.4\n\nIf you haven’t yet done so:\n\nRead the syllabus!\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an accounted created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password. You will need access to complete the first lab assignment.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+  },
+  {
+    "objectID": "prepare/02-03.html",
+    "href": "prepare/02-03.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nR4DS: Chp 3 - Workflow basics"
+  },
+  {
+    "objectID": "prepare/02-02.html",
+    "href": "prepare/02-02.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "The whitest, most patriarchal tradition. Groundhog Day.\n\n\n\n📖 Read:\n\nIMS: Chp 4 - Exploring categorical data\nIMS: Chp 5 - Exploring numerical data"
+  },
+  {
+    "objectID": "project-tips-resources.html",
+    "href": "project-tips-resources.html",
+    "title": "Project tips + resources",
+    "section": "",
+    "text": "The project is very open ended. For instance, in creating a compelling visualization(s) of your data in R, there is no limit on what tools or packages you may use. You do not need to visualize all of the data at once. A single high quality visualization will receive a much higher grade than a large number of poor quality visualizations.\nBefore you finalize your write up, make sure the printing of code chunks is turned off with the option echo: false. In addition to code chunks, ensure all messages are turned off with the options warning: false and message: false.\nFinally, pay attention to details in your write-up and presentation. Neatness, coherency, and clarity will count."
+  },
+  {
+    "objectID": "project-tips-resources.html#suppress-code-and-warnings",
+    "href": "project-tips-resources.html#suppress-code-and-warnings",
+    "title": "Project tips + resources",
+    "section": "Suppress code and warnings",
+    "text": "Suppress code and warnings\n\nInclude the following in the YAML of your report.qmd to suppress all code, warnings, and other messages.\n\nexecute:\n  echo: false\n  warning: false"
+  },
+  {
+    "objectID": "project-tips-resources.html#headers",
+    "href": "project-tips-resources.html#headers",
+    "title": "Project tips + resources",
+    "section": "Headers",
+    "text": "Headers\nUse headers to clearly label each section. Make sure there is a space between the previous line and the header. Use appropriate header levels."
+  },
+  {
+    "objectID": "project-tips-resources.html#references",
+    "href": "project-tips-resources.html#references",
+    "title": "Project tips + resources",
+    "section": "References",
+    "text": "References\nInclude all references in a section called “References” at the end of the report. This course does not have specific requirements for formatting citations and references. Optional: Use Quarto’s citation support for generating your reference. See Citations & Footnotes on the Quarto documentation for more on that."
+  },
+  {
+    "objectID": "project-tips-resources.html#appendix",
+    "href": "project-tips-resources.html#appendix",
+    "title": "Project tips + resources",
+    "section": "Appendix",
+    "text": "Appendix\nIf you have additional work that does not fit or does not belong in the body of the report, you may put it at the end of the document in section called “Appendix”. The items in the appendix should be properly labeled. The appendix should only be for additional material. The reader should be able to fully understand your report without viewing content in the appendix. We will not grade your appendix."
+  },
+  {
+    "objectID": "project-tips-resources.html#resize-figures",
+    "href": "project-tips-resources.html#resize-figures",
+    "title": "Project tips + resources",
+    "section": "Resize figures",
+    "text": "Resize figures\nResize plots and figures, so you have more space for the narrative. Resize individual figures: Set fig-width and fig-height in chunk options, e.g.,\n#| echo: fenced\n#| label: plot1\n#| fig-height: 3\n#| fig-width: 5\nreplacing plot1 with a meaningful label and the height and width with values appropriate for your write up.\nResize all figures: Include the fig-height and fig-width options in the YAML header as shown below:\nexecute:\n  fig-height: 3\n  fig-width: 5\nReplace the height and width values with values appropriate for your write up."
+  },
+  {
+    "objectID": "project-tips-resources.html#arranging-plots",
+    "href": "project-tips-resources.html#arranging-plots",
+    "title": "Project tips + resources",
+    "section": "Arranging plots",
+    "text": "Arranging plots\nArrange plots in a grid, instead of one after the other. This is especially useful when displaying plots for exploratory data analysis and to check assumptions.\nIf you’re using ggplot2 functions, the patchwork package makes it easy to arrange plots in a grid.\nMore to be added soon…"
+  },
+  {
+    "objectID": "computing-access.html",
+    "href": "computing-access.html",
+    "title": "Computing access",
+    "section": "",
+    "text": "To access computing resources for INFO 2950, go to the RStudio Workbench website and login using your Cornell NetID and password.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+  },
+  {
+    "objectID": "course-overview.html",
+    "href": "course-overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "This is an applied introductory course for learners who wish to harness growing digital and computational resources. The focus of the course is on using data to identify patterns, evaluate the strength and significance of relationships, and generate predictions using data. These techniques are implemented using a reproducible workflow through the use of programming languages and version control software. Major emphasis is placed on a pragmatic understanding of core principles of programming and packaged implementations of methods. Students will learn how to use data to make effective arguments, in a way that promotes the ethical usage of data."
+  },
+  {
+    "objectID": "course-overview.html#class-meetings",
+    "href": "course-overview.html#class-meetings",
+    "title": "Course overview",
+    "section": "Class meetings",
+    "text": "Class meetings\n\n\n\nMeeting\nLocation\nTime\n\n\n\n\nLecture\nTBD\nTue & Thur 9:40 - 10:55 am\n\n\nLab 01\nTBD\nFri 9:05 - 9:55 am\n\n\nLab 02\nTBD\nFri 9:05 - 9:55 am\n\n\nLab 03\nTBD\nFri 10:10 - 11:00 am\n\n\nLab 04\nTBD\nFri 10:10 - 11:00 am\n\n\nLab 05\nTBD\nFri 11:20 - 12:10 pm\n\n\nLab 06\nTBD\nFri 11:20 - 12:10 pm\n\n\nLab 07\nTBD\nFri 12:25 - 1:15 pm\n\n\nLab 08\nTBD\nFri 12:25 - 1:15 pm\n\n\nLab 09\nTBD\nFri 1:30 - 2:20 pm"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "INFO 2950: Introduction to Data Science",
+    "section": "",
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      ae\n      ae_sa\n      hw\n      hw_sa\n      lab\n      lab_sa\n      exam\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to INFO 2950\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nMeet the toolkit\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nJan 27\nLab 0\nHello data science!\n\n\n\n\n\n\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nGrammar of graphics\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nVisualizing various types of data\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nFeb 3\nLab 1\nData visualization\n\n\n\n\n\n\n\n\n\n\n\n    3\nTu\nFeb 7\nLec 5\nGrammar of data wrangling\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nFeb 9\nLec 6\nWorking with multiple data frames\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nFeb 10\nLab 2\nData wrangling\n\n\n\n\n\n\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nTidying data\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData types and classes\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nFeb 17\nLab 3\nData tidying\n\n\n\n\n\n\n\n\n\n\n\n    5\nTu\nFeb 21\nLec 9\nImporting and recoding data\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nData science ethics\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nFeb 24\nLab 4\nData cleaning\n\n\n\n\n\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nData science ethics\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMar 3\nLab\nNo lab - finish exam 1\n\n\n\n\n\n\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nThe language of probability\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nThe language of models\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMar 10\nLab\nWork on project proposals\n\n\n\n\n\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nModels with a single predictor\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nModels with multiple predictors\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMar 17\nLab 5\nModeling a numeric outcome\n\n\n\n\n\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nLogistic regression\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nPrediction and overfitting\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMar 24\nLab 6\nPredicting a binary outcome\n\n\n\n\n\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nQuantifying uncertainty\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nEstimation with bootstrap intervals\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMar 31\nLab 7\nPrediction + Bootstrapping\n\n\n\n\n\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nHypothesis testing via simulation\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nInference with the Central Limit Theorem\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nApr 14\nLab\nNo lab - finish exam 2\n\n\n\n\n\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nIntroduction to machine learning\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nBuild better training data\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nApr 21\nLab 8\nCreating ML workflows\n\n\n\n\n\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nTree-based inference and hyperparameter optimization\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nHigh-dimensional data (text data)\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nApr 28\nLab 9\nModeling with text features\n\n\n\n\n\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nUnsupervised learning\n\n\n\n\n\n\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nCustomizing Quarto reports and presentations\n\n\n\n\n\n\n\n\n\n\n\n    \nF\nMay 5\nLab\nGroup presentations\n\n\n\n\n\n\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\nCommunicating data science results effectively"
+  },
+  {
+    "objectID": "course-team.html",
+    "href": "course-team.html",
+    "title": "Course staff",
+    "section": "",
+    "text": "Dr. Benjamin Soltoff is Lecturer in Information Science at Cornell University. He is a political scientist with concentrations in American government, political methodology, and law and courts. Additionally, he has training and experience in data science, big data analytics, and policy evaluation. He currently teaches courses in data science, research design, data communication, and web design.\n\n\n\nOffice hours\nLocation\n\n\n\n\nTBD\nTBD"
+  },
+  {
+    "objectID": "course-team.html#teaching-assistants",
+    "href": "course-team.html#teaching-assistants",
+    "title": "Course staff",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n\n\n\n\n\n\nName\nRole\nLab section\n\n\n\n\nTBD\nTBD\nTBD\n\n\n\nFor office hours, please see INFO 2950 - Ultimate Office Hours sheet."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#agenda-1",
+    "href": "slides/01-welcome-info2950.html#agenda-1",
+    "title": "Welcome to INFO 2950",
+    "section": "Agenda",
+    "text": "Agenda\n\nStaff intros\nWhat is data science?\nSoftware\nApplication exercise\nWhat is INFO 2950?\nThis week’s tasks"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#meet-the-instructor",
+    "href": "slides/01-welcome-info2950.html#meet-the-instructor",
+    "title": "Welcome to INFO 2950",
+    "section": "Meet the instructor",
+    "text": "Meet the instructor\n\n\nDr. Benjamin Soltoff\nLecturer in Information Science\nGates Hall 216"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#meet-the-course-team",
+    "href": "slides/01-welcome-info2950.html#meet-the-course-team",
+    "title": "Welcome to INFO 2950",
+    "section": "Meet the course team",
+    "text": "Meet the course team\n\nTBD"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#meet-each-other",
+    "href": "slides/01-welcome-info2950.html#meet-each-other",
+    "title": "Welcome to INFO 2950",
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\n\n\n03:00"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#what-is-data-science-1",
+    "href": "slides/01-welcome-info2950.html#what-is-data-science-1",
+    "title": "Welcome to INFO 2950",
+    "section": "What is data science?",
+    "text": "What is data science?\n\nData science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.\n\n[A]n interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract or extrapolate knowledge and insights from noisy, structured and unstructured data, and apply knowledge from data across a broad range of application domains1\n\nWe’re going to learn to do this in a tidy way – more on that later!\nThis is a course on introduction to data science, with an emphasis on statistical thinking.\n\nSource: Wikipedia"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#excel---not",
+    "href": "slides/01-welcome-info2950.html#excel---not",
+    "title": "Welcome to INFO 2950",
+    "section": "Excel - not…",
+    "text": "Excel - not…"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#r",
+    "href": "slides/01-welcome-info2950.html#r",
+    "title": "Welcome to INFO 2950",
+    "section": "R",
+    "text": "R"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#rstudio",
+    "href": "slides/01-welcome-info2950.html#rstudio",
+    "title": "Welcome to INFO 2950",
+    "section": "RStudio",
+    "text": "RStudio"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#data-science-life-cycle-1",
+    "href": "slides/01-welcome-info2950.html#data-science-life-cycle-1",
+    "title": "Welcome to INFO 2950",
+    "section": "Data science life cycle",
+    "text": "Data science life cycle"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#import",
+    "href": "slides/01-welcome-info2950.html#import",
+    "title": "Welcome to INFO 2950",
+    "section": "Import",
+    "text": "Import"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#tidy-transform",
+    "href": "slides/01-welcome-info2950.html#tidy-transform",
+    "title": "Welcome to INFO 2950",
+    "section": "Tidy + transform",
+    "text": "Tidy + transform"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#visualize",
+    "href": "slides/01-welcome-info2950.html#visualize",
+    "title": "Welcome to INFO 2950",
+    "section": "Visualize",
+    "text": "Visualize"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#model",
+    "href": "slides/01-welcome-info2950.html#model",
+    "title": "Welcome to INFO 2950",
+    "section": "Model",
+    "text": "Model"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#understand",
+    "href": "slides/01-welcome-info2950.html#understand",
+    "title": "Welcome to INFO 2950",
+    "section": "Understand",
+    "text": "Understand"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#section",
+    "href": "slides/01-welcome-info2950.html#section",
+    "title": "Welcome to INFO 2950",
+    "section": "",
+    "text": "# A tibble: 5 × 2\n  date             season\n  <chr>            <chr> \n1 23 January 2017  winter\n2 4 March 2017     spring\n3 14 June 2017     summer\n4 1 September 2017 fall  \n5 ...              ..."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#communicate",
+    "href": "slides/01-welcome-info2950.html#communicate",
+    "title": "Welcome to INFO 2950",
+    "section": "Communicate",
+    "text": "Communicate"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#understand-communicate",
+    "href": "slides/01-welcome-info2950.html#understand-communicate",
+    "title": "Welcome to INFO 2950",
+    "section": "Understand + communicate",
+    "text": "Understand + communicate"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#program",
+    "href": "slides/01-welcome-info2950.html#program",
+    "title": "Welcome to INFO 2950",
+    "section": "Program",
+    "text": "Program"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#application-exercise",
+    "href": "slides/01-welcome-info2950.html#application-exercise",
+    "title": "Welcome to INFO 2950",
+    "section": "Application exercise",
+    "text": "Application exercise\n\nOr more like demo for today…\n📋 github.coecis.cornell.edu/info2950-s23/ae-0-unvotes"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#homepage",
+    "href": "slides/01-welcome-info2950.html#homepage",
+    "title": "Welcome to INFO 2950",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://info2950.infosci.cornell.edu/\n\nAll course materials\nLinks to Canvas, GitHub, RStudio Workbench, etc.\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#course-toolkit",
+    "href": "slides/01-welcome-info2950.html#course-toolkit",
+    "title": "Welcome to INFO 2950",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.coecis.cornell.edu/info2950-s23\nRStudio Workbench: rstudio-workbench.infosci.cornell.edu/\nCommunication: GitHub Discussions\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you can access RStudio Workbench before lab on Friday."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#activities-prepare-participate-practice-perform",
+    "href": "slides/01-welcome-info2950.html#activities-prepare-participate-practice-perform",
+    "title": "Welcome to INFO 2950",
+    "section": "Activities: Prepare, Participate, Practice, Perform",
+    "text": "Activities: Prepare, Participate, Practice, Perform\n\n\nPrepare: Introduce new content and prepare for lectures by completing the readings\nParticipate: Attend and actively participate in lectures and labs, office hours, team meetings\nPractice: Practice applying statistical concepts and computing with application exercises during lecture, graded for completion\nPerform: Put together what you’ve learned to analyze real-world data\n\n\nLab assignments x TODO (first individual, later team-based)\nHomework assignments x TODO (individual)\nThree take-home exams\nTeam project presented in the last lab session"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#cadence",
+    "href": "slides/01-welcome-info2950.html#cadence",
+    "title": "Welcome to INFO 2950",
+    "section": "Cadence",
+    "text": "Cadence\n\n\nApplication exercises: Complete within 24 hours of the end of class\nLabs: Start and make large progress on Friday in lab section, finish up by Monday 11:59pm the following week\nHWs: Posted Thursday morning, due following Wednesday 11:59pm\nExams: Exam released Thursday morning, no lab on Friday of that week, due Monday 11:59pm\nProject: Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#teams",
+    "href": "slides/01-welcome-info2950.html#teams",
+    "title": "Welcome to INFO 2950",
+    "section": "Teams",
+    "text": "Teams\n\nTeam assignments\n\nAssigned by course staff\nApplication exercises, labs, and project\nPeer evaluation during teamwork and after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#grading",
+    "href": "slides/01-welcome-info2950.html#grading",
+    "title": "Welcome to INFO 2950",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30%\n\n\nLabs\n15%\n\n\nProject\n20%\n\n\nExams\n25%\n\n\nApplication Exercises\n10%\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#minute-rule",
+    "href": "slides/01-welcome-info2950.html#minute-rule",
+    "title": "Welcome to INFO 2950",
+    "section": "15 minute rule",
+    "text": "15 minute rule"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#support",
+    "href": "slides/01-welcome-info2950.html#support",
+    "title": "Welcome to INFO 2950",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#announcements",
+    "href": "slides/01-welcome-info2950.html#announcements",
+    "title": "Welcome to INFO 2950",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool), be sure to check regularly (or forward announcements to your email)\nI’ll assume that you’ve read an announcement by the next “business” day"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#diversity-inclusion",
+    "href": "slides/01-welcome-info2950.html#diversity-inclusion",
+    "title": "Welcome to INFO 2950",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\n\n\nI want you to feel like you belong in this class and are respected\nWe are committed to full inclusion in education for all persons\nIf you feel that we have failed these goals, please either let us know or report it, and we will address the issue\nI (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#accessibility",
+    "href": "slides/01-welcome-info2950.html#accessibility",
+    "title": "Welcome to INFO 2950",
+    "section": "Accessibility",
+    "text": "Accessibility\nI want this course to be accessible to students with all abilities. Please feel free to let me know if there are circumstances affecting your ability to participate in class.\n\nOffice of Student Disability Services\nCornell Health CAPS (Counseling & Psychological Services)\nUndocumented/DACA Student support"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#late-work-waivers-regrades-policy",
+    "href": "slides/01-welcome-info2950.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to INFO 2950",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#collaboration-policy",
+    "href": "slides/01-welcome-info2950.html#collaboration-policy",
+    "title": "Welcome to INFO 2950",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.\nExams must be completed individually. You may not discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer."
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#sharing-reusing-code-policy",
+    "href": "slides/01-welcome-info2950.html#sharing-reusing-code-policy",
+    "title": "Welcome to INFO 2950",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#academic-integrity",
+    "href": "slides/01-welcome-info2950.html#academic-integrity",
+    "title": "Welcome to INFO 2950",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nA student shall in no way misrepresent his or her work.\nA student shall in no way fraudulently or unfairly advance his or her academic position.\nA student shall refuse to be a party to another student’s failure to maintain academic integrity.\nA student shall not in any other manner violate the principle of academic integrity.\n\n\n\nSource: Cornell University Code of Academic Integrity"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#most-importantly",
+    "href": "slides/01-welcome-info2950.html#most-importantly",
+    "title": "Welcome to INFO 2950",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#this-weeks-tasks",
+    "href": "slides/01-welcome-info2950.html#this-weeks-tasks",
+    "title": "Welcome to INFO 2950",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nLog in to Cornell’s GitHub - you already have an account!\nComplete the Getting to know you survey if you haven’t yet done so!\nRead the syllabus"
+  },
+  {
+    "objectID": "slides/01-welcome-info2950.html#something-personal",
+    "href": "slides/01-welcome-info2950.html#something-personal",
+    "title": "Welcome to INFO 2950",
+    "section": "Something personal",
+    "text": "Something personal\n\n\n\n🔗 info2950.infosci.cornell.edu"
+  },
+  {
+    "objectID": "course-faq.html",
+    "href": "course-faq.html",
+    "title": "FAQ",
+    "section": "",
+    "text": "Go to your Files tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select Export… If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you’ve selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).\nTODO: Rerecord video"
+  },
+  {
+    "objectID": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "href": "course-faq.html#how-can-i-submit-my-assignment-to-gradescope",
+    "title": "FAQ",
+    "section": "How can I submit my assignment to Gradescope?",
+    "text": "How can I submit my assignment to Gradescope?\nThe instructions for submitting your assignment to Gradescope can be found here. In a nutshell, you’ll upload your PDF and them mark the page(s) where each question can be found. It’s OK if a question spans multiple pages, just mark them all. It’s also OK if a page includes multiple questions."
+  },
+  {
+    "objectID": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-rstudio-workbench",
+    "href": "course-faq.html#can-i-use-a-local-install-of-r-and-rstudio-instead-of-using-rstudio-workbench",
+    "title": "FAQ",
+    "section": "Can I use a local install of R and RStudio instead of using RStudio Workbench?",
+    "text": "Can I use a local install of R and RStudio instead of using RStudio Workbench?\nThe short answer is, I’d rather you didn’t, to save yourself some headache. But, the long answer is, sure! But you will need to install a specific version of R and RStudio for everything to work as expected. You will also need to install the R packages we’re using as well as have Git installed on your computer.\nThese are not extremely challenging things to get right, but they are not trivial either, particularly on certain operating systems. Myself and the TAs are always happy to provide help with any computational questions when you’re working in RStudio Workbench. Since we have provisioned that server, we know it will work for all the labs/homeworks/exams/etc. If you’re working on your local setup, we can’t guarantee being able to resolve your issues, though we’re happy to try.\nIf you want to take this path, here is what you need to do:\n\nDownload and install R 4.2.2: https://cran.r-project.org/\nDownload and install RStudio: https://posit.co/download/rstudio-desktop/\nInstall Git: https://happygitwithr.com/install-git.html\nInstall any necessary packages with install.packages(\"___\")\n\nAnd I’d like to reiterate again that successful installation of these software is not a learning goal of this course. So if any of this seems tedious or intimidating in any way, just use the computing environment we have set up for you. More on that here."
+  },
+  {
+    "objectID": "computing-cheatsheets.html",
+    "href": "computing-cheatsheets.html",
+    "title": "R cheatsheets",
+    "section": "",
+    "text": "The following cheatsheets come from https://posit.co/resources/cheatsheets/. We haven’t covered every function and functionality listed on them, but you might still find them useful as references."
+  },
+  {
+    "objectID": "course-support.html",
+    "href": "course-support.html",
+    "title": "Course support",
+    "section": "",
+    "text": "Most of you will need help at some point and we want to make sure you can identify when that is without getting too frustrated and feel comfortable seeking help. Please follow the 15 minute rule in this class.\nIf you are stuck on a problem, you should attempt to fix it on your own for 15 minutes. After 15 minutes, you must ask for help."
+  },
+  {
+    "objectID": "course-support.html#lectures-and-labs",
+    "href": "course-support.html#lectures-and-labs",
+    "title": "Course support",
+    "section": "Lectures and labs",
+    "text": "Lectures and labs\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone."
+  },
+  {
+    "objectID": "course-support.html#office-hours",
+    "href": "course-support.html#office-hours",
+    "title": "Course support",
+    "section": "Office hours",
+    "text": "Office hours\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource!\nMake a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone’s office hours here."
+  },
+  {
+    "objectID": "course-support.html#github-discussions",
+    "href": "course-support.html#github-discussions",
+    "title": "Course support",
+    "section": "GitHub Discussions",
+    "text": "GitHub Discussions\nHave a question that can’t wait for office hours? Prefer to write out your question in detail rather than asking in person? The course discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!"
+  },
+  {
+    "objectID": "course-support.html#email",
+    "href": "course-support.html#email",
+    "title": "Course support",
+    "section": "Email",
+    "text": "Email\nPlease refrain from emailing any course content questions (those should go to office hours or GitHub Discussions), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Benjamin Soltoff at info2950-prof@cornell.edu.\nIf there is a question that’s not appropriate for a public discussion forum, you are welcome to email me directly. Barring extenuating circumstances, I will respond to INFO 2950 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-support.html#academic-support",
+    "href": "course-support.html#academic-support",
+    "title": "Course support",
+    "section": "Academic support",
+    "text": "Academic support\nSometimes you may need help with the class that is beyond what can be provided by the course staff. Cornell offers multiple centers to support student learning. The Learning Strategies Center (LSC) offers programs and resources to develop effective approaches to the learning process and become a successful and independent student. They host workshops, provide online resources, and offer private consultations for one-on-one support to develop effective learning strategies. Contact learningstrategiescenter@cornell.edu to setup an appointment."
+  },
+  {
+    "objectID": "course-support.html#mental-health-and-wellness",
+    "href": "course-support.html#mental-health-and-wellness",
+    "title": "Course support",
+    "section": "Mental health and wellness",
+    "text": "Mental health and wellness\nIf your mental health concerns and/or stressful events negatively affect your daily emotional state, academic performance, or ability to participate in your daily activities, many resources are available to help you through difficult times. Counseling & Psychological Services at Cornell Health provides professional and confidential mental health care to help you “live well to learn well” here at Cornell. Their services include self-care resources and programming, workshops, informal consultations, individual and group counseling, and referrals to off-campus mental health providers. To schedule an access appointment, log in tomyCornellHealth using your Cornell NetID and password, and select Appointments. You may also call 607-255-5155 during business hours to schedule."
+  },
+  {
+    "objectID": "course-support.html#course-costs",
+    "href": "course-support.html#course-costs",
+    "title": "Course support",
+    "section": "Course costs",
+    "text": "Course costs\n\nTextbooks: The textbooks for this course are freely available on the web.\nLaptops: Each student is expected to have a laptop they can bring to each lecture and lab.\n\nIf you are having difficulty with costs associated with this course, here are some resources:\n\nContact the financial aid office (whether or not you are on aid). They have loans and resources for connecting students with programs on campus that might be able to help alleviate these costs."
+  },
+  {
+    "objectID": "project-description.html",
+    "href": "project-description.html",
+    "title": "Project description",
+    "section": "",
+    "text": "Proposal due Fri, Oct 21\nDraft 1 due Fri, Nov 11\nDraft 2 due Sun, Nov 27 (optional)\nPeer review due Mon, Nov 28\nPresentation + slides and final GitHub repo due Mon, Dec 5\nFinal report due Thu, Dec 8"
+  },
+  {
+    "objectID": "project-description.html#criteria-for-datasets",
+    "href": "project-description.html#criteria-for-datasets",
+    "title": "Project description",
+    "section": "Criteria for datasets",
+    "text": "Criteria for datasets\nThe data sets should meet the following criteria:\n\nAt least 500 observations\nAt least 8 columns\nAt least 6 of the columns must be useful and unique explanatory variables.\n\nIdentifier variables such as “name”, “social security number”, etc. are not useful explanatory variables.\nIf you have multiple columns with the same information (e.g. “state abbreviation” and “state name”), then they are not unique explanatory variables.\n\nYou may not use data that has previously been used in any course materials, or any derivation of data that has been used in course materials.\nWe strongly recommend curating at least one of your datasets via web scraping.\n\nPlease ask a member of the teaching team if you’re unsure whether your data set meets the criteria.\nIf you set your hearts on a dataset that has fewer observations or variables than what’s suggested here, that might still be ok; use these numbers as guidance for a successful proposal, not as minimum requirements."
+  },
+  {
+    "objectID": "project-description.html#resources-for-datasets",
+    "href": "project-description.html#resources-for-datasets",
+    "title": "Project description",
+    "section": "Resources for datasets",
+    "text": "Resources for datasets\nYou can find data wherever you like, but here are some recommendations to get you started. You shouldn’t feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.\n\nAwesome public datasets\nBikeshare data portal\nCDC\nData.gov\nData is Plural\nDurham Open Data Portal\nEdinburgh Open Data\nElection Studies\nEuropean Statistics\nCORGIS: The Collection of Really Great, Interesting, Situated Datasets\nGeneral Social Survey\nGoogle Dataset Search\nHarvard Dataverse\nInternational Monetary Fund\nIPUMS survey data from around the world\nLos Angeles Open Data\nNHS Scotland Open Data\nNYC OpenData\nOpen access to Scotland’s official statistics\nPew Research\nPRISM Data Archive Project\nStatistics Canada\nThe National Bureau of Economic Research\nUCI Machine Learning Repository\nUK Government Data\nUNICEF Data\nUnited Nations Data\nUnited Nations Statistics Division\nUS Census Data\nUS Government Data\nWorld Bank Data\nYouth Risk Behavior Surveillance System (YRBSS)"
+  },
+  {
+    "objectID": "project-description.html#proposal-components",
+    "href": "project-description.html#proposal-components",
+    "title": "Project description",
+    "section": "Proposal components",
+    "text": "Proposal components\nFor each data set, include the following:\n\nIntroduction and data\nFor each data set:\n\nIdentify the source of the data.\nState when and how it was originally collected (by the original data curator, not necessarily how you found the data).\nWrite a brief description of the observations.\nAddress ethical concerns about the data, if any.\n\n\n\nResearch question\nYour research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:\n\nWhat is your target population?\nIs the question original?\nCan the question be answered?\n\nFor each data set, include the following:\n\nA well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)\nStatement on why this question is important.\nA description of the research topic along with a concise statement of your hypotheses on this topic.\nIdentify the types of variables in your research question. Categorical? Quantitative?\n\n\n\nGlimpse of data\nFor each data set:\n\nPlace the file containing your data in the data folder of the project repo.\nUse the glimpse() function to provide a glimpse of the data set."
+  },
+  {
+    "objectID": "project-description.html#proposal-grading",
+    "href": "project-description.html#proposal-grading",
+    "title": "Project description",
+    "section": "Proposal grading",
+    "text": "Proposal grading\n\n\n\nTotal\n10 pts\n\n\n\n\nIntroduction and data\n3\n\n\nResearch question\n3\n\n\nGlimpse of data\n3\n\n\nWorkflow and formatting\n1\n\n\n\nEach component will be graded as follows:\n\nMeets expectations (full credit): All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.\nClose to expectations (half credit): There are some elements missing and/or inaccurate. There are some issues with formatting.\nDoes not meet expectations (no credit): Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.\n\nIt is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect."
+  },
+  {
+    "objectID": "project-description.html#draft-components",
+    "href": "project-description.html#draft-components",
+    "title": "Project description",
+    "section": "Draft components",
+    "text": "Draft components\n\nIntroduction and data\nThe introduction provides motivation and context for your research. Describe your topic (citing sources) and provide a concise, clear statement of your research question and hypotheses.\nThen identify the source of the data, when and how it was collected, the cases, a general description of relevant variables.\n\n\nMethodology\nThe methodology section should include visualizations and summary statistics relevant to your research question. You should also justify the choice of statistical method(s) used to answer your research question.\n\n\nResults\nShowcase how you arrived at answers to your research question using the techniques we have learned in class (and beyond, if you’re feeling adventurous).\nProvide only the main results from your analysis. The goal is not to do an exhaustive data analysis (calculate every possible statistic and perform every possible procedure for all variables). Rather, you should demonstrate that you are proficient at asking meaningful questions and answering them using data, that you are skilled in interpreting and presenting results, and that you can accomplish these tasks using R. More is not better."
+  },
+  {
+    "objectID": "project-description.html#draft-grading",
+    "href": "project-description.html#draft-grading",
+    "title": "Project description",
+    "section": "Draft grading",
+    "text": "Draft grading\nYour first draft will be reviewed and graded by your TAs. We recommend you incorporate their suggestions into your second (optional) draft before the second round of feedback by your peers."
+  },
+  {
+    "objectID": "project-description.html#report-components",
+    "href": "project-description.html#report-components",
+    "title": "Project description",
+    "section": "Report components",
+    "text": "Report components\n\nIntroduction and data\nThis section includes an introduction to the project motivation, data, and research question. Describe the data and definitions of key variables. It should also include some exploratory data analysis. All of the EDA won’t fit in the paper, so focus on the EDA for the response variable and a few other interesting variables and relationships.\n\nGrading criteria\nThe research question and motivation are clearly stated in the introduction, including citations for the data source and any external research. The data are clearly described, including a description about how the data were originally collected and a concise definition of the variables relevant to understanding the report. The data cleaning process is clearly described, including any decisions made in the process (e.g., creating new variables, removing observations, etc.) The explanatory data analysis helps the reader better understand the observations in the data along with interesting and relevant relationships between the variables. It incorporates appropriate visualizations and summary statistics.\n\n\n\nMethodology\nThis section includes a brief description of your modeling process. Explain the reasoning for the type of model you’re fitting, predictor variables considered for the model including any interactions. Additionally, show how you arrived at the final model by describing the model selection process, interactions considered, variable transformations (if needed), assessment of conditions and diagnostics, and any other relevant considerations that were part of the model fitting process.\n\nGrading criteria\nThe analysis steps are appropriate for the data and research question. The group used a thorough and careful approach to select the final model; the approach is clearly described in the report. The model selection process took into account potential interaction effects and addressed any violations in model conditions. The model conditions and diagnostics are thoroughly and accurately assessed for their model. If violations of model conditions are still present, there was a reasonable attempt to address the violations based on the course content.\n\n\n\nResults\nThis is where you will output the final model with any relevant model fit statistics.\nDescribe the key results from the model. The goal is not to interpret every single variable in the model but rather to show that you are proficient in using the model output to address the research questions, using the interpretations to support your conclusions. Focus on the variables that help you answer the research question and that provide relevant context for the reader.\n\nGrading criteria\nThe model fit is clearly assessed, and interesting findings from the model are clearly described. Interpretations of model coefficients are used to support the key findings and conclusions, rather than merely listing the interpretation of every model coefficient. If the primary modeling objective is prediction, the model’s predictive power is thoroughly assessed.\n\n\n\nDiscussion\nIn this section you’ll include a summary of what you have learned about your research question along with statistical arguments supporting your conclusions. In addition, discuss the limitations of your analysis and provide suggestions on ways the analysis could be improved. Any potential issues pertaining to the reliability and validity of your data and appropriateness of the statistical analysis should also be discussed here. Lastly, this section will include ideas for future work.\n\nGrading criteria\nOverall conclusions from analysis are clearly described, and the model results are put into the larger context of the subject matter and original research question. There is thoughtful consideration of potential limitations of the data and/or analysis, and ideas for future work are clearly described.\n\n\n\nOrganization + formatting\nThis is an assessment of the overall presentation and formatting of the written report.\n\nGrading criteria\nThe report neatly written and organized with clear section headers and appropriately sized figures with informative labels. Numerical results are displayed with a reasonable number of digits, and all visualizations are neatly formatted. All citations and links are properly formatted. If there is an appendix, it is reasonably organized and easy for the reader to find relevant information. All code, warnings, and messages are suppressed. The main body of the written report (not including the appendix) is no longer than 10 pages."
+  },
+  {
+    "objectID": "project-description.html#report-grading",
+    "href": "project-description.html#report-grading",
+    "title": "Project description",
+    "section": "Report grading",
+    "text": "Report grading\nThe written report is worth 40 points, broken down as follows\n\n\n\nTotal\n40 pts\n\n\n\n\nIntroduction/data\n6 pts\n\n\nMethodology\n10 pts\n\n\nResults\n14 pts\n\n\nDiscussion\n6 pts\n\n\nOrganization + formatting\n4 pts"
+  },
+  {
+    "objectID": "project-description.html#slides",
+    "href": "project-description.html#slides",
+    "title": "Project description",
+    "section": "Slides",
+    "text": "Slides\nIn addition to the written report, your team will also create presentation slides and record a video presentation that summarize and showcase your project. Introduce your research question and data set, showcase visualizations, and discuss the primary conclusions. These slides should serve as a brief visual addition to your written report and will be graded for content and quality.\nYou can create your slides with any software you like (Keynote, PowerPoint, Google Slides, etc.). We recommend choosing an option that’s easy to collaborate with, e.g., Google Slides.\n\n\n\n\n\n\nNote\n\n\n\nYou can also use Quarto to make your slides! While we won’t be covering making slides with Quarto in the class, we would be happy to help you with it in office hours. It’s no different than writing other documents with Quarto, so the learning curve will not be steep!\n\n\nThe slide deck should have no more than 6 content slides + 1 title slide. Here is a suggested outline as you think through the slides; you do not have to use this exact format for the 6 slides.\n\nTitle Slide\nSlide 1: Introduce the topic and motivation\nSlide 2: Introduce the data\nSlide 3: Highlights from EDA\nSlide 4-5: Inference/modeling/other analysis\nSlide 6: Conclusions + future work"
+  },
+  {
+    "objectID": "project-description.html#presentation",
+    "href": "project-description.html#presentation",
+    "title": "Project description",
+    "section": "Presentation",
+    "text": "Presentation\nPresentations will take place in class during the last lab of the semester. The presentation must be no longer than 5 minutes. You can choose to present live in class (recommended) or pre-record a video to be shown in class. Either way you must attend the lab session for the Q&A following your presentation.\nIf you choose to pre-record your presentation, you may use can use any platform that works best for your group to record your presentation. Below are a few resources on recording videos:\n\nRecording presentations in Zoom\nApple Quicktime for screen recording\nWindows 10 built-in screen recording functionality\nKap for screen recording\n\nOnce your video is ready, upload the video to Warpwire or another video platform (e.g., YouTube), then add a link to your video in your repo README.\nTo upload your video to Warpwire:\n\nClick the Warpwire tab in the course Sakai site.\nClick the “+” and select “Upload files”.\nLocate the video on your computer and click to upload.\nOnce you’ve uploaded the video to Warpwire, click to share the video and copy the video’s URL. You will need this when you post the video in the discussion forum."
+  },
+  {
+    "objectID": "project-description.html#reproducibility-organization",
+    "href": "project-description.html#reproducibility-organization",
+    "title": "Project description",
+    "section": "Reproducibility + organization",
+    "text": "Reproducibility + organization\nAll written work (with exception of presentation slides) should be reproducible, and the GitHub repo should be neatly organized.\nPoints for reproducibility + organization will be based on the reproducibility of the written report and the organization of the project GitHub repo. The repo should be neatly organized as described above, there should be no extraneous files, all text in the README should be easily readable."
+  },
+  {
+    "objectID": "project-description.html#teamwork",
+    "href": "project-description.html#teamwork",
+    "title": "Project description",
+    "section": "Teamwork",
+    "text": "Teamwork\nYou will be asked to fill out a survey where you rate the contribution and teamwork of each team member by assigning a contribution percentage for each team member. Filling out the survey is a prerequisite for getting credit on the team member evaluation. If you are suggesting that an individual did less than half the expected contribution given your team size (e.g., for a team of four students, if a student contributed less than 12.5% of the total effort), please provide some explanation. If any individual gets an average peer score indicating that this was the case, their grade will be assessed accordingly and penalties may apply beyond the teamwork component of the grade.\nIf you have concerns with the teamwork and/or contribution from any team members, please email me by the project presentation deadline. You only need to email me if you have concerns. Otherwise, I will assume everyone on the team equally contributed and will receive full credit for the teamwork portion of the grade."
+  },
+  {
+    "objectID": "project-description.html#grading-summary",
+    "href": "project-description.html#grading-summary",
+    "title": "Project description",
+    "section": "Grading summary",
+    "text": "Grading summary\nGrading of the project will take into account the following:\n\nContent - What is the quality of research and/or policy question and relevancy of data to those questions?\nCorrectness - Are statistical procedures carried out and explained correctly?\nWriting and Presentation - What is the quality of the statistical presentation, writing, and explanations?\nCreativity and Critical Thought - Is the project carefully thought out? Are the limitations carefully considered? Does it appear that time and effort went into the planning and implementation of the project?\n\nA general breakdown of scoring is as follows:\n\n90%-100%: Outstanding effort. Student understands how to apply all statistical concepts, can put the results into a cogent argument, can identify weaknesses in the argument, and can clearly communicate the results to others.\n80%-89%: Good effort. Student understands most of the concepts, puts together an adequate argument, identifies some weaknesses of their argument, and communicates most results clearly to others.\n70%-79%: Passing effort. Student has misunderstanding of concepts in several areas, has some trouble putting results together in a cogent argument, and communication of results is sometimes unclear.\n60%-69%: Struggling effort. Student is making some effort, but has misunderstanding of many concepts and is unable to put together a cogent argument. Communication of results is unclear.\nBelow 60%: Student is not making a sufficient effort."
+  },
+  {
+    "objectID": "project-description.html#late-work-policy",
+    "href": "project-description.html#late-work-policy",
+    "title": "Project description",
+    "section": "Late work policy",
+    "text": "Late work policy\nThere is no late work accepted on this project. Be sure to turn in your work early to avoid any technological mishaps."
+  },
+  {
+    "objectID": "course-syllabus.html",
+    "href": "course-syllabus.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "Click here to download a PDF copy of the syllabus."
+  },
+  {
+    "objectID": "course-syllabus.html#info-2950---introduction-to-data-science",
+    "href": "course-syllabus.html#info-2950---introduction-to-data-science",
+    "title": "Syllabus",
+    "section": "INFO 2950 - Introduction to Data Science",
+    "text": "INFO 2950 - Introduction to Data Science\n\nInstructor\n\nDr. Benjamin Soltoff\nOffice: Gates Hall 216\nEmail: info2950-prof@cornell.edu\nOffice hours: Wed 9-11am\n\n\n\nCourse logistics\n\nMeets TuTh 9:40 - 10:55 am for 28 sessions\nLab sections meet on Fridays at varying times for 15 sessions\n4 credits, offered for a letter grade\nPrerequisites: (MATH 1710 or equivalent AND CS 1110 or CS 1112) OR permission of instructor\n\n\n\nCourse description\nThis is an applied introductory course for learners who wish to harness growing digital and computational resources. The focus of the course is on using data to identify patterns, evaluate the strength and significance of relationships, and generate predictions using data. These techniques are implemented using a reproducible workflow through the use of programming languages and version control software. Major emphasis is placed on a pragmatic understanding of core principles of programming and packaged implementations of methods. Students will learn how to use data to make effective arguments, in a way that promotes the ethical usage of data.\n\n\nCourse learning objectives\nBy the end of the semester, you will…\n\nConduct exploratory data analysis through data wrangling and munging as well as visualizations and summary statistics.\nIdentify patterns in data to make predictions or to identify associations between variables.\nEvaluate the strength of patterns using statistical and substantive significance.\nImplement data science workflows using common, reproducible methods and software tools.\nUse data ethically and responsibly."
+  },
+  {
+    "objectID": "course-syllabus.html#office-hours",
+    "href": "course-syllabus.html#office-hours",
+    "title": "Syllabus",
+    "section": "Office hours",
+    "text": "Office hours\nClick here for the instructor and TA office hours and locations.\nYou are welcome to attend the office hours for any INFO 2950 TA, regardless of section."
+  },
+  {
+    "objectID": "course-syllabus.html#textbooks",
+    "href": "course-syllabus.html#textbooks",
+    "title": "Syllabus",
+    "section": "Textbooks",
+    "text": "Textbooks\nAll books are freely available online.\n\n\n\nR for Data Science, 2e\nGrolemund, Wickham\nO’Reilly, 2nd edition, 2022\nHard copy only available of 1st edition\n\n\nIntroduction to Modern Statistics\nÇetinkaya-Rundel, Hardin\nOpenIntro Inc., 1st Edition, 2021\nHard copy available on Amazon"
+  },
+  {
+    "objectID": "course-syllabus.html#course-community",
+    "href": "course-syllabus.html#course-community",
+    "title": "Syllabus",
+    "section": "Course community",
+    "text": "Course community\nWe want you to feel like you belong in this class and are respected. Cornell University (as an institution) and we (as human beings and instructors of this course) are committed to full inclusion in education for all persons. If for any reason you feel that we have failed these goals, please either let us know or report it, and we will address the issue.\nServices and reasonable accommodations are available to persons with temporary and permanent disabilities, to students with DACA or undocumented status, to students facing mental health or other personal challenges, and to students with other kinds of learning challenges. Please feel free to let me know if there are circumstances affecting your ability to participate in class. Some resources that might be of use include:\n\nOffice of Student Disability Services: https://sds.cornell.edu\nCornell Health CAPS (Counseling & Psychological Services): https://health.cornell.edu/services/counseling-psychiatry\nUndocumented/DACA Student support: https://dos.cornell.edu/undocumented-daca-support/undergraduate-admissions-financial-aid\n\n\nAcademic accommodations\nWe want all students to have the opportunity to be successful in this course. Accommodations can help provide some flexibility and equitable classroom access.\nPer university policy, this course provides the following accommodations:\n\nDisability Accommodations\nReligious-Observance Accommodations\nTitle IX Accommodations\nVarsity Athlete Accommodations\nMedical Accommodations\nMilitary Service\nOther Accommodations\n\n\n\nAccessibility\nIf there is any portion of the course that is not accessible to you due to challenges with technology or the course format, please let me know so we can make appropriate accommodations.\nStudent Disability Services is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with Student Disability Services to request or update accommodations under these circumstances.\nIf you have an approved SDS accommodation, please send a copy of this letter to the instructors at info2950-prof@cornell.edu so we can ensure your accommodations are implemented in this course.\n\n\nCommunication\nAll lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: info2950.infosci.cornell.edu.\nAnnouncements will be posted through Canvas Announcements periodically. Please check Canvas (or ensure Canvas announcements are forwarded to your email) to ensure you have the latest announcements for the course.\n\n\nWhere to get help\n\nIf you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.\nThe teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!\nOutside of class and office hours, any general questions about course content or assignments should be posted on the course discussion forum. There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!\n\n\n\nEmail\nIf there is a question that’s not appropriate for the public forum, please email us at info2950-prof@cornell.edu. Barring extenuating circumstances, we will respond to INFO 2950 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday."
+  },
+  {
+    "objectID": "course-syllabus.html#activities-assessment",
+    "href": "course-syllabus.html#activities-assessment",
+    "title": "Syllabus",
+    "section": "Activities & Assessment",
+    "text": "Activities & Assessment\nThe activities and assessments in this course are designed to help you successfully achieve the course learning objectives. They are designed to follow the Prepare, Practice, Perform format.\n\nPrepare: Includes reading assignments and lectures to introduce new concepts and ensure a basic comprehension of the material. The goal is to help you prepare for the in-class activities during lecture.\nPractice: Includes in-class application exercises where you will begin to apply the concepts and methods introduced in the prepare assignment. The activities will graded for completion, as they are designed for you to gain experience with the statistical and computing techniques before working on graded assignments.\nPerform: Includes labs, homework, exams, and the project. These assignments build upon the prepare and practice assignments and are the opportunity for you to demonstrate your understanding of the course material and how it is applied to analyze real-world data.\n\n\nLectures (Prepare)\nPart of the class time will be lectures that introduce new concepts or review topics from the preparation videos. Lectures will not repeat everything in the readings, they will instead highlight important and known to be complex concepts and will be supplemented with live coding activities. You are expected to attend every lecture.\n\n\nApplication exercises (Practice)\nA majority of the in-class lectures will be dedicated to working on Application Exercises (AEs). These exercises will give you an opportunity to apply the statistical concepts and code introduced in the prepare assignment. These AEs are due within three days of the corresponding lecture period. Specifically, AEs from Tuesday lectures are due Friday by 11:59p ET, and AEs from Thursday lectures are due Sunday by 11:59p ET.\nBecause these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of at least 85% of AEs will result in full credit for AEs in the final course grade.\n\n\nLabs (Perform)\nIn labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team’s Git repository on the course’s GitHub page as the central platform for collaboration. Commits to this repository will be used as a metric of each team member’s relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.\nLabs are due 11:59p ET on the indicated due date.\nThe lowest lab grade will be dropped at the end of the semester.\n\n\nHomework (Perform)\nIn homework, you will apply what you’ve learned during lecture and lab to complete data analysis tasks. You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Similar to lab assignments, homework must be typed up using Quarto and GitHub and submitted as a PDF in Gradescope.\nHomework assignments are due 11:59p ET on the indicated due date.\nThe lowest homework grade will be dropped at the end of the semester.\n\n\nExams (Perform)\nThere will be three, take-home, open-note exams. Through these exams you have the opportunity to demonstrate what you’ve learned in the course thus far. Each exam will include small analysis and computational tasks related to the content in the prepare, practice, and perform assignments.\nMore details about the content and structure of the exams will be discussed during the semester.\n\n\nProject (Perform)\nThe purpose of the project is to apply what you’ve learned throughout the semester to analyze an interesting data-driven research question. The project will be completed with your lab teams, and each team will present their work during the final exam period.\nMore information about the project will be provided during the semester."
+  },
+  {
+    "objectID": "course-syllabus.html#grading",
+    "href": "course-syllabus.html#grading",
+    "title": "Syllabus",
+    "section": "Grading",
+    "text": "Grading\nThe final course grade will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30%\n\n\nLabs\n15%\n\n\nProject\n20%\n\n\nExams\n25%\n\n\nApplication Exercises\n10%\n\n\n\nThe final letter grade will be determined based on the following thresholds:\n\n\n\nLetter Grade\nFinal Course Grade\n\n\n\n\nA+\n>= 98\n\n\nA\n93 - 97.99\n\n\nA-\n90 - 92.99\n\n\nB+\n87 - 89.99\n\n\nB\n83 - 86.99\n\n\nB-\n80 - 82.99\n\n\nC+\n77 - 79.99\n\n\nC\n73 - 76.99\n\n\nC-\n70 - 72.99\n\n\nD+\n67 - 69.99\n\n\nD\n63 - 66.99\n\n\nD-\n60 - 62.99\n\n\nF\n< 60"
+  },
+  {
+    "objectID": "course-syllabus.html#course-policies",
+    "href": "course-syllabus.html#course-policies",
+    "title": "Syllabus",
+    "section": "Course policies",
+    "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework and lab assignments with other students; however, you may not directly share (or copy) code or write up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write up with another team. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nYou may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will automatically result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Note that the lowest homework and lab assignment will be dropped to accommodate such circumstances.\n\n\nLate work\n\nA slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 6 slip days for the entire semester. Slip days may be used on homework and lab assignments. You can use up to 2 slip days for a given homework or lab assignment.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework or lab assignment for up to 70% credit.\nThere is no late work accepted for application exercises, since these are designed to help you prepare for labs and homework.\nThe late work policy for exams will be provided with the exam instructions.\nThe late work policy for the project will be provided with the project instructions.\n\n\n\nWaiver for extenuating circumstances\nIf you need a bit of extra time, please use your slip days. Slip days are specifically intended for legitimate reasons for needing an extension like disability, religious observance, Title IX, student athletics, medical problems, and military service.\nIf using your slip days for accommodations is not working for you or if you have an SDS accommodation which includes deadline flexibility, you may request a deadline extension in-advance of the deadline. We will work with you to develop reasonable accommodations that align with your individual situation.\nTo request a deadline extension:\n\nCommit and push the work you have completed up to this point on the assignment.\nEmail info2950-prof@cornell.edu. In your email clearly state\n\nThe assignment\nWhat you have already completed on the assignment.\nWhat you have left to complete.\nYour proposed deadline extension (e.g. Monday, February 8th at 11:59pm.)\n\n\n\n\nRegrade requests\nRegrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points."
+  }
+]

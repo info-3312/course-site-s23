@@ -37,3 +37,20 @@ vignettes/*.pdf
 
 # R Environment Variables
 .Renviron
+
+# .Rprofile API keys
+.Rprofile
+
+# Excel temporary
+~$*.xls*
+
+# .DS_Store
+.DS_Store
+
+# Spark logs
+*.log
+*spark.log*
+
+Thumbs.db
+
+/.quarto/

@@ -1,0 +1,11 @@
+---
+title: "Prepare"
+subtitle: "Due: February 2, 2023"
+categories: "prepare"
+---
+
+![The whitest, most patriarchal tradition. Groundhog Day.](https://media.giphy.com/media/EPnrPSiKX1qZ2TWEuy/giphy.gif){fig-alt="Punxsutawney Phil being lifted up like Mufasa from the Lion King."}
+
+- 📖 Read:
+    - IMS: [Chp 4 - Exploring categorical data](https://openintro-ims.netlify.app/explore-categorical.html)
+    - IMS: [Chp 5 - Exploring numerical data](https://openintro-ims.netlify.app/explore-numerical.html)

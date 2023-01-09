@@ -1,0 +1,7 @@
+---
+title: "Prepare"
+subtitle: "Due: January 24, 2023"
+categories: "prepare"
+---
+
+- Log in to Cornell's GitHub at <https://github.coecis.cornell.edu/>.

@@ -1,0 +1,312 @@
+---
+title: "Welcome to INFO 2950"
+subtitle: "Lecture 1"
+date: "January 24, 2023"
+format: revealjs
+---
+
+# Agenda
+
+## Agenda
+
+-   Staff intros
+-   What is data science?
+-   Software
+-   Application exercise
+-   What is INFO 2950?
+-   This week's tasks
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+# Staff intros
+
+## Meet the instructor
+
+::: columns
+::: {.column width="50%"}
+Dr. Benjamin Soltoff
+
+Lecturer in Information Science
+
+Gates Hall 216
+:::
+
+::: {.column width="50%"}
+![](images/01/ben-soltoff.jpg){fig-alt="Headshot of Dr. Benjamin Soltoff" fig-align="center"}
+:::
+:::
+
+## Meet the course team {.smaller}
+
+-   TBD
+
+## Meet each other!
+
+```{r}
+#| echo: false
+
+countdown_fullscreen(minutes = 3)
+```
+
+# What is data science?
+
+## What is data science? {.smaller}
+
+-   Data science is an exciting discipline that allows you to turn raw data into understanding, insight, and knowledge.
+
+    > \[A\]n interdisciplinary field that uses scientific methods, processes, algorithms and systems to extract or extrapolate knowledge and insights from noisy, structured and unstructured data, and apply knowledge from data across a broad range of application domains[^1]
+
+-   We're going to learn to do this in a `tidy` way -- more on that later!
+
+-   This is a course on introduction to data science, with an emphasis on statistical thinking.
+
+[^1]: Source: [Wikipedia](https://en.wikipedia.org/wiki/Data_science)
+
+# Software
+
+## Excel - not...
+
+![](images/01/excel.png){fig-alt="An Excel window with data about countries" fig-align="center"}
+
+## R
+
+![](images/01/r.png){fig-alt="An R shell" fig-align="center"}
+
+## RStudio
+
+![](images/01/rstudio.png){fig-alt="An RStudio window" fig-align="center"}
+
+# Data science life cycle
+
+## Data science life cycle
+
+![](images/01/data-science-cycle/data-science-cycle.001.png){fig-alt="Data science life cycle" fig-align="center"}
+
+## Import
+
+![](images/01/data-science-cycle/data-science-cycle.002.png){fig-alt="Data science life cycle, with import highlighted" fig-align="center"}
+
+## Tidy + transform
+
+![](images/01/data-science-cycle/data-science-cycle.003.png){fig-alt="Data science life cycle, with tidy and transform highlighted" fig-align="center"}
+
+## Visualize
+
+![](images/01/data-science-cycle/data-science-cycle.004.png){fig-alt="Data science life cycle, with visualize highlighted" fig-align="center"}
+
+## Model
+
+![](images/01/data-science-cycle/data-science-cycle.005.png){fig-alt="Data science life cycle, with model highlighted" fig-align="center"}
+
+## Understand
+
+![](images/01/data-science-cycle/data-science-cycle.006.png){fig-alt="Data science life cycle, with understand highlighted" fig-align="center"}
+
+## 
+
+::: columns
+::: {.column width="50%"}
+```{r echo=FALSE, out.width="75%", fig.align="left"}
+knitr::include_graphics("images/01/google-trend-index.png")
+```
+:::
+
+::: {.column width="50%"}
+```{r echo=FALSE, out.width="100%", fig.align="center"}
+knitr::include_graphics("images/01/data-science-cycle/data-science-cycle.006.png")
+```
+
+```{r}
+#| echo: false
+#| message: false
+
+library(tidyverse)
+travel <- tribble(
+  ~date,              ~season,
+  "23 January 2017",  "winter",
+  "4 March 2017",     "spring",
+  "14 June 2017",     "summer",
+  "1 September 2017", "fall",
+  "...", "..."
+)
+travel
+```
+:::
+:::
+
+## Communicate
+
+![](images/01/data-science-cycle/data-science-cycle.007.png){fig-alt="Data science life cycle, with communicate highlighted" fig-align="center"}
+
+## Understand + communicate
+
+![](images/01/data-science-cycle/data-science-cycle.008.png){fig-alt="Data science life cycle, with understand and communicate highlighted" fig-align="center"}
+
+## Program
+
+![](images/01/data-science-cycle/data-science-cycle.009.png){fig-alt="Data science life cycle, with program highlighted" fig-align="center"}
+
+# Let's dive in!
+
+## Application exercise
+
+::: appex
+Or more like demo for today...
+
+📋 [github.coecis.cornell.edu/info2950-s23/ae-0-unvotes](https://github.coecis.cornell.edu/info2950-s23/ae-0-unvotes/)
+:::
+
+# Course overview
+
+## Homepage
+
+<https://info2950.infosci.cornell.edu/>
+
+-   All course materials
+-   Links to Canvas, GitHub, RStudio Workbench, etc.
+-   Let's take a tour!
+
+## Course toolkit
+
+All linked from the course website:
+
+-   GitHub organization: [github.coecis.cornell.edu/info2950-s23](https://github.coecis.cornell.edu/info2950-s23)
+-   RStudio Workbench: [rstudio-workbench.infosci.cornell.edu/](https://rstudio-workbench.infosci.cornell.edu/)
+-   Communication: [GitHub Discussions](https://github.coecis.cornell.edu/orgs/info2950-s23/discussions)
+-   Assignment submission and feedback: Gradescope
+
+::: callout-important
+Make sure you can access RStudio Workbench before lab on Friday.
+:::
+
+## Activities: Prepare, Participate, Practice, Perform {.smaller}
+
+::: incremental
+-   **Prepare:** Introduce new content and prepare for lectures by completing the readings
+-   **Participate:** Attend and actively participate in lectures and labs, office hours, team meetings
+-   **Practice:** Practice applying statistical concepts and computing with application exercises during lecture, graded for completion
+-   **Perform:** Put together what you've learned to analyze real-world data
+
+    ::: nonincremental
+    -   Lab assignments x TODO (first individual, later team-based)
+    -   Homework assignments x TODO (individual)
+    -   Three take-home exams
+    -   Team project presented in the last lab session
+    :::
+:::
+
+## Cadence
+
+::: incremental
+-   **Application exercises:** Complete within 24 hours of the end of class
+-   **Labs:** Start and make large progress on Friday in lab section, finish up by Monday 11:59pm the following week
+-   **HWs:** Posted Thursday morning, due following Wednesday 11:59pm
+-   **Exams:** Exam released Thursday morning, no lab on Friday of that week, due Monday 11:59pm
+-   **Project:** Deadlines throughout the semester, with some lab and lecture time dedicated to working on them, and most work done in teams outside of class
+:::
+
+## Teams
+
+-   Team assignments
+    -   Assigned by course staff
+    -   Application exercises, labs, and project
+    -   Peer evaluation during teamwork and after completion
+-   Expectations and roles
+    -   Everyone is expected to contribute equal *effort*
+    -   Everyone is expected to understand *all* code turned in
+    -   Individual contribution evaluated by peer evaluation, commits, etc.
+
+## Grading
+
+| Category              | Percentage   |
+|-----------------------|--------------|
+| Homework              | 30%          |
+| Labs                  | 15%          |
+| Project               | 20%          |
+| Exams                 | 25%          |
+| Application Exercises | 10%          |
+
+See [course syllabus](/course-syllabus.html) for how the final letter grade will be determined.
+
+## 15 minute rule
+
+{{< tweet math_rachel 764931533383749632 >}}
+
+## Support
+
+-   Attend office hours
+-   Ask and answer questions on the discussion forum
+-   Reserve email for questions on personal matters and/or grades
+-   Read the [course support](/course-support.html) page
+
+## Announcements
+
+-   Posted on Canvas (Announcements tool), be sure to check regularly (or forward announcements to your email)
+-   I'll assume that you've read an announcement by the next "business" day
+
+## Diversity + inclusion
+
+::: incremental
+- **I want you to feel like you belong in this class and are respected**
+- We are committed to full inclusion in education for all persons
+- If you feel that we have failed these goals, please either let us know or [report it](https://diversity.cornell.edu/our-commitments/bias-reporting-cornell), and we will address the issue
+- I (like many people) am still in the process of learning about diverse perspectives and identities. If something was said in class (by anyone) that made you feel uncomfortable, please talk to me about it.
+:::
+
+## Accessibility
+
+I want this course to be accessible to students with all abilities. Please feel free to let me know if there are circumstances affecting your ability to participate in class.
+
+-   [[Office of Student Disability Services]{.red}](https://sds.cornell.edu)
+-   [Cornell Health CAPS (Counseling & Psychological Services)](https://health.cornell.edu/services/counseling-psychiatry)
+-   [Undocumented/DACA Student support](https://dos.cornell.edu/undocumented-daca-support/undergraduate-admissions-financial-aid)
+
+# Course policies
+
+## Late work, waivers, regrades policy
+
+-   We have policies!
+-   Read about them on the [course syllabus](/course-syllabus.html) and refer back to them when you need it
+
+## Collaboration policy
+
+-   Only work that is clearly assigned as team work should be completed collaboratively.
+
+-   Homeworks must be completed individually. You may **not** directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.
+
+-   Exams must be completed individually. You may **not** discuss any aspect of the exam with peers. If you have questions, post as private questions on the course forum, only the teaching team will see and answer.
+
+## Sharing / reusing code policy
+
+-   We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted
+
+-   Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+
+-   Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source
+
+## Academic integrity
+
+1.  A student shall in no way misrepresent his or her work.
+2.  A student shall in no way fraudulently or unfairly advance his or her academic position.
+3.  A student shall refuse to be a party to another student's failure to maintain academic integrity.
+4.  A student shall not in any other manner violate the principle of academic integrity.
+
+::: aside
+Source: [Cornell University Code of Academic Integrity](https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/)
+:::
+
+## Most importantly!
+
+Ask if you're not sure if something violates a policy!
+
+## This week's tasks
+
+-   Log in to [Cornell's GitHub](https://github.coecis.cornell.edu) - you already have an account!
+-   Complete the Getting to know you survey if you haven't yet done so!
+-   Read the syllabus
+
+## Something personal

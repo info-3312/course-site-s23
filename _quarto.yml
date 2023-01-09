@@ -1,0 +1,91 @@
+project:
+  type: website
+  output-dir: docs
+  resources:
+    - info2950-sp23-syllabus.pdf
+
+website:
+  page-navigation: true
+  title: "INFO 2950"
+  description: "Homepage for INFO 2950 - Introduction to Data Science - Cornell University - Spring 2023."
+  site-url: "https://info2950.infosci.cornell.edu/"
+
+  repo-url: https://github.com/info-2950/course-site-s23
+  repo-actions: []
+
+  open-graph: true
+
+  favicon: images/favicon.png
+
+  sidebar:
+    background: "#B31B1B"
+    logo: "images/logo.svg"
+    pinned: true
+    align: center
+    tools:
+      - icon: github
+        href: https://github.coecis.cornell.edu/info2950-s23
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://rstudio-workbench.infosci.cornell.edu/
+        text: "RStudio Workbench"
+      - icon: person-fill
+        text: "Additional resources"
+        menu:
+          - text: Gradescope
+            url: https://www.gradescope.com/courses/468434
+          - text: Gradebook
+            url: https://canvas.cornell.edu/courses/49174/gradebook
+          - text: Discussion forum
+            url: https://github.coecis.cornell.edu/orgs/info2950-s23/discussions
+
+    style: docked
+    search: true
+    collapse-level: 1
+    contents:
+      - section: "Course information"
+        contents:
+          - href: course-overview.qmd
+            text: Overview
+          - href: course-syllabus.qmd
+            text: Syllabus
+          - href: course-support.qmd
+            text: Support
+          - href: course-team.qmd
+            text: Teaching team
+          - href: index.qmd
+            text: Schedule
+          - href: course-links.qmd
+            text: Useful links
+          - href: course-faq.qmd
+            text: FAQ
+      - section: "Computing"
+        contents:
+          - href: computing-access.qmd
+            text: Access
+          - href: computing-cheatsheets.qmd
+            text: Cheatsheets
+      - section: "Project"
+        contents:
+          - href: project-description.qmd
+            text: Description
+          - href: project-tips-resources.qmd
+            text: Tips + resources
+
+  page-footer:
+    right: "This page is built with [Quarto](https://quarto.org/)."
+    background: "#B31B1B"
+
+format:
+  html:
+    theme:
+      light: [cosmo, style/sta199.scss]
+      dark: [cosmo, style/sta199.scss, style/dark.scss]
+    linkcolor: "#B31B1B"
+    toc: true
+    code-copy: true
+    code-overflow: wrap
+    mainfont: "Atkinson Hyperlegible"
+
+execute:
+  freeze: auto

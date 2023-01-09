@@ -1,0 +1,8 @@
+---
+title: "Prepare"
+subtitle: "Due: January 31, 2023"
+categories: "prepare"
+---
+
+-   📖 Read:
+    - R4DS: [Chp 2 - Data visualization - Sections 2.5 - 2.10](https://r4ds.hadley.nz/data-visualize.html#facets)

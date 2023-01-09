@@ -1,0 +1,20 @@
+---
+title: "Course overview"
+---
+
+This is an applied introductory course for learners who wish to harness growing digital and computational resources. The focus of the course is on using data to identify patterns, evaluate the strength and significance of relationships, and generate predictions using **data**. These techniques are implemented using a **reproducible workflow** through the use of programming languages and version control software. Major emphasis is placed on a pragmatic understanding of core principles of programming and packaged implementations of methods. Students will learn how to use data to make effective arguments, in a way that promotes the ethical usage of data.
+
+## Class meetings
+
+| Meeting | Location | Time                       |
+|---------|----------|----------------------------|
+| Lecture | TBD      | Tue & Thur 9:40 - 10:55 am |
+| Lab 01  | TBD      | Fri 9:05 - 9:55 am         |
+| Lab 02  | TBD      | Fri 9:05 - 9:55 am         |
+| Lab 03  | TBD      | Fri 10:10 - 11:00 am       |
+| Lab 04  | TBD      | Fri 10:10 - 11:00 am       |
+| Lab 05  | TBD      | Fri 11:20 - 12:10 pm       |
+| Lab 06  | TBD      | Fri 11:20 - 12:10 pm       |
+| Lab 07  | TBD      | Fri 12:25 - 1:15 pm        |
+| Lab 08  | TBD      | Fri 12:25 - 1:15 pm        |
+| Lab 09  | TBD      | Fri 1:30 - 2:20 pm         |
