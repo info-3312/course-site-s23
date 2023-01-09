@@ -16,19 +16,19 @@ If you have a question during lecture or lab, feel free to ask it! There are lik
 
 ## Office hours
 
-The teaching team is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource!
+The course staff is here to help you be successful in the course. You are encouraged to attend office hours during the times posted on the home page to ask questions about the course content and assignments. A lot of questions are most effectively answered in-person, so office hours are a valuable resource. I encourage each and every one of you to take advantage of this resource!
 
 Make a pledge to stop by office hours at least once during the first three weeks of class. If you truly have no questions to ask, just stop by and say hi and introduce yourself. You can find a list of everyone's office hours [here](/course-team.qmd).
 
 ## GitHub Discussions
 
-Have a question that can't wait for office hours? Prefer to write out your question in detail rather than asking in person? The [course discussion forum](https://github.coecis.cornell.edu/orgs/info2950-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
+Have a question that can't wait for office hours? Prefer to write out your question in detail rather than asking in person? The [course discussion forum](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
 
 ## Email
 
-Please refrain from emailing any course content questions (those should go to office hours or GitHub Discussions), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Benjamin Soltoff at [info2950-prof\@cornell.edu](mailto:info2950-prof@cornell.edu).
+Please refrain from emailing any course content questions (those should go to office hours or GitHub Discussions), and only use email for questions about personal matters that may not be appropriate for the public course forum (e.g., illness, accommodations, etc.). For such matters, you may email Dr. Benjamin Soltoff at [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu).
 
-If there is a question that's not appropriate for a public discussion forum, you are welcome to email me directly. Barring extenuating circumstances, I will respond to INFO 2950 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
+If there is a question that's not appropriate for a public discussion forum, you are welcome to email me directly. Barring extenuating circumstances, I will respond to INFO 3312/5312 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
 ## Academic support
 

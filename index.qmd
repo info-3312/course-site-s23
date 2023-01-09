@@ -1,5 +1,5 @@
 ---
-title: "INFO 2950: Introduction to Data Science"
+title: "INFO 3312/5312: Data Communication"
 execute:
   freeze: false
 ---
@@ -12,7 +12,7 @@ library(googlesheets4)
 library(gt)
 library(tidyverse)
 
-d <- read_sheet("https://docs.google.com/spreadsheets/d/1cgFxR5RN92OJbCoCcNxPDstJVw1fVU1xd4dUBw518og/edit#gid=0")
+d <- read_sheet("https://docs.google.com/spreadsheets/d/1cBS3rzkaDqRH6AIdENrcH89UZ_C_djqeq8yF0E8A52g/edit#gid=0")
 ```
 
 ::: column-screen-right
@@ -39,52 +39,10 @@ d |>
       )
     }
   ) |>
-  text_transform(cells_body(columns = c(ae)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(ae_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
   text_transform(cells_body(columns = c(hw)),
     fn = function(x) {
       ifelse(is.na(x), fontawesome::fa("keyboard", fill_opacity = 0.1),
         glue::glue("<a href = {x}>{fontawesome::fa('keyboard')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(hw_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(lab)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("users-rectangle", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('users-rectangle')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(lab_sa)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("key", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('key')}</a>")
-      )
-    }
-  ) |>
-  text_transform(cells_body(columns = c(exam)),
-    fn = function(x) {
-      ifelse(is.na(x), fontawesome::fa("file-circle-check", fill_opacity = 0.1),
-        glue::glue("<a href = {x}>{fontawesome::fa('file-circle-check')}</a>")
       )
     }
   ) |>
@@ -99,7 +57,7 @@ d |>
   sub_missing(columns = c(date, what, topic, notes), missing_text = "") |>
   cols_align(
     align = "center", 
-    columns = c(week, dow, prepare, slides, ae, ae_sa, hw, hw_sa, lab, lab_sa, exam, project)
+    columns = c(week, dow, prepare, slides, hw, project)
     ) |>
   cols_align(
     align = "left", 
@@ -112,7 +70,7 @@ d |>
       style = "solid"
     ),
     locations = cells_body(
-      columns = c(date, topic, prepare, ae_sa, hw_sa, lab_sa, exam, project)
+      columns = c(date, topic, prepare, project)
     )
   )
 ```

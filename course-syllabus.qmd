@@ -3,53 +3,53 @@ title: "Syllabus"
 ---
 
 ::: {.content-visible when-format="html"}
-[**Click here**](SP23_IS_INFO2950_Soltoff.pdf) **to download a PDF copy of the syllabus.**
+[**Click here**](SP23_IS_INFO3312_Soltoff.pdf) **to download a PDF copy of the syllabus.**
 :::
 
-## INFO 2950 - Introduction to Data Science
+## INFO 3312/5312 - Data Communication
 
 ### Instructor
 
 - Dr. Benjamin Soltoff
 - Office: Gates Hall 216
-- Email: [info2950-prof\@cornell.edu](mailto:info2950-prof@cornell.edu)
+- Email: [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu)
 - Office hours: Wed 9-11am
 
 ### Course logistics
 
-- Meets TuTh 9:40 - 10:55 am for 28 sessions
+- Meets TuTh 1:00 - 2:15 pm for 28 sessions
 - Lab sections meet on Fridays at varying times for 15 sessions
 - 4 credits, offered for a letter grade
-- Prerequisites: (MATH 1710 or equivalent AND CS 1110 or CS 1112) OR permission of instructor
+- Prerequisites: INFO 2950. Prior experience with R and Git/GitHub is preferred.
 
 ### Course description
 
-This is an applied introductory course for learners who wish to harness growing digital and computational resources. The focus of the course is on using data to identify patterns, evaluate the strength and significance of relationships, and generate predictions using **data**. These techniques are implemented using a **reproducible workflow** through the use of programming languages and version control software. Major emphasis is placed on a pragmatic understanding of core principles of programming and packaged implementations of methods. Students will learn how to use data to make effective arguments, in a way that promotes the ethical usage of data.
+Data scientists often present information to disseminate their findings. This course introduces theories and applications of communicating with data, with an emphasis on visualizations. To support this approach, we will focus on the what, why, and how of data visualization. "What" focuses on specific types of visualizations for a particular purpose, as well as tools for constructing these plots. In "how" we will focus on the process of generating a data visualization from pre-processing the raw data, mapping attributes of the data to plot aesthetics, strategically determining how to define the visual encoding of the data for maximal accessibility, and finalizing the visualization to consider the importance of visual appeal. In "why" we discuss the theory tying together the "how" and the "what", and consider empirical evidence of best-practices in data communication.
 
 ### Course learning objectives
 
 By the end of the semester, you will...
 
-- Conduct exploratory data analysis through data wrangling and munging as well as visualizations and summary statistics.
-- Identify patterns in data to make predictions or to identify associations between variables.
-- Evaluate the strength of patterns using statistical and substantive significance.
-- Implement data science workflows using common, reproducible methods and software tools.
-- Use data ethically and responsibly.
+- Implement principles of designing and creating effective data visualizations.
+- Evaluate, critique, and improve upon one's own and others' data visualizations based on how good a job the visualization does for communicating a message clearly and correctly.
+- Post-process and refine plots for effective communication.
+- Master using R and a variety of modern data visualization packages to reproducibly create data visualizations.
+- Work reproducibly individually and collaboratively using Git and GitHub.
 
 ## Office hours
 
 [Click here](TODO) for the instructor and TA office hours and locations.
 
-You are welcome to attend the office hours for **any** INFO 2950 TA, regardless of section.
+You are welcome to attend the office hours for **any** INFO 3312/5312 TA, regardless of section.
 
 ## Textbooks
 
 All books are **freely available online**.
 
-|                                                                         |                          |                                   |                                                                                                                                  |
-|---------------|---------------|---------------|--------------------------|
-| [R for Data Science, 2e](https://r4ds.hadley.nz/)                       | Grolemund, Wickham       | O'Reilly, 2nd edition, 2022       | Hard copy only available of 1st edition                                                                                          |
-| [Introduction to Modern Statistics](https://openintro-ims.netlify.app/) | Çetinkaya-Rundel, Hardin | OpenIntro Inc., 1st Edition, 2021 | Hard copy available [on Amazon](https://www.amazon.com/Introduction-Modern-Statistics-Mine-%C3%87etinkaya-Rundel/dp/1943450145/) |
+|                                                                          |                                                           |                                     |                                                                                                 |
+|--------------------------------------------------------------------------|-----------------------------------------------------------|-------------------------------------|-------------------------------------------------------------------------------------------------|
+| [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/) | Hadley Wickham, Danielle Navarro, and Thomas Lin Pedersen | Springer, 3rd edition (in progress) | Hard copy only available of 2nd edition                                                         |
+| [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)    | Claus O. Wilke                                            | O'Rielly Media, 2019                | [Hard copy available](https://www.oreilly.com/library/view/fundamentals-of-data/9781492031079/) |
 
 ## Course community
 
@@ -81,72 +81,42 @@ If there is any portion of the course that is not accessible to you due to chall
 
 [Student Disability Services](https://sds.cornell.edu/) is available to ensure that students are able to engage with their courses and related assignments. Students should be in touch with Student Disability Services to [request or update accommodations](https://sds.cornell.edu/get-started) under these circumstances.
 
-If you have an approved SDS accommodation, please send a copy of this letter to the instructors at [info2950-prof\@cornell.edu](mailto:info2950-prof@cornell.edu) so we can ensure your accommodations are implemented in this course.
+If you have an approved SDS accommodation, please send a copy of this letter to the instructors at [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu) so we can ensure your accommodations are implemented in this course.
 
 ### Communication
 
-All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [info2950.infosci.cornell.edu](https://info2950.infosci.cornell.edu).
+All lecture notes, assignment instructions, an up-to-date schedule, and other course materials may be found on the course website: [info3312.infosci.cornell.edu](https://info3312.infosci.cornell.edu).
 
 Announcements will be posted through Canvas Announcements periodically. Please check Canvas (or ensure Canvas announcements are forwarded to your email) to ensure you have the latest announcements for the course.
 
 ### Where to get help
 
 -   If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
--   The teaching team is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://github.coecis.cornell.edu/orgs/info2950-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
+-   The course staff is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
+-   Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
 
 ### Email
 
-If there is a question that's not appropriate for the public forum, please email us at [info2950-prof\@cornell.edu](mailto:info2950-prof@cornell.edu). Barring extenuating circumstances, we will respond to INFO 2950 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
+If there is a question that's not appropriate for the public forum, please email us at [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu). Barring extenuating circumstances, we will respond to INFO 3312/5312 emails within 48 hours Monday - Friday. Response time may be slower for emails sent Friday evening - Sunday.
 
-## Activities & Assessment
+## Assessment
 
-The activities and assessments in this course are designed to help you successfully achieve the course learning objectives. They are designed to follow the **Prepare, Practice, Perform** format.
+Assessments in this course are designed to help you successfully achieve the course learning objectives. They are comprised of three components: attendance and participation, homework assignments, and projects.
 
--   **Prepare**: Includes reading assignments and lectures to introduce new concepts and ensure a basic comprehension of the material. The goal is to help you prepare for the in-class activities during lecture.
+- **Attendance and participation** is expected throughout the semester.
 
--   **Practice**: Includes in-class application exercises where you will begin to apply the concepts and methods introduced in the prepare assignment. The activities will graded for completion, as they are designed for you to gain experience with the statistical and computing techniques before working on graded assignments.
+- **Homework assignments** (6), due every other week (roughly), completed individually and submitted via Gradescope. Each homework assignment is worth 10% of the course grade. Lowest homework assignment score is dropped.
 
--   **Perform**: Includes labs, homework, exams, and the project. These assignments build upon the prepare and practice assignments and are the opportunity for you to demonstrate your understanding of the course material and how it is applied to analyze real-world data.
+- **Projects** (2), mid-semester and end of semester, completed in teams.
 
-### Lectures (Prepare)
+    - Project 1: Teams will be given a dataset to visualize. Project 1 is worth 20% of the course grade.
+    - Project 2: Teams will pick a dataset of interest to them and/or build an R package that implements a new type of data visualization in R. Project 2 is worth 30% of the course grade.
 
-Part of the class time will be lectures that introduce new concepts or review topics from the preparation videos. Lectures will **not** repeat everything in the readings, they will instead highlight important and known to be complex concepts and will be supplemented with live coding activities. You are expected to attend every lecture.
+    The deliverables for each project will include a data visualization, a write up of the process and findings, and a presentation. For the second project, you will be encouraged to think beyond a traditional two-dimensional data visualization (e.g. interactive web apps/dashboards, data art, generative art, physical/tangible visualizations, **ggplot2** extensions, etc.).
 
-### Application exercises (Practice)
+    Each project will have a peer review component to provide at least one round of feedback during the process of development. Teams will provide confidential peer feedback regarding their teammates upon completion of the project. The scores from the peer evaluations, along with individual contributions tracked by commits on GitHub, will be used to ensure that each student has contributed to the teamwork.
 
-A majority of the in-class lectures will be dedicated to working on Application Exercises (AEs). These exercises will give you an opportunity to apply the statistical concepts and code introduced in the prepare assignment. These AEs are due within three days of the corresponding lecture period. Specifically, AEs from Tuesday lectures are due Friday by 11:59p ET, and AEs from Thursday lectures are due Sunday by 11:59p ET.
-
-Because these AEs are for practice, they will be graded based on completion, i.e., a good-faith effort has been made in attempting all parts. Successful on-time completion of **at least 85%** of AEs will result in full credit for AEs in the final course grade.
-
-### Labs (Perform)
-
-In labs, you will apply the concepts discussed in lecture to various data analysis scenarios, with a focus on the computation. Most lab assignments will be completed in teams, and all team members are expected to contribute equally to the completion of each assignment. You are expected to use the team's Git repository on the course's GitHub page as the central platform for collaboration. Commits to this repository will be used as a metric of each team member's relative contribution for each lab, and there will be periodic peer evaluation on the team collaboration. Lab assignments will be completed using Quarto, correspond to an appropriate GitHub repository, and submitted for grading in Gradescope.
-
-Labs are due 11:59p ET on the indicated due date.
-
-*The lowest lab grade will be dropped at the end of the semester.*
-
-### Homework (Perform)
-
-In homework, you will apply what you've learned during lecture and lab to complete data analysis tasks.
-You may discuss homework assignments with other students; however, homework should be completed and submitted individually. Similar to lab assignments, homework must be typed up using Quarto and GitHub and submitted as a PDF in Gradescope.
-
-Homework assignments are due 11:59p ET on the indicated due date.
-
-*The lowest homework grade will be dropped at the end of the semester.*
-
-### Exams (Perform)
-
-There will be three, take-home, open-note exams. Through these exams you have the opportunity to demonstrate what you've learned in the course thus far. Each exam will include small analysis and computational tasks related to the content in the prepare, practice, and perform assignments.
-
-More details about the content and structure of the exams will be discussed during the semester.
-
-### Project (Perform)
-
-The purpose of the [project](project-description.html) is to apply what you've learned throughout the semester to analyze an interesting data-driven research question. The project will be completed with your lab teams, and each team will present their work during the final exam period.
-
-More information about the project will be provided during the semester.
+    All team members must take part in the presentation. Presentations can be given in person in class.
 
 ## Grading
 
@@ -154,10 +124,9 @@ The final course grade will be calculated as follows:
 
 | Category              | Percentage   |
 |-----------------------|--------------|
-| Homework              | 30%          |
-| Labs                  | 15%          |
-| Project               | 20%          |
-| Exams                 | 25%          |
+| Homework              | 40%          |
+| Project 1             | 20%          |
+| Project 2             | 30%          |
 | Application Exercises | 10%          |
 
 The final letter grade will be determined based on the following thresholds:
@@ -178,6 +147,12 @@ The final letter grade will be determined based on the following thresholds:
 | D-           | 60 - 62.99         |
 | F            | \< 60              |
 
+## Teams
+
+You will be assigned to a different team for each of your two projects. You are encouraged to sit with your teammates in lecture and you will also work with them in the lab sessions. All team members are expected to contribute equally to the completion of each project and you will be asked to evaluate your team members after each assignment is due. Failure to adequately contribute to an assignment will result in a penalty to your mark relative to the team's overall mark.
+
+You are expected to make use of the provided GitHub repository as their central collaborative platform. Commits to this repository will be used as a metric (one of several) of each team member’s relative contribution for each project.
+
 ## Course policies
 
 ### Academic honesty
@@ -186,42 +161,49 @@ The final letter grade will be determined based on the following thresholds:
 
 Please abide by the following as you work on assignments in this course:
 
--   You may discuss individual homework and lab assignments with other students; however, you may not directly share (or copy) code or write up with other students. For team assignments, you may collaborate freely within your team. You may discuss the assignment with other teams; however, you may not directly share (or copy) code or write up with another team. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
--   You may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.
+-   You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
 -   **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
 
 Any violations in academic honesty standards as outlined in the [Cornell University Code of Academic Integrity](https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/) and those specific to this course will automatically result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.
 
 ### Late work & extensions
 
-The due dates for assignments are there to help you keep up with the course material and to ensure the teaching team can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline. Note that the lowest homework and lab assignment will be dropped to accommodate such circumstances.
+The due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.
 
-### Late work
+#### Late work
 
--   A **slip day** allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of **6 slip days** for the entire semester. Slip days may be used on **homework and lab assignments**. You can use up to 2 slip days for a given homework or lab assignment.
+- **Homework assignments**:  A **slip day** allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of **3 slip days** for the entire semester. Slip days may be used on **homework assignments**. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.
     
     To use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.
     
-    If you run out of slip days or submit after the slip day deadline, you may submit your homework or lab assignment for up to 70% credit.
--   There is no late work accepted for application exercises, since these are designed to help you prepare for labs and homework.
--   The late work policy for exams will be provided with the exam instructions.
--   The late work policy for the project will be provided with the project instructions.
-
-### Waiver for extenuating circumstances
-
-If you need a bit of extra time, **please use your slip days**. Slip days are specifically intended for legitimate reasons for needing an extension like disability, religious observance, Title IX, student athletics, medical problems, and military service.
-
-If using your slip days for accommodations is not working for you or if you have an SDS accommodation which includes deadline flexibility, you may request a deadline extension in-advance of the deadline. We will work with you to develop reasonable accommodations that align with your individual situation.
-
-To request a deadline extension:
-
-1. Commit and push the work you have completed up to this point on the assignment.
-1. Email [info2950-prof\@cornell.edu](mailto:info2950-prof@cornell.edu). In your email clearly state
-    a. The assignment
-    a. What you have already completed on the assignment.
-    a. What you have left to complete.
-    a. Your proposed deadline extension (e.g. *Monday, February 8th at 11:59pm.*)
+    If you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.
+- **Projects**: Late work is not accepted.
 
 ### Regrade requests
 
-Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.
+- **Homework assignments**: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.
+- **Projects**: Copy the template below into an email. Send that email to [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu).
+
+    Subject:
+    > **INFO 3312/5312 (REQUEST) Regrade**
+
+    Email Message _Template_:
+    > NetID: _TODO_ <br/>
+    > Team Name: _TODO_ <br/>
+    > Assignment: _TODO_
+    >
+    > **Directly state the mistake(s)** in the grading of your assignment. Be **specific** _and_ **specify the total points** that you believed should be returned for **each mistake**. (1-3 _brief and concise_ bullets):
+    >
+    > _TODO_
+    >
+    > _(optional)_ If necessary, **briefly** explain why your approach to this assignment is a **good choice** (1-3 _brief and concise_ bullets):
+    >
+    > _TODO_
+
+    **Tips:**
+
+    - When writing, please be respectful, thoughtful, and professional.
+    - **Be brief and concise.** Bullet points are encouraged. Please do not write a lengthy explanation.
+    - Form and ground your argument based on **ideas and principles presented in this course**. This is the primary criteria we use to evaluate your regrade request.
+    - **Assume that we made a mistake**; avoid accusing us being unfair or punishing you.
+

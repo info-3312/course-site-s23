@@ -2,19 +2,12 @@
 title: "Course overview"
 ---
 
-This is an applied introductory course for learners who wish to harness growing digital and computational resources. The focus of the course is on using data to identify patterns, evaluate the strength and significance of relationships, and generate predictions using **data**. These techniques are implemented using a **reproducible workflow** through the use of programming languages and version control software. Major emphasis is placed on a pragmatic understanding of core principles of programming and packaged implementations of methods. Students will learn how to use data to make effective arguments, in a way that promotes the ethical usage of data.
+Data scientists often present information to disseminate their findings. This course introduces theories and applications of communicating with data, with an emphasis on visualizations. To support this approach, we will focus on the what, why, and how of data visualization. "What" focuses on specific types of visualizations for a particular purpose, as well as tools for constructing these plots. In "how" we will focus on the process of generating a data visualization from pre-processing the raw data, mapping attributes of the data to plot aesthetics, strategically determining how to define the visual encoding of the data for maximal accessibility, and finalizing the visualization to consider the importance of visual appeal. In "why" we discuss the theory tying together the "how" and the "what", and consider empirical evidence of best-practices in data communication.
 
 ## Class meetings
 
 | Meeting | Location | Time                       |
 |---------|----------|----------------------------|
-| Lecture | TBD      | Tue & Thur 9:40 - 10:55 am |
-| Lab 01  | TBD      | Fri 9:05 - 9:55 am         |
-| Lab 02  | TBD      | Fri 9:05 - 9:55 am         |
-| Lab 03  | TBD      | Fri 10:10 - 11:00 am       |
-| Lab 04  | TBD      | Fri 10:10 - 11:00 am       |
-| Lab 05  | TBD      | Fri 11:20 - 12:10 pm       |
-| Lab 06  | TBD      | Fri 11:20 - 12:10 pm       |
-| Lab 07  | TBD      | Fri 12:25 - 1:15 pm        |
-| Lab 08  | TBD      | Fri 12:25 - 1:15 pm        |
-| Lab 09  | TBD      | Fri 1:30 - 2:20 pm         |
+| Lecture | Thurston Hall 203       | Tue & Thur 1:00 - 2:15 pm |
+| Lab 01  | Upson Hall 216       | Fri 10:10 - 11:00 am         |
+| Lab 02  | Upson Hall 216      | Fri 11:20 - 12:10 pm         |

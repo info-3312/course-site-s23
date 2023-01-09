@@ -2,6 +2,6 @@
 title: "Computing access"
 ---
 
-To access computing resources for INFO 2950, go to the [RStudio Workbench](https://rstudio-workbench.infosci.cornell.edu/) website and login using your Cornell NetID and password.
+To access computing resources for INFO 3312/5312, go to the [RStudio Workbench](https://rstudio-workbench.infosci.cornell.edu/) website and login using your Cornell NetID and password.
 
 Click the "New Session" button on the top of the page. Leave all the settings on their default state and click "Start Session". If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. **Please be patient.** When you start a session in the future, your container will already be prepared and it should start within 15 seconds.

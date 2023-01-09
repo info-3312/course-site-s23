@@ -5,17 +5,17 @@ title: "Useful links"
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | RStudio Workbench            | 🔗 on [RStudio Workbench](https://rstudio-workbench.infosci.cornell.edu/)                                                                              |
 +==============================+========================================================================================================================================================+
-| Course GitHub organization   | 🔗 on [GitHub](https://github.coecis.cornell.edu/info2950-s23)                                                                                         |
+| Course GitHub organization   | 🔗 on [GitHub](https://github.coecis.cornell.edu/info3312-s23)                                                                                         |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Gradescope                   | 🔗 on [Gradescope](https://www.gradescope.com/courses/468434)                                                                                          |
+| Gradescope                   | 🔗 on [Gradescope](https://www.gradescope.com/courses/51488)                                                                                          |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Gradebook                    | 🔗 [Canvas](https://canvas.cornell.edu/courses/49174/grades)                                                                                           |
+| Gradebook                    | 🔗 [Canvas](https://canvas.cornell.edu/courses/51488/grades)                                                                                           |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Office hours                 | 🔗 on [TODO](TODO)                                                                                                                                     |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Textbooks                    | 🔗 [R for Data Science](https://r4ds.hadley.nz/)                                                                                                       |
+| Textbooks                    | 🔗 [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)                                                                            |
 |                              |                                                                                                                                                        |
-|                              | 🔗 [Introduction to Modern Statistics](https://openintro-ims.netlify.app/)                                                                             |
+|                              | 🔗 [Fundamentals of Data Visualization](https://clauswilke.com/dataviz/)                                                                               |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Package documentation        | 🔗 ggplot2: [ggplot2.tidyverse.org](https://ggplot2.tidyverse.org/)                                                                                    |
 |                              |                                                                                                                                                        |

@@ -1,6 +1,6 @@
-institute: "Cornell University <br> INFO 2950 - Spring 2023"
+institute: "Cornell University <br> INFO 3312/5312 - Spring 2023"
 author: "Dr. Benjamin Soltoff"
-footer: "[🔗 info2950.infosci.cornell.edu](https://info2950.infosci.cornell.edu)"
+footer: "[🔗 info3312.infosci.cornell.edu](https://info3312.infosci.cornell.edu)"
 logo: "images/favicon.png"
 format:
   revealjs:

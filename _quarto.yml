@@ -2,15 +2,15 @@ project:
   type: website
   output-dir: docs
   resources:
-    - info2950-sp23-syllabus.pdf
+    - info3312-sp23-syllabus.pdf
 
 website:
   page-navigation: true
-  title: "INFO 2950"
-  description: "Homepage for INFO 2950 - Introduction to Data Science - Cornell University - Spring 2023."
-  site-url: "https://info2950.infosci.cornell.edu/"
+  title: "INFO 3312/5312"
+  description: "Homepage for INFO 3312/5312 - Data Communication - Cornell University - Spring 2023."
+  site-url: "https://info3312.infosci.cornell.edu/"
 
-  repo-url: https://github.com/info-2950/course-site-s23
+  repo-url: https://github.com/info-3312/course-site-s23
   repo-actions: []
 
   open-graph: true
@@ -24,7 +24,7 @@ website:
     align: center
     tools:
       - icon: github
-        href: https://github.coecis.cornell.edu/info2950-s23
+        href: https://github.coecis.cornell.edu/info3312-s23
         text: "GitHub organization"
       - icon: code-square
         href: https://rstudio-workbench.infosci.cornell.edu/
@@ -33,11 +33,11 @@ website:
         text: "Additional resources"
         menu:
           - text: Gradescope
-            url: https://www.gradescope.com/courses/468434
+            url: https://canvas.cornell.edu/courses/51488
           - text: Gradebook
-            url: https://canvas.cornell.edu/courses/49174/gradebook
+            url: https://canvas.cornell.edu/courses/51488/gradebook
           - text: Discussion forum
-            url: https://github.coecis.cornell.edu/orgs/info2950-s23/discussions
+            url: https://github.coecis.cornell.edu/orgs/info3312-s23/discussions
 
     style: docked
     search: true
@@ -52,7 +52,7 @@ website:
           - href: course-support.qmd
             text: Support
           - href: course-team.qmd
-            text: Teaching team
+            text: Course staff
           - href: index.qmd
             text: Schedule
           - href: course-links.qmd
@@ -65,10 +65,12 @@ website:
             text: Access
           - href: computing-cheatsheets.qmd
             text: Cheatsheets
-      - section: "Project"
+      - section: "Projects"
         contents:
-          - href: project-description.qmd
-            text: Description
+          - href: project-1.qmd
+            text: Project 1
+          - href: project-2.qmd
+            text: Project 2
           - href: project-tips-resources.qmd
             text: Tips + resources
 

@@ -18,4 +18,4 @@ title: "Course staff"
 |---------------------------|-----------------------|---------------------|
 | TBD                  | TBD | TBD |
 
-For office hours, please see [INFO 2950 - Ultimate Office Hours](TODO) sheet.
+For office hours, please see [INFO 3312/5312 - Ultimate Office Hours](TODO) sheet.
