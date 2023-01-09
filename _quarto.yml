@@ -2,7 +2,7 @@ project:
   type: website
   output-dir: docs
   resources:
-    - info3312-sp23-syllabus.pdf
+    - SP23_IS_INFO3312_Soltoff.pdf
 
 website:
   page-navigation: true

@@ -153,6 +153,27 @@ You will be assigned to a different team for each of your two projects. You are 
 
 You are expected to make use of the provided GitHub repository as their central collaborative platform. Commits to this repository will be used as a metric (one of several) of each team member’s relative contribution for each project.
 
+## Graduate requirements for INFO 5312
+
+Students in INFO 5312 have additional expectations in the course:
+
+- INFO 5312 homework will at times be graded against a more stringent rubric
+- INFO 5312 students will be grouped together for all projects
+- Project rubric line items will have more stringent criteria for INFO 5312 students
+- INFO 5312 students will complete an additional individual project during the semester
+
+The final course grade for students registered in INFO 5312 will be calculated as follows:
+
+| Category              | Percentage   |
+|-----------------------|--------------|
+| Homework              | 30%          |
+| Project 1             | 15%          |
+| Project 2             | 25%          |
+| Individual project    | 20%          |
+| Application Exercises | 10%          |
+
+The final letter grade will be determined using the same thresholds as for INFO 3312.
+
 ## Course policies
 
 ### Academic honesty
@@ -208,4 +229,3 @@ The due dates for assignments are there to help you keep up with the course mate
     - **Be brief and concise.** Bullet points are encouraged. Please do not write a lengthy explanation.
     - Form and ground your argument based on **ideas and principles presented in this course**. This is the primary criteria we use to evaluate your regrade request.
     - **Assume that we made a mistake**; avoid accusing us being unfair or punishing you.
-
