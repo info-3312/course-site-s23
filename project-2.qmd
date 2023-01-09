@@ -21,7 +21,7 @@ Your first task is to come up with a goal for your project. Here are a few ideas
 -   Build a Shiny app that that has an Instagram-like user interface for applying filters, except not filters but themes for ggplots.
 -   Create an R package that provides functionality for a set of ggplot2 themes and/or color palettes.[^project-2-1]
 -   Build a generative art system.
--   Do a deep dive into accessibility for data visualization and build a lesson plan for creating accessible visualizations with ggplot2, R Markdown, and generally within the R ecosystem.
+-   Do a deep dive into accessibility for data visualization and build a lesson plan for creating accessible visualizations with ggplot2, Quarto, and generally within the R ecosystem.
 -   Create an interactive and/or animated spatio-temporal visualization on a topic of interest to you, e.g., redistricting, COVID-19, voter suppression, etc.
 -   Recreate art pieces with ggplot2.
 -   Make a data visualization telling a story and convert it to an illustration, presenting both the computational and artistic piece side by side.
@@ -217,7 +217,7 @@ Note that there will be points allocated to commits from each team member for th
 
 ### Reproducibility, style, and organization (10 points)
 
--   All required files are provided. R Markdown files knit without issues and reproduce the necessary outputs. If building a package, the checks pass. (3 points)
+-   All required files are provided. Quarto files render without issues and reproduce the necessary outputs. If building a package, the checks pass. (3 points)
 -   If there's a dataset, it's provided in a data folder, a codebook is provided, and a local copy of the data file is used where needed. (3 points)
 -   Documents are well structured and easy to follow. No extraneous materials. (2 points)
 -   All issues are closed, mostly with specific commits addressing them. (2 points)
@@ -249,8 +249,6 @@ All code reported in your final project document should work properly. Please do
     -   In your presentation your code should be hidden (`echo: false`) so that your slides are neat and easy to read.
         However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented.
         **Exception:** If you want to highlight something specific about a piece of code, you're welcome to show that portion.
-
-    -   In your write-up your code should be visible.
 
 -   Teamwork: You are to complete the assignment as a team.
     All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade reduced.

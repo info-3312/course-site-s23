@@ -185,9 +185,11 @@ The due dates for assignments are there to help you keep up with the course mate
 - **Projects**: Copy the template below into an email. Send that email to [soltoffbc\@cornell.edu](mailto:soltoffbc@cornell.edu).
 
     Subject:
+    
     > **INFO 3312/5312 (REQUEST) Regrade**
-
+    
     Email Message _Template_:
+    
     > NetID: _TODO_ <br/>
     > Team Name: _TODO_ <br/>
     > Assignment: _TODO_
@@ -199,7 +201,7 @@ The due dates for assignments are there to help you keep up with the course mate
     > _(optional)_ If necessary, **briefly** explain why your approach to this assignment is a **good choice** (1-3 _brief and concise_ bullets):
     >
     > _TODO_
-
+    
     **Tips:**
 
     - When writing, please be respectful, thoughtful, and professional.

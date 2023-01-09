@@ -477,7 +477,7 @@ Important
 <section id="reproducibility-style-and-organization-10-points" class="level3">
 <h3 class="anchored" data-anchor-id="reproducibility-style-and-organization-10-points">Reproducibility, style, and organization (10 points)</h3>
 <ul>
-<li>All required files are provided. Quarto files knit without issues and reproduce the necessary outputs. (3 points)</li>
+<li>All required files are provided. Quarto files render without issues and reproduce the necessary outputs. (3 points)</li>
 <li>Data is in the data folder, with a codebook in the README, and is loaded from this folder in presentation and writeup. (3 points)</li>
 <li>Documents are well structured and easy to follow. No extraneous materials. (2 points)</li>
 <li>All issues are closed, mostly with specific commits addressing them. (2 points)</li>
@@ -486,7 +486,7 @@ Important
 </section>
 <section id="guidelines" class="level2">
 <h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
-<p>Please use the project repository that has been created for your team to complete your project. This means putting all of the content in the Quarto files provided, knitting them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines. Your Quarto files (<code>.qmd</code>) and the resulting markdown files (<code>.md</code>) will be graded jointly, so they must be consistent (as in, don’t change the Quarto file without also updating the rendered document!).</p>
+<p>Please use the project repository that has been created for your team to complete your project. This means putting all of the content in the Quarto files provided, rendering them to obtain the output, and committing and pushing all files to your repository by the indicated deadlines. Your Quarto files (<code>.qmd</code>) and the resulting markdown files (<code>.md</code>) will be graded jointly, so they must be consistent (as in, don’t change the Quarto file without also updating the rendered document!).</p>
 <p>All results presented must have corresponding code. If you do calculations by hand instead of using R and then report the results from the calculations, you will not receive credit for those calculations. Any answers/results given without the corresponding R code that generated the result will not be considered. For example, if you’re reporting the number of observations in your dataset, don’t just write the number manually, use inline R code to calculate the number.</p>
 <p>All code reported in your final project document should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add <code>warning: false</code> and <code>message: false</code> in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there’s a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.</p>
 </section>
@@ -499,8 +499,7 @@ Important
 <li><p>Set aside time to work together and apart (physically).</p></li>
 <li><p>Code:</p>
 <ul>
-<li><p>In your presentation your code should be hidden (<code>echo: false</code>) so that your slides are neat and easy to read. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. <strong>Exception:</strong> If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.</p></li>
-<li><p>In your write-up your code should be visible.</p></li>
+<li>In your presentation your code should be hidden (<code>echo: false</code>) so that your slides are neat and easy to read. However your document should include all your code such that if I re-render your Quarto file I should be able to obtain the results you presented. <strong>Exception:</strong> If you want to highlight something specific about a piece of code, you’re welcomed to show that portion.</li>
 </ul></li>
 <li><p>Teamwork: You are to complete the assignment as a team. All team members are expected to contribute equally to the completion of this assignment and team evaluations will be given at its completion - anyone judged to not have sufficient contributed to the final product will have their grade reduced. While different teams members may have different backgrounds and abilities, <strong>it is the responsibility of every team member to understand how and why all code and approaches in the assignment works.</strong></p></li>
 <li><p>When you’re done, review the documents on GitHub to make sure you’re happy with the final state of your work. Then go get some rest!</p></li>
