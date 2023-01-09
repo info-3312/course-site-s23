@@ -96,7 +96,7 @@ sticker(
   # colors of sticker background/border
   h_color = "#6EB43F", h_fill = "#F7F7F7",
   # package name and formatting
-  package = NULL, p_color = "#FFFFFF",
+  package = NULL, p_color = "#006699",
   p_x = 1.175, p_y = 0.6, p_size = 13,
   p_family = "Atkinson Hyperlegible",
   p_fontface = "bold",

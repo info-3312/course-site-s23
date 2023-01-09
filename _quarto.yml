@@ -18,8 +18,8 @@ website:
   favicon: images/favicon.png
 
   sidebar:
-    background: "#B31B1B"
-    logo: "images/logo.svg"
+    background: "#9FAD9F"
+    logo: "images/logo.png"
     pinned: true
     align: center
     tools:
