@@ -124,10 +124,9 @@ The final course grade will be calculated as follows:
 
 | Category              | Percentage   |
 |-----------------------|--------------|
-| Homework              | 40%          |
+| Homework              | 50%          |
 | Project 1             | 20%          |
 | Project 2             | 30%          |
-| Application Exercises | 10%          |
 
 The final letter grade will be determined based on the following thresholds:
 
