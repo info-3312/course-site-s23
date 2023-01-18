@@ -13,3 +13,16 @@ format:
 execute:
   freeze: auto
   echo: true
+  cache: true
+  message: false
+  warning: false
+knitr:
+  opts_chunk:
+    fig.width: 8
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    fig.showtext: true
+    fig.align: "center"
+    out.width: "80%"
+    hiline: true
