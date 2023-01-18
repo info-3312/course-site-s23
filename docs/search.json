@@ -273,6 +273,328 @@
     "text": "Teaching assistants\n\n\n\nName\nRole\n\n\n\n\nChuanrui Liu\nGrad TA\n\n\nLincy Chen\nUndergrad TA\n\n\nMichelle Pryor\nUndergrad TA\n\n\nKevin Sheng\nUndergrad TA\n\n\nJessica Zhou\nUndergrad TA\n\n\n\nFor office hours, please see INFO 3312/5312 - Ultimate Office Hours sheet."
   },
   {
+    "objectID": "slides/01-welcome-info3312.html#agenda-1",
+    "href": "slides/01-welcome-info3312.html#agenda-1",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Agenda",
+    "text": "Agenda\n\nStaff intros\nThemes of the course\nFacts, truth, and beauty\nWhat makes a good visualization?\nCourse overview\nThis week’s tasks"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#meet-the-instructor",
+    "href": "slides/01-welcome-info3312.html#meet-the-instructor",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Meet the instructor",
+    "text": "Meet the instructor\n\n\nDr. Benjamin Soltoff\nLecturer in Information Science\nGates Hall 216"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#meet-the-course-team",
+    "href": "slides/01-welcome-info3312.html#meet-the-course-team",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Meet the course team",
+    "text": "Meet the course team\n\nChuanrui L (grad TA)\nJessica Z\nKevin S\nLincy C\nMichelle P"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#meet-each-other",
+    "href": "slides/01-welcome-info3312.html#meet-each-other",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Meet each other!",
+    "text": "Meet each other!\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#themes-what-why-and-how",
+    "href": "slides/01-welcome-info3312.html#themes-what-why-and-how",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Themes: what, why, and how",
+    "text": "Themes: what, why, and how\n\nWhat: the plot\n\nSpecific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.)\nTooling to produce them (e.g., specific R packages)\n\n\n\n\nHow: the process\n\nStart with a design (sketch + pseudo code)\nPre-process data (e.g., wrangle, reshape, join, etc.)\nMap data to aesthetics\nMake visual encoding decisions (e.g., address accessibility concerns)\nPost-process for visual appeal and annotation\n\n\n\n\n\nWhy: the theory\n\nTie together “how” and “what” through the grammar of graphics"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#what-is-truth",
+    "href": "slides/01-welcome-info3312.html#what-is-truth",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What is truth?",
+    "text": "What is truth?\n\nCore principles of the universe?\nUnderlying trends in society?\nSomething transcendental?\nReality?"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#how-do-we-find-truth",
+    "href": "slides/01-welcome-info3312.html#how-do-we-find-truth",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "How do we find truth?",
+    "text": "How do we find truth?\nScience!"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#but-wait",
+    "href": "slides/01-welcome-info3312.html#but-wait",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "But wait!",
+    "text": "But wait!\nBeware of scientism!\n\n“… promotion of science as the best or only objective means by which society should determine normative and epistemological values”\n\n\n\nSource: Wikipedia"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#science-is-not-the-only-way",
+    "href": "slides/01-welcome-info3312.html#science-is-not-the-only-way",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Science is not the only way",
+    "text": "Science is not the only way\n\nArt\nMusic\nLiterature\nReligion\nNature"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#nothing-here-is-factual",
+    "href": "slides/01-welcome-info3312.html#nothing-here-is-factual",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Nothing here is factual…",
+    "text": "Nothing here is factual…\n…but it all reveals truth\n\n\nCosette\n\n\nKing Lear\n\n\nBeethoven’s 9th symphony"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#facts-neq-truth",
+    "href": "slides/01-welcome-info3312.html#facts-neq-truth",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Facts \\(\\neq\\) truth",
+    "text": "Facts \\(\\neq\\) truth\n\nWhere does truth come when there are no facts?\n\n\nBeauty"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#beauty-in-science",
+    "href": "slides/01-welcome-info3312.html#beauty-in-science",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Beauty in science",
+    "text": "Beauty in science\n\n\n\n\n\n\n\n\n\n\n\n\nThis is also true for science and math and other more factual realms"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#content-form",
+    "href": "slides/01-welcome-info3312.html#content-form",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Content + form",
+    "text": "Content + form\nArt is how we translate core, essential content (or truth!) to different forms for specific audiences."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#truth-is-beautiful",
+    "href": "slides/01-welcome-info3312.html#truth-is-beautiful",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Truth is beautiful",
+    "text": "Truth is beautiful\n\nTruth \\(\\neq\\) facts\n\n\nTruth comes from aesthetic combination of content and form\n\n\nFacts require beauty to be true"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#just-show-me-the-data",
+    "href": "slides/01-welcome-info3312.html#just-show-me-the-data",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Just show me the data!",
+    "text": "Just show me the data!\n\n\n\n\n\n\nhead(my_data, 10)\n\n# A tibble: 10 × 2\n       x     y\n   <dbl> <dbl>\n 1  55.4  97.2\n 2  51.5  96.0\n 3  46.2  94.5\n 4  42.8  91.4\n 5  40.8  88.3\n 6  38.7  84.9\n 7  35.6  79.9\n 8  33.1  77.6\n 9  29.0  74.5\n10  26.2  71.4\n\n\n\n\nmean(my_data$x)\n\n[1] 54.26327\n\nmean(my_data$y)\n\n[1] 47.83225\n\ncor(my_data$x, my_data$y)\n\n[1] -0.06447185"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#oh-no",
+    "href": "slides/01-welcome-info3312.html#oh-no",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "oh no",
+    "text": "oh no"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#raw-data-is-not-enough",
+    "href": "slides/01-welcome-info3312.html#raw-data-is-not-enough",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Raw data is not enough",
+    "text": "Raw data is not enough"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#humans-love-patterns",
+    "href": "slides/01-welcome-info3312.html#humans-love-patterns",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Humans love patterns",
+    "text": "Humans love patterns\n\n\n\n\n\n\n\n\n\n\n\nhttps://doi.org/10.3389/fnins.2014.00265"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#sometimes-we-love-them-too-much",
+    "href": "slides/01-welcome-info3312.html#sometimes-we-love-them-too-much",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "(Sometimes we love them too much)",
+    "text": "(Sometimes we love them too much)\nPareidolia: seeing patterns that aren’t there."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#beauty-is-necessary-to-see-patterns",
+    "href": "slides/01-welcome-info3312.html#beauty-is-necessary-to-see-patterns",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Beauty is necessary to see patterns",
+    "text": "Beauty is necessary to see patterns"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#what-makes-a-great-visualization",
+    "href": "slides/01-welcome-info3312.html#what-makes-a-great-visualization",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What makes a great visualization?",
+    "text": "What makes a great visualization?\n\nTruthful\nFunctional\nBeautiful\nInsightful\nEnlightening\n\n\n\nSource: Alberto Cairo, The Truthful Art"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#what-makes-a-great-visualization-1",
+    "href": "slides/01-welcome-info3312.html#what-makes-a-great-visualization-1",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What makes a great visualization?",
+    "text": "What makes a great visualization?\n\nGraphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data.\n\n\n\nEdward Tufte, The Visual Display of Quantitative Information, p. 51"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#what-makes-a-great-visualization-2",
+    "href": "slides/01-welcome-info3312.html#what-makes-a-great-visualization-2",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What makes a great visualization?",
+    "text": "What makes a great visualization?\n\nGood aesthetics\nNo substantive issues\nNo perceptual issues\nHonesty + good judgment\n\n\n\nKieran Healy, Data Visualization: A Practical Introduction"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#whats-wrong",
+    "href": "slides/01-welcome-info3312.html#whats-wrong",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What’s wrong?",
+    "text": "What’s wrong?\n\n\n\nAesthetic issues\nSubstantive issues\nPerceptual issues\nHonesty + judgment issues"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#whats-wrong-1",
+    "href": "slides/01-welcome-info3312.html#whats-wrong-1",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What’s wrong?",
+    "text": "What’s wrong?\n\n\n\nAesthetic issues\nSubstantive issues\nPerceptual issues\nHonesty + judgment issues"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#whats-wrong-2",
+    "href": "slides/01-welcome-info3312.html#whats-wrong-2",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What’s wrong?",
+    "text": "What’s wrong?\n\n\n\nAesthetic issues\nSubstantive issues\nPerceptual issues\nHonesty + judgment issues"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#whats-right",
+    "href": "slides/01-welcome-info3312.html#whats-right",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "What’s right?",
+    "text": "What’s right?\n\n\n\nAesthetic issues\nSubstantive issues\nPerceptual issues\nHonesty + judgment issues"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#homepage",
+    "href": "slides/01-welcome-info3312.html#homepage",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://info3312.infosci.cornell.edu/\n\nAll course materials\nLinks to Canvas, GitHub, RStudio Workbench, etc.\nLet’s take a tour!"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#course-toolkit",
+    "href": "slides/01-welcome-info3312.html#course-toolkit",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.coecis.cornell.edu/info2950-s23\nRStudio Workbench: rstudio-workbench.infosci.cornell.edu\nCommunication: GitHub Discussions\nAssignment submission and feedback: Gradescope\n\n\n\n\n\n\n\nImportant\n\n\nMake sure you can access RStudio Workbench before lab on Friday."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#activities-prepare-participate-perform",
+    "href": "slides/01-welcome-info3312.html#activities-prepare-participate-perform",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Activities: Prepare, Participate, Perform",
+    "text": "Activities: Prepare, Participate, Perform\n\n\nPrepare: Introduce new content and prepare for lectures by completing the readings\nParticipate: Attend and actively participate in lectures and labs, office hours, team meetings\nPerform: Put together what you’ve learned to analyze real-world data\n\nHomework assignments x 6(-ish) (individual)\nTwo team projects"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#teams",
+    "href": "slides/01-welcome-info3312.html#teams",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Teams",
+    "text": "Teams\n\nTeam assignments\n\nAssigned by course staff\nPeer evaluation after completion\n\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#grading",
+    "href": "slides/01-welcome-info3312.html#grading",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n50%\n\n\nProject 1\n20%\n\n\nProject 2\n30%\n\n\n\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#info-5312",
+    "href": "slides/01-welcome-info3312.html#info-5312",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "INFO 5312",
+    "text": "INFO 5312\nAdditional expectations:\n\nINFO 5312 homework will at times be graded against a more stringent rubric\nINFO 5312 students will be grouped together for all projects\nProject rubric line items will have more stringent criteria for INFO 5312 students\nINFO 5312 students will complete an additional individual project during the semester"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#info-5312-1",
+    "href": "slides/01-welcome-info3312.html#info-5312-1",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "INFO 5312",
+    "text": "INFO 5312\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n40%\n\n\nProject 1\n15%\n\n\nProject 2\n25%\n\n\nIndividual project\n20%"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#minute-rule",
+    "href": "slides/01-welcome-info3312.html#minute-rule",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "15 minute rule",
+    "text": "15 minute rule"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#support",
+    "href": "slides/01-welcome-info3312.html#support",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Support",
+    "text": "Support\n\nAttend office hours\nAsk and answer questions on the discussion forum\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#announcements",
+    "href": "slides/01-welcome-info3312.html#announcements",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool), be sure to check regularly (or forward announcements to your email)\nI’ll assume that you’ve read an announcement by the next “business” day"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#diversity-inclusion",
+    "href": "slides/01-welcome-info3312.html#diversity-inclusion",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Diversity + inclusion",
+    "text": "Diversity + inclusion\n\n\nI want you to feel like you belong in this class and are respected\nWe are committed to full inclusion in education for all persons\nIf you feel that we have failed these goals, please either let us know or report it, and we will address the issue"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#accessibility",
+    "href": "slides/01-welcome-info3312.html#accessibility",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Accessibility",
+    "text": "Accessibility\nI want this course to be accessible to students with all abilities. Please feel free to let me know if there are circumstances affecting your ability to participate in class.\n\nOffice of Student Disability Services\nCornell Health CAPS (Counseling & Psychological Services)\nUndocumented/DACA Student support"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#late-work-waivers-regrades-policy",
+    "href": "slides/01-welcome-info3312.html#late-work-waivers-regrades-policy",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Late work, waivers, regrades policy",
+    "text": "Late work, waivers, regrades policy\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#collaboration-policy",
+    "href": "slides/01-welcome-info3312.html#collaboration-policy",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Collaboration policy",
+    "text": "Collaboration policy\n\nOnly work that is clearly assigned as team work should be completed collaboratively.\nHomeworks must be completed individually. You may not directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#sharing-reusing-code-policy",
+    "href": "slides/01-welcome-info3312.html#sharing-reusing-code-policy",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Sharing / reusing code policy",
+    "text": "Sharing / reusing code policy\n\nWe are aware that a huge volume of code is available on the web, and many tasks may have solutions posted\nUnless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).\nAny recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.\nAI code helpers are prohibited."
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#academic-integrity",
+    "href": "slides/01-welcome-info3312.html#academic-integrity",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nA student shall in no way misrepresent his or her work.\nA student shall in no way fraudulently or unfairly advance his or her academic position.\nA student shall refuse to be a party to another student’s failure to maintain academic integrity.\nA student shall not in any other manner violate the principle of academic integrity.\n\n\n\nSource: Cornell University Code of Academic Integrity"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#most-importantly",
+    "href": "slides/01-welcome-info3312.html#most-importantly",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Most importantly!",
+    "text": "Most importantly!\nAsk if you’re not sure if something violates a policy!"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#this-weeks-tasks",
+    "href": "slides/01-welcome-info3312.html#this-weeks-tasks",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nLog in to Cornell’s GitHub - you already have an account!\nRead the syllabus"
+  },
+  {
+    "objectID": "slides/01-welcome-info3312.html#something-personal",
+    "href": "slides/01-welcome-info3312.html#something-personal",
+    "title": "Welcome to INFO 3312/5312",
+    "section": "Something personal",
+    "text": "Something personal\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "course-faq.html",
     "href": "course-faq.html",
     "title": "FAQ",
@@ -417,7 +739,7 @@
     "href": "course-syllabus.html#graduate-requirements-for-info-5312",
     "title": "Syllabus",
     "section": "Graduate requirements for INFO 5312",
-    "text": "Graduate requirements for INFO 5312\nStudents in INFO 5312 have additional expectations in the course:\n\nINFO 5312 homework will at times be graded against a more stringent rubric\nINFO 5312 students will be grouped together for all projects\nProject rubric line items will have more stringent criteria for INFO 5312 students\nINFO 5312 students will complete an additional individual project during the semester\n\nThe final course grade for students registered in INFO 5312 will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n30%\n\n\nProject 1\n15%\n\n\nProject 2\n25%\n\n\nIndividual project\n20%\n\n\nApplication Exercises\n10%\n\n\n\nThe final letter grade will be determined using the same thresholds as for INFO 3312."
+    "text": "Graduate requirements for INFO 5312\nStudents in INFO 5312 have additional expectations in the course:\n\nINFO 5312 homework will at times be graded against a more stringent rubric\nINFO 5312 students will be grouped together for all projects\nProject rubric line items will have more stringent criteria for INFO 5312 students\nINFO 5312 students will complete an additional individual project during the semester\n\nThe final course grade for students registered in INFO 5312 will be calculated as follows:\n\n\n\nCategory\nPercentage\n\n\n\n\nHomework\n40%\n\n\nProject 1\n15%\n\n\nProject 2\n25%\n\n\nIndividual project\n20%\n\n\n\nThe final letter grade will be determined using the same thresholds as for INFO 3312."
   },
   {
     "objectID": "course-syllabus.html#course-policies",

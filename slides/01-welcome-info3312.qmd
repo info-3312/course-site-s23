@@ -1,0 +1,692 @@
+---
+title: "Welcome to INFO 3312/5312"
+subtitle: "Lecture 1"
+date: "January 24, 2023"
+format: revealjs
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+```
+
+```{r}
+#| label: packages
+#| include: false
+#| cache: false
+
+library(tidyverse)
+library(knitr)
+library(stringr)
+library(broom)
+library(datasauRus)
+library(gganimate)
+library(socviz)
+library(patchwork)
+library(rcis)
+library(tidycensus)
+library(statebins)
+library(here)
+library(countdown)
+
+set.seed(123)
+```
+
+# Agenda
+
+## Agenda
+
+- Staff intros
+- Themes of the course
+- Facts, truth, and beauty
+- What makes a good visualization?
+- Course overview
+- This week's tasks
+
+```{r}
+#| echo: false
+
+library(countdown)
+```
+
+# Staff intros
+
+## Meet the instructor
+
+::: columns
+::: {.column width="50%"}
+Dr. Benjamin Soltoff
+
+Lecturer in Information Science
+
+Gates Hall 216
+:::
+
+::: {.column width="50%"}
+![](images/01/ben-soltoff.jpg){fig-alt="Headshot of Dr. Benjamin Soltoff" fig-align="center"}
+:::
+:::
+
+## Meet the course team
+
+- Chuanrui L (grad TA)
+- Jessica Z
+- Kevin S
+- Lincy C
+- Michelle P
+
+## Meet each other!
+
+```{r}
+#| echo: false
+#| cache: false
+
+countdown_fullscreen(minutes = 3, font_size = "20vw")
+```
+
+## Themes: what, why, and how {.smaller}
+
+- **What:** the plot
+  - Specific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.) 
+  - Tooling to produce them (e.g., specific R packages)
+
+. . .
+
+- **How:** the process
+  - Start with a design (sketch + pseudo code)
+  - Pre-process data (e.g., wrangle, reshape, join, etc.)
+  - Map data to aesthetics
+  - Make visual encoding decisions (e.g., address accessibility concerns)
+  - Post-process for visual appeal and annotation
+
+. . .
+
+- **Why:** the theory
+  - Tie together "how" and "what" through the grammar of graphics
+
+# Facts, truth, and beauty
+
+## What is truth?
+
+- Core principles of the universe?
+- Underlying trends in society?
+- Something transcendental?
+- Reality?
+
+## How do we find truth?
+
+### Science!
+
+```{r}
+include_graphics(path = "images/01/ndgt-scientism.png")
+```
+
+## But wait!
+
+### Beware of scientism!
+
+::: appex
+"… promotion of science as the best or only objective means by which society should determine normative and epistemological values"
+:::
+
+::: aside
+[Source: Wikipedia](https://en.wikipedia.org/wiki/Scientism)
+:::
+
+## Science is not the only way
+
+- Art
+- Music
+- Literature
+- Religion
+- Nature
+
+---
+
+## Nothing here is factual...
+
+...but it all reveals truth
+
+:::: columns
+
+::: {.column width="25%"}
+
+#### Cosette
+
+![](images/01/les-mis.jpg)
+
+:::
+
+::: {.column width="25%"}
+
+#### King Lear
+
+![](images/01/King_Lear.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+#### Beethoven's 9th symphony
+
+![](images/01/beethoven.png)
+
+:::
+
+::::
+
+## **Facts $\neq$ truth**
+
+. . . 
+
+Where does truth come when there are no facts?
+
+. . .
+
+[Beauty]{.orange}
+
+## Beauty in science
+
+:::: columns
+
+::: {.column width="40%"}
+
+```{r}
+#| fig-caption: "Frank Wilczek's A Beautiful Question"
+#| out-width: 50%
+include_graphics(path = "images/01/beautiful-question.jpg")
+```
+
+:::
+
+::: {.column width="60%"}
+
+This is also true for science and math and other more factual realms
+
+:::
+
+::::
+
+## Content + form
+
+Art is how we translate core, essential **content** (or truth!) to different **forms** for specific **audiences**.
+
+## Truth is beautiful
+
+. . .
+
+Truth $\neq$ facts
+
+. . .
+
+Truth comes from aesthetic combination of content and form
+
+. . .
+
+Facts require beauty to be true
+
+# Data, truth, and beauty
+
+## Just show me the data!
+
+```{r}
+#| label: load-datasaurus-dozen
+#| echo: false
+my_data <- datasaurus_dozen %>% 
+  filter(dataset == "dino") %>% 
+  select(x, y)
+```
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| label: head-datasaurus
+#| echo: true
+head(my_data, 10)
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: summary-datasaurus
+#| echo: true
+mean(my_data$x)
+mean(my_data$y)
+cor(my_data$x, my_data$y)
+```
+
+:::
+
+::::
+
+## oh no
+
+```{r}
+#| label: datasaurus-graph
+#| echo: false
+#| warning: false
+ggplot(datasaurus_dozen, aes(x = x, y = y))+
+  geom_point() +
+  coord_fixed() +
+  theme_minimal(base_size = rcfss::base_size) +
+  transition_states(dataset, 3, 3) + 
+  ease_aes('cubic-in-out')
+```
+
+## Raw data is not enough
+
+```{r}
+#| label: datasaurus-graph-static
+ggplot(datasaurus_dozen, aes(x = x, y = y)) +
+  facet_wrap(vars(dataset), nrow = 3) +
+  geom_point(size = 0.8) +
+  coord_fixed() +
+  theme_minimal()
+```
+
+## Humans love patterns
+
+```{r}
+include_graphics(path = "images/01/pattern-processing.png")
+```
+
+::: aside
+
+https://doi.org/10.3389/fnins.2014.00265
+:::
+
+## (Sometimes we love them too much)
+
+**Pareidolia**: seeing patterns that aren't there.
+
+. . .
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+
+include_graphics(path = "images/01/pareidolia-1.jpg")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+
+include_graphics(path = "images/01/pareidolia-3.jpg")
+```
+
+:::
+
+::::
+
+## Beauty is necessary to see patterns
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| fig.alt: Amount donated table
+include_graphics(path = "images/01/amount-diffs-table.png")
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| fig.alt: Amount donated graph
+include_graphics(path = "images/01/amount-diffs.png")
+```
+
+:::
+
+::::
+
+# Beautiful visualizations
+
+## What makes a great visualization?
+
+- Truthful
+- Functional
+- Beautiful
+- Insightful
+- Enlightening
+
+::: aside
+
+Source: Alberto Cairo, *The Truthful Art*
+
+:::
+
+## What makes a great visualization?
+
+> Graphical excellence is the **well-designed presentation of interesting data**—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which **gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space** … [It] is nearly always multivariate … And graphical excellence requires **telling the truth about the data**.
+
+::: aside
+
+Edward Tufte, *The Visual Display of Quantitative Information*, p. 51
+
+:::
+
+## What makes a great visualization?
+
+- Good aesthetics
+- No substantive issues
+- No perceptual issues
+- Honesty + good judgment
+
+::: aside
+
+Kieran Healy, *Data Visualization: A Practical Introduction*
+
+:::
+
+## What's wrong?
+
+:::: columns
+
+::: {.column width="20%"}
+
+- Aesthetic issues
+- Substantive issues
+- Perceptual issues
+- Honesty + judgment issues
+
+:::
+
+::: {.column width="80%"}
+
+```{r}
+#| out.width: 75%
+include_graphics(path = "images/01/pie-genus.png")
+```
+
+:::
+
+::::
+
+## What's wrong?
+
+:::: columns
+
+::: {.column width="20%"}
+
+- Aesthetic issues
+- Substantive issues
+- Perceptual issues
+- Honesty + judgment issues
+
+:::
+
+::: {.column width="80%"}
+
+```{r}
+#| out.width: 65%
+include_graphics(path = "images/01/changing-face-of-america.png")
+```
+
+:::
+
+::::
+
+## What's wrong?
+
+:::: columns
+
+::: {.column width="20%"}
+
+- Aesthetic issues
+- Substantive issues
+- Perceptual issues
+- Honesty + judgment issues
+
+:::
+
+::: {.column width="80%"}
+
+```{r}
+#| out.width: 75%
+include_graphics(path = "images/01/death_penalty.jpg")
+```
+
+:::
+
+::::
+
+## What's right?
+
+:::: columns
+
+::: {.column width="20%"}
+
+- Aesthetic issues
+- Substantive issues
+- Perceptual issues
+- Honesty + judgment issues
+
+:::
+
+::: {.column width="80%"}
+
+```{r}
+#| label: flatten-the-curve
+high_mean <- 12
+high_sd <- 4
+flat_mean <- 35
+flat_sd <- 12
+
+ggplot(tibble(x = c(0, 70)), aes(x = x)) +
+  stat_function(geom = "area", fun = dnorm, n = 1000, 
+                args = list(mean = high_mean, sd = high_sd),
+                fill = "#FF4136", alpha = 0.8) +
+  stat_function(geom = "area", fun = dnorm, n = 1000, 
+                args = list(mean = flat_mean, sd = flat_sd),
+                fill = "#0074D9", alpha = 0.8) +
+  geom_hline(yintercept = dnorm(flat_mean, flat_mean, flat_sd), 
+             linetype = "61", color = "grey75") +
+  annotate(geom = "text", x = qnorm(0.5, high_mean, high_sd), 
+           y = dnorm(qnorm(0.5, high_mean, high_sd), high_mean, high_sd) / 2, 
+           label = "Without\nprotective\nmeasures", color = "white", size = 3,
+           family = "Fira Sans Condensed", fontface = "bold") +
+  annotate(geom = "text", x = qnorm(0.5, flat_mean, sd = flat_sd), 
+           y = dnorm(qnorm(0.5, flat_mean, sd = flat_sd), flat_mean, sd = flat_sd) / 2, 
+           label = "With protective\nmeasures", color = "white", size = 3,
+           family = "Fira Sans Condensed", fontface = "bold") +
+  annotate(geom = "text", x = 45, y = dnorm(flat_mean, flat_mean, sd = flat_sd), 
+           label = "Healthcare system capacity", vjust = -0.5, hjust = 0, size = 3,
+           family = "Fira Sans Condensed", fontface = "bold") +
+  labs(x = "Time since first case", 
+       y = "# of\ncases",
+       title = "Flatten the curve!", 
+       subtitle = "Slow down community spread by social distancing",
+       caption = "Adapted from the CDC and The Economist\nVisit flattenthecurve.com") +
+  scale_x_continuous(expand = c(0, 0)) +
+  scale_y_continuous(expand = c(0, 0)) +
+  theme_minimal(base_family = "Fira Sans Condensed Light") +
+  theme(panel.grid = element_blank(),
+        axis.line = element_line(color = "black"),
+        axis.text = element_blank(),
+        axis.title = element_text(family = "Fira Sans Condensed", face = "bold"),
+        axis.title.y = element_text(angle = 0, vjust = 0.5),
+        plot.title = element_text(family = "Fira Sans Condensed", face = "bold", size = rel(1.7)),
+        plot.subtitle = element_text(size = rel(1.2), color = "grey50"),
+        plot.caption = element_text(color = "grey50"))
+```
+
+:::
+
+::::
+
+# Course overview
+
+## Homepage
+
+<https://info3312.infosci.cornell.edu/>
+
+- All course materials
+- Links to Canvas, GitHub, RStudio Workbench, etc.
+- Let's take a tour!
+
+## Course toolkit
+
+All linked from the course website:
+
+- GitHub organization: [github.coecis.cornell.edu/info2950-s23](https://github.coecis.cornell.edu/info3312-s23)
+- RStudio Workbench: [rstudio-workbench.infosci.cornell.edu](https://rstudio-workbench.infosci.cornell.edu/)
+- Communication: [GitHub Discussions](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions)
+- Assignment submission and feedback: [Gradescope](https://www.gradescope.com/courses/498453)
+
+::: callout-important
+Make sure you can access RStudio Workbench before lab on Friday.
+:::
+
+## Activities: Prepare, Participate, Perform
+
+::: {.incremental}
+
+- **Prepare:** Introduce new content and prepare for lectures by completing the readings
+- **Participate:** Attend and actively participate in lectures and labs, office hours, team meetings
+- **Perform:** Put together what you've learned to analyze real-world data
+    
+    - Homework assignments x 6(-ish) (individual)
+    - Two team projects
+    
+:::
+
+## Teams
+
+- Team assignments
+    - Assigned by course staff
+    - Peer evaluation after completion
+- Expectations and roles
+    - Everyone is expected to contribute equal *effort*
+    - Everyone is expected to understand *all* code turned in
+    - Individual contribution evaluated by peer evaluation, commits, etc.
+
+## Grading
+
+| Category              | Percentage   |
+|-----------------------|--------------|
+| Homework              | 50%          |
+| Project 1             | 20%          |
+| Project 2             | 30%          |
+
+See [course syllabus](/course-syllabus.html) for how the final letter grade will be determined.
+
+## INFO 5312
+
+Additional expectations:
+
+- INFO 5312 homework will at times be graded against a more stringent rubric
+- INFO 5312 students will be grouped together for all projects
+- Project rubric line items will have more stringent criteria for INFO 5312 students
+- INFO 5312 students will complete an additional individual project during the semester
+
+## INFO 5312
+
+| Category              | Percentage   |
+|-----------------------|--------------|
+| Homework              | 40%          |
+| Project 1             | 15%          |
+| Project 2             | 25%          |
+| Individual project    | 20%          |
+
+## 15 minute rule
+
+{{< tweet math_rachel 764931533383749632 >}}
+
+## Support
+
+- Attend office hours
+- Ask and answer questions on the discussion forum
+- Reserve email for questions on personal matters and/or grades
+- Read the [course support](/course-support.html) page
+
+## Announcements
+
+- Posted on Canvas (Announcements tool), be sure to check regularly (or forward announcements to your email)
+- I'll assume that you've read an announcement by the next "business" day
+
+## Diversity + inclusion
+
+::: incremental
+- **I want you to feel like you belong in this class and are respected**
+- We are committed to full inclusion in education for all persons
+- If you feel that we have failed these goals, please either let us know or [report it](https://diversity.cornell.edu/our-commitments/bias-reporting-cornell), and we will address the issue
+:::
+
+## Accessibility
+
+I want this course to be accessible to students with all abilities. Please feel free to let me know if there are circumstances affecting your ability to participate in class.
+
+- [[Office of Student Disability Services]{.red}](https://sds.cornell.edu)
+- [Cornell Health CAPS (Counseling & Psychological Services)](https://health.cornell.edu/services/counseling-psychiatry)
+- [Undocumented/DACA Student support](https://dos.cornell.edu/undocumented-daca-support/undergraduate-admissions-financial-aid)
+
+# Course policies
+
+## Late work, waivers, regrades policy
+
+- We have policies!
+- Read about them on the [course syllabus](/course-syllabus.html) and refer back to them when you need it
+
+---
+
+![](images/01/chatgpt-warning.png){width=70% fig-align="center" fig-alt="A web comic where the professor is facing the classroom and debating whether or not to warn students about ChatGPT."}
+
+::: aside
+Source: [r/Professors](https://www.reddit.com/r/Professors/comments/107eme3/drew_this_after_a_week_of_inner_turmoil_about/)
+:::
+
+## Collaboration policy
+
+- Only work that is clearly assigned as team work should be completed collaboratively.
+
+- Homeworks must be completed individually. You may **not** directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.
+
+## Sharing / reusing code policy
+
+- We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted
+
+- Unless explicitly stated otherwise, this course's policy is that you may make use of any online resources (e.g. RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).
+
+- Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.
+
+- AI code helpers are prohibited.
+
+## Academic integrity
+
+1.  A student shall in no way misrepresent his or her work.
+2.  A student shall in no way fraudulently or unfairly advance his or her academic position.
+3.  A student shall refuse to be a party to another student's failure to maintain academic integrity.
+4.  A student shall not in any other manner violate the principle of academic integrity.
+
+::: aside
+Source: [Cornell University Code of Academic Integrity](https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/)
+:::
+
+## Most importantly!
+
+Ask if you're not sure if something violates a policy!
+
+## This week's tasks
+
+- Log in to [Cornell's GitHub](https://github.coecis.cornell.edu) - you already have an account!
+- Read the syllabus
+
+## Something personal
+
+![](images/personal/beverly-donut.jpg){fig-align="center" fig-alt="My daughter eating a peppermint mochi donut at Paris Baguette."}

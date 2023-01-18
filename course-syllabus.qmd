@@ -165,11 +165,10 @@ The final course grade for students registered in INFO 5312 will be calculated a
 
 | Category              | Percentage   |
 |-----------------------|--------------|
-| Homework              | 30%          |
+| Homework              | 40%          |
 | Project 1             | 15%          |
 | Project 2             | 25%          |
 | Individual project    | 20%          |
-| Application Exercises | 10%          |
 
 The final letter grade will be determined using the same thresholds as for INFO 3312.
 
