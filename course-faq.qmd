@@ -4,12 +4,18 @@ title: "FAQ"
 
 ## How do I export my assignment PDF from RStudio to upload to Gradescope?
 
-Go to your *Files* tab, check the box next to the file you want to download, then click on the blue gear icon on the Files tab to reveal the drop down menu, and select *Export*... If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you've selected just a single file, it will only download that. The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).
+1. Go to your *Files* tab, check the box next to the file you want to download.
 
-TODO: Rerecord video
+    ![](images/export-from-rstudio/select-file.png){fig-alt="An image of the RStudio IDE showing the Files panel in the bottom-right corner and the assignment's rendered PDF file checked."}
 
-{{< video https://www.youtube.com/embed/cAHCMpPJx3k >}}
+1. Click on the blue gear icon on the Files tab to reveal the drop down menu, and select *Export...*.
 
+    ![](images/export-from-rstudio/more-export.png){fig-alt="An image of the RStudio IDE demonstrating how to select the blue gear icon, also known as the More button, and then select Export to download files."}
+
+1. Click the *Download* button. If you have selected multiple files to export, RStudio will zip them up into a single zip file for you. If you've selected just a single file, it will only download that. **For assignments submitted via Gradescope, you only need to download the PDF.** The downloaded file will go to wherever files you download off the internet goes on your computer (usually your Downloads folder).
+
+    ![](images/export-from-rstudio/download.png){fig-alt="An image of the RStudio IDE showing download button that needs to be clicked to download the specified file."}
+    
 ## How can I submit my assignment to Gradescope?
 
 The instructions for submitting your assignment to Gradescope can be found [here](https://help.gradescope.com/article/ccbpppziu9-student-submit-work#submitting_a_pdf). In a nutshell, you'll upload your PDF and them mark the page(s) where each question can be found. It's OK if a question spans multiple pages, just mark them all. It's also OK if a page includes multiple questions.
