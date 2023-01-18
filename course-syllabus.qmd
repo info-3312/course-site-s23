@@ -91,9 +91,9 @@ Announcements will be posted through Canvas Announcements periodically. Please c
 
 ### Where to get help
 
--   If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
--   The course staff is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
--   Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
+- If you have a question during lecture or lab, feel free to ask it! There are likely other students with the same question, so by asking you will create a learning opportunity for everyone.
+- The course staff is here to help you be successful in the course. You are encouraged to attend office hours to ask questions about the course content and assignments. Many questions are most effectively answered as you discuss them with others, so office hours are a valuable resource. Please use them!
+- Outside of class and office hours, any general questions about course content or assignments should be posted on the [course discussion forum](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions). There is a chance another student has already asked a similar question, so please check the other posts on GitHub Discussions before adding a new question. If you know the answer to a question posted on the discussion board, I encourage you to respond!
 
 ### Email
 
@@ -134,16 +134,16 @@ The final letter grade will be determined based on the following thresholds:
 |--------------|--------------------|
 | A+           | \>= 98             |
 | A            | 93 - 97.99         |
-| A-           | 90 - 92.99         |
+| A-         | 90 - 92.99         |
 | B+           | 87 - 89.99         |
 | B            | 83 - 86.99         |
-| B-           | 80 - 82.99         |
+| B-         | 80 - 82.99         |
 | C+           | 77 - 79.99         |
 | C            | 73 - 76.99         |
-| C-           | 70 - 72.99         |
+| C-         | 70 - 72.99         |
 | D+           | 67 - 69.99         |
 | D            | 63 - 66.99         |
-| D-           | 60 - 62.99         |
+| D-         | 60 - 62.99         |
 | F            | \< 60              |
 
 ## Teams
@@ -181,10 +181,11 @@ The final letter grade will be determined using the same thresholds as for INFO 
 
 Please abide by the following as you work on assignments in this course:
 
--   You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
--   **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. If you directly use code from an outside source (or use it as inspiration), you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
+- You may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.
+- **Reusing code**: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment `#` immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
+- **Automated help**: AI code helpers such as GitHub CoPilot and ChatGPT are prohibited in this course. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being -- you.
 
-Any violations in academic honesty standards as outlined in the [Cornell University Code of Academic Integrity](https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/) and those specific to this course will automatically result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.
+Any violations in academic honesty standards as outlined in the [Cornell University Code of Academic Integrity](https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/) and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.
 
 ### Late work & extensions
 
