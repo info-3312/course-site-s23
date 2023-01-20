@@ -14,12 +14,12 @@ title: "Course staff"
 
 ## Teaching assistants
 
-| Name           | Role         |
-|----------------|--------------|
-| Chuanrui Liu   | Grad TA      |
-| Lincy Chen     | Undergrad TA |
-| Michelle Pryor | Undergrad TA |
-| Kevin Sheng    | Undergrad TA |
-| Jessica Zhou   | Undergrad TA |
+| Name       | Role         |
+|------------|--------------|
+| Chuanrui L | Grad TA      |
+| Lincy C    | Undergrad TA |
+| Michelle P | Undergrad TA |
+| Kevin S    | Undergrad TA |
+| Jessica Z  | Undergrad TA |
 
 For office hours, please see [INFO 3312/5312 - Ultimate Office Hours](TODO) sheet.
