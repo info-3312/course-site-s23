@@ -163,9 +163,9 @@ include_graphics(path = "images/01/ndgt-scientism.png")
 
 ::: {.column width="25%"}
 
-#### King Lear
+#### The Bible
 
-![](images/01/King_Lear.jpg)
+![](images/01/jesus.jpeg)
 
 :::
 
@@ -544,7 +544,7 @@ ggplot(tibble(x = c(0, 70)), aes(x = x)) +
 
 All linked from the course website:
 
-- GitHub organization: [github.coecis.cornell.edu/info2950-s23](https://github.coecis.cornell.edu/info3312-s23)
+- GitHub organization: [github.coecis.cornell.edu/info3312-s23](https://github.coecis.cornell.edu/info3312-s23)
 - RStudio Workbench: [rstudio-workbench.infosci.cornell.edu](https://rstudio-workbench.infosci.cornell.edu/)
 - Communication: [GitHub Discussions](https://github.coecis.cornell.edu/orgs/info3312-s23/discussions)
 - Assignment submission and feedback: [Gradescope](https://www.gradescope.com/courses/498453)
@@ -665,7 +665,7 @@ Source: [r/Professors](https://www.reddit.com/r/Professors/comments/107eme3/drew
 
 - Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.
 
-- AI code helpers are prohibited.
+- All code must be written by you, the human being.
 
 ## Academic integrity
 
