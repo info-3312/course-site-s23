@@ -85,7 +85,7 @@ Gates Hall 216
 #| echo: false
 #| cache: false
 
-countdown_fullscreen(minutes = 3, font_size = "20vw")
+countdown_fullscreen(minutes = 3, font_size = "15vw")
 ```
 
 ## Themes: what, why, and how {.smaller}
@@ -236,8 +236,8 @@ Facts require beauty to be true
 ```{r}
 #| label: load-datasaurus-dozen
 #| echo: false
-my_data <- datasaurus_dozen %>% 
-  filter(dataset == "dino") %>% 
+my_data <- datasaurus_dozen |> 
+  filter(dataset == "dino") |> 
   select(x, y)
 ```
 

@@ -5,9 +5,7 @@ categories: "prepare"
 ---
 
 - 📖 Read:
-    - R for Data Science (R4DS): [Chp 1 - Introduction](https://r4ds.hadley.nz/intro.html)
-    - Introduction to Modern Statistics (IMS): [Chp 1 - Hello data](https://openintro-ims.netlify.app/data-hello.html)
-    - The [syllabus](/course-syllabus.qmd)!
+    - [Chapter 13 in **ggplot2: Elegant Graphics for Data Analysis**](https://ggplot2-book.org/mastery.html)
 -   ⌨️ Do:
     - Log in to Cornell's GitHub at <https://github.coecis.cornell.edu/>. You already have an accounted created based on your Cornell NetID.
     - Access [RStudio Workbench](https://rstudio-workbench.infosci.cornell.edu/) using your Cornell NetID and password.

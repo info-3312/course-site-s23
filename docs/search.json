@@ -25,7 +25,7 @@
     "href": "prepare/01-26.html",
     "title": "Prepare",
     "section": "",
-    "text": "📖 Read:\n\nR for Data Science (R4DS): Chp 1 - Introduction\nIntroduction to Modern Statistics (IMS): Chp 1 - Hello data\nThe syllabus!\n\n⌨️ Do:\n\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an accounted created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+    "text": "📖 Read:\n\nChapter 13 in ggplot2: Elegant Graphics for Data Analysis\n\n⌨️ Do:\n\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an accounted created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
   },
   {
     "objectID": "prepare/01-27.html",
@@ -271,6 +271,244 @@
     "title": "Course staff",
     "section": "Teaching assistants",
     "text": "Teaching assistants\n\n\n\nName\nRole\n\n\n\n\nChuanrui L\nGrad TA\n\n\nLincy C\nUndergrad TA\n\n\nMichelle P\nUndergrad TA\n\n\nKevin S\nUndergrad TA\n\n\nJessica Z\nUndergrad TA\n\n\n\nFor office hours, please see INFO 3312/5312 - Ultimate Office Hours sheet."
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#data-visualization-1",
+    "href": "slides/02-grammar-of-graphics.html#data-visualization-1",
+    "title": "The grammar of graphics",
+    "section": "Data visualization",
+    "text": "Data visualization\n\n“The simple graph has brought more information to the data analyst’s mind than any other device.”\nJohn Tukey\n\n\nData visualization is the creation and study of the visual representation of data\nMany tools for visualizing data – R is one of them\nMany approaches/systems within R for making data visualizations – ggplot2 is one of them, and that’s what we’re going to use"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#ggplot2-in-tidyverse",
+    "href": "slides/02-grammar-of-graphics.html#ggplot2-in-tidyverse",
+    "title": "The grammar of graphics",
+    "section": "ggplot2 \\(\\in\\) tidyverse",
+    "text": "ggplot2 \\(\\in\\) tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 is tidyverse’s data visualization package\ngg in “ggplot2” stands for Grammar of Graphics\nInspired by the book Grammar of Graphics by Leland Wilkinson"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#grammar-of-graphics",
+    "href": "slides/02-grammar-of-graphics.html#grammar-of-graphics",
+    "title": "The grammar of graphics",
+    "section": "Grammar of Graphics",
+    "text": "Grammar of Graphics\n\n\nA grammar of graphics is a tool that enables us to concisely describe the components of a graphic\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: BloggoType"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#hello-ggplot2",
+    "href": "slides/02-grammar-of-graphics.html#hello-ggplot2",
+    "title": "The grammar of graphics",
+    "section": "Hello ggplot2!",
+    "text": "Hello ggplot2!\n\nggplot() is the main function in ggplot2\nPlots are constructed in layers\nStructure of the code for plots can be summarized as\n\nggplot(data = [dataset], \n       mapping = aes(x = [x-variable], y = [y-variable])) +\n   geom_xxx() +\n   other options\n\nThe ggplot2 package comes with the tidyverse\n\n\nlibrary(tidyverse)\n\n\nFor help with ggplot2, see ggplot2.tidyverse.org"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#why-do-we-visualize-1",
+    "href": "slides/02-grammar-of-graphics.html#why-do-we-visualize-1",
+    "title": "The grammar of graphics",
+    "section": "Why do we visualize?",
+    "text": "Why do we visualize?\n\nDiscover patterns that may not be obvious from numerical summaries"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#anscombes-quartet",
+    "href": "slides/02-grammar-of-graphics.html#anscombes-quartet",
+    "title": "The grammar of graphics",
+    "section": "Anscombe’s quartet",
+    "text": "Anscombe’s quartet\n\nlibrary(Tmisc)\nquartet |> slice_head(n = 15)\n\n   set  x     y\n1    I 10  8.04\n2    I  8  6.95\n3    I 13  7.58\n4    I  9  8.81\n5    I 11  8.33\n6    I 14  9.96\n7    I  6  7.24\n8    I  4  4.26\n9    I 12 10.84\n10   I  7  4.82\n11   I  5  5.68\n12  II 10  9.14\n13  II  8  8.14\n14  II 13  8.74\n15  II  9  8.77"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#summary-statistics-for-anscombes-quartet",
+    "href": "slides/02-grammar-of-graphics.html#summary-statistics-for-anscombes-quartet",
+    "title": "The grammar of graphics",
+    "section": "Summary statistics for Anscombe’s quartet",
+    "text": "Summary statistics for Anscombe’s quartet\n\nquartet |>\n  group_by(set) |>\n  summarise(\n    mean_x = mean(x), \n    mean_y = mean(y),\n    sd_x = sd(x),\n    sd_y = sd(y),\n    r = cor(x, y)\n  )\n\n# A tibble: 4 × 6\n  set   mean_x mean_y  sd_x  sd_y     r\n  <fct>  <dbl>  <dbl> <dbl> <dbl> <dbl>\n1 I          9   7.50  3.32  2.03 0.816\n2 II         9   7.50  3.32  2.03 0.816\n3 III        9   7.5   3.32  2.03 0.816\n4 IV         9   7.50  3.32  2.03 0.817"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#scatterplots-for-anscombes-quartet",
+    "href": "slides/02-grammar-of-graphics.html#scatterplots-for-anscombes-quartet",
+    "title": "The grammar of graphics",
+    "section": "Scatterplots for Anscombe’s quartet",
+    "text": "Scatterplots for Anscombe’s quartet"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#why-do-we-visualize-2",
+    "href": "slides/02-grammar-of-graphics.html#why-do-we-visualize-2",
+    "title": "The grammar of graphics",
+    "section": "Why do we visualize?",
+    "text": "Why do we visualize?\n\nDiscover patterns that may not be obvious from numerical summaries\nConvey information in a way that is otherwise difficult/impossible to convey"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#impact-of-omicron-variant-on-unvaccinated-populations",
+    "href": "slides/02-grammar-of-graphics.html#impact-of-omicron-variant-on-unvaccinated-populations",
+    "title": "The grammar of graphics",
+    "section": "Impact of Omicron variant on unvaccinated populations",
+    "text": "Impact of Omicron variant on unvaccinated populations\n\n\n\n\n\n\n\n\n\n\n\nSource: John Burn-Murdoch"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#covid-19-vaccination-in-us-counties",
+    "href": "slides/02-grammar-of-graphics.html#covid-19-vaccination-in-us-counties",
+    "title": "The grammar of graphics",
+    "section": "COVID-19 vaccination in US Counties",
+    "text": "COVID-19 vaccination in US Counties\n\n\n\n\n\n\n\n\n\n\n\nSource: New York Times, March 28, 2022."
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#ggplot2-in-tidyverse-1",
+    "href": "slides/02-grammar-of-graphics.html#ggplot2-in-tidyverse-1",
+    "title": "The grammar of graphics",
+    "section": "ggplot2 \\(\\in\\) tidyverse",
+    "text": "ggplot2 \\(\\in\\) tidyverse\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot2 is tidyverse’s data visualization package\nStructure of the code for plots can be summarized as\n\nggplot(data = [dataset], \n       mapping = aes(x = [x-variable], \n                     y = [y-variable])) +\n   geom_xxx() +\n   other options"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#data-palmer-penguins",
+    "href": "slides/02-grammar-of-graphics.html#data-palmer-penguins",
+    "title": "The grammar of graphics",
+    "section": "Data: Palmer Penguins",
+    "text": "Data: Palmer Penguins\nMeasurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(palmerpenguins)\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Ad…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39…\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19…\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193…\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 46…\n$ sex               <fct> male, female, female, NA, female, male, fe…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, …"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#argument-names",
+    "href": "slides/02-grammar-of-graphics.html#argument-names",
+    "title": "The grammar of graphics",
+    "section": "Argument names",
+    "text": "Argument names\n\nYou can omit the names of first two arguments when building plots with ggplot().\n\n\n\n\nggplot(data = penguins,\n       mapping = aes(x = bill_depth_mm,\n                     y = bill_length_mm,\n                     color = species)) +\n  geom_point() +\n  scale_color_viridis_d()\n\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm,\n           y = bill_length_mm,\n           color = species)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#aesthetics-options",
+    "href": "slides/02-grammar-of-graphics.html#aesthetics-options",
+    "title": "The grammar of graphics",
+    "section": "Aesthetics options",
+    "text": "Aesthetics options\nCommonly used characteristics of plotting characters that can be mapped to a specific variable in the data are\n\ncolor\nshape\nsize\nalpha (transparency)"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#color",
+    "href": "slides/02-grammar-of-graphics.html#color",
+    "title": "The grammar of graphics",
+    "section": "Color",
+    "text": "Color\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#shape",
+    "href": "slides/02-grammar-of-graphics.html#shape",
+    "title": "The grammar of graphics",
+    "section": "Shape",
+    "text": "Shape\nMapped to a different variable than color\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = island)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#shape-1",
+    "href": "slides/02-grammar-of-graphics.html#shape-1",
+    "title": "The grammar of graphics",
+    "section": "Shape",
+    "text": "Shape\nMapped to same variable as color\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = species)) + #<<\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#size",
+    "href": "slides/02-grammar-of-graphics.html#size",
+    "title": "The grammar of graphics",
+    "section": "Size",
+    "text": "Size\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = species,\n           size = body_mass_g)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#alpha",
+    "href": "slides/02-grammar-of-graphics.html#alpha",
+    "title": "The grammar of graphics",
+    "section": "Alpha",
+    "text": "Alpha\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = species,\n           size = body_mass_g,\n           alpha = flipper_length_mm)) +\n  geom_point() +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#mapping-vs.-setting",
+    "href": "slides/02-grammar-of-graphics.html#mapping-vs.-setting",
+    "title": "The grammar of graphics",
+    "section": "Mapping vs. setting",
+    "text": "Mapping vs. setting\n\nMapping: Determine the size, alpha, etc. of points based on the values of a variable in the data\n\ngoes into aes()\n\nSetting: Determine the size, alpha, etc. of points not based on the values of a variable in the data\n\ngoes into geom_*() (this was geom_point() in the previous example, but we’ll learn about other geoms soon!)"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#faceting-1",
+    "href": "slides/02-grammar-of-graphics.html#faceting-1",
+    "title": "The grammar of graphics",
+    "section": "Faceting",
+    "text": "Faceting\n\nSmaller plots that display different subsets of the data\nUseful for exploring conditional relationships and large data"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#various-ways-to-facet",
+    "href": "slides/02-grammar-of-graphics.html#various-ways-to-facet",
+    "title": "The grammar of graphics",
+    "section": "Various ways to facet",
+    "text": "Various ways to facet\n\nIn the next few slides describe what each plot displays. Think about how the code relates to the output.\nNote: The plots in the next few slides do not have proper titles, axis labels, etc. because we want you to figure out what’s happening in the plots. But you should always label your plots!"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#faceting-summary",
+    "href": "slides/02-grammar-of-graphics.html#faceting-summary",
+    "title": "The grammar of graphics",
+    "section": "Faceting summary",
+    "text": "Faceting summary\n\nfacet_grid():\n\n2 dimensional grid\nrows = vars(<VARIABLE>), cols = vars(<VARIABLE>)\nAlternative: rows ~ cols\n\nfacet_wrap(): 1 dimensional ribbon wrapped according to number of rows and columns specified or available plotting area"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#facet-and-color",
+    "href": "slides/02-grammar-of-graphics.html#facet-and-color",
+    "title": "The grammar of graphics",
+    "section": "Facet and color",
+    "text": "Facet and color\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  penguins, \n  aes(x = bill_depth_mm, \n      y = bill_length_mm, \n      color = species)) +\n  geom_point() +\n  facet_grid(species ~ sex) +\n  scale_color_viridis_d()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#facet-and-color-no-legend",
+    "href": "slides/02-grammar-of-graphics.html#facet-and-color-no-legend",
+    "title": "The grammar of graphics",
+    "section": "Facet and color, no legend",
+    "text": "Facet and color, no legend\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  penguins, \n  aes(x = bill_depth_mm, \n      y = bill_length_mm, \n      color = species)) +\n  geom_point() +\n  facet_grid(species ~ sex) +\n  scale_color_viridis_d(guide = \"none\")"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#recreate-the-visualization",
+    "href": "slides/02-grammar-of-graphics.html#recreate-the-visualization",
+    "title": "The grammar of graphics",
+    "section": "Recreate the visualization",
+    "text": "Recreate the visualization\nIn order to recreate this visualization we need to first reshape the data to have one variable for faculty type and one variable for year. In other words, we will convert the data from the long format to wide format.\nBut before we do so…\n\nIf the long data will have a row for each year/faculty type combination, and there are 5 faculty types and 11 years of data, how many rows will the data have?"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#pivot_-function",
+    "href": "slides/02-grammar-of-graphics.html#pivot_-function",
+    "title": "The grammar of graphics",
+    "section": "pivot_*() function",
+    "text": "pivot_*() function"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#pivot_longer",
+    "href": "slides/02-grammar-of-graphics.html#pivot_longer",
+    "title": "The grammar of graphics",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\npivot_longer(data, cols, names_to = \"name\", values_to = \"value\")\n\n\nThe first argument is data as usual.\nThe second argument, cols, is where you specify which columns to pivot into longer format – in this case all columns except for the faculty_type\nThe third argument, names_to, is a string specifying the name of the column to create from the data stored in the column names of data – in this case year\nThe fourth argument, values_to, is a string specifying the name of the column to create from the data stored in cell values, in this case percentage"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#pivot-instructor-data",
+    "href": "slides/02-grammar-of-graphics.html#pivot-instructor-data",
+    "title": "The grammar of graphics",
+    "section": "Pivot instructor data",
+    "text": "Pivot instructor data\n\nlibrary(tidyverse)\n\nstaff_long <- staff |>\n  pivot_longer(cols = -faculty_type, names_to = \"year\", \n               values_to = \"percentage\") |>\n  mutate(percentage = as.numeric(percentage))\n\nstaff_long\n\n# A tibble: 55 × 3\n   faculty_type              year  percentage\n   <chr>                     <chr>      <dbl>\n 1 Full-Time Tenured Faculty 1975        29  \n 2 Full-Time Tenured Faculty 1989        27.6\n 3 Full-Time Tenured Faculty 1993        25  \n 4 Full-Time Tenured Faculty 1995        24.8\n 5 Full-Time Tenured Faculty 1999        21.8\n 6 Full-Time Tenured Faculty 2001        20.3\n 7 Full-Time Tenured Faculty 2003        19.3\n 8 Full-Time Tenured Faculty 2005        17.8\n 9 Full-Time Tenured Faculty 2007        17.2\n10 Full-Time Tenured Faculty 2009        16.8\n# … with 45 more rows"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#some-improvement",
+    "href": "slides/02-grammar-of-graphics.html#some-improvement",
+    "title": "The grammar of graphics",
+    "section": "Some improvement…",
+    "text": "Some improvement…\n\n\nstaff_long |>\n  ggplot(aes(x = percentage, y = year, fill = faculty_type)) +\n  geom_col()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#more-improvement",
+    "href": "slides/02-grammar-of-graphics.html#more-improvement",
+    "title": "The grammar of graphics",
+    "section": "More improvement",
+    "text": "More improvement\n\n\nstaff_long |>\n  ggplot(aes(x = year, y = percentage, group = faculty_type, \n             color = faculty_type)) +\n  geom_line() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#goal-even-more-improvement",
+    "href": "slides/02-grammar-of-graphics.html#goal-even-more-improvement",
+    "title": "The grammar of graphics",
+    "section": "Goal: even more improvement!",
+    "text": "Goal: even more improvement!\n\nI want to achieve the following look but I have no idea how!"
+  },
+  {
+    "objectID": "slides/02-grammar-of-graphics.html#asking-good-questions",
+    "href": "slides/02-grammar-of-graphics.html#asking-good-questions",
+    "title": "The grammar of graphics",
+    "section": "Asking good questions",
+    "text": "Asking good questions\n\nDescribe what you want\nDescribe where you are\nCreate a minimal reproducible example: reprex::reprex()"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#agenda-1",
