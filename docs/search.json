@@ -833,6 +833,174 @@
     "text": "Something personal\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
+    "objectID": "slides/03-look-at-data.html#data-college-education-costs",
+    "href": "slides/03-look-at-data.html#data-college-education-costs",
+    "title": "Look at data",
+    "section": "Data: College education costs",
+    "text": "Data: College education costs\n\n\n\nData on four year colleges and universities in the United States (2020-21)\nExtracted from College Scorecard API\nSource: rcis::scorecard"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#rcisscorecard",
+    "href": "slides/03-look-at-data.html#rcisscorecard",
+    "title": "Look at data",
+    "section": "rcis::scorecard",
+    "text": "rcis::scorecard\n\nlibrary(tidyverse)\n# remotes::install_github(\"cis-ds/rcis\")\nlibrary(rcis)\n\nglimpse(scorecard)\n\nRows: 1,721\nColumns: 14\n$ unitid    <dbl> 100654, 100663, 100706, 100724, 100751, 100830, 100858, 1009…\n$ name      <chr> \"Alabama A & M University\", \"University of Alabama at Birmin…\n$ state     <chr> \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", …\n$ type      <fct> \"Public\", \"Public\", \"Public\", \"Public\", \"Public\", \"Public\", …\n$ admrate   <dbl> 0.8965, 0.8060, 0.7711, 0.9888, 0.8039, 0.9555, 0.8507, 0.60…\n$ satavg    <dbl> 959, 1245, 1300, 938, 1262, 1061, 1302, 1202, 1068, NA, 1101…\n$ cost      <dbl> 23445, 25542, 24861, 21892, 30016, 20225, 32196, 32514, 3483…\n$ netcost   <dbl> 15529, 16530, 17208, 19534, 20917, 13678, 24018, 19808, 2050…\n$ avgfacsal <dbl> 68391, 102420, 87273, 64746, 93141, 69561, 96498, 62649, 533…\n$ pctpell   <dbl> 0.7095, 0.3397, 0.2403, 0.7368, 0.1718, 0.4654, 0.1343, 0.22…\n$ comprate  <dbl> 0.2866, 0.6117, 0.5714, 0.3177, 0.7214, 0.3040, 0.7870, 0.70…\n$ firstgen  <dbl> 0.3658281, 0.3412237, 0.3101322, 0.3434343, 0.2257127, 0.381…\n$ debt      <dbl> 15250, 15085, 14000, 17500, 17671, 12000, 17500, 16000, 1425…\n$ locale    <fct> City, City, City, City, City, City, City, City, City, Suburb…"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#a-simple-visualization",
+    "href": "slides/03-look-at-data.html#a-simple-visualization",
+    "title": "Look at data",
+    "section": "A simple visualization",
+    "text": "A simple visualization\n\nCodePlot\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(alpha = 0.5, size = 2) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.7) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  )"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#new-variable-pctpell_cat",
+    "href": "slides/03-look-at-data.html#new-variable-pctpell_cat",
+    "title": "Look at data",
+    "section": "New variable: pctpell_cat",
+    "text": "New variable: pctpell_cat\n\nscorecard <- scorecard |>\n  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>\n  drop_na(pctpell_cat)\n\nscorecard |>\n  select(pctpell, pctpell_cat)\n\n# A tibble: 1,717 × 2\n   pctpell pctpell_cat  \n     <dbl> <fct>        \n 1   0.710 (0.667,0.833]\n 2   0.340 (0.333,0.5]  \n 3   0.240 (0.167,0.333]\n 4   0.737 (0.667,0.833]\n 5   0.172 (0.167,0.333]\n 6   0.465 (0.333,0.5]  \n 7   0.134 [0,0.167]    \n 8   0.226 (0.167,0.333]\n 9   0.501 (0.5,0.667]  \n10   0.697 (0.667,0.833]\n# … with 1,707 more rows"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#distribution-of-pctpell_cat",
+    "href": "slides/03-look-at-data.html#distribution-of-pctpell_cat",
+    "title": "Look at data",
+    "section": "Distribution of pctpell_cat",
+    "text": "Distribution of pctpell_cat\n\nscorecard <- scorecard |>\n  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>\n  drop_na(pctpell_cat)\n\nscorecard |>\n  count(pctpell_cat)\n\n# A tibble: 6 × 2\n  pctpell_cat       n\n  <fct>         <int>\n1 [0,0.167]       169\n2 (0.167,0.333]   630\n3 (0.333,0.5]     609\n4 (0.5,0.667]     205\n5 (0.667,0.833]    73\n6 (0.833,1]        31"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#a-slightly-more-complex-visualization",
+    "href": "slides/03-look-at-data.html#a-slightly-more-complex-visualization",
+    "title": "Look at data",
+    "section": "A slightly more complex visualization",
+    "text": "A slightly more complex visualization\n\nCodePlot\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  )"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#test-1",
+    "href": "slides/03-look-at-data.html#test-1",
+    "title": "Look at data",
+    "section": "Test 1",
+    "text": "Test 1\n\nPlot APlot B"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#test-2",
+    "href": "slides/03-look-at-data.html#test-2",
+    "title": "Look at data",
+    "section": "Test 2",
+    "text": "Test 2\n\nPlot APlot B"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#minimal-theme-viridis-scale-default-option",
+    "href": "slides/03-look-at-data.html#minimal-theme-viridis-scale-default-option",
+    "title": "Look at data",
+    "section": "Minimal theme + viridis scale, default option",
+    "text": "Minimal theme + viridis scale, default option\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 16) +\n  scale_color_viridis_d(end = 0.9)"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#viridis-scale-option-a-magma",
+    "href": "slides/03-look-at-data.html#viridis-scale-option-a-magma",
+    "title": "Look at data",
+    "section": "Viridis scale, option A (magma)",
+    "text": "Viridis scale, option A (magma)\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 16) +\n  scale_color_viridis_d(end = 0.8, option = \"A\")"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#dark-theme-further-theme-customization",
+    "href": "slides/03-look-at-data.html#dark-theme-further-theme-customization",
+    "title": "Look at data",
+    "section": "Dark theme + further theme customization",
+    "text": "Dark theme + further theme customization\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_dark(base_size = 16) +\n  scale_color_manual(values = c(\"yellow\", \"blue\", \"orange\", \"red\", \"green\", \"white\")) +\n  theme(\n    text = element_text(color = \"red\", face = \"bold.italic\"),\n    plot.background = element_rect(fill = \"yellow\")\n  )"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#bad-taste",
+    "href": "slides/03-look-at-data.html#bad-taste",
+    "title": "Look at data",
+    "section": "Bad taste",
+    "text": "Bad taste"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#data-to-ink-ratio",
+    "href": "slides/03-look-at-data.html#data-to-ink-ratio",
+    "title": "Look at data",
+    "section": "Data-to-ink ratio",
+    "text": "Data-to-ink ratio\n\n\nTufte strongly recommends maximizing the data-to-ink ratio this in the Visual Display of Quantitative Information (Tufte, 1983).\n\nGraphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data. (Tufte, 1983, p. 51)."
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#summary-statistics",
+    "href": "slides/03-look-at-data.html#summary-statistics",
+    "title": "Look at data",
+    "section": "Summary statistics",
+    "text": "Summary statistics\n\nmean_netcost_pctpell <- scorecard |>\n  group_by(pctpell_cat) |>\n  summarise(mean_netcost = mean(netcost, na.rm = TRUE))\n\nmean_netcost_pctpell\n\n# A tibble: 6 × 2\n  pctpell_cat   mean_netcost\n  <fct>                <dbl>\n1 [0,0.167]           29919.\n2 (0.167,0.333]       22579.\n3 (0.333,0.5]         19171.\n4 (0.5,0.667]         16966.\n5 (0.667,0.833]       15572.\n6 (0.833,1]           10138."
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#barplot",
+    "href": "slides/03-look-at-data.html#barplot",
+    "title": "Look at data",
+    "section": "Barplot",
+    "text": "Barplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_col() +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#scatterplot",
+    "href": "slides/03-look-at-data.html#scatterplot",
+    "title": "Look at data",
+    "section": "Scatterplot",
+    "text": "Scatterplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#lollipop-plot-a-happy-medium",
+    "href": "slides/03-look-at-data.html#lollipop-plot-a-happy-medium",
+    "title": "Look at data",
+    "section": "Lollipop plot – a happy medium?",
+    "text": "Lollipop plot – a happy medium?\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#activity-napoleons-retreat",
+    "href": "slides/03-look-at-data.html#activity-napoleons-retreat",
+    "title": "Look at data",
+    "section": "Activity: Napoleon’s retreat",
+    "text": "Activity: Napoleon’s retreat\n\n\n\nThis is Minard’s visualization of Napoleon’s retreat. Discuss in a pair (or group) the features of the following visualization. What are the variables plotted? Which aesthetics are they mapped to?\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Wikipedia]"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#bad-data",
+    "href": "slides/03-look-at-data.html#bad-data",
+    "title": "Look at data",
+    "section": "Bad data",
+    "text": "Bad data\n\nOriginalImproved\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHealy, Data Visualization: A practical introduction. Chapter 1. Figures 1.8 and 1.9."
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#bad-perception",
+    "href": "slides/03-look-at-data.html#bad-perception",
+    "title": "Look at data",
+    "section": "Bad perception",
+    "text": "Bad perception\n\n\n\n\n\n\n\n\n\n\n\nHealy, Data Visualization: A practical introduction. Chapter 1. Figure 1.12."
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#a-second-look-lollipop-plot",
+    "href": "slides/03-look-at-data.html#a-second-look-lollipop-plot",
+    "title": "Look at data",
+    "section": "A second look: lollipop plot",
+    "text": "A second look: lollipop plot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#activity-spot-the-difference-i",
+    "href": "slides/03-look-at-data.html#activity-spot-the-difference-i",
+    "title": "Look at data",
+    "section": "Activity: Spot the difference I",
+    "text": "Activity: Spot the difference I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = pctpell_cat\n  )) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#global-vs.-layer-specific-aesthetics",
+    "href": "slides/03-look-at-data.html#global-vs.-layer-specific-aesthetics",
+    "title": "Look at data",
+    "section": "Global vs. layer-specific aesthetics",
+    "text": "Global vs. layer-specific aesthetics\n\nAesthetic mappings can be supplied in the initial ggplot() call, in individual layers, or in some combination of both.\nWithin each layer, you can add, override, or remove mappings.\nIf you only have one layer in the plot, the way you specify aesthetics doesn’t make any difference. However, the distinction is important when you start adding additional layers."
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#wrap-up",
+    "href": "slides/03-look-at-data.html#wrap-up",
+    "title": "Look at data",
+    "section": "Wrap up",
+    "text": "Wrap up\n\nThink back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "course-faq.html",
     "href": "course-faq.html",
     "title": "FAQ",

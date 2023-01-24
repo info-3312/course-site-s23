@@ -1,0 +1,671 @@
+---
+title: "Look at data"
+subtitle: "Lecture 3"
+date: "January 31, 2023"
+format: revealjs
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
+```
+
+# A/B testing
+
+## Data: College education costs
+
+:::: columns
+
+::: {.column width="50%"}
+
+- Data on four year colleges and universities in the United States (2020-21)
+
+- Extracted from College Scorecard API
+
+- Source: `rcis::scorecard`
+
+:::
+
+::: {.column width="50%"}
+
+{{< tweet ColIegeStudent 829377468595306500 >}}
+
+:::
+
+::::
+
+## `rcis::scorecard`
+
+```{r}
+library(tidyverse)
+# remotes::install_github("cis-ds/rcis")
+library(rcis)
+
+glimpse(scorecard)
+```
+
+## A simple visualization
+
+::: {.panel-tabset}
+
+### Code
+
+```{r}
+#| label: simple-viz
+#| fig-show: hide
+ggplot(scorecard, aes(x = avgfacsal, y = netcost)) +
+  geom_point(alpha = 0.5, size = 2) +
+  geom_smooth(method = "lm", se = FALSE, size = 0.7) +
+  labs(
+    x = "Average faculty salary (USD)",
+    y = "Net cost of attendance (USD)",
+    title = "Faculty salaries and net cost of attendance in US universities"
+  )
+```
+
+### Plot
+
+```{r}
+#| ref.label: simple-viz
+#| echo: false
+```
+
+:::
+
+## New variable: `pctpell_cat`
+
+```{r}
+scorecard <- scorecard |>
+  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>
+  drop_na(pctpell_cat)
+
+scorecard |>
+  select(pctpell, pctpell_cat)
+```
+
+## Distribution of `pctpell_cat`
+
+```{r}
+scorecard <- scorecard |>
+  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>
+  drop_na(pctpell_cat)
+
+scorecard |>
+  count(pctpell_cat)
+```
+
+## A slightly more complex visualization
+
+::: {.panel-tabset}
+
+### Code
+
+```{r}
+#| label: slight-complex-viz
+#| fig-show: hide
+ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
+  geom_point(alpha = 0.5, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, size = 0.5, show.legend = FALSE) +
+  facet_wrap(vars(pctpell_cat)) +
+  labs(
+    x = "Average faculty salary (USD)",
+    y = "Net cost of attendance (USD)",
+    color = "Percentage of Pell grant recipients",
+    title = "Faculty salaries and net cost of attendance in US universities"
+  )
+```
+
+### Plot
+
+```{r}
+#| ref.label: slight-complex-viz
+#| echo: false
+```
+
+:::
+
+---
+
+::: {.appex .center}
+
+In the next two slides, the same plots are created with different "cosmetic" choices. Examine the plots two given (Plot A and Plot B), and decide which one you prefer.
+
+:::
+
+## Test 1
+
+::: {.panel-tabset}
+
+### Plot A
+
+```{r}
+#| label: test-1-a
+#| echo: false
+#| out.width: 90%
+#| fig.asp: 0.5
+#| fig.width: 10.0
+#| code-line-numbers: "11-16"
+ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
+  geom_point(alpha = 0.5, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, size = 0.5, show.legend = FALSE) +
+  facet_wrap(vars(pctpell_cat)) +
+  labs(
+    x = "Average faculty salary (USD)",
+    y = "Net cost of attendance (USD)",
+    color = "Percentage of Pell grant recipients",
+    title = "Faculty salaries and net cost of attendance in US universities"
+  ) +
+  theme_dark(base_size = 16) +
+  scale_color_manual(values = c("yellow", "blue", "orange", "red", "green", "white")) +
+  theme(
+    text = element_text(color = "red", face = "bold.italic"),
+    plot.background = element_rect(fill = "yellow")
+  )
+```
+
+### Plot B
+
+```{r}
+#| label: test-1-b
+#| echo: false
+#| out.width: 90%
+#| fig.asp: 0.5
+#| fig.width: 10.0
+#| code-line-numbers: "11-12"
+ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
+  geom_point(alpha = 0.5, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, size = 0.5, show.legend = FALSE) +
+  facet_wrap(vars(pctpell_cat)) +
+  labs(
+    x = "Average faculty salary (USD)",
+    y = "Net cost of attendance (USD)",
+    color = "Percentage of Pell grant recipients",
+    title = "Faculty salaries and net cost of attendance in US universities"
+  ) +
+  theme_minimal(base_size = 16) +
+  scale_color_viridis_d(end = 0.9)
+```
+
+:::
+
+## Test 2
+
+::: {.panel-tabset}
+
+### Plot A
+
+```{r}
+#| ref.label: test-1-b
+#| echo: false
+#| out-width: 90%
+#| fig-asp: 0.5
+#| fig-width: 10.0
+```
+
+### Plot B
+
+```{r}
+#| label: test-2-b
+#| echo: false
+#| out.width: 90%
+#| fig.asp: 0.5
+#| fig.width: 10.0
+#| code-line-numbers: "12"
+ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
+  geom_point(alpha = 0.5, show.legend = FALSE) +
+  geom_smooth(method = "lm", se = FALSE, size = 0.5, show.legend = FALSE) +
+  facet_wrap(vars(pctpell_cat)) +
+  labs(
+    x = "Average faculty salary (USD)",
+    y = "Net cost of attendance (USD)",
+    color = "Percentage of Pell grant recipients",
+    title = "Faculty salaries and net cost of attendance in US universities"
+  ) +
+  theme_minimal(base_size = 16) +
+  scale_color_viridis_d(end = 0.8, option = "A")
+```
+
+:::
+
+---
+
+::: {.appex .center}
+a deeper look at the plotting code...
+:::
+
+---
+
+## Minimal theme + viridis scale, default option
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: test-1-b
+#| out-width: 90%
+#| fig-asp: 0.5
+#| fig-width: 10.0
+#| echo: false
+```
+
+### Code
+
+```{r}
+#| ref.label: test-1-b
+#| code-line-numbers: "11-12"
+#| fig-show: hide
+```
+
+:::
+
+## Viridis scale, option A (magma)
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: test-2-b
+#| out-width: 90%
+#| fig-asp: 0.5
+#| fig-width: 10.0
+#| echo: false
+```
+
+### Code
+
+```{r}
+#| ref.label: test-2-b
+#| code-line-numbers: "12"
+#| fig.show: hide
+```
+
+:::
+
+## Dark theme + further theme customization
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: test-1-a
+#| out-width: 90%
+#| fig-asp: 0.5
+#| fig-width: 10.0
+#| echo: false
+```
+
+### Code
+
+```{r}
+#| ref.label: test-1-a
+#| code-line-numbers: "11-16"
+#| fig-show: hide
+```
+
+:::
+
+# What makes bad figures bad?
+
+## Bad taste
+
+```{r}
+#| ref.label: test-1-a
+#| echo: false
+#| out-width: 90%
+#| fig-asp: 0.5
+#| fig-width: 10.0
+```
+
+## Data-to-ink ratio
+
+:::: columns
+
+::: {.column width="67%"}
+Tufte strongly recommends maximizing the **data-to-ink ratio** this in the Visual Display of Quantitative Information (Tufte, 1983).
+
+> Graphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data. (Tufte, 1983, p. 51).
+
+:::
+
+::: {.column width="33%"}
+
+```{r}
+#| echo: false
+#| out-width: 100%
+#| fig-align: right
+#| fig-alt: Cover of Visual Display of Quantitative Information, Tufte (1983).
+knitr::include_graphics("images/03/tufte-visual-display-cover.png")
+```
+
+:::
+
+::::
+
+---
+
+::: {.appex}
+
+Which of the plots has higher data-to-ink ratio?
+
+:::
+
+```{r}
+#| label: mean-netcost-pctpell-summary
+#| include: false
+mean_netcost_pctpell <- scorecard |>
+  group_by(pctpell_cat) |>
+  summarise(mean_netcost = mean(netcost, na.rm = TRUE))
+
+mean_netcost_pctpell
+```
+
+::: {.panel-tabset}
+
+### Plot A
+
+```{r}
+#| label: mean-netcost-pctpell-a
+#| out-width: 70%
+#| echo: false
+#| code-line-numbers: "2"
+ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
+  geom_col() +
+  labs(
+    x = "Mean net cost of attendance", y = "Pell grant recipients",
+    title = "Mean net cost of attendance, by Pell grant recipients"
+  ) +
+  theme_minimal(base_size = 16)
+```
+]
+
+### Plot B
+
+```{r}
+#| label: mean-netcost-pctpell-b
+#| out-width: 70%
+#| echo: false
+#| code-line-numbers: "2"
+ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
+  geom_point(size = 4) +
+  labs(
+    x = "Mean net cost of attendance", y = "Pell grant recipients",
+    title = "Mean net cost of attendance, by Pell grant recipients"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+:::
+
+---
+
+::: {.appex .center}
+a deeper look at the plotting code...
+:::
+
+## Summary statistics
+
+```{r}
+#| ref.label: mean-netcost-pctpell-summary
+```
+
+## Barplot
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: mean-netcost-pctpell-a
+#| out-width: 70%
+#| echo: false
+```
+
+### Code
+
+```{r}
+#| ref.label: mean-netcost-pctpell-a
+#| code-line-numbers: "2"
+#| fig-show: hide
+```
+
+:::
+
+## Scatterplot
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: mean-netcost-pctpell-b
+#| out-width: 70%
+#| echo: false
+```
+
+### Code
+
+```{r}
+#| ref.label: mean-netcost-pctpell-b
+#| code-line-numbers: "2"
+#| fig-show: hide
+```
+
+:::
+
+## Lollipop plot -- a happy medium?
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| label: mean-netcost-pctpell-lollipop
+#| out-width: 70%
+#| echo: false
+ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      x = 0, xend = mean_netcost,
+      y = pctpell_cat, yend = pctpell_cat
+    )
+  ) +
+  labs(
+    x = "Mean net cost of attendance", y = "Pell grant recipients",
+    title = "Mean net cost of attendance, by Pell grant recipients"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+### Code
+
+```{r}
+#| ref.label: mean-netcost-pctpell-lollipop
+#| code-line-numbers: "3-8"
+#| fig-show: hide
+```
+
+:::
+
+## Activity: Napoleon’s retreat
+
+:::: columns
+
+::: {.column width="70%"}
+
+::: {.appex .small}
+
+This is Minard’s visualization of Napoleon’s retreat. Discuss in a pair (or group) the features of the following visualization. What are the variables plotted? Which aesthetics are they mapped to?
+
+:::
+
+:::
+
+::: {.column width="30%"}
+
+```{r}
+#| cache: false
+#| echo: false
+countdown(minutes = 5, top = 0, font_size = "5vw")
+```
+
+:::
+
+::::
+
+```{r}
+#| echo: false
+#| out-width: 83%
+#| fig-align: center
+#| fig-alt: Minard’s visualization of Napoleon’s retreat
+knitr::include_graphics("images/03/minard.jpg")
+```
+
+::: aside
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png)]
+:::
+
+
+## Bad data
+
+::: {.panel-tabset}
+
+### Original
+
+```{r}
+#| echo: false
+#| fig-alt: A crisis of faith in democracy? New York Times.
+#| out-width: 50%
+knitr::include_graphics("images/03/healy-democracy-nyt-version.png")
+```
+
+### Improved
+
+```{r}
+#| echo: false
+#| fig-alt: A crisis of faith in democracy? New York Times.
+#| out-width: 50%
+knitr::include_graphics("images/03/healy-democracy-voeten-version-2.png")
+```
+
+:::
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figures 1.8 and 1.9.
+:::
+
+## Bad perception
+
+```{r}
+#| echo: false
+#| fig-alt: Aspect ratios affect our perception of rates of change, modeled after an
+#|   example by William S. Cleveland.
+#| out-width: 80%
+knitr::include_graphics("images/03/healy-perception-curves.png")
+```
+
+::: aside
+Healy, Data Visualization: A practical introduction. [Chapter 1](https://socviz.co/lookatdata.html). Figure 1.12.
+:::
+
+# Aesthetic mappings in ggplot2
+
+## A second look: lollipop plot
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| label: mean-netcost-pctpell-lollipop-layer
+#| out-width: 70%
+#| echo: false
+ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
+  geom_point(size = 4) +
+  geom_segment(
+    aes(
+      x = 0, xend = mean_netcost,
+      y = pctpell_cat, yend = pctpell_cat
+    )
+  ) +
+  labs(
+    x = "Mean net cost of attendance", y = "Pell grant recipients",
+    title = "Mean net cost of attendance, by Pell grant recipients"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+### Code
+
+```{r}
+#| ref.label: mean-netcost-pctpell-lollipop-layer
+#| fig-show: hide
+```
+
+:::
+
+## Activity: Spot the difference I
+
+::: appex
+Can you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.
+:::
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| label: mean-netcost-pctpell-lollipop-global
+#| out-width: 50%
+#| echo: false
+ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
+  geom_point(size = 4) +
+  geom_segment(aes(
+    xend = 0,
+    yend = pctpell_cat
+  )) +
+  labs(
+    x = "Mean net cost of attendance", y = "Pell grant recipients",
+    title = "Mean net cost of attendance, by Pell grant recipients"
+  ) +
+  theme_minimal(base_size = 16)
+```
+
+### Code
+
+```{r}
+#| ref.label: mean-netcost-pctpell-lollipop-global
+#| code-line-numbers: "|1,4,5"
+#| fig-show: hide
+```
+
+:::
+
+```{r}
+#| cache: false
+#| echo: false
+countdown(minutes = 3, bottom = 0)
+```
+
+## Global vs. layer-specific aesthetics
+
+- Aesthetic mappings can be supplied in the initial `ggplot()` call, in individual layers, or in some combination of both.
+
+- Within each layer, you can add, override, or remove mappings.
+
+- If you only have one layer in the plot, the way you specify aesthetics doesn’t make any difference. However, the distinction is important when you start adding additional layers.
+
+---
+
+## Wrap up
+
+::: {.appex .center}
+Think back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.
+:::
