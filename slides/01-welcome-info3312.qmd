@@ -85,12 +85,12 @@ Gates Hall 216
 #| echo: false
 #| cache: false
 
-countdown_fullscreen(minutes = 3, font_size = "15vw")
+countdown_fullscreen(minutes = 2, font_size = "15vw")
 ```
 
 ## Themes: what, why, and how {.smaller}
 
-- **What:** the plot
+- **What:** the communication (e.g. plot, table, report)
   - Specific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.) 
   - Tooling to produce them (e.g., specific R packages)
 
@@ -107,6 +107,7 @@ countdown_fullscreen(minutes = 3, font_size = "15vw")
 
 - **Why:** the theory
   - Tie together "how" and "what" through the grammar of graphics
+  - Extend to underlying theory of cognition and information processing
 
 # Facts, truth, and beauty
 
@@ -229,6 +230,10 @@ Truth comes from aesthetic combination of content and form
 
 Facts require beauty to be true
 
+. . . 
+
+We want to blend **facts** with **beauty** to find **truth**
+
 # Data, truth, and beauty
 
 ## Just show me the data!
@@ -305,13 +310,11 @@ https://doi.org/10.3389/fnins.2014.00265
 
 ## (Sometimes we love them too much)
 
-**Pareidolia**: seeing patterns that aren't there.
-
-. . .
+**Pareidolia**: seeing patterns that aren't there
 
 :::: columns
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment .fade-in-then-semi-out}
 
 ```{r}
 
@@ -320,7 +323,7 @@ include_graphics(path = "images/01/pareidolia-1.jpg")
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment}
 
 ```{r}
 
@@ -344,7 +347,7 @@ include_graphics(path = "images/01/amount-diffs-table.png")
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="50%" .fragment .fade-in-then-semi-out}
 
 ```{r}
 #| fig.alt: Amount donated graph

@@ -536,14 +536,14 @@
     "href": "slides/01-welcome-info3312.html#meet-each-other",
     "title": "Welcome to INFO 3312/5312",
     "section": "Meet each other!",
-    "text": "Meet each other!\n\n\n\n−+\n03:00"
+    "text": "Meet each other!\n\n\n\n−+\n02:00"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#themes-what-why-and-how",
     "href": "slides/01-welcome-info3312.html#themes-what-why-and-how",
     "title": "Welcome to INFO 3312/5312",
     "section": "Themes: what, why, and how",
-    "text": "Themes: what, why, and how\n\nWhat: the plot\n\nSpecific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.)\nTooling to produce them (e.g., specific R packages)\n\n\n\n\nHow: the process\n\nStart with a design (sketch + pseudo code)\nPre-process data (e.g., wrangle, reshape, join, etc.)\nMap data to aesthetics\nMake visual encoding decisions (e.g., address accessibility concerns)\nPost-process for visual appeal and annotation\n\n\n\n\n\nWhy: the theory\n\nTie together “how” and “what” through the grammar of graphics"
+    "text": "Themes: what, why, and how\n\nWhat: the communication (e.g. plot, table, report)\n\nSpecific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.)\nTooling to produce them (e.g., specific R packages)\n\n\n\n\nHow: the process\n\nStart with a design (sketch + pseudo code)\nPre-process data (e.g., wrangle, reshape, join, etc.)\nMap data to aesthetics\nMake visual encoding decisions (e.g., address accessibility concerns)\nPost-process for visual appeal and annotation\n\n\n\n\n\nWhy: the theory\n\nTie together “how” and “what” through the grammar of graphics\nExtend to underlying theory of cognition and information processing"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#what-is-truth",
@@ -606,7 +606,7 @@
     "href": "slides/01-welcome-info3312.html#truth-is-beautiful",
     "title": "Welcome to INFO 3312/5312",
     "section": "Truth is beautiful",
-    "text": "Truth is beautiful\n\nTruth \\(\\neq\\) facts\n\n\nTruth comes from aesthetic combination of content and form\n\n\nFacts require beauty to be true"
+    "text": "Truth is beautiful\n\nTruth \\(\\neq\\) facts\n\n\nTruth comes from aesthetic combination of content and form\n\n\nFacts require beauty to be true\n\n\nWe want to blend facts with beauty to find truth"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#just-show-me-the-data",
@@ -641,7 +641,7 @@
     "href": "slides/01-welcome-info3312.html#sometimes-we-love-them-too-much",
     "title": "Welcome to INFO 3312/5312",
     "section": "(Sometimes we love them too much)",
-    "text": "(Sometimes we love them too much)\nPareidolia: seeing patterns that aren’t there."
+    "text": "(Sometimes we love them too much)\nPareidolia: seeing patterns that aren’t there"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#beauty-is-necessary-to-see-patterns",
