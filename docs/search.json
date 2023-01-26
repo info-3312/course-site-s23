@@ -11,7 +11,7 @@
     "href": "prepare/01-31.html",
     "title": "Prepare",
     "section": "",
-    "text": "📖 Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.5 - 2.10"
+    "text": "📖 Read:\n\nHealy, chapter 1\n\nOptional 📖 Read:\n\nStudy: Charts change hearts and minds better than words do\nWilke chapter 2"
   },
   {
     "objectID": "prepare/01-24.html",
@@ -32,7 +32,7 @@
     "href": "prepare/01-27.html",
     "title": "Prepare",
     "section": "",
-    "text": "📖 Read:\n\nR4DS: Chp 2 - Data visualization - Sections 2.1 and 2.4\n\nIf you haven’t yet done so:\n\nRead the syllabus!\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an accounted created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password. You will need access to complete the first lab assignment.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
+    "text": "If you haven’t yet done so:\n\nRead the syllabus!\nLog in to Cornell’s GitHub at https://github.coecis.cornell.edu/. You already have an account created based on your Cornell NetID.\nAccess RStudio Workbench using your Cornell NetID and password. You will need access to complete the first lab assignment.\nClick the “New Session” button on the top of the page. Leave all the settings on their default state and click “Start Session”. If this is your first time accessing RStudio Workbench for the course, it will take a couple of minutes to prepare your session. Please be patient. When you start a session in the future, your container will already be prepared and it should start within 15 seconds."
   },
   {
     "objectID": "prepare/02-03.html",
