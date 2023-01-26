@@ -167,7 +167,7 @@ Source: [New York Times](https://www.nytimes.com/interactive/2020/us/covid-19-va
 
 # ggplot2 `r emo::ji("heart")` `r emo::ji("penguin")`
 
-## ggplot2 $\in$ tidyverse {.smaller}
+## ggplot2 $\in$ tidyverse
 
 :::: columns
 
@@ -692,7 +692,7 @@ ggplot(penguins,
        aes(x = bill_depth_mm, 
            y = bill_length_mm,
            color = species,
-           shape = species)) + #<<
+           shape = species)) +
   geom_point() +
   scale_color_viridis_d()
 ```
@@ -738,7 +738,7 @@ ggplot(penguins,
 
 :::: columns
 
-::: {.column .small width="50%"}
+::: {.column width="50%"}
 
 ### Mapping
 
@@ -755,7 +755,7 @@ ggplot(penguins,
 
 :::
 
-::: {.column .small width="50%"}
+::: {.column width="50%"}
 
 ### Setting
 
@@ -992,7 +992,7 @@ include_graphics("images/02/pivot.gif")
 include_graphics("https://raw.githubusercontent.com/gadenbuie/tidyexplain/main/images/tidyr-pivoting.gif")
 ```
 
-## `pivot_longer()` {.smaller}
+## `pivot_longer()`
 
 ```{r}
 #| eval: false
@@ -1005,7 +1005,7 @@ into longer format -- in this case all columns except for the `faculty_type`
 - The third argument, `names_to`, is a string specifying the name of the column to create from the data stored in the column names of data -- in this case `year`
 - The fourth argument, `values_to`, is a string specifying the name of the column to create from the data stored in cell values, in this case `percentage`
 
-## Pivot instructor data {.smaller}
+## Pivot instructor data
 
 ```{r}
 library(tidyverse)

@@ -361,7 +361,7 @@
     "href": "slides/02-grammar-of-graphics.html#data-palmer-penguins",
     "title": "The grammar of graphics",
     "section": "Data: Palmer Penguins",
-    "text": "Data: Palmer Penguins\nMeasurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(palmerpenguins)\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Ad…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39…\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19…\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193…\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 46…\n$ sex               <fct> male, female, female, NA, female, male, fe…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, …"
+    "text": "Data: Palmer Penguins\nMeasurements for penguin species, island in Palmer Archipelago, size (flipper length, body mass, bill dimensions), and sex.\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(palmerpenguins)\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           <fct> Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            <fct> Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    <dbl> 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     <dbl> 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm <int> 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       <int> 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               <fct> male, female, female, NA, female, male, female, male…\n$ year              <int> 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#argument-names",
@@ -396,7 +396,7 @@
     "href": "slides/02-grammar-of-graphics.html#shape-1",
     "title": "The grammar of graphics",
     "section": "Shape",
-    "text": "Shape\nMapped to same variable as color\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = species)) + #<<\n  geom_point() +\n  scale_color_viridis_d()"
+    "text": "Shape\nMapped to same variable as color\n\n\nggplot(penguins,\n       aes(x = bill_depth_mm, \n           y = bill_length_mm,\n           color = species,\n           shape = species)) +\n  geom_point() +\n  scale_color_viridis_d()"
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#size",
