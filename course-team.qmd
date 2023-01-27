@@ -22,4 +22,4 @@ title: "Course staff"
 | Kevin S    | Undergrad TA |
 | Jessica Z  | Undergrad TA |
 
-For office hours, please see [INFO 3312/5312 - Ultimate Office Hours](TODO) sheet.
+For office hours, please see [this Google calendar](https://calendar.google.com/calendar/u/1?cid=Y18xMTQ5MWM1ODkxZWQyZjRjZGNjY2Q2MTY3MmI3Y2E0N2E5YjViNmNjNjY1N2EyYmVhM2JhYTQ1NjVkOTlkNjQ0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20).

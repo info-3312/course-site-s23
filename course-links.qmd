@@ -11,7 +11,7 @@ title: "Useful links"
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Gradebook                    | 🔗 [Canvas](https://canvas.cornell.edu/courses/51488/grades)                                                                                           |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-| Office hours                 | 🔗 on [TODO](TODO)                                                                                                                                     |
+| Office hours                 | 🔗 on [Google Calendar](https://calendar.google.com/calendar/u/1?cid=Y18xMTQ5MWM1ODkxZWQyZjRjZGNjY2Q2MTY3MmI3Y2E0N2E5YjViNmNjNjY1N2EyYmVhM2JhYTQ1NjVkOTlkNjQ0QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20)                                                                                                   |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------+
 | Textbooks                    | 🔗 [ggplot2: Elegant Graphics for Data Analysis](https://ggplot2-book.org/)                                                                            |
 |                              |                                                                                                                                                        |

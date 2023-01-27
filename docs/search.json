@@ -81,7 +81,7 @@
     "href": "course-links.html",
     "title": "Useful links",
     "section": "",
-    "text": "RStudio Workbench\n🔗 on RStudio Workbench\n\n\n\n\nCourse GitHub organization\n🔗 on GitHub\n\n\nGradescope\n🔗 on Gradescope |\n\n\nGradebook\n🔗 Canvas\n\n\nOffice hours\n🔗 on TODO\n\n\nTextbooks\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org"
+    "text": "RStudio Workbench\nCourse GitHub organization\n🔗 on RStudio Workbench\n🔗 on GitHub\n\n\n\n\n\n\n\n\nGradescope\n🔗 on Gradescope |\n\n\n\nGradebook\n🔗 Canvas\n\n\n\nOffice hours\n🔗 on Google Calendar\n\n\n\nTextbooks\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org"
   },
   {
     "objectID": "prepare/01-31.html",
@@ -347,7 +347,7 @@
     "href": "course-team.html#teaching-assistants",
     "title": "Course staff",
     "section": "Teaching assistants",
-    "text": "Teaching assistants\n\n\n\nName\nRole\n\n\n\n\nChuanrui L\nGrad TA\n\n\nLincy C\nUndergrad TA\n\n\nMichelle P\nUndergrad TA\n\n\nKevin S\nUndergrad TA\n\n\nJessica Z\nUndergrad TA\n\n\n\nFor office hours, please see INFO 3312/5312 - Ultimate Office Hours sheet."
+    "text": "Teaching assistants\n\n\n\nName\nRole\n\n\n\n\nChuanrui L\nGrad TA\n\n\nLincy C\nUndergrad TA\n\n\nMichelle P\nUndergrad TA\n\n\nKevin S\nUndergrad TA\n\n\nJessica Z\nUndergrad TA\n\n\n\nFor office hours, please see this Google calendar."
   },
   {
     "objectID": "slides/02-grammar-of-graphics.html#data-visualization-1",
