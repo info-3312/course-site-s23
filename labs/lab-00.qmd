@@ -63,7 +63,7 @@ You only need to do this authentication process one time on a single system.
     [1] "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDJYmJeave083exQwYcIqZJk/Y1mgPxdcTYCTWLL+6mlhN9MM3enjDqb2eZvVJ0JK29NYL1++DTqY/saP08IlswNIMntwaWFDNx42yLsuFrWiPqzm9hWWnRcor/d+4zTrcSIEvfAAnLsYkagNqurrCf2taO62YRepTgxErLvLOG10qn4LKhNfT+PTqdPq2Mr88jXQYYrRxGnOV6oVYf6PurKkiooTsKYxVtJWai8Ek9fhK2y5vaQd5yP0H/3Hbw8Mn+rB+O8Yj6/oQKGBCgxkDB4Aw7T91DkIXlHppneO683Y54WvUftJYvSVsnyt/XuNjvXNAir0+kHETLM32uzH6L"
     ```
 
-- Copy the entire string of characters (not including the quotation marks) and paste them into [the settings page on GitHub](https://github.coecis.cornell.edu/settings/ssh/new). Give the key an informative title such as "INFO 2950 RStudio Workbench". Click "Add SSH key."
+- Copy the entire string of characters (not including the quotation marks) and paste them into [the settings page on GitHub](https://github.coecis.cornell.edu/settings/ssh/new). Give the key an informative title such as "INFO 3312 RStudio Workbench". Click "Add SSH key."
 
 ## Configure Git
 
@@ -95,7 +95,7 @@ You are now ready interact with GitHub via RStudio!
 
 ## Clone the repo & start new RStudio project
 
--   Go to the course organization at [https://github.coecis.cornell.edu/info2950-s23](https://github.coecis.cornell.edu/info2950-s23) organization on GitHub.
+-   Go to the course organization at [https://github.coecis.cornell.edu/info3312-s23](https://github.coecis.cornell.edu/info3312-s23) organization on GitHub.
     Click on the repo with the prefix **lab-00**.
     It contains the starter documents you need to complete the lab.
 
