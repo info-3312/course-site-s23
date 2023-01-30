@@ -14,6 +14,217 @@ source(here::here("slides", "_R", "slide-opts.R"))
 ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
 ```
 
+# Take a sad plot, and make it better
+
+---
+
+::: {.appex .small}
+The American Association of 
+University Professors (AAUP) is a nonprofit membership association of faculty 
+and other academic professionals. 
+[This report](https://www.aaup.org/sites/default/files/files/AAUP_Report_InstrStaff-75-11_apr2013.pdf) 
+by the AAUP shows trends in instructional staff employees between 1975 
+and 2011, and contains an image very similar to the one given below.
+:::
+
+```{r}
+#| echo: false
+include_graphics("images/02/staff-employment.png")
+```
+
+---
+
+::: small
+Each row in this dataset represents a faculty type, and the columns are the years for which we have data. 
+The values are percentage of hires of that type of faculty for each year.
+
+:::
+
+```{r}
+#| label: load-data-staff
+staff <- read_csv("data/instructional-staff.csv")
+staff
+```
+
+## Recreate the visualization
+
+In order to recreate this visualization we need to first reshape the data to have one variable for faculty type and one variable for year. In other words, we will convert the data from the long format to wide format. 
+
+But before we do so... 
+
+::: appex
+If the long data will have a row for each year/faculty type combination, and there are 5 faculty types and 11 years of data, how many rows will the data have?
+:::
+
+---
+
+```{r}
+#| echo: false
+include_graphics("images/02/pivot.gif")
+```
+
+## `pivot_*()` function
+
+```{r}
+#| out-width: 50%
+#| echo: false
+include_graphics("https://raw.githubusercontent.com/gadenbuie/tidyexplain/main/images/tidyr-pivoting.gif")
+```
+
+## `pivot_longer()`
+
+```{r}
+#| eval: false
+pivot_longer(data, cols, names_to = "name", values_to = "value")
+```
+
+- The first argument is `data` as usual.
+- The second argument, `cols`, is where you specify which columns to pivot 
+into longer format -- in this case all columns except for the `faculty_type` 
+- The third argument, `names_to`, is a string specifying the name of the column to create from the data stored in the column names of data -- in this case `year`
+- The fourth argument, `values_to`, is a string specifying the name of the column to create from the data stored in cell values, in this case `percentage`
+
+## Pivot instructor data
+
+```{r}
+library(tidyverse)
+
+staff_long <- staff |>
+  pivot_longer(cols = -faculty_type, names_to = "year", 
+               values_to = "percentage") |>
+  mutate(percentage = as.numeric(percentage))
+
+staff_long
+```
+
+---
+
+::: {.appex .small}
+This doesn't look quite right, how would you fix it?
+:::
+
+::: {.small}
+
+```{r}
+#| fig-height: 2.0
+staff_long |>
+  ggplot(aes(x = percentage, y = year, color = faculty_type)) +
+  geom_col(position = "dodge")
+```
+
+:::
+
+---
+
+::: {.small}
+
+```{r}
+#| fig-height: 2.0
+staff_long |>
+  ggplot(aes(x = percentage, y = year, fill = faculty_type)) +
+  geom_col(position = "dodge")
+```
+
+:::
+
+## Some improvement...
+
+::: {.small}
+
+```{r}
+#| out-width: 60%
+staff_long |>
+  ggplot(aes(x = percentage, y = year, fill = faculty_type)) +
+  geom_col()
+```
+
+:::
+
+## More improvement
+
+::: {.small}
+
+```{r}
+#| out-width: 100%
+#| fig-asp: 0.4
+#| fig-width: 7.0
+staff_long |>
+  ggplot(aes(x = year, y = percentage, group = faculty_type, 
+             color = faculty_type)) +
+  geom_line() +
+  theme_minimal()
+```
+
+:::
+
+
+## Goal: even more improvement!
+
+::: appex
+I want to achieve the following look but I have no idea how!
+:::
+
+```{r}
+#| label: instructor-lines-for-show
+#| echo: false
+#| out-width: 60%
+include_graphics("images/02/sketch.png")
+```
+
+## Asking good questions
+
+- Describe what you want
+- Describe where you are
+- Create a minimal **repr**oducible **ex**ample: `reprex::reprex()`
+
+---
+
+::: {.panel-tabset}
+
+### Plot
+
+```{r}
+#| ref.label: instructor-lines
+#| echo: false
+#| fig-width: 7.0
+#| out-width: 100%
+#| fig-asp: 0.5
+```
+
+### Code
+
+::: small
+
+```{r}
+#| label: instructor-lines
+#| fig-show: hide
+#| code-line-numbers: "4-8,12-13,19"
+
+library(scales)
+
+staff_long |>
+  mutate(
+    part_time = if_else(faculty_type == "Part-Time Faculty",
+                        "Part-Time Faculty", "Other Faculty"),
+    year = as.numeric(year)
+    ) |>
+  ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
+             color = part_time)) +
+  geom_line() +
+  scale_color_manual(values = c("gray", "red")) +
+  scale_y_continuous(labels = label_percent(accuracy = 1)) +
+  theme_minimal() +
+  labs(
+    title = "Instructional staff employment trends",
+    x = "Year", y = "Percentage", color = NULL
+  ) +
+  theme(legend.position = "bottom")
+```
+
+:::
+
+:::
+
 # A/B testing
 
 ## Data: College education costs

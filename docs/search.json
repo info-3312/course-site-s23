@@ -123,7 +123,7 @@
     "href": "prepare/02-02.html",
     "title": "Prepare",
     "section": "",
-    "text": "The whitest, most patriarchal tradition. Groundhog Day.\n\n\n\n📖 Read:\n\nIMS: Chp 4 - Exploring categorical data\nIMS: Chp 5 - Exploring numerical data"
+    "text": "📖 Read:\n\nWickham et. al., chapter 14"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -908,6 +908,62 @@
     "title": "Welcome to INFO 3312/5312",
     "section": "Something personal",
     "text": "Something personal\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#recreate-the-visualization",
+    "href": "slides/03-look-at-data.html#recreate-the-visualization",
+    "title": "Look at data",
+    "section": "Recreate the visualization",
+    "text": "Recreate the visualization\nIn order to recreate this visualization we need to first reshape the data to have one variable for faculty type and one variable for year. In other words, we will convert the data from the long format to wide format.\nBut before we do so…\n\nIf the long data will have a row for each year/faculty type combination, and there are 5 faculty types and 11 years of data, how many rows will the data have?"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#pivot_-function",
+    "href": "slides/03-look-at-data.html#pivot_-function",
+    "title": "Look at data",
+    "section": "pivot_*() function",
+    "text": "pivot_*() function"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#pivot_longer",
+    "href": "slides/03-look-at-data.html#pivot_longer",
+    "title": "Look at data",
+    "section": "pivot_longer()",
+    "text": "pivot_longer()\n\npivot_longer(data, cols, names_to = \"name\", values_to = \"value\")\n\n\nThe first argument is data as usual.\nThe second argument, cols, is where you specify which columns to pivot into longer format – in this case all columns except for the faculty_type\nThe third argument, names_to, is a string specifying the name of the column to create from the data stored in the column names of data – in this case year\nThe fourth argument, values_to, is a string specifying the name of the column to create from the data stored in cell values, in this case percentage"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#pivot-instructor-data",
+    "href": "slides/03-look-at-data.html#pivot-instructor-data",
+    "title": "Look at data",
+    "section": "Pivot instructor data",
+    "text": "Pivot instructor data\n\nlibrary(tidyverse)\n\nstaff_long <- staff |>\n  pivot_longer(cols = -faculty_type, names_to = \"year\", \n               values_to = \"percentage\") |>\n  mutate(percentage = as.numeric(percentage))\n\nstaff_long\n\n# A tibble: 55 × 3\n   faculty_type              year  percentage\n   <chr>                     <chr>      <dbl>\n 1 Full-Time Tenured Faculty 1975        29  \n 2 Full-Time Tenured Faculty 1989        27.6\n 3 Full-Time Tenured Faculty 1993        25  \n 4 Full-Time Tenured Faculty 1995        24.8\n 5 Full-Time Tenured Faculty 1999        21.8\n 6 Full-Time Tenured Faculty 2001        20.3\n 7 Full-Time Tenured Faculty 2003        19.3\n 8 Full-Time Tenured Faculty 2005        17.8\n 9 Full-Time Tenured Faculty 2007        17.2\n10 Full-Time Tenured Faculty 2009        16.8\n# … with 45 more rows"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#some-improvement",
+    "href": "slides/03-look-at-data.html#some-improvement",
+    "title": "Look at data",
+    "section": "Some improvement…",
+    "text": "Some improvement…\n\n\nstaff_long |>\n  ggplot(aes(x = percentage, y = year, fill = faculty_type)) +\n  geom_col()"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#more-improvement",
+    "href": "slides/03-look-at-data.html#more-improvement",
+    "title": "Look at data",
+    "section": "More improvement",
+    "text": "More improvement\n\n\nstaff_long |>\n  ggplot(aes(x = year, y = percentage, group = faculty_type, \n             color = faculty_type)) +\n  geom_line() +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#goal-even-more-improvement",
+    "href": "slides/03-look-at-data.html#goal-even-more-improvement",
+    "title": "Look at data",
+    "section": "Goal: even more improvement!",
+    "text": "Goal: even more improvement!\n\nI want to achieve the following look but I have no idea how!"
+  },
+  {
+    "objectID": "slides/03-look-at-data.html#asking-good-questions",
+    "href": "slides/03-look-at-data.html#asking-good-questions",
+    "title": "Look at data",
+    "section": "Asking good questions",
+    "text": "Asking good questions\n\nDescribe what you want\nDescribe where you are\nCreate a minimal reproducible example: reprex::reprex()"
   },
   {
     "objectID": "slides/03-look-at-data.html#data-college-education-costs",
