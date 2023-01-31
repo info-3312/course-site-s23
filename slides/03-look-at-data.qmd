@@ -12,6 +12,8 @@ format: revealjs
 
 source(here::here("slides", "_R", "slide-opts.R"))
 ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
+
+library(tidyverse)
 ```
 
 # Take a sad plot, and make it better
@@ -108,7 +110,7 @@ This doesn't look quite right, how would you fix it?
 ```{r}
 #| fig-height: 2.0
 staff_long |>
-  ggplot(aes(x = percentage, y = year, color = faculty_type)) +
+  ggplot(aes(x = percentage, y = faculty_type, color = year)) +
   geom_col(position = "dodge")
 ```
 
@@ -121,7 +123,7 @@ staff_long |>
 ```{r}
 #| fig-height: 2.0
 staff_long |>
-  ggplot(aes(x = percentage, y = year, fill = faculty_type)) +
+  ggplot(aes(x = percentage, y = faculty_type, fill = year)) +
   geom_col(position = "dodge")
 ```
 
@@ -198,18 +200,23 @@ include_graphics("images/02/sketch.png")
 ```{r}
 #| label: instructor-lines
 #| fig-show: hide
-#| code-line-numbers: "4-8,12-13,19"
+#| code-line-numbers: "4-9,12-13,17-18,24"
 
 library(scales)
 
 staff_long |>
   mutate(
     part_time = if_else(faculty_type == "Part-Time Faculty",
-                        "Part-Time Faculty", "Other Faculty"),
+      "Part-Time Faculty", "Other Faculty"
+    ),
     year = as.numeric(year)
-    ) |>
-  ggplot(aes(x = year, y = percentage/100, group = faculty_type, 
-             color = part_time)) +
+  ) |>
+  ggplot(aes(
+    x = year,
+    y = percentage / 100,
+    group = faculty_type,
+    color = part_time
+  )) +
   geom_line() +
   scale_color_manual(values = c("gray", "red")) +
   scale_y_continuous(labels = label_percent(accuracy = 1)) +
@@ -705,7 +712,19 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
 
 :::
 
-## Activity: Napoleon’s retreat
+## [Activity: Napoleon's disastrous Russian campaign of 1812]{.small}
+
+```{r}
+#| echo: false
+#| fig-alt: Minard’s visualization of Napoleon’s retreat
+knitr::include_graphics("images/03/minard.jpg")
+```
+
+::: aside
+Source: [Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png)
+:::
+
+## Activity: Napoleon's retreat
 
 :::: columns
 
@@ -731,18 +750,7 @@ countdown(minutes = 5, top = 0, font_size = "5vw")
 
 ::::
 
-```{r}
-#| echo: false
-#| out-width: 83%
-#| fig-align: center
-#| fig-alt: Minard’s visualization of Napoleon’s retreat
-knitr::include_graphics("images/03/minard.jpg")
-```
-
-::: aside
-Source: [Wikipedia](https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png)]
-:::
-
+![Source: [Wikipedia](https://commons.wikimedia.org/wiki/File:Redrawing_of_Minard%27s_Napoleon_map.svg)](https://upload.wikimedia.org/wikipedia/commons/d/db/Redrawing_of_Minard%27s_Napoleon_map.svg){fig-alt="A modern recreation of Minard’s visualization of Napoleon’s retreat"}
 
 ## Bad data
 
@@ -862,7 +870,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
 ```{r}
 #| cache: false
 #| echo: false
-countdown(minutes = 3, bottom = 0)
+countdown(minutes = 1, bottom = 0)
 ```
 
 ## Global vs. layer-specific aesthetics

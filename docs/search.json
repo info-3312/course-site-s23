@@ -1428,11 +1428,18 @@
     "text": "Lollipop plot – a happy medium?\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
   },
   {
+    "objectID": "slides/03-look-at-data.html#activity-napoleons-disastrous-russian-campaign-of-1812",
+    "href": "slides/03-look-at-data.html#activity-napoleons-disastrous-russian-campaign-of-1812",
+    "title": "Look at data",
+    "section": "Activity: Napoleon’s disastrous Russian campaign of 1812",
+    "text": "Activity: Napoleon’s disastrous Russian campaign of 1812\n\n\n\n\n\n\n\n\n\n\n\nSource: Wikipedia"
+  },
+  {
     "objectID": "slides/03-look-at-data.html#activity-napoleons-retreat",
     "href": "slides/03-look-at-data.html#activity-napoleons-retreat",
     "title": "Look at data",
     "section": "Activity: Napoleon’s retreat",
-    "text": "Activity: Napoleon’s retreat\n\n\n\nThis is Minard’s visualization of Napoleon’s retreat. Discuss in a pair (or group) the features of the following visualization. What are the variables plotted? Which aesthetics are they mapped to?\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Wikipedia]"
+    "text": "Activity: Napoleon’s retreat\n\n\n\nThis is Minard’s visualization of Napoleon’s retreat. Discuss in a pair (or group) the features of the following visualization. What are the variables plotted? Which aesthetics are they mapped to?\n\n\n\n\n\n−+\n05:00\n\n\n\n\n\n\nSource: Wikipedia"
   },
   {
     "objectID": "slides/03-look-at-data.html#bad-data",
@@ -1460,7 +1467,7 @@
     "href": "slides/03-look-at-data.html#activity-spot-the-difference-i",
     "title": "Look at data",
     "section": "Activity: Spot the difference I",
-    "text": "Activity: Spot the difference I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = pctpell_cat\n  )) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)\n\n\n\n\n\n\n\n−+\n03:00"
+    "text": "Activity: Spot the difference I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = pctpell_cat\n  )) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)\n\n\n\n\n\n\n\n−+\n01:00"
   },
   {
     "objectID": "slides/03-look-at-data.html#global-vs.-layer-specific-aesthetics",

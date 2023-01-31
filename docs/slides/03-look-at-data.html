@@ -509,9 +509,9 @@ Dr.&nbsp;Benjamin Soltoff
 <p>This doesn’t look quite right, how would you fix it?</p>
 </div>
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-8_b03a8687e1f121479997bb7a150de5e1">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-8_4d4e398eac9effd5370689366436e7f6">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>staff_long <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> year, <span class="at">color =</span> faculty_type)) <span class="sc">+</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> faculty_type, <span class="at">color =</span> year)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -526,9 +526,9 @@ Dr.&nbsp;Benjamin Soltoff
 <section class="slide level2">
 
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-9_2e1ef5d5536770dd1f45c32f8ffc999e">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-9_04f3267124c74cc5f61e7fb5c36dac63">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>staff_long <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> year, <span class="at">fill =</span> faculty_type)) <span class="sc">+</span></span>
+<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> faculty_type, <span class="at">fill =</span> year)) <span class="sc">+</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -597,7 +597,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot</a></li><li><a href="#tabset-1-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-13_86338f04ee63d16b169c35a365235459">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-13_433f135fde7750be80378955a0ce4968">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -609,26 +609,31 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div id="tabset-1-2">
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/instructor-lines_3ad30798d51d8c63d05e983331600667">
-<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="4-8,12-13,19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(scales)</span>
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/instructor-lines_ea2919131d766eaede539f78f1f17fa2">
+<div class="sourceCode cell-code" id="cb10" data-code-line-numbers="4-9,12-13,17-18,24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(scales)</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a>staff_long <span class="sc">|&gt;</span></span>
 <span id="cb10-4"><a href="#cb10-4"></a>  <span class="fu">mutate</span>(</span>
 <span id="cb10-5"><a href="#cb10-5"></a>    <span class="at">part_time =</span> <span class="fu">if_else</span>(faculty_type <span class="sc">==</span> <span class="st">"Part-Time Faculty"</span>,</span>
-<span id="cb10-6"><a href="#cb10-6"></a>                        <span class="st">"Part-Time Faculty"</span>, <span class="st">"Other Faculty"</span>),</span>
-<span id="cb10-7"><a href="#cb10-7"></a>    <span class="at">year =</span> <span class="fu">as.numeric</span>(year)</span>
-<span id="cb10-8"><a href="#cb10-8"></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb10-9"><a href="#cb10-9"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percentage<span class="sc">/</span><span class="dv">100</span>, <span class="at">group =</span> faculty_type, </span>
-<span id="cb10-10"><a href="#cb10-10"></a>             <span class="at">color =</span> part_time)) <span class="sc">+</span></span>
-<span id="cb10-11"><a href="#cb10-11"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb10-12"><a href="#cb10-12"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"gray"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
-<span id="cb10-13"><a href="#cb10-13"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
-<span id="cb10-14"><a href="#cb10-14"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb10-15"><a href="#cb10-15"></a>  <span class="fu">labs</span>(</span>
-<span id="cb10-16"><a href="#cb10-16"></a>    <span class="at">title =</span> <span class="st">"Instructional staff employment trends"</span>,</span>
-<span id="cb10-17"><a href="#cb10-17"></a>    <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Percentage"</span>, <span class="at">color =</span> <span class="cn">NULL</span></span>
-<span id="cb10-18"><a href="#cb10-18"></a>  ) <span class="sc">+</span></span>
-<span id="cb10-19"><a href="#cb10-19"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb10-6"><a href="#cb10-6"></a>      <span class="st">"Part-Time Faculty"</span>, <span class="st">"Other Faculty"</span></span>
+<span id="cb10-7"><a href="#cb10-7"></a>    ),</span>
+<span id="cb10-8"><a href="#cb10-8"></a>    <span class="at">year =</span> <span class="fu">as.numeric</span>(year)</span>
+<span id="cb10-9"><a href="#cb10-9"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb10-10"><a href="#cb10-10"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(</span>
+<span id="cb10-11"><a href="#cb10-11"></a>    <span class="at">x =</span> year,</span>
+<span id="cb10-12"><a href="#cb10-12"></a>    <span class="at">y =</span> percentage <span class="sc">/</span> <span class="dv">100</span>,</span>
+<span id="cb10-13"><a href="#cb10-13"></a>    <span class="at">group =</span> faculty_type,</span>
+<span id="cb10-14"><a href="#cb10-14"></a>    <span class="at">color =</span> part_time</span>
+<span id="cb10-15"><a href="#cb10-15"></a>  )) <span class="sc">+</span></span>
+<span id="cb10-16"><a href="#cb10-16"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb10-17"><a href="#cb10-17"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"gray"</span>, <span class="st">"red"</span>)) <span class="sc">+</span></span>
+<span id="cb10-18"><a href="#cb10-18"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>(<span class="at">accuracy =</span> <span class="dv">1</span>)) <span class="sc">+</span></span>
+<span id="cb10-19"><a href="#cb10-19"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb10-20"><a href="#cb10-20"></a>  <span class="fu">labs</span>(</span>
+<span id="cb10-21"><a href="#cb10-21"></a>    <span class="at">title =</span> <span class="st">"Instructional staff employment trends"</span>,</span>
+<span id="cb10-22"><a href="#cb10-22"></a>    <span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Percentage"</span>, <span class="at">color =</span> <span class="cn">NULL</span></span>
+<span id="cb10-23"><a href="#cb10-23"></a>  ) <span class="sc">+</span></span>
+<span id="cb10-24"><a href="#cb10-24"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">"bottom"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </div>
 </div>
@@ -650,7 +655,7 @@ Dr.&nbsp;Benjamin Soltoff
 <li><p>Source: <code>rcis::scorecard</code></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p></p><div id="tweet-12973"></div><script>tweet={"url":"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500","author_name":"College Student","author_url":"https:\/\/twitter.com\/ColIegeStudent","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe 4 stages of a morning lecture \u003Ca href=\"https:\/\/t.co\/B7v6WLtX3J\"\u003Epic.twitter.com\/B7v6WLtX3J\u003C\/a\u003E\u003C\/p\u003E&mdash; College Student (@ColIegeStudent) \u003Ca href=\"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500?ref_src=twsrc%5Etfw\"\u003EFebruary 8, 2017\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-12973").innerHTML = tweet["html"];</script><p></p>
+<p></p><div id="tweet-80598"></div><script>tweet={"url":"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500","author_name":"College Student","author_url":"https:\/\/twitter.com\/ColIegeStudent","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe 4 stages of a morning lecture \u003Ca href=\"https:\/\/t.co\/B7v6WLtX3J\"\u003Epic.twitter.com\/B7v6WLtX3J\u003C\/a\u003E\u003C\/p\u003E&mdash; College Student (@ColIegeStudent) \u003Ca href=\"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500?ref_src=twsrc%5Etfw\"\u003EFebruary 8, 2017\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-80598").innerHTML = tweet["html"];</script><p></p>
 </div>
 </div>
 </section>
@@ -1163,6 +1168,21 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 </section>
+<section id="activity-napoleons-disastrous-russian-campaign-of-1812" class="slide level2">
+<h2><span class="small">Activity: Napoleon’s disastrous Russian campaign of 1812</span></h2>
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-44_0f964b88bad82e785cbaa360bb7d7e7c">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/03/minard.jpg" style="width:80.0%" alt="Minard’s visualization of Napoleon’s retreat"></p>
+</figure>
+</div>
+</div>
+</div>
+
+<aside><div>
+<p>Source: <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png">Wikipedia</a></p>
+</div></aside></section>
 <section id="activity-napoleons-retreat" class="slide level2">
 <h2>Activity: Napoleon’s retreat</h2>
 <div class="columns">
@@ -1173,7 +1193,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div><div class="column" style="width:30%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f574ce81" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:5vw;">
+<div class="countdown" id="timer_ebba627c" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:5vw;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1181,19 +1201,8 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-45_bcb124ccc830b1988ef9cda19de4e947">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/03/minard.jpg" style="width:83.0%" alt="Minard’s visualization of Napoleon’s retreat"></p>
-</figure>
-</div>
-</div>
-</div>
 
-<aside><div>
-<p>Source: <a href="https://en.wikipedia.org/wiki/Charles_Joseph_Minard#/media/File:Minard.png">Wikipedia</a>]</p>
-</div></aside></section>
+<img data-src="https://upload.wikimedia.org/wikipedia/commons/d/db/Redrawing_of_Minard%27s_Napoleon_map.svg" alt="A modern recreation of Minard’s visualization of Napoleon’s retreat" class="r-stretch quarto-figure-center"><p class="caption">Source: <a href="https://commons.wikimedia.org/wiki/File:Redrawing_of_Minard%27s_Napoleon_map.svg">Wikipedia</a></p></section>
 <section id="bad-data" class="slide level2">
 <h2>Bad data</h2>
 <div class="panel-tabset">
@@ -1321,9 +1330,9 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f68b33bc" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_7cc5e0e5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
