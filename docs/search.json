@@ -910,6 +910,349 @@
     "text": "Something personal\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
+    "objectID": "slides/04-geoms.html#announcements",
+    "href": "slides/04-geoms.html#announcements",
+    "title": "Deep dive: geoms",
+    "section": "Announcements",
+    "text": "Announcements\nHW 1 is posted:\n\nGo to the course GitHub org and look for a repo named hw-01-NETID\nInstructions are in the README\nAll work must be completed in the provided Quarto document, rendered as PDF, and uploaded to Gradescope\nMake sure to also stage/commit/push your work to GitHub\nDue Wednesday, February 8, by 11:59pm\nPost questions on the discussion forum"
+  },
+  {
+    "objectID": "slides/04-geoms.html#packages",
+    "href": "slides/04-geoms.html#packages",
+    "title": "Deep dive: geoms",
+    "section": "Packages",
+    "text": "Packages\n\n# load packages\nlibrary(tidyverse)\n# remotes::install_github(\"cis-ds/rcis\")\nlibrary(rcis)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#ggplot2-theme",
+    "href": "slides/04-geoms.html#ggplot2-theme",
+    "title": "Deep dive: geoms",
+    "section": "ggplot2 theme",
+    "text": "ggplot2 theme\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))"
+  },
+  {
+    "objectID": "slides/04-geoms.html#figure-sizing",
+    "href": "slides/04-geoms.html#figure-sizing",
+    "title": "Deep dive: geoms",
+    "section": "Figure sizing",
+    "text": "Figure sizing\nFor more on including figures in Quarto documents with the right size, resolution, etc.\n\nR for Data Science - Figures\nUse the YAML header\n\nknitr:\n  opts_chunk:\n    fig.width: 8\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+  },
+  {
+    "objectID": "slides/04-geoms.html#data-prep-new-variables",
+    "href": "slides/04-geoms.html#data-prep-new-variables",
+    "title": "Deep dive: geoms",
+    "section": "Data prep: new variables",
+    "text": "Data prep: new variables\nFrom last class…\n\nscorecard <- scorecard %>%\n  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) %>%\n  drop_na(pctpell_cat)\n\nscorecard %>%\n  count(pctpell_cat)\n\n# A tibble: 6 × 2\n  pctpell_cat       n\n  <fct>         <int>\n1 [0,0.167]       169\n2 (0.167,0.333]   630\n3 (0.333,0.5]     609\n4 (0.5,0.667]     205\n5 (0.667,0.833]    73\n6 (0.833,1]        31"
+  },
+  {
+    "objectID": "slides/04-geoms.html#data-prep-summary-table",
+    "href": "slides/04-geoms.html#data-prep-summary-table",
+    "title": "Deep dive: geoms",
+    "section": "Data prep: summary table",
+    "text": "Data prep: summary table\nFrom last class…\n\nmean_netcost_pctpell <- scorecard %>%\n  group_by(pctpell_cat) %>%\n  summarise(mean_netcost = mean(netcost, na.rm = TRUE))\n\nmean_netcost_pctpell\n\n# A tibble: 6 × 2\n  pctpell_cat   mean_netcost\n  <fct>                <dbl>\n1 [0,0.167]           29919.\n2 (0.167,0.333]       22579.\n3 (0.333,0.5]         19171.\n4 (0.5,0.667]         16966.\n5 (0.667,0.833]       15572.\n6 (0.833,1]           10138."
+  },
+  {
+    "objectID": "slides/04-geoms.html#global-vs.-layer-specific-aesthetics",
+    "href": "slides/04-geoms.html#global-vs.-layer-specific-aesthetics",
+    "title": "Deep dive: geoms",
+    "section": "Global vs. layer-specific aesthetics",
+    "text": "Global vs. layer-specific aesthetics\n\nAesthetic mappings can be supplied in the initial ggplot() call, in individual layers, or in some combination of both.\nWithin each layer, you can add, override, or remove mappings.\nIf you only have one layer in the plot, the way you specify aesthetics doesn’t make any difference. However, the distinction is important when you start adding additional layers."
+  },
+  {
+    "objectID": "slides/04-geoms.html#activity-spot-the-difference-i",
+    "href": "slides/04-geoms.html#activity-spot-the-difference-i",
+    "title": "Deep dive: geoms",
+    "section": "Activity: Spot the difference I",
+    "text": "Activity: Spot the difference I\n\nDo you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.\n\n\n# Plot A\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.7) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5)\n# Plot B\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(aes(color = pctpell_cat), alpha = 0.7) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5)\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#activity-spot-the-difference-ii",
+    "href": "slides/04-geoms.html#activity-spot-the-difference-ii",
+    "title": "Deep dive: geoms",
+    "section": "Activity: Spot the difference II",
+    "text": "Activity: Spot the difference II\n\nDo you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.\n\n\n# Plot A\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(aes(color = pctpell_cat))\n\n\n# Plot B\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(color = \"blue\")\n\n\n# Plot C\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(color = \"#a493ba\")\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geoms-1",
+    "href": "slides/04-geoms.html#geoms-1",
+    "title": "Deep dive: geoms",
+    "section": "Geoms",
+    "text": "Geoms\n\nGeometric objects, or geoms for short, perform the actual rendering of the layer, controlling the type of plot that you create\nYou can think of them as “the geometric shape used to represent the data”"
+  },
+  {
+    "objectID": "slides/04-geoms.html#one-variable",
+    "href": "slides/04-geoms.html#one-variable",
+    "title": "Deep dive: geoms",
+    "section": "One variable",
+    "text": "One variable\n\nDiscrete:\n\ngeom_bar(): display distribution of discrete variable.\n\nContinuous\n\ngeom_histogram(): bin and count continuous variable, display with bars\ngeom_density(): smoothed density estimate\ngeom_dotplot(): stack individual points into a dot plot\ngeom_freqpoly(): bin and count continuous variable, display with lines"
+  },
+  {
+    "objectID": "slides/04-geoms.html#aside",
+    "href": "slides/04-geoms.html#aside",
+    "title": "Deep dive: geoms",
+    "section": "aside…",
+    "text": "aside…\nAlways use “typewriter text” (monospace font) when writing function names, and follow with (), e.g.,\n\ngeom_freqpoly()\nmean()\nlm()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_bar",
+    "href": "slides/04-geoms.html#geom_bar",
+    "title": "Deep dive: geoms",
+    "section": "geom_bar()",
+    "text": "geom_bar()\n\nggplot(scorecard, aes(x = pctpell_cat)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_bar-1",
+    "href": "slides/04-geoms.html#geom_bar-1",
+    "title": "Deep dive: geoms",
+    "section": "geom_bar()",
+    "text": "geom_bar()\n\nggplot(scorecard, aes(y = pctpell_cat)) +\n  geom_bar()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_histogram",
+    "href": "slides/04-geoms.html#geom_histogram",
+    "title": "Deep dive: geoms",
+    "section": "geom_histogram()",
+    "text": "geom_histogram()\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_histogram()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_histogram-and-binwidth",
+    "href": "slides/04-geoms.html#geom_histogram-and-binwidth",
+    "title": "Deep dive: geoms",
+    "section": "geom_histogram() and binwidth",
+    "text": "geom_histogram() and binwidth\n\n2K5K10K20K\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_histogram(binwidth = 2000)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_histogram(binwidth = 5000)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_histogram(binwidth = 10000)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_histogram(binwidth = 20000)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_density",
+    "href": "slides/04-geoms.html#geom_density",
+    "title": "Deep dive: geoms",
+    "section": "geom_density()",
+    "text": "geom_density()\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_density-and-bandwidth-bw",
+    "href": "slides/04-geoms.html#geom_density-and-bandwidth-bw",
+    "title": "Deep dive: geoms",
+    "section": "geom_density() and bandwidth (bw)",
+    "text": "geom_density() and bandwidth (bw)\n\n11001,00010,000\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(bw = 1)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(bw = 100)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(bw = 1000)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(bw = 10000)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_density-outlines",
+    "href": "slides/04-geoms.html#geom_density-outlines",
+    "title": "Deep dive: geoms",
+    "section": "geom_density() outlines",
+    "text": "geom_density() outlines\n\nfullbothupperlower\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(outline.type = \"full\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(outline.type = \"both\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(outline.type = \"upper\")\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_density(outline.type = \"lower\")"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_dotplot",
+    "href": "slides/04-geoms.html#geom_dotplot",
+    "title": "Deep dive: geoms",
+    "section": "geom_dotplot()",
+    "text": "geom_dotplot()\n\nWhat does each point represent? How are their locations determined? What do the x and y axes represent?\n\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_dotplot(binwidth = 418)\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_freqpoly",
+    "href": "slides/04-geoms.html#geom_freqpoly",
+    "title": "Deep dive: geoms",
+    "section": "geom_freqpoly()",
+    "text": "geom_freqpoly()\n\nggplot(scorecard, aes(x = netcost)) +\n  geom_freqpoly(binwidth = 1000)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_freqpoly-for-comparisons",
+    "href": "slides/04-geoms.html#geom_freqpoly-for-comparisons",
+    "title": "Deep dive: geoms",
+    "section": "geom_freqpoly() for comparisons",
+    "text": "geom_freqpoly() for comparisons\n\nHistogramFrequency polygon\n\n\n\nggplot(scorecard, aes(x = netcost, fill = pctpell_cat)) +\n  geom_histogram(binwidth = 5000)\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = netcost, color = pctpell_cat)) +\n  geom_freqpoly(binwidth = 5000, size = 1)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#two-variables---both-continuous",
+    "href": "slides/04-geoms.html#two-variables---both-continuous",
+    "title": "Deep dive: geoms",
+    "section": "Two variables - both continuous",
+    "text": "Two variables - both continuous\n\ngeom_point(): scatterplot\ngeom_quantile(): smoothed quantile regression\ngeom_rug(): marginal rug plots\ngeom_smooth(): smoothed line of best fit\ngeom_text(): text labels"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_rug",
+    "href": "slides/04-geoms.html#geom_rug",
+    "title": "Deep dive: geoms",
+    "section": "geom_rug()",
+    "text": "geom_rug()\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point() +\n  geom_rug(alpha = 0.1)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_rug-on-the-outside",
+    "href": "slides/04-geoms.html#geom_rug-on-the-outside",
+    "title": "Deep dive: geoms",
+    "section": "geom_rug() on the outside",
+    "text": "geom_rug() on the outside\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point() +\n  geom_rug(alpha = 0.1, outside = TRUE) +\n  coord_cartesian(clip = \"off\")"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_rug-on-the-outside-but-better",
+    "href": "slides/04-geoms.html#geom_rug-on-the-outside-but-better",
+    "title": "Deep dive: geoms",
+    "section": "geom_rug() on the outside, but better",
+    "text": "geom_rug() on the outside, but better\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point() +\n  geom_rug(alpha = 0.1, outside = TRUE, sides = \"tr\") +\n  coord_cartesian(clip = \"off\") +\n  theme(plot.margin = margin(1, 1, 1, 1, \"cm\"))"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_text",
+    "href": "slides/04-geoms.html#geom_text",
+    "title": "Deep dive: geoms",
+    "section": "geom_text()",
+    "text": "geom_text()\n\nscorecard_samp <- sample_n(scorecard, size = 50) # for viz purposes\n\nggplot(scorecard_samp, aes(x = avgfacsal, y = netcost)) +\n  geom_text(aes(label = type))"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_text-and-more",
+    "href": "slides/04-geoms.html#geom_text-and-more",
+    "title": "Deep dive: geoms",
+    "section": "geom_text() and more",
+    "text": "geom_text() and more\n\nggplot(scorecard_samp, aes(x = avgfacsal, y = netcost)) +\n  geom_text(aes(label = type, color = type))"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_text-and-even-more",
+    "href": "slides/04-geoms.html#geom_text-and-even-more",
+    "title": "Deep dive: geoms",
+    "section": "geom_text() and even more",
+    "text": "geom_text() and even more\n\nggplot(scorecard_samp, aes(x = avgfacsal, y = netcost)) +\n  geom_text(aes(label = type, color = type),\n    show.legend = FALSE\n  )"
+  },
+  {
+    "objectID": "slides/04-geoms.html#two-variables---show-distribution",
+    "href": "slides/04-geoms.html#two-variables---show-distribution",
+    "title": "Deep dive: geoms",
+    "section": "Two variables - show distribution",
+    "text": "Two variables - show distribution\n\ngeom_bin2d(): bin into rectangles and count\ngeom_density2d(): smoothed 2d density estimate\ngeom_hex(): bin into hexagons and count"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_hex",
+    "href": "slides/04-geoms.html#geom_hex",
+    "title": "Deep dive: geoms",
+    "section": "geom_hex()",
+    "text": "geom_hex()\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_hex()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_hex-and-warnings",
+    "href": "slides/04-geoms.html#geom_hex-and-warnings",
+    "title": "Deep dive: geoms",
+    "section": "geom_hex() and warnings",
+    "text": "geom_hex() and warnings\n\nRequires installing the hexbin package separately!\n\n\ninstall.packages(\"hexbin\")\n\n\nOtherwise you might see\n\nWarning: Computation failed in `stat_binhex()`"
+  },
+  {
+    "objectID": "slides/04-geoms.html#two-variables",
+    "href": "slides/04-geoms.html#two-variables",
+    "title": "Deep dive: geoms",
+    "section": "Two variables",
+    "text": "Two variables\n\nAt least one discrete\n\ngeom_count(): count number of point at distinct locations\ngeom_jitter(): randomly jitter overlapping points\n\nOne continuous, one discrete\n\ngeom_col(): a bar chart of pre-computed summaries\ngeom_boxplot(): boxplots\ngeom_violin(): show density of values in each group"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_jitter",
+    "href": "slides/04-geoms.html#geom_jitter",
+    "title": "Deep dive: geoms",
+    "section": "geom_jitter()",
+    "text": "geom_jitter()\n\nHow are the following three plots different?\n\n\nPlot APlot BPlot C\n\n\n\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_point()\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_jitter-and-set.seed",
+    "href": "slides/04-geoms.html#geom_jitter-and-set.seed",
+    "title": "Deep dive: geoms",
+    "section": "geom_jitter() and set.seed()",
+    "text": "geom_jitter() and set.seed()\n\nPlot APlot BPlot C\n\n\n\nset.seed(123)\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\nset.seed(123)\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_jitter()\n\n\n\n\n\n\n\n\n\n\n\nset.seed(234)\nggplot(scorecard, aes(x = type, y = netcost)) +\n  geom_jitter()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#two-variables-1",
+    "href": "slides/04-geoms.html#two-variables-1",
+    "title": "Deep dive: geoms",
+    "section": "Two variables",
+    "text": "Two variables\n\nOne time, one continuous\n\ngeom_area(): area plot\ngeom_line(): line plot\ngeom_step(): step plot\n\nDisplay uncertainty:\n\ngeom_crossbar(): vertical bar with center\ngeom_errorbar(): error bars\ngeom_linerange(): vertical line\ngeom_pointrange(): vertical line with center\n\nSpatial\n\ngeom_sf(): for map data (more on this later…)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#average-net-cost-per-pell-grant-recipient",
+    "href": "slides/04-geoms.html#average-net-cost-per-pell-grant-recipient",
+    "title": "Deep dive: geoms",
+    "section": "Average net cost per Pell grant recipient",
+    "text": "Average net cost per Pell grant recipient\n\nmean_netcost_pctpell <- scorecard %>%\n  mutate(pctpell = round(pctpell, digits = 2)) %>%\n  group_by(pctpell) %>%\n  summarise(\n    n = n(),\n    mean_netcost = mean(netcost),\n    sd_netcost = sd(netcost)\n  ) %>%\n  drop_na(mean_netcost)\n\nmean_netcost_pctpell\n\n# A tibble: 67 × 4\n   pctpell     n mean_netcost sd_netcost\n     <dbl> <int>        <dbl>      <dbl>\n 1    0.08     2        8334       2493.\n 2    0.09     5       34389.      3211.\n 3    0.1      9       35855.      8615.\n 4    0.11    17       29528.      8323.\n 5    0.12    15       32092.      9152.\n 6    0.13    18       31172.      6811.\n 7    0.14    27       28900.      7628.\n 8    0.17    29       27933.     11449.\n 9    0.18    25       24109.      9916.\n10    0.19    36       25109.      8936.\n# … with 57 more rows"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_line",
+    "href": "slides/04-geoms.html#geom_line",
+    "title": "Deep dive: geoms",
+    "section": "geom_line()",
+    "text": "geom_line()\n\nggplot(mean_netcost_pctpell, aes(x = pctpell, y = mean_netcost)) +\n  geom_line()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_area",
+    "href": "slides/04-geoms.html#geom_area",
+    "title": "Deep dive: geoms",
+    "section": "geom_area()",
+    "text": "geom_area()\n\nggplot(mean_netcost_pctpell, aes(x = pctpell, y = mean_netcost)) +\n  geom_area()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_step",
+    "href": "slides/04-geoms.html#geom_step",
+    "title": "Deep dive: geoms",
+    "section": "geom_step()",
+    "text": "geom_step()\n\nggplot(mean_netcost_pctpell, aes(x = pctpell, y = mean_netcost)) +\n  geom_step()"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_errorbar",
+    "href": "slides/04-geoms.html#geom_errorbar",
+    "title": "Deep dive: geoms",
+    "section": "geom_errorbar()",
+    "text": "geom_errorbar()\n\nDescribe how this plot is constructed and what the points and the lines (error bars) correspond to.\n\n\nCodePlot\n\n\n\nggplot(mean_netcost_pctpell, aes(x = pctpell, y = mean_netcost)) +\n  geom_point() +\n  geom_errorbar(aes(\n    ymin = mean_netcost - sd_netcost,\n    ymax = mean_netcost + sd_netcost\n  ))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#lets-clean-things-up-a-bit",
+    "href": "slides/04-geoms.html#lets-clean-things-up-a-bit",
+    "title": "Deep dive: geoms",
+    "section": "Let’s clean things up a bit!",
+    "text": "Let’s clean things up a bit!\nMeet your new best friend, the scales package!\n\nlibrary(scales)"
+  },
+  {
+    "objectID": "slides/04-geoms.html#lets-clean-things-up-a-bit-1",
+    "href": "slides/04-geoms.html#lets-clean-things-up-a-bit-1",
+    "title": "Deep dive: geoms",
+    "section": "Let’s clean things up a bit!",
+    "text": "Let’s clean things up a bit!\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost)) +\n  geom_point(alpha = 0.4, size = 2, color = \"#012169\") +\n  scale_x_continuous(labels = label_number(big.mark = \",\")) +\n  scale_y_continuous(labels = label_dollar()) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    title = \"Faculty salaries and net cost of attendance in US universities\",\n    subtitle = \"2020-21\",\n    caption = \"Source: College Scorecard\"\n  )"
+  },
+  {
+    "objectID": "slides/04-geoms.html#three-variables",
+    "href": "slides/04-geoms.html#three-variables",
+    "title": "Deep dive: geoms",
+    "section": "Three variables",
+    "text": "Three variables\n\ngeom_tile(): tile the plane with rectangles\ngeom_raster(): fast version of geom_tile() for equal sized tiles"
+  },
+  {
+    "objectID": "slides/04-geoms.html#geom_tile",
+    "href": "slides/04-geoms.html#geom_tile",
+    "title": "Deep dive: geoms",
+    "section": "geom_tile()",
+    "text": "geom_tile()\n\nggplot(scorecard, aes(x = type, y = locale)) +\n geom_tile(aes(fill = netcost))"
+  },
+  {
+    "objectID": "slides/04-geoms.html#another-look-at-smooth-ish-surface",
+    "href": "slides/04-geoms.html#another-look-at-smooth-ish-surface",
+    "title": "Deep dive: geoms",
+    "section": "Another look at smooth-ish surface",
+    "text": "Another look at smooth-ish surface\n\nSummarizePlot\n\n\n\nmean_netcost_type_locale <- scorecard %>%\n  group_by(type, locale) %>%\n  summarize(mean_netcost = mean(netcost, na.rm = TRUE), .groups = \"drop\")\n\nmean_netcost_type_locale\n\n# A tibble: 12 × 3\n   type                locale mean_netcost\n   <fct>               <fct>         <dbl>\n 1 Public              City         14007.\n 2 Public              Suburb       15946.\n 3 Public              Town         14692.\n 4 Public              Rural        13390.\n 5 Public              <NA>          7999 \n 6 Private, nonprofit  City         24485.\n 7 Private, nonprofit  Suburb       23018.\n 8 Private, nonprofit  Town         21785.\n 9 Private, nonprofit  Rural        22533.\n10 Private, for-profit City         28005.\n11 Private, for-profit Suburb       25778.\n12 Private, for-profit Town         13370.\n\n\n\n\n\nggplot(mean_netcost_type_locale, aes(x = type, y = locale)) +\n  geom_point(aes(color = mean_netcost), size = 30, pch = \"square\")"
+  },
+  {
+    "objectID": "slides/04-geoms.html#activity-pick-a-geom",
+    "href": "slides/04-geoms.html#activity-pick-a-geom",
+    "title": "Deep dive: geoms",
+    "section": "Activity: Pick a geom",
+    "text": "Activity: Pick a geom\n\nFor each of the following problems, suggest a useful geom:\n\nDisplay how the value of variable has changed over time\nShow the detailed distribution of a single continuous variable\nFocus attention on the overall relationship between two variables in a large dataset\nLabel outlying points in a single variable\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/04-geoms.html#homework-1-1",
+    "href": "slides/04-geoms.html#homework-1-1",
+    "title": "Deep dive: geoms",
+    "section": "Homework 1",
+    "text": "Homework 1\n\nLocate your Homework 1 repo, clone it in RStudio Workbench\nPut your name in the YAML of homework-01.qmd, render, commit (with a meaningful message), push\nSkim the instructions to get a sense of the exercises and use the remaining time to ask any clarifying questions and to get started on the first question\nMake sure you know how to ask a question on the course discussion forum, and set up notifications"
+  },
+  {
+    "objectID": "slides/04-geoms.html#homework-1-tips",
+    "href": "slides/04-geoms.html#homework-1-tips",
+    "title": "Deep dive: geoms",
+    "section": "Homework 1 tips",
+    "text": "Homework 1 tips\n\nYou can go in order or jump around between exercises. If you get stuck on a specific exercise, feel free to switch to a different one.\nBut, of course, do what feels right for you in terms of pace, ordering, etc.!\nAnd ask questions on the course discussion forum\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "slides/03-look-at-data.html#recreate-the-visualization",
     "href": "slides/03-look-at-data.html#recreate-the-visualization",
     "title": "Look at data",
