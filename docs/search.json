@@ -84,6 +84,83 @@
     "text": "RStudio Workbench\nCourse GitHub organization\n🔗 on RStudio Workbench\n🔗 on GitHub\n\n\n\n\n\n\n\n\nGradescope\n🔗 on Gradescope |\n\n\n\nGradebook\n🔗 Canvas\n\n\n\nOffice hours\n🔗 on Google Calendar\n\n\n\nTextbooks\n🔗 ggplot2: Elegant Graphics for Data Analysis\n🔗 Fundamentals of Data Visualization\n\n\n\nPackage documentation\n🔗 ggplot2: ggplot2.tidyverse.org\n🔗 dplyr: dplyr.tidyverse.org\n🔗 tidyr: tidyr.tidyverse.org\n🔗 forcats: forcats.tidyverse.org\n🔗 stringr: stringr.tidyverse.org\n🔗 lubridate: lubridate.tidyverse.org\n🔗 readr: readr.tidyverse.org\n🔗 readxl: readxl.tidyverse.org"
   },
   {
+    "objectID": "hw/hw-01.html",
+    "href": "hw/hw-01.html",
+    "title": "Homework 1",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Wednesday, February 8 at 11:59pm ET."
+  },
+  {
+    "objectID": "hw/hw-01.html#packages",
+    "href": "hw/hw-01.html#packages",
+    "title": "Homework 1",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)"
+  },
+  {
+    "objectID": "hw/hw-01.html#guidelines-tips",
+    "href": "hw/hw-01.html#guidelines-tips",
+    "title": "Homework 1",
+    "section": "Guidelines + tips",
+    "text": "Guidelines + tips\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to knit, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\nNote\n\n\n\nNote: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not."
+  },
+  {
+    "objectID": "hw/hw-01.html#workflow-formatting",
+    "href": "hw/hw-01.html#workflow-formatting",
+    "title": "Homework 1",
+    "section": "Workflow + formatting",
+    "text": "Workflow + formatting\nMake sure to\n\nUpdate author name on your document.\nLabel all code chunks informatively and concisely.\nFollow the Tidyverse code style guidelines.\nMake at least 3 commits.\nResize figures where needed, avoid tiny or huge plots.\nTurn in an organized, well formatted document."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-1",
+    "href": "hw/hw-01.html#exercise-1",
+    "title": "Homework 1",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nReverse-engineering the grammar of graphics. COVID-19 has been a thing for the past 2+ years. Data visualizations have proven extremely valuable for communicating trends regarding the pandemic to the public. For the main plot in this article, write down the components of its grammar of graphic. Don’t worry about identifying the correct functions in ggplot2 used to generate the graph. Instead, focus on recording the key elements of a plot so you could communicate it to someone else.\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-2",
+    "href": "hw/hw-01.html#exercise-2",
+    "title": "Homework 1",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nRoad traffic accidents in Edinburgh. Next we’ll look at traffic accidents in Edinburgh. The data are made available online by the UK Government. It covers all recorded accidents in Edinburgh in 2018 and some of the variables were modified for the purposes of this assignment. The data can be found in the dsbox package, and it’s called accidents. You can find out more about the dataset by inspecting its documentation with ?accidents and you can also find this information here.\nRecreate the following plot, and interpret in context of the data.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-3",
+    "href": "hw/hw-01.html#exercise-3",
+    "title": "Homework 1",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nNYC marathon winners. The New York City Marathon is an annual marathon that courses through the five boroughs of New York City. Marathon times of runners in the Men and Women divisions of the New York City Marathon between 1970 and 2020 can be found in the nyc_marathon dataset in the openintro package. You can find out more about the dataset by inspecting its documentation with ?nyc_marathon and you can also find this information here.\n\nCreate a histogram and a box plot of the distribution of marathon times of all runners in the dataset. What features of the distribution are apparent in the histogram and not the box plot? What features are apparent in the box plot but not in the histogram?\nCreate a side-by-side box plots of marathon times for men and women. Use different colors for the each of the box plots – do not use the default colors, but instead manually define them (you can choose any two colors you want). Based on the plots you made, compare the distribution of marathon times for men and women.\nWhat information in the above plot is redundant? Redo the plot avoiding this redundancy. How does this update change the data-to-ink ratio?\nVisualize the marathon times of men and women over the years. As is usual with time series plot, year should go on the x-axis. Use different colors and shapes to represent the times for men and women. Make sure your colors match those in the previous part. Once you have your plot, describe what is visible in this plot but not in the others.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-4",
+    "href": "hw/hw-01.html#exercise-4",
+    "title": "Homework 1",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nUS counties. The following questions use the county dataset in the openintro package. You can find out more about the dataset by inspecting its documentation with ?county and you can also find this information here.\n\nWhat does the following code do? Does it work? Does it make sense? Why/why not?\nggplot(county) +\n  geom_point(aes(x = median_edu, y = median_hh_income)) +\n  geom_boxplot(aes(x = smoking_ban, y = pop2017))\nRecreate the R code necessary to generate the following graphs. You will need to create 8 separate plots for this exercise. Note that wherever a categorical variable is used in the plot, it’s metro.\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-01.html#exercise-5",
+    "href": "hw/hw-01.html#exercise-5",
+    "title": "Homework 1",
+    "section": "Exercise 5",
+    "text": "Exercise 5\nNapoleon’s march. The instructions for this exercise are simple: recreate the Napoleon’s march plot by Charles John Minard in ggplot2. The data is provided as a list, saved as napoleon.rds.\nRead it in using read_rds(). This object has three elements: cities, temperatures, and troops. Each of these is a data frame, and the three of them combined contain all of the data you need to recreate the visualization. Your goal isn’t to create an exact replica of the original plot, but to get as close to it as you can using code you understand and can describe articulately in your response.\nI’ll be the first to say that if you Google “Napoleon’s march in ggplot2”, you’ll find a bunch of blog posts, tutorials, etc. that walk you through how to recreate this visualization with ggplot2. So you might be thinking, “why am I being asked to copy something off the internet for my homework?” Well, this is an exercise in (1) working with web resources and citing them properly, (2) understanding someone else’s ggplot2 code and reproducing their work, (3) describing what that code does in your own words, and finally (4) putting some final touches to make the final product your own. Some more guidelines below:\n\nYou should make sure your response properly cites all of the resources you use. I’m defining “use” to include “browse, read, get inspired by, or directly borrow snippets of code from”. You don’t need to worry about formal citations, it’s okay to make a list with links to your resources and provide a brief summary of how you used each one.\nFor this exercise, you’re asked to describe what your code does (instead of interpreting the visualization, since we already did that in class). If you write the code, it should be straightforward for you to describe it. If you borrow any code from outside resources, you need to understand what that code does, and describe it, in your own words. (This is important, you’re allowed to use found code, but you are not allowed to copy someone’s blog post or tutorial as your description of their code.)\nFinally, you should personalize the visualization with your own touch. You can do this in a myriad of ways, e.g., change colors, annotations, labels, etc. This change should be made to make the plot more like the original in some way. You need to explicitly call out what change you made and why you made it.\n\n\n Render, commit, and push one last time.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-01.html#submission",
+    "href": "hw/hw-01.html#submission",
+    "title": "Homework 1",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Cornell University NetID and log in using your NetID credentials.\nClick on your INFO 3312 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .pdf submission to be associated with the “Workflow & formatting” question."
+  },
+  {
+    "objectID": "hw/hw-01.html#grading",
+    "href": "hw/hw-01.html#grading",
+    "title": "Homework 1",
+    "section": "Grading",
+    "text": "Grading\n\nExercise 1: 10 points\nExercise 2: 10 points\nExercise 3: 10 points\nExercise 4: 10 points\nExercise 5: 10 points\nTotal: 50 points"
+  },
+  {
     "objectID": "prepare/01-31.html",
     "href": "prepare/01-31.html",
     "title": "Prepare",
