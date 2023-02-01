@@ -74,7 +74,7 @@ b.  Create a side-by-side box plots of marathon times for men and women. Use dif
 
 c.  What information in the above plot is redundant? Redo the plot avoiding this redundancy. How does this update change the data-to-ink ratio?
 
-d.  Visualize the marathon times of men and women over the years. As is usual with time series plot, year should go on the x-axis. Use different colors and shapes to represent the times for men and women. Make sure your colors match those in the previous part. Once you have your plot, describe what is visible in this plot but not in the others.
+a. Visualize the marathon times of men and women over the years. As is usual with time series plot, year should go on the x-axis. Use different colors and patterns to represent the times for men and women. Make sure your colors match those in the previous part. Once you have your plot, describe what is visible in this plot but not in the others.
 
 ::: render-commit-push
 Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding. <br>
