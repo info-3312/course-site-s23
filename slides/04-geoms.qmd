@@ -15,17 +15,10 @@ source(here::here("slides", "_R", "slide-opts.R"))
 
 ## Announcements
 
-HW 1 is posted:
-
-- Go to the [course GitHub org](https://github.coecis.cornell.edu/info3312-s23/) and look for a repo named `hw-01-NETID`
-- Instructions are in the README
-- All work must be completed in the provided Quarto document, rendered as PDF, and uploaded to Gradescope
-- Make sure to also stage/commit/push your work to GitHub
-- Due Wednesday, February 8, by 11:59pm
+- HW 1 will be posted tomorrow
 - Post questions on the discussion forum
 
 # Setup
-
 
 ## Packages
 
@@ -217,7 +210,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 2K
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_histogram(binwidth = 2000)
 ```
@@ -225,7 +218,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 5K
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_histogram(binwidth = 5000)
 ```
@@ -233,7 +226,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 10K
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_histogram(binwidth = 10000)
 ```
@@ -241,7 +234,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 20K
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_histogram(binwidth = 20000)
 ```
@@ -262,7 +255,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 1
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(bw = 1)
 ```
@@ -270,7 +263,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 100
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(bw = 100)
 ```
@@ -278,7 +271,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 1,000
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(bw = 1000)
 ```
@@ -286,7 +279,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### 10,000
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(bw = 10000)
 ```
@@ -300,7 +293,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### full
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(outline.type = "full")
 ```
@@ -308,7 +301,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### both
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(outline.type = "both")
 ```
@@ -316,7 +309,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### upper
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(outline.type = "upper")
 ```
@@ -324,7 +317,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### lower
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost)) +
   geom_density(outline.type = "lower")
 ```
@@ -363,7 +356,7 @@ ggplot(scorecard, aes(x = netcost)) +
 ### Histogram
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost, fill = pctpell_cat)) +
   geom_histogram(binwidth = 5000)
 ```
@@ -371,7 +364,7 @@ ggplot(scorecard, aes(x = netcost, fill = pctpell_cat)) +
 ### Frequency polygon
 
 ```{r}
-#| fig-asp: 0.6
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = netcost, color = pctpell_cat)) +
   geom_freqpoly(binwidth = 5000, size = 1)
 ```
@@ -660,6 +653,7 @@ library(scales)
 #| label: scales-clean
 #| fig-show: hold
 #| echo: false
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = avgfacsal, y = netcost)) +
   geom_point(alpha = 0.4, size = 2, color = "#012169") +
   scale_x_continuous(labels = label_number(big.mark = ",")) +
@@ -737,19 +731,3 @@ For each of the following problems, suggest a useful geom:
 #| cache: false
 countdown(minutes = 3, bottom = 0)
 ```
-
-# Homework 1
-
-## Homework 1
-
-- Locate your Homework 1 repo, clone it in RStudio Workbench
-- Put your name in the YAML of `homework-01.qmd`, render, commit (with a meaningful message), push
-- Skim the instructions to get a sense of the exercises and use the remaining time to ask any clarifying questions and to get started on the first question
-- Make sure you know how to ask a question on the course discussion forum, and set up notifications
-
-## Homework 1 tips
-
-- You can go in order or jump around between exercises. If you get stuck on a specific exercise, feel free to switch to a different one.
-- But, of course, do what feels right for you in terms of pace, ordering, etc.!
-- And ask questions on the course discussion forum
-

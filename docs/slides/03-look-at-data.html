@@ -429,7 +429,7 @@ Dr.&nbsp;Benjamin Soltoff
 <div class="small">
 <p>Each row in this dataset represents a faculty type, and the columns are the years for which we have data. The values are percentage of hires of that type of faculty for each year.</p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/load-data-staff_6648905fcc6ac26948033cd17fc712d1">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/load-data-staff_583020d9686c7206cddd358d667498ec">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a>staff <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/instructional-staff.csv"</span>)</span>
 <span id="cb1-2"><a href="#cb1-2"></a>staff</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -464,7 +464,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="https://raw.githubusercontent.com/gadenbuie/tidyexplain/main/images/tidyr-pivoting.gif" style="width:50.0%" class="r-stretch quarto-figure-center"></section>
 <section id="pivot_longer" class="slide level2">
 <h2><code>pivot_longer()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-6_7d34861d3bcd398b6e057e85a93638cf">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-6_2d9452528ae44b6143cc16284921d951">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">pivot_longer</span>(data, cols, <span class="at">names_to =</span> <span class="st">"name"</span>, <span class="at">values_to =</span> <span class="st">"value"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -476,7 +476,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="pivot-instructor-data" class="slide level2">
 <h2>Pivot instructor data</h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-7_f1ca59dea0296d27d940597f46c599b3">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-7_af92a78a68a044748d4e0408f587016a">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb4-2"><a href="#cb4-2"></a></span>
 <span id="cb4-3"><a href="#cb4-3"></a>staff_long <span class="ot">&lt;-</span> staff <span class="sc">|&gt;</span></span>
@@ -509,7 +509,7 @@ Dr.&nbsp;Benjamin Soltoff
 <p>This doesn’t look quite right, how would you fix it?</p>
 </div>
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-8_4d4e398eac9effd5370689366436e7f6">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-8_09cb2b0d27b9869ccc31fe3b7d95b1bf">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>staff_long <span class="sc">|&gt;</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> faculty_type, <span class="at">color =</span> year)) <span class="sc">+</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -526,7 +526,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section class="slide level2">
 
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-9_04f3267124c74cc5f61e7fb5c36dac63">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-9_1f543571d86386d1cd923521033b3e30">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>staff_long <span class="sc">|&gt;</span></span>
 <span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> faculty_type, <span class="at">fill =</span> year)) <span class="sc">+</span></span>
 <span id="cb7-3"><a href="#cb7-3"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="st">"dodge"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -543,7 +543,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="some-improvement" class="slide level2">
 <h2>Some improvement…</h2>
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-10_1879fa12f18ebb2a74081cb00872fd32">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-10_2a09c0fd78105fbdb2b9f19b3b311661">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>staff_long <span class="sc">|&gt;</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> percentage, <span class="at">y =</span> year, <span class="at">fill =</span> faculty_type)) <span class="sc">+</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -609,7 +609,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div id="tabset-1-2">
 <div class="small">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/instructor-lines_ea2919131d766eaede539f78f1f17fa2">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/instructor-lines_96e48867715f494e75fa7ea16b4a6994">
 <div class="sourceCode cell-code" id="cb10" data-code-line-numbers="4-9,12-13,17-18,24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">library</span>(scales)</span>
 <span id="cb10-2"><a href="#cb10-2"></a></span>
 <span id="cb10-3"><a href="#cb10-3"></a>staff_long <span class="sc">|&gt;</span></span>
@@ -655,13 +655,13 @@ Dr.&nbsp;Benjamin Soltoff
 <li><p>Source: <code>rcis::scorecard</code></p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p></p><div id="tweet-72297"></div><script>tweet={"url":"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500","author_name":"College Student","author_url":"https:\/\/twitter.com\/ColIegeStudent","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe 4 stages of a morning lecture \u003Ca href=\"https:\/\/t.co\/B7v6WLtX3J\"\u003Epic.twitter.com\/B7v6WLtX3J\u003C\/a\u003E\u003C\/p\u003E&mdash; College Student (@ColIegeStudent) \u003Ca href=\"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500?ref_src=twsrc%5Etfw\"\u003EFebruary 8, 2017\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-72297").innerHTML = tweet["html"];</script><p></p>
+<p></p><div id="tweet-21110"></div><script>tweet={"url":"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500","author_name":"College Student","author_url":"https:\/\/twitter.com\/ColIegeStudent","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003EThe 4 stages of a morning lecture \u003Ca href=\"https:\/\/t.co\/B7v6WLtX3J\"\u003Epic.twitter.com\/B7v6WLtX3J\u003C\/a\u003E\u003C\/p\u003E&mdash; College Student (@ColIegeStudent) \u003Ca href=\"https:\/\/twitter.com\/ColIegeStudent\/status\/829377468595306500?ref_src=twsrc%5Etfw\"\u003EFebruary 8, 2017\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-21110").innerHTML = tweet["html"];</script><p></p>
 </div>
 </div>
 </section>
 <section id="rcisscorecard" class="slide level2">
 <h2><code>rcis::scorecard</code></h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-15_fa13de0f579a76315864ed4c836e158f">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-15_30f0987ec916343dc6e945a984d6a237">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="co"># remotes::install_github("cis-ds/rcis")</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a><span class="fu">library</span>(rcis)</span>
@@ -693,7 +693,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Code</a></li><li><a href="#tabset-2-2">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/simple-viz_bf6891e5812fe8387b8fc3d68158dadd">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/simple-viz_f53ef35efff5c19ee76dfdb36996a404">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
 <span id="cb13-3"><a href="#cb13-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
@@ -705,7 +705,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-2-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-17_08e4900b82524f7426ea5c9206180bbf">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-17_e259d0e54aa7cf8c296300c177f689ee">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -720,7 +720,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </section>
 <section id="new-variable-pctpell_cat" class="slide level2">
 <h2>New variable: <code>pctpell_cat</code></h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-18_6aa8b6a639b7720dce10b84c56ba2b59">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-18_bafe304124eb233d795088b144c0c560">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a>scorecard <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell_cat =</span> <span class="fu">cut_interval</span>(<span class="at">x =</span> pctpell, <span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb14-3"><a href="#cb14-3"></a>  <span class="fu">drop_na</span>(pctpell_cat)</span>
@@ -747,7 +747,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </section>
 <section id="distribution-of-pctpell_cat" class="slide level2">
 <h2>Distribution of <code>pctpell_cat</code></h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-19_0cfad46b6985d2e102f92f050b607126">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-19_792f8d23a8263d0e282ebe3bfc7e22a5">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a>scorecard <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
 <span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell_cat =</span> <span class="fu">cut_interval</span>(<span class="at">x =</span> pctpell, <span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb16-3"><a href="#cb16-3"></a>  <span class="fu">drop_na</span>(pctpell_cat)</span>
@@ -773,7 +773,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">Code</a></li><li><a href="#tabset-3-2">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/slight-complex-viz_453586a3b1b6523692f71f600ab4c25b">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/slight-complex-viz_be195007bcf51210dc308a35e7937206">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb18-3"><a href="#cb18-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
@@ -787,7 +787,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-3-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-21_904743bc11d7c1eac1812678a4a81eb3">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-21_030f81ed31fdec3e8e2b5758479733e0">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -889,7 +889,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-6-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-27_77dd17d993b3a68092d674ffdba480e2">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-27_ebe1edad3a515b543b26d2f934d0d9f2">
 <div class="sourceCode cell-code" id="cb19" data-code-line-numbers="11-12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb19-3"><a href="#cb19-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
@@ -924,7 +924,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-7-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-29_b95552b93bc9e12054cb29f19ef51260">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-29_1a2ab9bcc68e4a8435895ef38f94adb3">
 <div class="sourceCode cell-code" id="cb20" data-code-line-numbers="12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb20-3"><a href="#cb20-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
@@ -959,7 +959,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-8-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-31_b5f4c1f200b18d8070e4c2c698887e4f">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-31_e065cd2af0bc0016993633867b283e97">
 <div class="sourceCode cell-code" id="cb21" data-code-line-numbers="11-16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
 <span id="cb21-3"><a href="#cb21-3"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">size =</span> <span class="fl">0.5</span>, <span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
@@ -999,7 +999,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <p>Graphical excellence is the well-designed presentation of interesting data—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space … [It] is nearly always multivariate … And graphical excellence requires telling the truth about the data. (Tufte, 1983, p.&nbsp;51).</p>
 </blockquote>
 </div><div class="column" style="width:33%;">
-<div class="cell" data-layout-align="right" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-33_937577035649c32f46b0bbb24314b08f">
+<div class="cell" data-layout-align="right" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-33_dc88b4135f88c617f455e66f9cf3d402">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-right">
 <figure>
@@ -1020,7 +1020,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Plot A</a></li><li><a href="#tabset-9-2">Plot B</a></li></ul>
 <div class="tab-content">
 <div id="tabset-9-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-a_80729840ce5fa456b47cfa39628e7dcf">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-a_6ba2598b9c55c690d4aa43f6d0f77a0c">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1032,7 +1032,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <p>]</p>
 </div>
 <div id="tabset-9-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-b_60dfcd963894186e4ffaf5480e6cde07">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-b_4b9879877b7826679629f7a7f7ece6db">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1053,7 +1053,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </section>
 <section id="summary-statistics" class="slide level2">
 <h2>Summary statistics</h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-37_0c1844791883c21499a4848485adbc1c">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-37_0fe1d3eddf8f35288d835779a998f466">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">group_by</span>(pctpell_cat) <span class="sc">|&gt;</span></span>
 <span id="cb22-3"><a href="#cb22-3"></a>  <span class="fu">summarise</span>(<span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
@@ -1078,7 +1078,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-10" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-10-1">Plot</a></li><li><a href="#tabset-10-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-10-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-38_c05729df945bd7ca71d5ba0d066fcbad">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-38_dbae7c5fa5e97dee635304b3d4c02b7d">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1089,7 +1089,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-10-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-39_4f02313da26e42ae8e831c33ea65ed2e">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-39_b8202dce33570a8c78ea5390fd8c38cc">
 <div class="sourceCode cell-code" id="cb24" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat, <span class="at">x =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
 <span id="cb24-3"><a href="#cb24-3"></a>  <span class="fu">labs</span>(</span>
@@ -1108,7 +1108,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-11" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-11-1">Plot</a></li><li><a href="#tabset-11-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-11-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-40_569715691eddc8876427bf47ef430b29">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-40_6c9748f48b542d973c09ca9398d17a54">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1119,7 +1119,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-11-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-41_46159cfa23c80bdeff2ff29e5aaa4a94">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-41_0cf804796c1ecbc0672a4b82c621b567">
 <div class="sourceCode cell-code" id="cb25" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat, <span class="at">x =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb25-3"><a href="#cb25-3"></a>  <span class="fu">labs</span>(</span>
@@ -1138,7 +1138,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-12" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-12-1">Plot</a></li><li><a href="#tabset-12-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-12-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop_5dc68da53b82f2c263837676bb6af9bf">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop_e023f5ce4fb7f8ad85febf3ad469e05f">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1149,7 +1149,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-12-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-43_95f572a8b11c5d064a92eb8e8b6f3529">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-43_2880e6f2b6e440128fae8503e397c9c1">
 <div class="sourceCode cell-code" id="cb26" data-code-line-numbers="3-8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat, <span class="at">x =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb26-3"><a href="#cb26-3"></a>  <span class="fu">geom_segment</span>(</span>
@@ -1170,7 +1170,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </section>
 <section id="activity-napoleons-disastrous-russian-campaign-of-1812" class="slide level2">
 <h2><span class="small">Activity: Napoleon’s disastrous Russian campaign of 1812</span></h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-44_0f964b88bad82e785cbaa360bb7d7e7c">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-44_7b1b2979386ccf54d4dfadc7b7759621">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1193,7 +1193,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div><div class="column" style="width:30%;">
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_ebba627c" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:5vw;">
+<div class="countdown" id="timer_ac3cf3e2" data-update-every="1" tabindex="0" style="top:0;right:0;font-size:5vw;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1209,7 +1209,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-13" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-13-1">Original</a></li><li><a href="#tabset-13-2">Improved</a></li></ul>
 <div class="tab-content">
 <div id="tabset-13-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-46_f22d6792522843bd5db8a1f0fc3f914c">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-46_9984bc65d0e8ce55a02a9f0a41e2652f">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1220,7 +1220,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-13-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-47_c24adc779b35617cbe91d6c99ee5d3c4">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-47_4932eb38c45d197c5fa04ecd4725cc26">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1238,7 +1238,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div></aside></section>
 <section id="bad-perception" class="slide level2">
 <h2>Bad perception</h2>
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-48_e02f67a527aed1c3e89560418ec19077">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-48_526d82ec788975ba5e86a3d52518bbde">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1262,7 +1262,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-14" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-14-1">Plot</a></li><li><a href="#tabset-14-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-14-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop-layer_fe261f4dac520f540015d056a0e7a690">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop-layer_d5e54d980e3fefdb6299f49cffd29e17">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1273,7 +1273,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-14-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-50_1880e41fbc648ac8b07862e2a2a7d852">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-50_566d9e48766f2ee7d20dcbf0a1e8ce71">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat, <span class="at">x =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb27-3"><a href="#cb27-3"></a>  <span class="fu">geom_segment</span>(</span>
@@ -1301,7 +1301,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 <ul id="tabset-15" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-15-1">Plot</a></li><li><a href="#tabset-15-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-15-1">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop-global_d45999adf9d5e6557f8581a3d59803fe">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/mean-netcost-pctpell-lollipop-global_3e8ee5324d9d2a907753ba6140d9a780">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1312,7 +1312,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 </div>
 <div id="tabset-15-2">
-<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-52_7f9aa98f5a96db9d13844741b418e273">
+<div class="cell" data-layout-align="center" data-hash="03-look-at-data_cache/revealjs/unnamed-chunk-52_dee6e3e0b45af65b2616a1c062803f9c">
 <div class="sourceCode cell-code" id="cb28" data-code-line-numbers="|1,4,5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat, <span class="at">x =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">4</span>) <span class="sc">+</span></span>
 <span id="cb28-3"><a href="#cb28-3"></a>  <span class="fu">geom_segment</span>(<span class="fu">aes</span>(</span>
@@ -1330,7 +1330,7 @@ $ locale    &lt;fct&gt; City, City, City, City, City, City, City, City, City, Su
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_7cc5e0e5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_b8f38823" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">01</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

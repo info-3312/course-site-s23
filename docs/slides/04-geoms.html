@@ -414,13 +414,8 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="announcements" class="slide level2">
 <h2>Announcements</h2>
-<p>HW 1 is posted:</p>
 <ul>
-<li>Go to the <a href="https://github.coecis.cornell.edu/info3312-s23/">course GitHub org</a> and look for a repo named <code>hw-01-NETID</code></li>
-<li>Instructions are in the README</li>
-<li>All work must be completed in the provided Quarto document, rendered as PDF, and uploaded to Gradescope</li>
-<li>Make sure to also stage/commit/push your work to GitHub</li>
-<li>Due Wednesday, February 8, by 11:59pm</li>
+<li>HW 1 will be posted tomorrow</li>
 <li>Post questions on the discussion forum</li>
 </ul>
 </section>
@@ -431,7 +426,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="packages" class="slide level2">
 <h2>Packages</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-2_8bd9cee788e3a93e1b32d9afb03886b2">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-2_6154e84a3e8b494d52ab51c3b3e99563">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load packages</span></span>
 <span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
 <span id="cb1-3"><a href="#cb1-3"></a><span class="co"># remotes::install_github("cis-ds/rcis")</span></span>
@@ -440,7 +435,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="ggplot2-theme" class="slide level2">
 <h2><strong>ggplot2</strong> theme</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-3_e993a3b61a1f6f9ed36db4d250a8b899">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-3_42687f7b000166b05b3fa4032f92d806">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co"># set default theme for ggplot2</span></span>
 <span id="cb2-2"><a href="#cb2-2"></a>ggplot2<span class="sc">::</span><span class="fu">theme_set</span>(ggplot2<span class="sc">::</span><span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">16</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -463,7 +458,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="data-prep-new-variables" class="slide level2">
 <h2>Data prep: new variables</h2>
 <p>From last class…</p>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-4_e515ebcca0f618474430cf7e8a5f963e">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-4_6ee2ebb7819d39c557cc2159b94cc7eb">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>scorecard <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
 <span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell_cat =</span> <span class="fu">cut_interval</span>(<span class="at">x =</span> pctpell, <span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">drop_na</span>(pctpell_cat)</span>
@@ -486,7 +481,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="data-prep-summary-table" class="slide level2">
 <h2>Data prep: summary table</h2>
 <p>From last class…</p>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-5_a1187ef108d2ba732b06cc341a927e4f">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-5_87a7583c4817b9ce05df0f79a48fb1d2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
 <span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">group_by</span>(pctpell_cat) <span class="sc">%&gt;%</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">summarise</span>(<span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
@@ -523,7 +518,7 @@ Dr.&nbsp;Benjamin Soltoff
 <div class="appex">
 <p>Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.</p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-6_a7f41c1749e176d3564531c06c2b3bdc">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-6_49b8d5f6f682474723963682d9956e23">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="co"># Plot A</span></span>
 <span id="cb8-2"><a href="#cb8-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
@@ -535,7 +530,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_80fc6b44" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_2982ad51" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -547,24 +542,24 @@ Dr.&nbsp;Benjamin Soltoff
 <div class="appex">
 <p>Do you expect the following plots to be the same or different? If different, how? Discuss in a pair (or group) without running the code and sketch the resulting plots based on what you think the code will produce.</p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-8_d9f4743d36d7c9d6c32b1bb9c6b818ab">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-8_710f17249bd95fcf605d04b01c722e66">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># Plot A</span></span>
 <span id="cb10-2"><a href="#cb10-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb10-3"><a href="#cb10-3"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> pctpell_cat))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-9_a90c6720c0eb56733b6369f0b9bf9fa8">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-9_9d40739df1a16500f755c7ce1edf277b">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="co"># Plot B</span></span>
 <span id="cb11-2"><a href="#cb11-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb11-3"><a href="#cb11-3"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"blue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-10_48645525269911f59cd99bddb953640a">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-10_fe907882d2f62c50be4c13d43230e30e">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="co"># Plot C</span></span>
 <span id="cb12-2"><a href="#cb12-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb12-3"><a href="#cb12-3"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"#a493ba"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_76730d01" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_eb16a2c5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -610,7 +605,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_bar" class="slide level2">
 <h2><code>geom_bar()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-12_b559495e5260b8e46cb4a21191604e19">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-12_9a7fff3d9eb8f51dc6f07848b62d013b">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb13-2"><a href="#cb13-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -618,7 +613,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-12-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_bar-1" class="slide level2">
 <h2><code>geom_bar()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-13_d02d8638705988556e94ad345dc79e82">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-13_f52815bd6c2610febd7ef840fc84235c">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">y =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb14-2"><a href="#cb14-2"></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -626,7 +621,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-13-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_histogram" class="slide level2">
 <h2><code>geom_histogram()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-14_c856a2dae7df0cbff5aa9cb7d25896a8">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-14_4952fd98831d46d48f19e1f878b708af">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb15-2"><a href="#cb15-2"></a>  <span class="fu">geom_histogram</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -638,7 +633,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">2K</a></li><li><a href="#tabset-1-2">5K</a></li><li><a href="#tabset-1-3">10K</a></li><li><a href="#tabset-1-4">20K</a></li></ul>
 <div class="tab-content">
 <div id="tabset-1-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-15_7021bd353be5b9442f4c8cf44b0475e7">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-15_b5b9d874331918bf68d6822624ea9761">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb16-2"><a href="#cb16-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">2000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -651,7 +646,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-1-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-16_b7ee2dead1e0c6a8721437a0bdeaf8e1">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-16_37f4d94ac94567bc5eb9c4ce50941428">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb17-2"><a href="#cb17-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -664,7 +659,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-1-3">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-17_dc7eda0efe30c9a61b05891b833c9917">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-17_979c5a151a2dd23dd358aef3111b0978">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb18-2"><a href="#cb18-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -677,7 +672,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-1-4">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-18_c479780c754f459bd42d2db8a7f08182">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-18_252fcdd699d4b5bbc3e2c4ca2e0f90a5">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb19-2"><a href="#cb19-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">20000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -694,7 +689,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_density" class="slide level2">
 <h2><code>geom_density()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-19_abe954af33806ad2d562e778ad10c8ab">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-19_dd851bc73244627bda3fd296da015996">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb20-2"><a href="#cb20-2"></a>  <span class="fu">geom_density</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -706,7 +701,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">1</a></li><li><a href="#tabset-2-2">100</a></li><li><a href="#tabset-2-3">1,000</a></li><li><a href="#tabset-2-4">10,000</a></li></ul>
 <div class="tab-content">
 <div id="tabset-2-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-20_ffdf4874f6ceec45a6e969b9afded0f4">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-20_299785e7738cf28d726469f3819fb81d">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb21-2"><a href="#cb21-2"></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -719,7 +714,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-2-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-21_1d153e551487f3fb2b129e53cc03a102">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-21_c21239b56ebed62a733790228093f108">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb22-2"><a href="#cb22-2"></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -732,7 +727,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-2-3">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-22_4ff80499755c40d733fd856b6d2e2b3e">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-22_c0755486bc19e6033d552eee8e84745e">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb23-2"><a href="#cb23-2"></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -745,7 +740,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-2-4">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-23_db6460006662b652b3a00c639fcb5ab1">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-23_5959ebcee1bf016ec221146cde97e148">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb24-2"><a href="#cb24-2"></a>  <span class="fu">geom_density</span>(<span class="at">bw =</span> <span class="dv">10000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -766,7 +761,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-3" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-3-1">full</a></li><li><a href="#tabset-3-2">both</a></li><li><a href="#tabset-3-3">upper</a></li><li><a href="#tabset-3-4">lower</a></li></ul>
 <div class="tab-content">
 <div id="tabset-3-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-24_2081a2a16bc584a94aaaff1f0fb18ac5">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-24_95acd5defc078d3d09b58a2e0816a399">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb25-2"><a href="#cb25-2"></a>  <span class="fu">geom_density</span>(<span class="at">outline.type =</span> <span class="st">"full"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -779,7 +774,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-3-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-25_aa46ff54eaf45fe6f1a3782cb56c0eee">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-25_53766cc2795be42a522edeac5468f7a3">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb26-2"><a href="#cb26-2"></a>  <span class="fu">geom_density</span>(<span class="at">outline.type =</span> <span class="st">"both"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -792,7 +787,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-3-3">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-26_fa0a11da8c61165409d37e9d213478b9">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-26_85dad339cbe6ca7e58c7abd7be85a2f7">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb27-2"><a href="#cb27-2"></a>  <span class="fu">geom_density</span>(<span class="at">outline.type =</span> <span class="st">"upper"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -805,7 +800,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-3-4">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-27_24b45f4b652cea22022ede4b396d18ea">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-27_540d0ea72df442f043b6592195343b0e">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb28-2"><a href="#cb28-2"></a>  <span class="fu">geom_density</span>(<span class="at">outline.type =</span> <span class="st">"lower"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -825,14 +820,14 @@ Dr.&nbsp;Benjamin Soltoff
 <div class="appex">
 <p>What does each point represent? How are their locations determined? What do the x and y axes represent?</p>
 </div>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-28_c520483f95644bb155b21d79ddec64cb">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-28_09d0c8c2e6ed81fe228b190f448df5aa">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb29-2"><a href="#cb29-2"></a>  <span class="fu">geom_dotplot</span>(<span class="at">binwidth =</span> <span class="dv">418</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 </div>
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-28-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_f131ebe9" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_feb328ec" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -841,7 +836,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_freqpoly" class="slide level2">
 <h2><code>geom_freqpoly()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-30_3be4dd066986a4a6bf69d476100e91e8">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-30_822330b71d698d3ff4789809da9ac05a">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb30-2"><a href="#cb30-2"></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">1000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -853,7 +848,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-4" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-4-1">Histogram</a></li><li><a href="#tabset-4-2">Frequency polygon</a></li></ul>
 <div class="tab-content">
 <div id="tabset-4-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-31_3e5d33e81141ade4446011c067ce17ea">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-31_762ccf75c2280b92c23f705622ac5375">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost, <span class="at">fill =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb31-2"><a href="#cb31-2"></a>  <span class="fu">geom_histogram</span>(<span class="at">binwidth =</span> <span class="dv">5000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -866,7 +861,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-4-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-32_394b07b190a53f4e5694daecee1d8a7c">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-32_87ae32acce82bcfbe1c663511840cd1f">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> netcost, <span class="at">color =</span> pctpell_cat)) <span class="sc">+</span></span>
 <span id="cb32-2"><a href="#cb32-2"></a>  <span class="fu">geom_freqpoly</span>(<span class="at">binwidth =</span> <span class="dv">5000</span>, <span class="at">size =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -893,7 +888,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_rug" class="slide level2">
 <h2><code>geom_rug()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-33_0bc245565f5d90b2a47e37d47e454424">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-33_696562dd941aade26bc2a31a988de345">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb33-2"><a href="#cb33-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb33-3"><a href="#cb33-3"></a>  <span class="fu">geom_rug</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -902,7 +897,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-33-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_rug-on-the-outside" class="slide level2">
 <h2><code>geom_rug()</code> on the outside</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-34_a3f97703a4a583829b639611a8cae3b4">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-34_5db35a5d50da7104deeb52fde21aa8df">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb34-2"><a href="#cb34-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb34-3"><a href="#cb34-3"></a>  <span class="fu">geom_rug</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">outside =</span> <span class="cn">TRUE</span>) <span class="sc">+</span></span>
@@ -912,7 +907,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-34-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_rug-on-the-outside-but-better" class="slide level2">
 <h2><code>geom_rug()</code> on the outside, but better</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-35_907ae12eef766f3fe19a728b3e1d9102">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-35_0fcef7e9c609e7363be31af80e8a422a">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb35-2"><a href="#cb35-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb35-3"><a href="#cb35-3"></a>  <span class="fu">geom_rug</span>(<span class="at">alpha =</span> <span class="fl">0.1</span>, <span class="at">outside =</span> <span class="cn">TRUE</span>, <span class="at">sides =</span> <span class="st">"tr"</span>) <span class="sc">+</span></span>
@@ -923,7 +918,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-35-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_text" class="slide level2">
 <h2><code>geom_text()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-36_44ed1303e0babcbd02b5f183865ef627">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-36_4ab1dc58efd556613222009110bb1e22">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1"></a>scorecard_samp <span class="ot">&lt;-</span> <span class="fu">sample_n</span>(scorecard, <span class="at">size =</span> <span class="dv">50</span>) <span class="co"># for viz purposes</span></span>
 <span id="cb36-2"><a href="#cb36-2"></a></span>
 <span id="cb36-3"><a href="#cb36-3"></a><span class="fu">ggplot</span>(scorecard_samp, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
@@ -933,7 +928,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-36-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_text-and-more" class="slide level2">
 <h2><code>geom_text()</code> and more</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-37_189df62ea04837be2e03aab2ec556e88">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-37_3e54a9eca3ccd6a8231fede46455237a">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1"></a><span class="fu">ggplot</span>(scorecard_samp, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb37-2"><a href="#cb37-2"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> type, <span class="at">color =</span> type))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -941,7 +936,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-37-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_text-and-even-more" class="slide level2">
 <h2><code>geom_text()</code> and even more</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-38_8c8ce2867999520ac2634b14047e6e22">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-38_6589e71e77559acbbea937ad71d90215">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1"></a><span class="fu">ggplot</span>(scorecard_samp, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb38-2"><a href="#cb38-2"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> type, <span class="at">color =</span> type),</span>
 <span id="cb38-3"><a href="#cb38-3"></a>    <span class="at">show.legend =</span> <span class="cn">FALSE</span></span>
@@ -959,7 +954,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_hex" class="slide level2">
 <h2><code>geom_hex()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-39_629d56dd92bfb83c2df7fd8a52d2ba50">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-39_a7c014c4b9bf2e50944533586aace792">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a href="#cb39-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb39-2"><a href="#cb39-2"></a>  <span class="fu">geom_hex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -970,7 +965,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul>
 <li>Requires installing the <a href="https://cran.r-project.org/web/packages/hexbin/index.html"><strong>hexbin</strong></a> package separately!</li>
 </ul>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-40_aead52150bd31dac1d148aff75d5c7ee">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-40_2be6f174d7d5439e37be6e977c01a218">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1"></a><span class="fu">install.packages</span>(<span class="st">"hexbin"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
@@ -1003,7 +998,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-5" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-5-1">Plot A</a></li><li><a href="#tabset-5-2">Plot B</a></li><li><a href="#tabset-5-3">Plot C</a></li></ul>
 <div class="tab-content">
 <div id="tabset-5-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-41_eb319c4b8c91b7cb4411ca8bf43f8a53">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-41_2bad6fa8a5ee60074f379900c706e7d1">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb42-2"><a href="#cb42-2"></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1016,7 +1011,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-5-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-42_ca86571d1af585e5d8ee57efac69fd59">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-42_07711eefb647d7dd99a8c56e7db72eff">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb43-2"><a href="#cb43-2"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1029,7 +1024,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-5-3">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-43_86d56de50bbb84cdf676a57dcaca97f3">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-43_49baa5612450849a0a1126033c65eb05">
 <div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb44-2"><a href="#cb44-2"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1045,7 +1040,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_69293052" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_cffa981c" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1058,7 +1053,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-6" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-6-1">Plot A</a></li><li><a href="#tabset-6-2">Plot B</a></li><li><a href="#tabset-6-3">Plot C</a></li></ul>
 <div class="tab-content">
 <div id="tabset-6-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-45_97a2622b5a79e739c17c4b4050e71b47">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-45_b8d66d32ae170c8c1464cf5c8ff1240a">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb45-2"><a href="#cb45-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb45-3"><a href="#cb45-3"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1072,7 +1067,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-6-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-46_7cdaa6ec7025dcb0c1dcfe07361fc0a4">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-46_e11b0fe8e01cbad3c885d8234dde44f8">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb46-2"><a href="#cb46-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb46-3"><a href="#cb46-3"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1086,7 +1081,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-6-3">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-47_10880cb79607da2fd35c437950ea9f39">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-47_5ab8b1f37db9c5dc08001de53cc8b8bc">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1"></a><span class="fu">set.seed</span>(<span class="dv">234</span>)</span>
 <span id="cb47-2"><a href="#cb47-2"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb47-3"><a href="#cb47-3"></a>  <span class="fu">geom_jitter</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1126,7 +1121,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="average-net-cost-per-pell-grant-recipient" class="slide level2">
 <h2>Average net cost per Pell grant recipient</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-48_2c18f5b5e8abac3cbd14705fce91c4bd">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-48_5411ee5f4f0aef97348e952714314446">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
 <span id="cb48-2"><a href="#cb48-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell =</span> <span class="fu">round</span>(pctpell, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
 <span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">group_by</span>(pctpell) <span class="sc">%&gt;%</span></span>
@@ -1158,7 +1153,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_line" class="slide level2">
 <h2><code>geom_line()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-49_b75af5616986a5b271938ea0d2df8807">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-49_1d075cb3c021d2a024dd08acab7a57e2">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">x =</span> pctpell, <span class="at">y =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb50-2"><a href="#cb50-2"></a>  <span class="fu">geom_line</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -1166,7 +1161,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-49-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_area" class="slide level2">
 <h2><code>geom_area()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-50_e2d05f2169603413db9d85718f83ffd7">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-50_0a8cb9129e9f078f9b1f5b4803c84c30">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a href="#cb51-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">x =</span> pctpell, <span class="at">y =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb51-2"><a href="#cb51-2"></a>  <span class="fu">geom_area</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -1174,7 +1169,7 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-50-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
 <section id="geom_step" class="slide level2">
 <h2><code>geom_step()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-51_a3ed1bc3cf929ecc8abe3ffeaa90b8ca">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-51_c8a062b583cc269e453ee0d268670266">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">x =</span> pctpell, <span class="at">y =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb52-2"><a href="#cb52-2"></a>  <span class="fu">geom_step</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -1189,7 +1184,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-7" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-7-1">Code</a></li><li><a href="#tabset-7-2">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-7-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/errorbar_4230c27cfaeada5e706776cc762f9947">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/errorbar_1e041c198f023e6472ad864bfb240135">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a href="#cb53-1"></a><span class="fu">ggplot</span>(mean_netcost_pctpell, <span class="fu">aes</span>(<span class="at">x =</span> pctpell, <span class="at">y =</span> mean_netcost)) <span class="sc">+</span></span>
 <span id="cb53-2"><a href="#cb53-2"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
 <span id="cb53-3"><a href="#cb53-3"></a>  <span class="fu">geom_errorbar</span>(<span class="fu">aes</span>(</span>
@@ -1199,7 +1194,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-7-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-53_2c096b53dcfbd9c78b3c78dd6ab51b65">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-53_9fbaa334dcc1415751638f14f050d92d">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1213,7 +1208,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_1e820dd2" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_4653f9da" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1223,7 +1218,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="lets-clean-things-up-a-bit" class="slide level2">
 <h2>Let’s clean things up a bit!</h2>
 <p>Meet your new best friend, the <a href="https://scales.r-lib.org/"><strong>scales</strong></a> package!</p>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-55_240c59515bac3be9543dc5986561bbc1">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-55_684845e265f4d03a0817b9831c7fcc7e">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1"></a><span class="fu">library</span>(scales)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
@@ -1233,7 +1228,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-8" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-8-1">Plot</a></li><li><a href="#tabset-8-2">Code</a></li></ul>
 <div class="tab-content">
 <div id="tabset-8-1">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/scales-clean_21072626d3a4ac287377e407af8d6e0b">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/scales-clean_7e701a01d5e6d18b1589e91a33495a2d">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
@@ -1244,7 +1239,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-8-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-57_42646214f402f1edae31789732e279ee">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-57_999d0e5750bd0c76356202d5cd896b26">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a href="#cb55-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> avgfacsal, <span class="at">y =</span> netcost)) <span class="sc">+</span></span>
 <span id="cb55-2"><a href="#cb55-2"></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.4</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">color =</span> <span class="st">"#012169"</span>) <span class="sc">+</span></span>
 <span id="cb55-3"><a href="#cb55-3"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">big.mark =</span> <span class="st">","</span>)) <span class="sc">+</span></span>
@@ -1275,7 +1270,7 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="geom_tile" class="slide level2">
 <h2><code>geom_tile()</code></h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-58_1c27d0172b9cd8bb2489cd263789fc30">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-58_0a858c6c8194e1110b78d3e55be17c93">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1"></a><span class="fu">ggplot</span>(scorecard, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> locale)) <span class="sc">+</span></span>
 <span id="cb56-2"><a href="#cb56-2"></a> <span class="fu">geom_tile</span>(<span class="fu">aes</span>(<span class="at">fill =</span> netcost))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
@@ -1287,7 +1282,7 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Summarize</a></li><li><a href="#tabset-9-2">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-9-1" class="smaller">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-59_c719a3ce70e611837d41d58fed5d11c0">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-59_a59c8aa7198017f0283b8c675312b39a">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>mean_netcost_type_locale <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
 <span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">group_by</span>(type, locale) <span class="sc">%&gt;%</span></span>
 <span id="cb57-3"><a href="#cb57-3"></a>  <span class="fu">summarize</span>(<span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
@@ -1313,7 +1308,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 </div>
 <div id="tabset-9-2">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-60_ae1c309395a4aca2bacdb5f4626b2e64">
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-60_e033fd6b373be59bd8e864aa1216a7ad">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a href="#cb59-1"></a><span class="fu">ggplot</span>(mean_netcost_type_locale, <span class="fu">aes</span>(<span class="at">x =</span> type, <span class="at">y =</span> locale)) <span class="sc">+</span></span>
 <span id="cb59-2"><a href="#cb59-2"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> mean_netcost), <span class="at">size =</span> <span class="dv">30</span>, <span class="at">pch =</span> <span class="st">"square"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
@@ -1341,34 +1336,12 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_a481ca89" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_5922c440" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
 </div>
 </div>
-</section></section>
-<section>
-<section id="homework-1" class="title-slide slide level1 center">
-<h1>Homework 1</h1>
-
-</section>
-<section id="homework-1-1" class="slide level2">
-<h2>Homework 1</h2>
-<ul>
-<li>Locate your Homework 1 repo, clone it in RStudio Workbench</li>
-<li>Put your name in the YAML of <code>homework-01.qmd</code>, render, commit (with a meaningful message), push</li>
-<li>Skim the instructions to get a sense of the exercises and use the remaining time to ask any clarifying questions and to get started on the first question</li>
-<li>Make sure you know how to ask a question on the course discussion forum, and set up notifications</li>
-</ul>
-</section>
-<section id="homework-1-tips" class="slide level2">
-<h2>Homework 1 tips</h2>
-<ul>
-<li>You can go in order or jump around between exercises. If you get stuck on a specific exercise, feel free to switch to a different one.</li>
-<li>But, of course, do what feels right for you in terms of pace, ordering, etc.!</li>
-<li>And ask questions on the course discussion forum</li>
-</ul>
 
 
 <img src="images/favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">

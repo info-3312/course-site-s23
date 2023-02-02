@@ -11,7 +11,7 @@ format: revealjs
 #| cache: false
 
 source(here::here("slides", "_R", "slide-opts.R"))
-ggplot2::theme_set(ggplot2::theme_gray(base_size = 16))
+ggplot2::theme_set(ggplot2::theme_gray(base_size = 14))
 
 library(tidyverse)
 ```
@@ -275,6 +275,7 @@ glimpse(scorecard)
 ```{r}
 #| label: simple-viz
 #| fig-show: hide
+#| fig-asp: 0.5
 ggplot(scorecard, aes(x = avgfacsal, y = netcost)) +
   geom_point(alpha = 0.5, size = 2) +
   geom_smooth(method = "lm", se = FALSE, size = 0.7) +

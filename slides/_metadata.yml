@@ -18,7 +18,7 @@ execute:
   warning: false
 knitr:
   opts_chunk:
-    fig.width: 8
+    fig.width: 7
     fig.asp: 0.618
     fig.retina: 2
     dpi: 150

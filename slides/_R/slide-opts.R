@@ -1,5 +1,5 @@
 # set base theme
-ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
 
 # load basic packages
 library(knitr)
