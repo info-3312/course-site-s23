@@ -1005,7 +1005,7 @@
     "href": "slides/04-geoms.html#ggplot2-theme",
     "title": "Deep dive: geoms",
     "section": "ggplot2 theme",
-    "text": "ggplot2 theme\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))"
+    "text": "ggplot2 theme\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))"
   },
   {
     "objectID": "slides/04-geoms.html#figure-sizing",
@@ -1432,21 +1432,21 @@
     "href": "slides/03-look-at-data.html#minimal-theme-viridis-scale-default-option",
     "title": "Look at data",
     "section": "Minimal theme + viridis scale, default option",
-    "text": "Minimal theme + viridis scale, default option\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 16) +\n  scale_color_viridis_d(end = 0.9)"
+    "text": "Minimal theme + viridis scale, default option\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 14) +\n  scale_color_viridis_d(end = 0.9)"
   },
   {
     "objectID": "slides/03-look-at-data.html#viridis-scale-option-a-magma",
     "href": "slides/03-look-at-data.html#viridis-scale-option-a-magma",
     "title": "Look at data",
     "section": "Viridis scale, option A (magma)",
-    "text": "Viridis scale, option A (magma)\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 16) +\n  scale_color_viridis_d(end = 0.8, option = \"A\")"
+    "text": "Viridis scale, option A (magma)\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_minimal(base_size = 14) +\n  scale_color_viridis_d(end = 0.8, option = \"A\")"
   },
   {
     "objectID": "slides/03-look-at-data.html#dark-theme-further-theme-customization",
     "href": "slides/03-look-at-data.html#dark-theme-further-theme-customization",
     "title": "Look at data",
     "section": "Dark theme + further theme customization",
-    "text": "Dark theme + further theme customization\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_dark(base_size = 16) +\n  scale_color_manual(values = c(\"yellow\", \"blue\", \"orange\", \"red\", \"green\", \"white\")) +\n  theme(\n    text = element_text(color = \"red\", face = \"bold.italic\"),\n    plot.background = element_rect(fill = \"yellow\")\n  )"
+    "text": "Dark theme + further theme customization\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +\n  geom_point(alpha = 0.5, show.legend = FALSE) +\n  geom_smooth(method = \"lm\", se = FALSE, size = 0.5, show.legend = FALSE) +\n  facet_wrap(vars(pctpell_cat)) +\n  labs(\n    x = \"Average faculty salary (USD)\",\n    y = \"Net cost of attendance (USD)\",\n    color = \"Percentage of Pell grant recipients\",\n    title = \"Faculty salaries and net cost of attendance in US universities\"\n  ) +\n  theme_dark(base_size = 14) +\n  scale_color_manual(values = c(\"yellow\", \"blue\", \"orange\", \"red\", \"green\", \"white\")) +\n  theme(\n    text = element_text(color = \"red\", face = \"bold.italic\"),\n    plot.background = element_rect(fill = \"yellow\")\n  )"
   },
   {
     "objectID": "slides/03-look-at-data.html#bad-taste",
@@ -1474,21 +1474,21 @@
     "href": "slides/03-look-at-data.html#barplot",
     "title": "Look at data",
     "section": "Barplot",
-    "text": "Barplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_col() +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+    "text": "Barplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_col() +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 14)"
   },
   {
     "objectID": "slides/03-look-at-data.html#scatterplot",
     "href": "slides/03-look-at-data.html#scatterplot",
     "title": "Look at data",
     "section": "Scatterplot",
-    "text": "Scatterplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+    "text": "Scatterplot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 14)"
   },
   {
     "objectID": "slides/03-look-at-data.html#lollipop-plot-a-happy-medium",
     "href": "slides/03-look-at-data.html#lollipop-plot-a-happy-medium",
     "title": "Look at data",
     "section": "Lollipop plot – a happy medium?",
-    "text": "Lollipop plot – a happy medium?\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+    "text": "Lollipop plot – a happy medium?\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 14)"
   },
   {
     "objectID": "slides/03-look-at-data.html#activity-napoleons-disastrous-russian-campaign-of-1812",
@@ -1523,14 +1523,14 @@
     "href": "slides/03-look-at-data.html#a-second-look-lollipop-plot",
     "title": "Look at data",
     "section": "A second look: lollipop plot",
-    "text": "A second look: lollipop plot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)"
+    "text": "A second look: lollipop plot\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(\n    aes(\n      x = 0, xend = mean_netcost,\n      y = pctpell_cat, yend = pctpell_cat\n    )\n  ) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 14)"
   },
   {
     "objectID": "slides/03-look-at-data.html#activity-spot-the-difference-i",
     "href": "slides/03-look-at-data.html#activity-spot-the-difference-i",
     "title": "Look at data",
     "section": "Activity: Spot the difference I",
-    "text": "Activity: Spot the difference I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = pctpell_cat\n  )) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 16)\n\n\n\n\n\n\n\n−+\n01:00"
+    "text": "Activity: Spot the difference I\n\nCan you spot the differences between the code here and the one provided in the previous slide? Are there any differences in the resulting plot? Work in a pair (or group) to answer.\n\n\nPlotCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +\n  geom_point(size = 4) +\n  geom_segment(aes(\n    xend = 0,\n    yend = pctpell_cat\n  )) +\n  labs(\n    x = \"Mean net cost of attendance\", y = \"Pell grant recipients\",\n    title = \"Mean net cost of attendance, by Pell grant recipients\"\n  ) +\n  theme_minimal(base_size = 14)\n\n\n\n\n\n\n\n−+\n01:00"
   },
   {
     "objectID": "slides/03-look-at-data.html#global-vs.-layer-specific-aesthetics",

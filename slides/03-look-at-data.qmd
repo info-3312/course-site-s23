@@ -378,7 +378,7 @@ ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
     color = "Percentage of Pell grant recipients",
     title = "Faculty salaries and net cost of attendance in US universities"
   ) +
-  theme_dark(base_size = 16) +
+  theme_dark(base_size = 14) +
   scale_color_manual(values = c("yellow", "blue", "orange", "red", "green", "white")) +
   theme(
     text = element_text(color = "red", face = "bold.italic"),
@@ -405,7 +405,7 @@ ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
     color = "Percentage of Pell grant recipients",
     title = "Faculty salaries and net cost of attendance in US universities"
   ) +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 14) +
   scale_color_viridis_d(end = 0.9)
 ```
 
@@ -444,7 +444,7 @@ ggplot(scorecard, aes(x = avgfacsal, y = netcost, color = pctpell_cat)) +
     color = "Percentage of Pell grant recipients",
     title = "Faculty salaries and net cost of attendance in US universities"
   ) +
-  theme_minimal(base_size = 16) +
+  theme_minimal(base_size = 14) +
   scale_color_viridis_d(end = 0.8, option = "A")
 ```
 
@@ -600,7 +600,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
     x = "Mean net cost of attendance", y = "Pell grant recipients",
     title = "Mean net cost of attendance, by Pell grant recipients"
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 14)
 ```
 ]
 
@@ -617,7 +617,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
     x = "Mean net cost of attendance", y = "Pell grant recipients",
     title = "Mean net cost of attendance, by Pell grant recipients"
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 14)
 ```
 
 :::
@@ -700,7 +700,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
     x = "Mean net cost of attendance", y = "Pell grant recipients",
     title = "Mean net cost of attendance, by Pell grant recipients"
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 14)
 ```
 
 ### Code
@@ -819,7 +819,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
     x = "Mean net cost of attendance", y = "Pell grant recipients",
     title = "Mean net cost of attendance, by Pell grant recipients"
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 14)
 ```
 
 ### Code
@@ -855,7 +855,7 @@ ggplot(mean_netcost_pctpell, aes(y = pctpell_cat, x = mean_netcost)) +
     x = "Mean net cost of attendance", y = "Pell grant recipients",
     title = "Mean net cost of attendance, by Pell grant recipients"
   ) +
-  theme_minimal(base_size = 16)
+  theme_minimal(base_size = 14)
 ```
 
 ### Code
