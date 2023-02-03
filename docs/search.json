@@ -95,7 +95,7 @@
     "href": "hw/hw-01.html#packages",
     "title": "Homework 1",
     "section": "Packages",
-    "text": "Packages\n\nlibrary(tidyverse)"
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(dsbox)\nlibrary(openintro)"
   },
   {
     "objectID": "hw/hw-01.html#guidelines-tips",
@@ -123,7 +123,7 @@
     "href": "hw/hw-01.html#exercise-2",
     "title": "Homework 1",
     "section": "Exercise 2",
-    "text": "Exercise 2\nRoad traffic accidents in Edinburgh. Next we’ll look at traffic accidents in Edinburgh. The data are made available online by the UK Government. It covers all recorded accidents in Edinburgh in 2018 and some of the variables were modified for the purposes of this assignment. The data can be found in the dsbox package, and it’s called accidents. You can find out more about the dataset by inspecting its documentation with ?accidents and you can also find this information here.\nRecreate the following plot, and interpret in context of the data.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+    "text": "Exercise 2\nRoad traffic accidents in Edinburgh. Next we’ll look at traffic accidents in Edinburgh. The data are made available online by the UK Government. It covers all recorded accidents in Edinburgh in 2018 and some of the variables were modified for the purposes of this assignment. The data can be found in the dsbox package, and it’s called accidents. You can find out more about the dataset by inspecting its documentation with ?accidents and you can also find this information here.\nRecreate the following plot, and interpret in context of the data.\n\n\n\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
   },
   {
     "objectID": "hw/hw-01.html#exercise-3",
@@ -137,7 +137,7 @@
     "href": "hw/hw-01.html#exercise-4",
     "title": "Homework 1",
     "section": "Exercise 4",
-    "text": "Exercise 4\nUS counties. The following questions use the county dataset in the openintro package. You can find out more about the dataset by inspecting its documentation with ?county and you can also find this information here.\n\nWhat does the following code do? Does it work? Does it make sense? Why/why not?\nggplot(county) +\n  geom_point(aes(x = median_edu, y = median_hh_income)) +\n  geom_boxplot(aes(x = smoking_ban, y = pop2017))\nRecreate the R code necessary to generate the following graphs. You will need to create 8 separate plots for this exercise. Note that wherever a categorical variable is used in the plot, it’s metro.\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+    "text": "Exercise 4\nUS counties. The following questions use the county dataset in the openintro package. You can find out more about the dataset by inspecting its documentation with ?county and you can also find this information here.\n\nWhat does the following code do? Does it work? Does it make sense? Why/why not?\nggplot(county) +\n  geom_point(aes(x = median_edu, y = median_hh_income)) +\n  geom_boxplot(aes(x = smoking_ban, y = pop2017))\nRecreate the R code necessary to generate the following graphs. You will need to create 8 separate plots for this exercise. Note that wherever a categorical variable is used in the plot, it’s metro.\n\n\n\n\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
   },
   {
     "objectID": "hw/hw-01.html#exercise-5",
@@ -151,7 +151,7 @@
     "href": "hw/hw-01.html#submission",
     "title": "Homework 1",
     "section": "Submission",
-    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Cornell University NetID and log in using your NetID credentials.\nClick on your INFO 3312 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).\nSelect the first page of your .pdf submission to be associated with the “Workflow & formatting” question."
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Cornell University NetID and log in using your NetID credentials.\nClick on your INFO 3312 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”)."
   },
   {
     "objectID": "hw/hw-01.html#grading",

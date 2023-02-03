@@ -362,7 +362,9 @@ Important
 <section id="packages" class="level2">
 <h2 class="anchored" data-anchor-id="packages">Packages</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dsbox)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(openintro)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="guidelines-tips" class="level2">
@@ -406,7 +408,11 @@ Note
 <h2 class="anchored" data-anchor-id="exercise-2">Exercise 2</h2>
 <p><strong>Road traffic accidents in Edinburgh.</strong> Next we’ll look at traffic accidents in Edinburgh. The data are made available <a href="https://www.gov.uk/government/collections/road-traffic-statistics">online</a> by the UK Government. It covers all recorded accidents in Edinburgh in 2018 and some of the variables were modified for the purposes of this assignment. The data can be found in the <strong>dsbox</strong> package, and it’s called <code>accidents</code>. You can find out more about the dataset by inspecting its documentation with <code>?accidents</code> and you can also find this information <a href="https://rstudio-education.github.io/dsbox/reference/accidents.html">here</a>.</p>
 <p>Recreate the following plot, and interpret in context of the data.</p>
-<p><img src="01/accidents.png" class="img-fluid" alt="Recreation of the required plot for exercise 2."></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="hw-01_files/figure-html/unnamed-chunk-2-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding. <br></p>
 </div>
@@ -434,7 +440,11 @@ Note
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> smoking_ban, <span class="at">y =</span> pop2017))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div></li>
 <li><p>Recreate the R code necessary to generate the following graphs. You will need to create 8 separate plots for this exercise. Note that wherever a categorical variable is used in the plot, it’s <code>metro</code>.</p></li>
 </ol>
-<p><img src="01/plots-recreation.png" class="img-fluid" alt="Recreation of the required plot for exercise 4(b)."></p>
+<div class="cell">
+<div class="cell-output-display">
+<p><img src="hw-01_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
 <div class="render-commit-push">
 <p>Now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding. <br></p>
 </div>
@@ -464,8 +474,7 @@ Note
 <li>Click <em>School Credentials</em> <span class="math inline">\(\rightarrow\)</span> <em>Cornell University NetID</em> and log in using your NetID credentials.</li>
 <li>Click on your <em>INFO 3312</em> course.</li>
 <li>Click on the assignment, and you’ll be prompted to submit it.</li>
-<li>Mark all the pages associated with exercise. All the pages of your lab should be associated with at least one question (i.e., should be “checked”).</li>
-<li>Select the first page of your .pdf submission to be associated with the <em>“Workflow &amp; formatting”</em> question.</li>
+<li>Mark all the pages associated with exercise. All the pages of your homework should be associated with at least one question (i.e., should be “checked”).</li>
 </ul>
 </section>
 <section id="grading" class="level2">
