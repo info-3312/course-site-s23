@@ -2,98 +2,102 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://info3312.infosci.cornell.edu/labs/lab-00.html</loc>
-    <lastmod>2023-02-02T17:48:24.665Z</lastmod>
+    <lastmod>2023-02-03T00:31:53.797Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-links.html</loc>
-    <lastmod>2023-02-02T17:48:25.018Z</lastmod>
+    <lastmod>2023-02-03T00:31:54.153Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/hw/hw-01.html</loc>
-    <lastmod>2023-02-02T17:48:25.660Z</lastmod>
+    <lastmod>2023-02-03T00:31:54.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://info3312.infosci.cornell.edu/prepare/02-09.html</loc>
+    <lastmod>2023-02-03T00:31:55.131Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/prepare/01-31.html</loc>
-    <lastmod>2023-02-02T17:48:26.012Z</lastmod>
+    <lastmod>2023-02-03T00:31:55.467Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/prepare/01-24.html</loc>
-    <lastmod>2023-02-02T17:48:26.344Z</lastmod>
+    <lastmod>2023-02-03T00:31:55.777Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/prepare/01-26.html</loc>
-    <lastmod>2023-02-02T17:48:26.655Z</lastmod>
+    <lastmod>2023-02-03T00:31:56.096Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/prepare/01-27.html</loc>
-    <lastmod>2023-02-02T17:48:26.974Z</lastmod>
+    <lastmod>2023-02-03T00:31:56.427Z</lastmod>
   </url>
   <url>
-    <loc>https://info3312.infosci.cornell.edu/prepare/02-03.html</loc>
-    <lastmod>2023-02-02T17:48:27.299Z</lastmod>
+    <loc>https://info3312.infosci.cornell.edu/prepare/02-07.html</loc>
+    <lastmod>2023-02-03T00:31:56.758Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/prepare/02-02.html</loc>
-    <lastmod>2023-02-02T17:48:27.609Z</lastmod>
+    <lastmod>2023-02-03T00:31:57.070Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/project-tips-resources.html</loc>
-    <lastmod>2023-02-02T17:48:28.123Z</lastmod>
+    <lastmod>2023-02-03T00:31:57.593Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/computing-access.html</loc>
-    <lastmod>2023-02-02T17:48:28.451Z</lastmod>
+    <lastmod>2023-02-03T00:31:57.912Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/project-2.html</loc>
-    <lastmod>2023-02-02T17:48:28.942Z</lastmod>
+    <lastmod>2023-02-03T00:31:58.424Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-overview.html</loc>
-    <lastmod>2023-02-02T17:48:29.253Z</lastmod>
+    <lastmod>2023-02-03T00:31:58.774Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/index.html</loc>
-    <lastmod>2023-02-02T17:48:31.436Z</lastmod>
+    <lastmod>2023-02-03T00:32:01.381Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/project-1.html</loc>
-    <lastmod>2023-02-02T17:48:31.944Z</lastmod>
+    <lastmod>2023-02-03T00:32:01.901Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-team.html</loc>
-    <lastmod>2023-02-02T17:48:32.288Z</lastmod>
+    <lastmod>2023-02-03T00:32:02.233Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/slides/02-grammar-of-graphics.html</loc>
-    <lastmod>2023-02-02T17:48:33.155Z</lastmod>
+    <lastmod>2023-02-03T00:32:03.098Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/slides/01-welcome-info3312.html</loc>
-    <lastmod>2023-02-02T17:48:34.118Z</lastmod>
+    <lastmod>2023-02-03T00:32:04.140Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/slides/04-geoms.html</loc>
-    <lastmod>2023-02-02T17:48:34.846Z</lastmod>
+    <lastmod>2023-02-03T00:32:04.999Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/slides/03-look-at-data.html</loc>
-    <lastmod>2023-02-02T17:48:35.830Z</lastmod>
+    <lastmod>2023-02-03T00:32:06.139Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-faq.html</loc>
-    <lastmod>2023-02-02T17:48:36.176Z</lastmod>
+    <lastmod>2023-02-03T00:32:06.504Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/computing-cheatsheets.html</loc>
-    <lastmod>2023-02-02T17:48:36.541Z</lastmod>
+    <lastmod>2023-02-03T00:32:06.895Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-support.html</loc>
-    <lastmod>2023-02-02T17:48:37.206Z</lastmod>
+    <lastmod>2023-02-03T00:32:07.635Z</lastmod>
   </url>
   <url>
     <loc>https://info3312.infosci.cornell.edu/course-syllabus.html</loc>
-    <lastmod>2023-02-02T17:48:37.684Z</lastmod>
+    <lastmod>2023-02-03T00:32:08.155Z</lastmod>
   </url>
 </urlset>

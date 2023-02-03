@@ -1,0 +1,8 @@
+---
+title: "Prepare"
+subtitle: "Due: February 9, 2023"
+categories: "prepare"
+---
+
+- 📖 Read:
+    - Wickham et. al., [chapter 16](https://ggplot2-book.org/coord.html) + [chapter 17](https://ggplot2-book.org/facet.html)

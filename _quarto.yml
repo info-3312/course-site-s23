@@ -65,6 +65,10 @@ website:
             text: Access
           - href: computing-cheatsheets.qmd
             text: Cheatsheets
+      - section: "Homework"
+        contents:
+          - href: hw/hw-01.qmd
+            text: Homework 01
       - section: "Projects"
         contents:
           - href: project-1.qmd

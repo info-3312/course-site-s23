@@ -1,8 +1,0 @@
----
-title: "Prepare"
-subtitle: "Due: February 3, 2023"
-categories: "prepare"
----
-
-- 📖 Read:
-    - R4DS: [Chp 3 - Workflow basics](https://r4ds.hadley.nz/workflow-basics.html)
