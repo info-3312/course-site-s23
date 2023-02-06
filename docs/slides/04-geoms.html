@@ -449,7 +449,7 @@ Dr.&nbsp;Benjamin Soltoff
 </ul>
 <div class="sourceCode" id="cb3"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">knitr</span><span class="kw">:</span></span>
 <span id="cb3-2"><a href="#cb3-2"></a><span class="at">  </span><span class="fu">opts_chunk</span><span class="kw">:</span></span>
-<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">fig.width</span><span class="kw">:</span><span class="at"> </span><span class="dv">8</span></span>
+<span id="cb3-3"><a href="#cb3-3"></a><span class="at">    </span><span class="fu">fig.width</span><span class="kw">:</span><span class="at"> </span><span class="dv">7</span></span>
 <span id="cb3-4"><a href="#cb3-4"></a><span class="at">    </span><span class="fu">fig.asp</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.618</span></span>
 <span id="cb3-5"><a href="#cb3-5"></a><span class="at">    </span><span class="fu">fig.retina</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
 <span id="cb3-6"><a href="#cb3-6"></a><span class="at">    </span><span class="fu">dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">150</span></span>
@@ -458,12 +458,12 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="data-prep-new-variables" class="slide level2">
 <h2>Data prep: new variables</h2>
 <p>From last class…</p>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-4_6ee2ebb7819d39c557cc2159b94cc7eb">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>scorecard <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell_cat =</span> <span class="fu">cut_interval</span>(<span class="at">x =</span> pctpell, <span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">%&gt;%</span></span>
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-4_e3b139f49f9f606940e8c96849347547">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>scorecard <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell_cat =</span> <span class="fu">cut_interval</span>(<span class="at">x =</span> pctpell, <span class="at">n =</span> <span class="dv">6</span>)) <span class="sc">|&gt;</span></span>
 <span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">drop_na</span>(pctpell_cat)</span>
 <span id="cb4-4"><a href="#cb4-4"></a></span>
-<span id="cb4-5"><a href="#cb4-5"></a>scorecard <span class="sc">%&gt;%</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>scorecard <span class="sc">|&gt;</span></span>
 <span id="cb4-6"><a href="#cb4-6"></a>  <span class="fu">count</span>(pctpell_cat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 6 × 2
@@ -481,9 +481,9 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="data-prep-summary-table" class="slide level2">
 <h2>Data prep: summary table</h2>
 <p>From last class…</p>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-5_87a7583c4817b9ce05df0f79a48fb1d2">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
-<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">group_by</span>(pctpell_cat) <span class="sc">%&gt;%</span></span>
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-5_c26c3a7e6e642cef296427ebc86fc069">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="fu">group_by</span>(pctpell_cat) <span class="sc">|&gt;</span></span>
 <span id="cb6-3"><a href="#cb6-3"></a>  <span class="fu">summarise</span>(<span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span>
 <span id="cb6-4"><a href="#cb6-4"></a></span>
 <span id="cb6-5"><a href="#cb6-5"></a>mean_netcost_pctpell</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -530,7 +530,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_1a184e14" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_e764f000" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -559,7 +559,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_9d30e114" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_2121deba" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -827,7 +827,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <img data-src="04-geoms_files/figure-revealjs/unnamed-chunk-28-1.png" style="width:100.0%" class="r-stretch quarto-figure-center"><div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_63b79bd0" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_0e10efae" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1040,7 +1040,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_858fbd83" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_d73ade41" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1121,15 +1121,15 @@ Dr.&nbsp;Benjamin Soltoff
 </section>
 <section id="average-net-cost-per-pell-grant-recipient" class="slide level2">
 <h2>Average net cost per Pell grant recipient</h2>
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-48_5411ee5f4f0aef97348e952714314446">
-<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
-<span id="cb48-2"><a href="#cb48-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell =</span> <span class="fu">round</span>(pctpell, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">%&gt;%</span></span>
-<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">group_by</span>(pctpell) <span class="sc">%&gt;%</span></span>
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-48_611dfa95ee3651eab42e5040287acb0b">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1"></a>mean_netcost_pctpell <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
+<span id="cb48-2"><a href="#cb48-2"></a>  <span class="fu">mutate</span>(<span class="at">pctpell =</span> <span class="fu">round</span>(pctpell, <span class="at">digits =</span> <span class="dv">2</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb48-3"><a href="#cb48-3"></a>  <span class="fu">group_by</span>(pctpell) <span class="sc">|&gt;</span></span>
 <span id="cb48-4"><a href="#cb48-4"></a>  <span class="fu">summarise</span>(</span>
 <span id="cb48-5"><a href="#cb48-5"></a>    <span class="at">n =</span> <span class="fu">n</span>(),</span>
 <span id="cb48-6"><a href="#cb48-6"></a>    <span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost),</span>
 <span id="cb48-7"><a href="#cb48-7"></a>    <span class="at">sd_netcost =</span> <span class="fu">sd</span>(netcost)</span>
-<span id="cb48-8"><a href="#cb48-8"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb48-8"><a href="#cb48-8"></a>  ) <span class="sc">|&gt;</span></span>
 <span id="cb48-9"><a href="#cb48-9"></a>  <span class="fu">drop_na</span>(mean_netcost)</span>
 <span id="cb48-10"><a href="#cb48-10"></a></span>
 <span id="cb48-11"><a href="#cb48-11"></a>mean_netcost_pctpell</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1208,7 +1208,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_767f53c5" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_6d632920" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>
@@ -1282,9 +1282,9 @@ Dr.&nbsp;Benjamin Soltoff
 <ul id="tabset-9" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-9-1">Summarize</a></li><li><a href="#tabset-9-2">Plot</a></li></ul>
 <div class="tab-content">
 <div id="tabset-9-1" class="smaller">
-<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-59_a59c8aa7198017f0283b8c675312b39a">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>mean_netcost_type_locale <span class="ot">&lt;-</span> scorecard <span class="sc">%&gt;%</span></span>
-<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">group_by</span>(type, locale) <span class="sc">%&gt;%</span></span>
+<div class="cell" data-layout-align="center" data-hash="04-geoms_cache/revealjs/unnamed-chunk-59_b39a9db727b45b0871e846e0b53fa10d">
+<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a href="#cb57-1"></a>mean_netcost_type_locale <span class="ot">&lt;-</span> scorecard <span class="sc">|&gt;</span></span>
+<span id="cb57-2"><a href="#cb57-2"></a>  <span class="fu">group_by</span>(type, locale) <span class="sc">|&gt;</span></span>
 <span id="cb57-3"><a href="#cb57-3"></a>  <span class="fu">summarize</span>(<span class="at">mean_netcost =</span> <span class="fu">mean</span>(netcost, <span class="at">na.rm =</span> <span class="cn">TRUE</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span>
 <span id="cb57-4"><a href="#cb57-4"></a></span>
 <span id="cb57-5"><a href="#cb57-5"></a>mean_netcost_type_locale</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1336,7 +1336,7 @@ Dr.&nbsp;Benjamin Soltoff
 </div>
 <div class="cell" data-layout-align="center">
 <div class="cell-output-display">
-<div class="countdown" id="timer_4e791d60" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
+<div class="countdown" id="timer_28711e01" data-update-every="1" tabindex="0" style="right:0;bottom:0;">
 <div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
 <code class="countdown-time"><span class="countdown-digits minutes">03</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
 </div>

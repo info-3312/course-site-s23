@@ -347,7 +347,7 @@
     "href": "index.html",
     "title": "INFO 3312/5312: Data Communication",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\nHW 1 due\n    \nW\nFeb 8\n\n\n\n\n\n\n\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\n\n    5\nTu\nFeb 21\nLec 9\nOptimizing color spaces\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nPresentation ready plots\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nCalling bullshit I\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nCalling bullshit II\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nCalling bullshit III\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nCalling bullshit IV\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nScience, art, or somewhere in-between?\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nGraphical perception and cognition\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nData feminism I\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nData feminism II\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text + network data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\n???"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\n\n    \nW\nFeb 8\n\n\n\n\n\n\nHW 1 due\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\n\n    5\nTu\nFeb 21\nLec 9\nOptimizing color spaces\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nPresentation ready plots\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nCalling bullshit I\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nCalling bullshit II\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nCalling bullshit III\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nCalling bullshit IV\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nScience, art, or somewhere in-between?\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nGraphical perception and cognition\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nData feminism I\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nData feminism II\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text + network data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\n???"
   },
   {
     "objectID": "project-1.html",
@@ -1019,21 +1019,21 @@
     "href": "slides/04-geoms.html#figure-sizing",
     "title": "Deep dive: geoms",
     "section": "Figure sizing",
-    "text": "Figure sizing\nFor more on including figures in Quarto documents with the right size, resolution, etc.\n\nR for Data Science - Figures\nUse the YAML header\n\nknitr:\n  opts_chunk:\n    fig.width: 8\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+    "text": "Figure sizing\nFor more on including figures in Quarto documents with the right size, resolution, etc.\n\nR for Data Science - Figures\nUse the YAML header\n\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
   },
   {
     "objectID": "slides/04-geoms.html#data-prep-new-variables",
     "href": "slides/04-geoms.html#data-prep-new-variables",
     "title": "Deep dive: geoms",
     "section": "Data prep: new variables",
-    "text": "Data prep: new variables\nFrom last class…\n\nscorecard <- scorecard %>%\n  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) %>%\n  drop_na(pctpell_cat)\n\nscorecard %>%\n  count(pctpell_cat)\n\n# A tibble: 6 × 2\n  pctpell_cat       n\n  <fct>         <int>\n1 [0,0.167]       169\n2 (0.167,0.333]   630\n3 (0.333,0.5]     609\n4 (0.5,0.667]     205\n5 (0.667,0.833]    73\n6 (0.833,1]        31"
+    "text": "Data prep: new variables\nFrom last class…\n\nscorecard <- scorecard |>\n  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>\n  drop_na(pctpell_cat)\n\nscorecard |>\n  count(pctpell_cat)\n\n# A tibble: 6 × 2\n  pctpell_cat       n\n  <fct>         <int>\n1 [0,0.167]       169\n2 (0.167,0.333]   630\n3 (0.333,0.5]     609\n4 (0.5,0.667]     205\n5 (0.667,0.833]    73\n6 (0.833,1]        31"
   },
   {
     "objectID": "slides/04-geoms.html#data-prep-summary-table",
     "href": "slides/04-geoms.html#data-prep-summary-table",
     "title": "Deep dive: geoms",
     "section": "Data prep: summary table",
-    "text": "Data prep: summary table\nFrom last class…\n\nmean_netcost_pctpell <- scorecard %>%\n  group_by(pctpell_cat) %>%\n  summarise(mean_netcost = mean(netcost, na.rm = TRUE))\n\nmean_netcost_pctpell\n\n# A tibble: 6 × 2\n  pctpell_cat   mean_netcost\n  <fct>                <dbl>\n1 [0,0.167]           29919.\n2 (0.167,0.333]       22579.\n3 (0.333,0.5]         19171.\n4 (0.5,0.667]         16966.\n5 (0.667,0.833]       15572.\n6 (0.833,1]           10138."
+    "text": "Data prep: summary table\nFrom last class…\n\nmean_netcost_pctpell <- scorecard |>\n  group_by(pctpell_cat) |>\n  summarise(mean_netcost = mean(netcost, na.rm = TRUE))\n\nmean_netcost_pctpell\n\n# A tibble: 6 × 2\n  pctpell_cat   mean_netcost\n  <fct>                <dbl>\n1 [0,0.167]           29919.\n2 (0.167,0.333]       22579.\n3 (0.333,0.5]         19171.\n4 (0.5,0.667]         16966.\n5 (0.667,0.833]       15572.\n6 (0.833,1]           10138."
   },
   {
     "objectID": "slides/04-geoms.html#global-vs.-layer-specific-aesthetics",
@@ -1250,7 +1250,7 @@
     "href": "slides/04-geoms.html#average-net-cost-per-pell-grant-recipient",
     "title": "Deep dive: geoms",
     "section": "Average net cost per Pell grant recipient",
-    "text": "Average net cost per Pell grant recipient\n\nmean_netcost_pctpell <- scorecard %>%\n  mutate(pctpell = round(pctpell, digits = 2)) %>%\n  group_by(pctpell) %>%\n  summarise(\n    n = n(),\n    mean_netcost = mean(netcost),\n    sd_netcost = sd(netcost)\n  ) %>%\n  drop_na(mean_netcost)\n\nmean_netcost_pctpell\n\n# A tibble: 67 × 4\n   pctpell     n mean_netcost sd_netcost\n     <dbl> <int>        <dbl>      <dbl>\n 1    0.08     2        8334       2493.\n 2    0.09     5       34389.      3211.\n 3    0.1      9       35855.      8615.\n 4    0.11    17       29528.      8323.\n 5    0.12    15       32092.      9152.\n 6    0.13    18       31172.      6811.\n 7    0.14    27       28900.      7628.\n 8    0.17    29       27933.     11449.\n 9    0.18    25       24109.      9916.\n10    0.19    36       25109.      8936.\n# … with 57 more rows"
+    "text": "Average net cost per Pell grant recipient\n\nmean_netcost_pctpell <- scorecard |>\n  mutate(pctpell = round(pctpell, digits = 2)) |>\n  group_by(pctpell) |>\n  summarise(\n    n = n(),\n    mean_netcost = mean(netcost),\n    sd_netcost = sd(netcost)\n  ) |>\n  drop_na(mean_netcost)\n\nmean_netcost_pctpell\n\n# A tibble: 67 × 4\n   pctpell     n mean_netcost sd_netcost\n     <dbl> <int>        <dbl>      <dbl>\n 1    0.08     2        8334       2493.\n 2    0.09     5       34389.      3211.\n 3    0.1      9       35855.      8615.\n 4    0.11    17       29528.      8323.\n 5    0.12    15       32092.      9152.\n 6    0.13    18       31172.      6811.\n 7    0.14    27       28900.      7628.\n 8    0.17    29       27933.     11449.\n 9    0.18    25       24109.      9916.\n10    0.19    36       25109.      8936.\n# … with 57 more rows"
   },
   {
     "objectID": "slides/04-geoms.html#geom_line",
@@ -1313,7 +1313,7 @@
     "href": "slides/04-geoms.html#another-look-at-smooth-ish-surface",
     "title": "Deep dive: geoms",
     "section": "Another look at smooth-ish surface",
-    "text": "Another look at smooth-ish surface\n\nSummarizePlot\n\n\n\nmean_netcost_type_locale <- scorecard %>%\n  group_by(type, locale) %>%\n  summarize(mean_netcost = mean(netcost, na.rm = TRUE), .groups = \"drop\")\n\nmean_netcost_type_locale\n\n# A tibble: 12 × 3\n   type                locale mean_netcost\n   <fct>               <fct>         <dbl>\n 1 Public              City         14007.\n 2 Public              Suburb       15946.\n 3 Public              Town         14692.\n 4 Public              Rural        13390.\n 5 Public              <NA>          7999 \n 6 Private, nonprofit  City         24485.\n 7 Private, nonprofit  Suburb       23018.\n 8 Private, nonprofit  Town         21785.\n 9 Private, nonprofit  Rural        22533.\n10 Private, for-profit City         28005.\n11 Private, for-profit Suburb       25778.\n12 Private, for-profit Town         13370.\n\n\n\n\n\nggplot(mean_netcost_type_locale, aes(x = type, y = locale)) +\n  geom_point(aes(color = mean_netcost), size = 30, pch = \"square\")"
+    "text": "Another look at smooth-ish surface\n\nSummarizePlot\n\n\n\nmean_netcost_type_locale <- scorecard |>\n  group_by(type, locale) |>\n  summarize(mean_netcost = mean(netcost, na.rm = TRUE), .groups = \"drop\")\n\nmean_netcost_type_locale\n\n# A tibble: 12 × 3\n   type                locale mean_netcost\n   <fct>               <fct>         <dbl>\n 1 Public              City         14007.\n 2 Public              Suburb       15946.\n 3 Public              Town         14692.\n 4 Public              Rural        13390.\n 5 Public              <NA>          7999 \n 6 Private, nonprofit  City         24485.\n 7 Private, nonprofit  Suburb       23018.\n 8 Private, nonprofit  Town         21785.\n 9 Private, nonprofit  Rural        22533.\n10 Private, for-profit City         28005.\n11 Private, for-profit Suburb       25778.\n12 Private, for-profit Town         13370.\n\n\n\n\n\nggplot(mean_netcost_type_locale, aes(x = type, y = locale)) +\n  geom_point(aes(color = mean_netcost), size = 30, pch = \"square\")"
   },
   {
     "objectID": "slides/04-geoms.html#activity-pick-a-geom",
@@ -1321,6 +1321,216 @@
     "title": "Deep dive: geoms",
     "section": "Activity: Pick a geom",
     "text": "Activity: Pick a geom\n\nFor each of the following problems, suggest a useful geom:\n\nDisplay how the value of variable has changed over time\nShow the detailed distribution of a single continuous variable\nFocus attention on the overall relationship between two variables in a large dataset\nLabel outlying points in a single variable\n\n\n\n\n\n−+\n03:00\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#project-1-1",
+    "href": "slides/05-stats-scales-guides.html#project-1-1",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Project #1",
+    "text": "Project #1\n\nProject description\nTeam assignments on Thursday\nRepos\nDeliverables\n\nFebruary 16 - Proposals for peer review\nFebruary 20 - Revised proposals for instructor review\nMarch 3 - write-up and presentation"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#packages-figures",
+    "href": "slides/05-stats-scales-guides.html#packages-figures",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#scorecard",
+    "href": "slides/05-stats-scales-guides.html#scorecard",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "scorecard",
+    "text": "scorecard\n\nglimpse(scorecard)\n\nRows: 1,721\nColumns: 14\n$ unitid    <dbl> 100654, 100663, 100706, 100724, 100751, 100830, 100858, 1009…\n$ name      <chr> \"Alabama A & M University\", \"University of Alabama at Birmin…\n$ state     <chr> \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", \"AL\", …\n$ type      <fct> \"Public\", \"Public\", \"Public\", \"Public\", \"Public\", \"Public\", …\n$ admrate   <dbl> 0.8965, 0.8060, 0.7711, 0.9888, 0.8039, 0.9555, 0.8507, 0.60…\n$ satavg    <dbl> 959, 1245, 1300, 938, 1262, 1061, 1302, 1202, 1068, NA, 1101…\n$ cost      <dbl> 23445, 25542, 24861, 21892, 30016, 20225, 32196, 32514, 3483…\n$ netcost   <dbl> 15529, 16530, 17208, 19534, 20917, 13678, 24018, 19808, 2050…\n$ avgfacsal <dbl> 68391, 102420, 87273, 64746, 93141, 69561, 96498, 62649, 533…\n$ pctpell   <dbl> 0.7095, 0.3397, 0.2403, 0.7368, 0.1718, 0.4654, 0.1343, 0.22…\n$ comprate  <dbl> 0.2866, 0.6117, 0.5714, 0.3177, 0.7214, 0.3040, 0.7870, 0.70…\n$ firstgen  <dbl> 0.3658281, 0.3412237, 0.3101322, 0.3434343, 0.2257127, 0.381…\n$ debt      <dbl> 15250, 15085, 14000, 17500, 17671, 12000, 17500, 16000, 1425…\n$ locale    <fct> City, City, City, City, City, City, City, City, City, Suburb…"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#stats-geoms",
+    "href": "slides/05-stats-scales-guides.html#stats-geoms",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Stats < > geoms",
+    "text": "Stats < > geoms\n\nStatistical transformation (stat) transforms the data, typically by summarizing\nMany of ggplot2’s stats are used behind the scenes to generate many important geoms\n\n\n\n\n\n\n\n\nstat\ngeom\n\n\n\n\nstat_bin()\ngeom_bar(), geom_freqpoly(), geom_histogram()\n\n\nstat_bin2d()\ngeom_bin2d()\n\n\nstat_bindot()\ngeom_dotplot()\n\n\nstat_binhex()\ngeom_hex()\n\n\nstat_boxplot()\ngeom_boxplot()\n\n\nstat_contour()\ngeom_contour()\n\n\nstat_quantile()\ngeom_quantile()\n\n\nstat_smooth()\ngeom_smooth()\n\n\nstat_sum()\ngeom_count()"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#stat_boxplot",
+    "href": "slides/05-stats-scales-guides.html#stat_boxplot",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "stat_boxplot()",
+    "text": "stat_boxplot()"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#layering-with-stats",
+    "href": "slides/05-stats-scales-guides.html#layering-with-stats",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Layering with stats",
+    "text": "Layering with stats\n\nggplot(scorecard, aes(x = type, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  stat_summary(geom = \"point\", fun = \"median\", color = \"red\", size = 5, pch = 4, stroke = 2)"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#alternate-layering-with-stats",
+    "href": "slides/05-stats-scales-guides.html#alternate-layering-with-stats",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Alternate: layering with stats",
+    "text": "Alternate: layering with stats\n\nggplot(scorecard, aes(x = type, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  geom_point(stat = \"summary\", fun = \"median\", color = \"red\", size = 5, pch = 4, stroke = 2)"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#statistical-transformations",
+    "href": "slides/05-stats-scales-guides.html#statistical-transformations",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Statistical transformations",
+    "text": "Statistical transformations\n\nWhat can you say about the distribution of average faculty salaries from the following QQ plot?\n\n\n\nggplot(scorecard, aes(sample = avgfacsal)) +\n  stat_qq() +\n  stat_qq_line() +\n  labs(y = \"avgfacsal\")"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#what-is-a-scale",
+    "href": "slides/05-stats-scales-guides.html#what-is-a-scale",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "What is a scale?",
+    "text": "What is a scale?\n\nEach scale is a function from a region in data space (the domain of the scale) to a region in aesthetic space (the range of the scale)\nThe axis or legend is the inverse function: it allows you to convert visual properties back to data"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#scale-specification",
+    "href": "slides/05-stats-scales-guides.html#scale-specification",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Scale specification",
+    "text": "Scale specification\nEvery aesthetic in your plot is associated with exactly one scale:\n\nCodePlot\n\n\n\n# automatic scales\nggplot(scorecard, aes(x = pctpell, y = avgfacsal, color = type)) +\n  geom_point(alpha = 0.8)\n# manual scales\nggplot(scorecard, aes(x = pctpell, y = avgfacsal, color = type)) +\n  geom_point(alpha = 0.8) +\n  scale_x_continuous() +\n  scale_y_continuous() +\n  scale_color_ordinal()"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#anatomy-of-a-scale-function",
+    "href": "slides/05-stats-scales-guides.html#anatomy-of-a-scale-function",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Anatomy of a scale function",
+    "text": "Anatomy of a scale function\n\nscale_A_B()\n\n\nAlways starts with scale\nA: Name of the primary aesthetic (e.g., color, shape, x)\nB: Name of the scale (e.g., continuous, discrete, brewer)"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#guess-the-output",
+    "href": "slides/05-stats-scales-guides.html#guess-the-output",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Guess the output",
+    "text": "Guess the output\n\nWhat will the x-axis label of the following plot say?\n\n\nggplot(scorecard, aes(x = pctpell, y = avgfacsal, color = type)) +\n  geom_point(alpha = 0.8) +\n  scale_x_continuous(name = \"pctpell\") +\n  scale_x_continuous(name = \"Percent of students receiving a Pell grant\")\n\n\n\n\n−+\n01:00"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#address-messages",
+    "href": "slides/05-stats-scales-guides.html#address-messages",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "“Address” messages",
+    "text": "“Address” messages\n\n\nggplot(scorecard, aes(x = pctpell, y = avgfacsal, color = type)) +\n  geom_point(alpha = 0.8) +\n  scale_x_continuous(name = \"pctpell\") +\n  scale_x_continuous(name = \"Percent of students receiving a Pell grant\")\n\n\nScale for x is already present.\nAdding another scale for x, which will replace the existing scale."
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#guess-the-output-1",
+    "href": "slides/05-stats-scales-guides.html#guess-the-output-1",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Guess the output",
+    "text": "Guess the output\n\nWhat happens if you pair a discrete variable with a continuous scale? What happens if you pair a continuous variable with a discrete scale? Answer in the context of the following plots.\n\n\nPlotsResults\n\n\n\n\n\nggplot(\n  data = scorecard,\n  mapping = aes(\n    x = type,\n    y = avgfacsal\n  )\n) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous()\n\n\n\nggplot(\n  data = scorecard,\n  mapping = aes(\n    x = type,\n    y = avgfacsal\n  )\n) +\n  geom_point(alpha = 0.5) +\n  scale_y_discrete()\n\n\n\n\n\n\n\n\n\nError: Discrete value supplied to continuous scale\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n03:00"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#transformations",
+    "href": "slides/05-stats-scales-guides.html#transformations",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Transformations",
+    "text": "Transformations\nWhen working with continuous data, the default is to map linearly from the data space onto the aesthetic space, but this scale can be transformed\n\nLinearTransformed\n\n\n\n\nggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_point(alpha = 0.5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_point(alpha = 0.5) +\n  scale_y_continuous(trans = \"log10\")"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#continuous-scale-transformations",
+    "href": "slides/05-stats-scales-guides.html#continuous-scale-transformations",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Continuous scale transformations",
+    "text": "Continuous scale transformations\n\n\n\nName\nFunction \\(f(x)\\)\nInverse \\(f^{-1}(y)\\)\n\n\n\n\nasn\n\\(\\tanh^{-1}(x)\\)\n\\(\\tanh(y)\\)\n\n\nexp\n\\(e ^ x\\)\n\\(\\log(y)\\)\n\n\nidentity\n\\(x\\)\n\\(y\\)\n\n\nlog\n\\(\\log(x)\\)\n\\(e ^ y\\)\n\n\nlog10\n\\(\\log_{10}(x)\\)\n\\(10 ^ y\\)\n\n\nlog2\n\\(\\log_2(x)\\)\n\\(2 ^ y\\)\n\n\nlogit\n\\(\\log(\\frac{x}{1 - x})\\)\n\\(\\frac{1}{1 + e(y)}\\)\n\n\npow10\n\\(10^x\\)\n\\(\\log_{10}(y)\\)\n\n\nprobit\n\\(\\Phi(x)\\)\n\\(\\Phi^{-1}(y)\\)\n\n\nreciprocal\n\\(x^{-1}\\)\n\\(y^{-1}\\)\n\n\nreverse\n\\(-x\\)\n\\(-y\\)\n\n\nsqrt\n\\(x^{1/2}\\)\n\\(y ^ 2\\)"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#convenience-functions-for-transformations",
+    "href": "slides/05-stats-scales-guides.html#convenience-functions-for-transformations",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Convenience functions for transformations",
+    "text": "Convenience functions for transformations\n\n\n\nggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_point(alpha = 0.5) +\n  scale_y_continuous(trans = \"log10\")\n\n\n\n\n\n\n\n\n\n\nggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_point(alpha = 0.5) +\n  scale_y_log10()"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#scale-transform-vs.-data-transform",
+    "href": "slides/05-stats-scales-guides.html#scale-transform-vs.-data-transform",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Scale transform vs. data transform",
+    "text": "Scale transform vs. data transform\n\nHow are the following two plots different, how are they similar? What does this say about how scale transformations work.\n\n\nPlot APlot B\n\n\n\n\nscorecard |>\n  mutate(avgfacsal_log10 = log(avgfacsal, base = 10)) |>\n  ggplot(aes(\n    x = pctpell,\n    y = avgfacsal_log10\n  )) +\n  geom_point(alpha = 0.5)\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_point(alpha = 0.5) +\n  scale_y_log10()\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n−+\n02:00"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#what-is-a-guide",
+    "href": "slides/05-stats-scales-guides.html#what-is-a-guide",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "What is a guide?",
+    "text": "What is a guide?\nGuides are legends and axes:\n\n\nSource: ggplot2: Elegant Graphics for Data Analysis, Chp 15."
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\"\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-1",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-1",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\nWhy does 60000 not appear on the x-axis?\n\n\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000)\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-2",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-2",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000),\n    limits = c(0, 60000)\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-3",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-3",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000),\n    limits = c(0, 60000),\n    labels = c(\"$0\", \"$10,000\", \"$20,000\", \"$30,000\", \"$40,000\", \"$50,000\", \"$60,000\")\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-4",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-4",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\n\nlibrary(scales)\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000),\n    limits = c(0, 60000),\n    labels = label_dollar()\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-5",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-5",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000),\n    limits = c(0, 60000),\n    labels = label_dollar(scale_cut = cut_short_scale())\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axes-6",
+    "href": "slides/05-stats-scales-guides.html#customizing-axes-6",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axes",
+    "text": "Customizing axes\n\n\nggplot(scorecard, aes(x = netcost, y = avgfacsal)) +\n  geom_point(alpha = 0.5) +\n  scale_x_continuous(\n    name = \"Net cost of attendance\",\n    breaks = seq(from = 0, to = 60000, by = 10000),\n    limits = c(0, 60000),\n    labels = label_dollar(scale_cut = cut_short_scale())\n  ) +\n  scale_y_continuous(\n    name = \"Average faculty salary (USD)\",\n    labels = label_dollar(scale_cut = cut_short_scale())\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#aside-storing-a-plot",
+    "href": "slides/05-stats-scales-guides.html#aside-storing-a-plot",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Aside: storing a plot",
+    "text": "Aside: storing a plot\n\n\nset.seed(123)\n\np_pctpell_avgfacsal_type <- ggplot(\n  scorecard,\n  aes(x = pctpell, y = avgfacsal)\n) +\n  geom_jitter(\n    aes(\n      color = type,\n      shape = type\n    ),\n    size = 2\n  )\np_pctpell_avgfacsal_type"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axis-and-legend-labels-with-scale_",
+    "href": "slides/05-stats-scales-guides.html#customizing-axis-and-legend-labels-with-scale_",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axis and legend labels with scale_*()",
+    "text": "Customizing axis and legend labels with scale_*()\n\n\np_pctpell_avgfacsal_type +\n  scale_x_continuous(name = \"Percent of students receiving a Pell grant\") +\n  scale_y_continuous(name = \"Average faculty salary (USD)\") +\n  scale_color_discrete(name = \"College type\") +\n  scale_shape_discrete(name = \"College type\")"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#customizing-axis-and-legend-labels-with-labs",
+    "href": "slides/05-stats-scales-guides.html#customizing-axis-and-legend-labels-with-labs",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Customizing axis and legend labels with labs()",
+    "text": "Customizing axis and legend labels with labs()\n\n\np_pctpell_avgfacsal_type +\n  labs(\n    x = \"Percent of students receiving a Pell grant\",\n    y = \"Average faculty salary (USD)\",\n    color = \"College type\",\n    shape = \"College type\"\n  )"
+  },
+  {
+    "objectID": "slides/05-stats-scales-guides.html#splitting-legend-labels",
+    "href": "slides/05-stats-scales-guides.html#splitting-legend-labels",
+    "title": "Deep dive: stats + scales + guides",
+    "section": "Splitting legend labels",
+    "text": "Splitting legend labels\n\n\np_pctpell_avgfacsal_type +\n  labs(\n    x = \"Percent of students receiving a Pell grant\",\n    y = \"Average faculty salary (USD)\",\n    color = \"College type\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/03-look-at-data.html#recreate-the-visualization",

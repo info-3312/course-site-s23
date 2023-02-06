@@ -6,8 +6,8 @@ library(here)
 library(showtext)
 font_add_google("Atkinson Hyperlegible", "atkinson")
 
-p <- scorecard %>%
-  mutate(type = fct_infreq(f = type)) %>%
+p <- scorecard |>
+  mutate(type = fct_infreq(f = type)) |>
   ggplot(mapping = aes(x = type, fill = type)) +
   geom_bar(color = NA) +
   scale_fill_manual(values = c("#073949", "#F8981D", "#6EB43F"), guide = "none") +
@@ -44,8 +44,8 @@ sticker(
 )
 
 # favicon
-p <- scorecard %>%
-  mutate(type = fct_infreq(f = type)) %>%
+p <- scorecard |>
+  mutate(type = fct_infreq(f = type)) |>
   ggplot(mapping = aes(x = type, fill = type)) +
   geom_bar(color = NA) +
   scale_fill_manual(values = c("#073949", "#F8981D", "#6EB43F"), guide = "none") +

@@ -61,11 +61,11 @@ knitr:
 From last class...
 
 ```{r}
-scorecard <- scorecard %>%
-  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) %>%
+scorecard <- scorecard |>
+  mutate(pctpell_cat = cut_interval(x = pctpell, n = 6)) |>
   drop_na(pctpell_cat)
 
-scorecard %>%
+scorecard |>
   count(pctpell_cat)
 ```
 
@@ -76,8 +76,8 @@ scorecard %>%
 From last class...
 
 ```{r}
-mean_netcost_pctpell <- scorecard %>%
-  group_by(pctpell_cat) %>%
+mean_netcost_pctpell <- scorecard |>
+  group_by(pctpell_cat) |>
   summarise(mean_netcost = mean(netcost, na.rm = TRUE))
 
 mean_netcost_pctpell
@@ -562,14 +562,14 @@ ggplot(scorecard, aes(x = type, y = netcost)) +
 ## Average net cost per Pell grant recipient
 
 ```{r}
-mean_netcost_pctpell <- scorecard %>%
-  mutate(pctpell = round(pctpell, digits = 2)) %>%
-  group_by(pctpell) %>%
+mean_netcost_pctpell <- scorecard |>
+  mutate(pctpell = round(pctpell, digits = 2)) |>
+  group_by(pctpell) |>
   summarise(
     n = n(),
     mean_netcost = mean(netcost),
     sd_netcost = sd(netcost)
-  ) %>%
+  ) |>
   drop_na(mean_netcost)
 
 mean_netcost_pctpell
@@ -698,8 +698,8 @@ ggplot(scorecard, aes(x = type, y = locale)) +
 ### Summarize {.smaller}
 
 ```{r}
-mean_netcost_type_locale <- scorecard %>%
-  group_by(type, locale) %>%
+mean_netcost_type_locale <- scorecard |>
+  group_by(type, locale) |>
   summarize(mean_netcost = mean(netcost, na.rm = TRUE), .groups = "drop")
 
 mean_netcost_type_locale
