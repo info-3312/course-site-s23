@@ -19,10 +19,9 @@ source(here::here("slides", "_R", "slide-opts.R"))
 
 - [Project description](/project-1.html)
 - Team assignments on Thursday
-- Repos
 - Deliverables
-    - February 16 - Proposals for peer review
-    - February 20 - Revised proposals for instructor review
+    - February 16 - proposals for peer review
+    - February 20 - revised proposals for instructor review
     - March 3 - write-up and presentation
 
 # Setup
