@@ -1,0 +1,689 @@
+---
+title: "Deep dive: coordinates + facets"
+subtitle: "Lecture 6"
+date: "February 9, 2023"
+format: revealjs
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+library(patchwork)
+```
+
+# Announcements
+
+## Announcements
+
+- Homework 1 collected
+- Team projects begin tomorrow -- look for team assignments in Canvas
+
+## Agenda for today
+
+- Coordinate systems
+
+- Facets
+
+- Group collaboration
+
+# Setup
+
+## Packages + figures
+
+```{r}
+#| cache: false
+# load packages
+library(tidyverse)
+library(knitr)
+library(openintro)
+library(palmerpenguins)
+library(ggrepel)
+library(waffle)
+library(broom)
+
+# set default theme for ggplot2
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+
+# dplyr print min and max
+options(dplyr.print_max = 6, dplyr.print_min = 6)
+```
+
+### YAML options
+
+```yaml
+knitr:
+  opts_chunk:
+    fig.width: 7
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    out.width: "80%"
+```
+
+# Coordinate systems
+
+## Coordinate systems: purpose
+
+- Combine the two position aesthetics (`x` and `y`) to produce a 2d position on the plot:
+  - linear coordinate system: horizontal and vertical coordinates 
+  - polar coordinate system: angle and radius
+  - maps: latitude and longitude
+
+- Draw axes and panel backgrounds in coordination with the coordinate systems
+
+## Coordinate systems: types
+
+1. **Linear coordinate systems:** preserve the shape of geoms
+
+  - `coord_cartesian()`: the default Cartesian coordinate system, where the 2d position of an element is given by the combination of the x and y positions.
+  - `coord_flip()`: Cartesian coordinate system with x and y axes flipped *(won't be using much now that geoms can take aesthetic mappings in x and y axes)*
+  - `coord_fixed()`: Cartesian coordinate system with a fixed aspect ratio. *(useful only in limited circumstances)*
+
+. . .
+
+2. **Non-linear coordinate systems:** can change the shapes -- a straight line may no longer be straight. The closest distance between two points may no longer be a straight line.
+
+  - `coord_trans()`: Apply arbitrary transformations to x and y positions, after the data has been processed by the stat
+  - `coord_polar()`: Polar coordinates
+  - `coord_map()` / `coord_quickmap()` / `coord_sf()`: Map projections
+
+## Setting limits: what the plots say
+
+::: appex
+Identify the differences between each plot. Focus on the range of the `x` and `y` axes<br>as well as the contents of the plots.
+:::
+
+```{r}
+#| cache: false
+#| echo: false
+countdown(minutes = 4, top = 0)
+```
+
+:::: columns
+
+::: column
+
+```{r}
+#| label: set-limits
+#| fig-show: hide
+#| code-line-numbers: "7,8,13,18"
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  labs(title = "Plot 1")
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  scale_x_continuous(limits = c(190, 220)) +
+  scale_y_continuous(limits = c(4000, 5000)) +
+  labs(title = "Plot 2")
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  xlim(190, 220) + ylim(4000, 5000) +
+  labs(title = "Plot 3")
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +
+  labs(title = "Plot 4")
+```
+
+:::
+
+::: column
+
+```{r}
+#| label: set-limits-patchwork
+#| echo: false
+#| out.width: "100%"
+
+{ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  labs(title = "Plot 1")} +
+
+{ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  scale_x_continuous(limits = c(190, 220)) +
+  scale_y_continuous(limits = c(4000, 5000)) +
+  labs(title = "Plot 2")} +
+
+{ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  xlim(190, 220) + ylim(4000, 5000) +
+  labs(title = "Plot 3")} +
+
+{ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
+  geom_point() + geom_smooth() +
+  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +
+  labs(title = "Plot 4")} &
+  theme_minimal(base_size = 10)
+```
+
+:::
+
+::::
+
+## Setting limits: what the warnings say
+
+```{r}
+#| ref.label: set-limits
+#| fig.show: hide
+#| message: false
+#| warning: true
+#| collapse: true
+```
+
+## Setting limits
+
+- Setting scale limits: Any data outside the limits is thrown away
+  - `scale_*_continuous()`, `xlim` and `ylim` arguments
+  - `xlim()` and `ylim()`
+
+- Setting coordinate system limits: Use all the data, but only display a small region of the plot (zooming in)
+  - `coord_cartesian()`, `xlim` and `ylim` arguments
+
+## Fixing aspect ratio with `coord_fixed()`
+
+Useful when having an aspect ratio of 1 makes sense, e.g. scores on two tests (reading and writing) on the same scale (0 to 100 points)
+
+```{r}
+#| output-location: column
+#| fig-show: hold
+#| out.width: 75%
+#| code-line-numbers: "9"
+ggplot(hsb2, aes(x = read, y = write)) +
+  geom_point() + geom_smooth(method = "lm") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray") +
+  labs(title = "Not fixed")
+
+ggplot(hsb2, aes(x = read, y = write)) +
+  geom_point() + geom_smooth(method = "lm") +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray") +
+  coord_fixed() +
+  labs(title = "Fixed")
+```
+
+## Fixing aspect ratio with `tune::coord_obs_pred()`
+
+::: {.panel-tabset}
+
+### Code
+
+```{r}
+#| label: pred-data
+data(solubility_test, package = "modeldata")
+
+p <- ggplot(solubility_test, aes(x = solubility, y = prediction)) +
+  geom_abline(lty = 2) +
+  geom_point(alpha = 0.5)
+
+```
+
+### `coord_cartesian()`
+
+```{r}
+#| label: pred-default
+#| dependson: pred-data
+p + coord_cartesian()
+```
+
+### `coord_fixed()`
+
+```{r}
+#| label: pred-fixed
+#| dependson: pred-data
+p + coord_fixed()
+```
+
+### `coord_obs_pred()`
+
+```{r}
+#| label: pred-tune
+#| dependson: pred-data
+p + tune::coord_obs_pred()
+```
+
+:::
+
+## Transformations
+
+::: {.panel-tabset}
+
+### Raw axes
+
+```{r}
+#| output-location: column
+#| out.width: "100%"
+#| fig-width: 5
+ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
+  geom_point() + geom_smooth(method = "lm") +
+  labs(title = "Plot 1")
+```
+
+### `scale_*_log10()`
+
+```{r}
+#| output-location: column
+#| out.width: "100%"
+#| fig-width: 5
+#| code-line-numbers: "3"
+ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
+  geom_point() + geom_smooth(method = "lm") +
+  scale_x_log10() + scale_y_log10() +
+  labs(title = "Plot 2")
+```
+
+### `coord_trans()`
+
+```{r}
+#| output-location: column
+#| out.width: "100%"
+#| fig-width: 5
+#| code-line-numbers: "3"
+ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
+  geom_point() + geom_smooth(method = "lm") +
+  coord_trans(x = "log10", y = "log10") +
+  labs(title = "Plot 3")
+
+```
+
+### `log()`
+
+```{r}
+#| output-location: column
+#| out.width: "100%"
+#| fig-width: 5
+#| code-line-numbers: "4-5"
+ggplot(
+  penguins,
+  aes(
+    x = log(bill_depth_mm, base = 10),
+    y = log(body_mass_g, base = 10)
+  )
+) +
+  geom_point() +
+  geom_smooth(method = "lm") +
+  labs(title = "Plot 4")
+```
+
+:::
+
+## Pie charts and bullseye charts with `coord_polar()`
+
+```{r}
+#| out.width: 50%
+#| fig.show: hold
+#| output-location: column
+#| code-line-numbers: "7,12"
+ggplot(penguins, aes(x = 1, fill = species)) +
+  geom_bar() +
+  labs(title = "Stacked bar chart")
+
+ggplot(penguins, aes(x = 1, fill = species)) +
+  geom_bar() +
+  coord_polar(theta = "y") +
+  labs(title = "Pie chart")
+
+ggplot(penguins, aes(x = 1, fill = species)) +
+  geom_bar() +
+  coord_polar(theta = "x") +
+  labs(title = "Bullseye chart")
+```
+
+---
+
+[aside: about pie charts...]{.large .hand}
+
+## Pie charts
+
+::: appex
+What do you know about pie charts and data visualization best practices? Love 'em or lose 'em?
+:::
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+loans <- loans_full_schema |>
+  mutate(application_type = as.character(application_type)) |>
+  filter(application_type != "") |>
+  mutate(
+    homeownership    = tolower(homeownership), 
+    homeownership    = fct_relevel(homeownership, "rent", "mortgage", "own"), 
+    application_type = fct_relevel(application_type, "joint", "individual")
+    ) 
+
+pie_homeownership <- loans |> 
+  mutate(homeownership = fct_infreq(homeownership)) |>
+  count(homeownership) |>
+  mutate(text_y = cumsum(n) - n/2) |>
+  ggplot(aes(x = "", fill = homeownership, y = n)) + 
+  geom_col(position = position_stack(reverse = TRUE), show.legend = FALSE) +
+  geom_text_repel(aes(x = 1, label = homeownership, y = text_y)) +
+  coord_polar("y", start = 0) +
+  scale_fill_openintro("hot") +
+  theme_void(base_size = 16) +
+  labs(title = "Homeownership")
+pie_homeownership
+
+pie_loan_grades <- loans |> 
+  count(grade) |> 
+  mutate(text_y = cumsum(n) - n/2) |> 
+  ggplot(aes(x = "", fill = grade, y = n)) + 
+  geom_col(position = position_stack(reverse = TRUE), show.legend = FALSE) +
+  geom_text_repel(aes(x = 1.4, label = grade, y = text_y), nudge_x = 0.3, segment.size = 0.5) + 
+  coord_polar(theta = "y") + 
+  scale_fill_openintro("cool") +
+  theme_void(base_size = 16) +
+  labs(title = "Loan grade")
+pie_loan_grades
+```
+
+## Pie charts: when to love 'em, when to lose 'em
+
+:::: columns
+
+::: {.column width="30%"}
+
+`r emo::ji("heart")` For categorical variables with few levels, pie charts can work well
+
+<br><br><br><br>
+
+`r emo::ji("broken_heart")` For categorical variables with many levels, pie charts are difficult to read
+
+:::
+
+::: {.column width="70%"}
+
+```{r}
+#| echo: false
+#| layout-ncol: 2
+pie_homeownership
+
+loans |>
+  ggplot(aes(x = homeownership, fill = homeownership)) +
+  geom_bar(show.legend = FALSE) +
+  scale_fill_openintro("hot") +
+  labs(x = "Homeownership", y = "Count")
+
+pie_loan_grades
+
+loans |>
+  ggplot(aes(x = grade, fill = grade)) +
+  geom_bar(show.legend = FALSE) +
+  scale_fill_openintro("cool") +
+  labs(x = "Loan grade", y = "Count")
+```
+
+:::
+
+::::
+
+## Waffle charts
+
+- Like with pie charts, work best when the number of levels represented is low
+- Unlike pie charts, easier to compare proportions that represent non-simple fractions
+
+```{r}
+#| fig.asp: 0.5
+#| echo: false
+#| layout-ncol: 2
+#| out.width: "100%"
+loans |>
+  count(homeownership) |>
+  ggplot(aes(fill = homeownership, values = n)) +
+  geom_waffle(color = "white", flip = TRUE, make_proportional = TRUE) +
+  labs(fill = NULL, title = "Homeownership") +
+  scale_fill_openintro("hot") +
+  coord_equal() +
+  theme_enhance_waffle() +
+  theme(legend.position = "bottom")
+
+loans |>
+  count(loan_status) |>
+  ggplot(aes(fill = loan_status, values = n)) +
+  geom_waffle(color = "white", flip = TRUE, make_proportional = TRUE)  +
+  labs(fill = NULL, title = "Loan status") +
+  scale_fill_openintro("four") +
+  coord_equal() +
+  theme_enhance_waffle() +
+  theme(legend.position = "bottom") +
+  guides(fill=guide_legend(nrow = 2))
+```
+
+## Waffle charts: making of
+
+```{r}
+#| label: waffle-penguin
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "1,6-8"
+#| out.width: "100%"
+#| fig-width: 5
+library(waffle)
+
+penguins |>
+  count(species) |>
+  ggplot(aes(fill = species, values = n)) +
+  geom_waffle(color = "white",
+              flip = TRUE,
+              make_proportional = TRUE) +
+  labs(fill = NULL,
+       title = "Penguin species")
+```
+
+## Waffle charts: enhanced theme
+
+```{r}
+#| label: waffle-penguin-theme
+#| echo: true
+#| output-location: column
+#| code-line-numbers: "6"
+#| out.width: "100%"
+#| fig-width: 5
+penguins |>
+  count(species) |>
+  ggplot(aes(fill = species, values = n)) +
+  geom_waffle(color = "white", flip = TRUE, make_proportional = TRUE) +
+  labs(fill = NULL, title = "Penguin species") +
+  theme_enhance_waffle()
+```
+
+# Facets
+
+## `facet_*()`
+
+:::: columns
+
+::: column
+- `facet_wrap()` 
+  - "wraps" a 1d ribbon of panels into 2d
+  - generally for faceting by a single variable
+- `facet_grid()` for faceting 
+  - produces a 2d grid of panels defined by variables which form the rows and columns
+  - generally for faceting by two variables
+- `facet_null()`: a single plot, the default
+
+:::
+
+::: column
+
+![](images/06/grammar-of-graphics.png)
+
+:::
+
+::::
+
+## Free the scales!
+
+```{r}
+#| label: free-all-scales
+#| out.width: 100%
+#| fig.asp: 0.5
+#| fig.show: hold
+#| output-location: column
+#| code-line-numbers: "|10"
+p <- ggplot(penguins, aes(x = flipper_length_mm,
+                          y = body_mass_g)) +
+  geom_point()
+
+p + 
+  facet_wrap(vars(species)) + 
+  labs(title = "Same scales")
+p + 
+  facet_wrap(vars(species),
+             scales = "free") +
+  labs(title = "Free scales")
+```
+
+## Free some scales
+
+```{r}
+#| label: free-some-scales
+#| out.width: 100%
+#| fig.asp: 0.5
+#| fig.show: hold
+#| output-location: column
+#| code-line-numbers: "3,8"
+p +
+  facet_wrap(vars(species),
+             scales = "free_x") +
+  labs(title = "Free x scale")
+
+p +
+  facet_wrap(vars(species),
+             scales = "free_y") +
+  labs(title = "Free x scale")
+```
+
+---
+
+::: appex
+Freeing the y scale improves the display, but it's still not satisfying. What's wrong with it?
+:::
+
+::: smaller
+
+```{r}
+#| label: free-scales-not-spaces
+#| out.width: 50%
+#| fig.asp: 0.5
+#| fig.width: 8.0
+#| fig.show: hold
+#| layout-ncol: 2
+ggplot(penguins, aes(y = species, x = body_mass_g, fill = species)) +
+  geom_boxplot(show.legend = FALSE) +
+  facet_grid(island ~ .) +
+  labs(title = "Same scale and spacing")
+
+ggplot(penguins, aes(y = species, x = body_mass_g, fill = species)) +
+  geom_boxplot(show.legend = FALSE) +
+  facet_grid(island ~ ., scales = "free_y") +
+  labs(title = "Free y scale, same spacing")
+```
+
+:::
+
+## Free spaces
+
+```{r}
+#| label: free-spaces
+ggplot(penguins, aes(y = species, x = body_mass_g, fill = species)) +
+  geom_boxplot(show.legend = FALSE) +
+  facet_grid(island ~ ., scales = "free_y", space = "free") +
+  labs(title = "Free y scale and spacing")
+```
+
+## Highlighting across facets
+
+```{r}
+#| out.width: 50%
+penguins_sans_species <- penguins |> select(-species)
+
+ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +
+  geom_point(data = penguins_sans_species, color = "gray") +
+  geom_point(aes(color = species)) +
+  facet_wrap(vars(species))
+```
+
+# Themes
+
+## Complete themes
+
+```{r}
+#| echo: false
+#| fig.show: hold
+#| layout-ncol: 2
+#| layout-nrow: 2
+p + theme_gray() + labs(title = "theme_gray()")
+p + theme_minimal() + labs(title = "theme_minimal()")
+p + theme_void() + labs(title = "theme_void()")
+p + theme_dark() + labs(title = "theme_dark()")
+```
+
+## Themes from **ggthemes**
+
+```{r}
+#| echo: false
+#| fig.show: hold
+#| layout-ncol: 2
+#| layout-nrow: 2
+library(ggthemes)
+
+p + theme_fivethirtyeight() + labs(title = "theme_fivethirtyeight()")
+p + theme_economist() + labs(title = "theme_economist()")
+p + theme_wsj() + labs(title = "theme_wsj()")
+p + theme_excel() + labs(title = "theme_excel()")
+```
+
+## Themes and color scales from ggthemes
+
+```{r}
+#| out.width: 60%
+p + 
+  aes(color = species) +
+  scale_color_wsj() +
+  theme_wsj() + 
+  labs(title = "Wall Street Journal")
+```
+
+## Modifying theme elements
+
+```{r}
+#| fig.asp: 0.5
+#| out.width: 60%
+p + 
+  labs(title = "Palmer penguins") +
+  theme(
+    plot.title = element_text(color = "red", face = "bold", family = "Comic Sans MS"),
+    plot.background = element_rect(color = "red", fill = "mistyrose")
+  )
+```
+
+# Project #1
+
+## Project #1
+
+:::: columns
+
+::: column
+
+- Initial proposal
+- Develop as a team
+- Take chances, make mistakes, get messy!
+
+:::
+
+::: column
+
+```{r}
+#| echo: false
+include_graphics(path = "https://media.giphy.com/media/vhpwk2TOw2hq0/giphy.gif")
+```
+
+:::
+
+::::
