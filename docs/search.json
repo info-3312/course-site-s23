@@ -1012,7 +1012,7 @@
     "href": "slides/04-geoms.html#ggplot2-theme",
     "title": "Deep dive: geoms",
     "section": "ggplot2 theme",
-    "text": "ggplot2 theme\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))"
+    "text": "ggplot2 theme\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 14))"
   },
   {
     "objectID": "slides/04-geoms.html#figure-sizing",
@@ -1334,7 +1334,7 @@
     "href": "slides/05-stats-scales-guides.html#packages-figures",
     "title": "Deep dive: stats + scales + guides",
     "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 14))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
   },
   {
     "objectID": "slides/05-stats-scales-guides.html#scorecard",
@@ -1531,6 +1531,195 @@
     "title": "Deep dive: stats + scales + guides",
     "section": "Splitting legend labels",
     "text": "Splitting legend labels\n\n\np_pctpell_avgfacsal_type +\n  labs(\n    x = \"Percent of students receiving a Pell grant\",\n    y = \"Average faculty salary (USD)\",\n    color = \"College type\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#announcements-1",
+    "href": "slides/06-coordinates-facets.html#announcements-1",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 1 collected\nTeam projects begin tomorrow – look for team assignments in Canvas"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#agenda-for-today",
+    "href": "slides/06-coordinates-facets.html#agenda-for-today",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\nCoordinate systems\nFacets\nThemes (a little bit)"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#packages-figures",
+    "href": "slides/06-coordinates-facets.html#packages-figures",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(openintro)\nlibrary(palmerpenguins)\nlibrary(ggrepel)\nlibrary(waffle)\nlibrary(broom)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 14))\n\n# dplyr print min and max\noptions(dplyr.print_max = 6, dplyr.print_min = 6)\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#coordinate-systems-purpose",
+    "href": "slides/06-coordinates-facets.html#coordinate-systems-purpose",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Coordinate systems: purpose",
+    "text": "Coordinate systems: purpose\n\nCombine the two position aesthetics (x and y) to produce a 2d position on the plot:\n\nlinear coordinate system: horizontal and vertical coordinates\npolar coordinate system: angle and radius\nmaps: latitude and longitude\n\nDraw axes and panel backgrounds in coordination with the coordinate systems"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#coordinate-systems-types",
+    "href": "slides/06-coordinates-facets.html#coordinate-systems-types",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Coordinate systems: types",
+    "text": "Coordinate systems: types\n\nLinear coordinate systems: preserve the shape of geoms\n\n\ncoord_cartesian(): the default Cartesian coordinate system, where the 2d position of an element is given by the combination of the x and y positions.\ncoord_flip(): Cartesian coordinate system with x and y axes flipped (won’t be using much now that geoms can take aesthetic mappings in x and y axes)\ncoord_fixed(): Cartesian coordinate system with a fixed aspect ratio. (useful only in limited circumstances)\n\n\n\nNon-linear coordinate systems: can change the shapes – a straight line may no longer be straight. The closest distance between two points may no longer be a straight line.\n\n\ncoord_trans(): Apply arbitrary transformations to x and y positions, after the data has been processed by the stat\ncoord_polar(): Polar coordinates\ncoord_map() / coord_quickmap() / coord_sf(): Map projections"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#setting-limits-what-the-plots-say",
+    "href": "slides/06-coordinates-facets.html#setting-limits-what-the-plots-say",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Setting limits: what the plots say",
+    "text": "Setting limits: what the plots say\n\nIdentify the differences between each plot. Focus on the range of the x and y axesas well as the contents of the plots.\n\n\n\n\n−+\n02:00\n\n\n\n\n\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  labs(title = \"Plot 1\")\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  scale_x_continuous(limits = c(190, 220)) +\n  scale_y_continuous(limits = c(4000, 5000)) +\n  labs(title = \"Plot 2\")\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  xlim(190, 220) + ylim(4000, 5000) +\n  labs(title = \"Plot 3\")\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +\n  labs(title = \"Plot 4\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#setting-limits-what-the-warnings-say",
+    "href": "slides/06-coordinates-facets.html#setting-limits-what-the-warnings-say",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Setting limits: what the warnings say",
+    "text": "Setting limits: what the warnings say\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  labs(title = \"Plot 1\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 2 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  scale_x_continuous(limits = c(190, 220)) +\n  scale_y_continuous(limits = c(4000, 5000)) +\n  labs(title = \"Plot 2\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 235 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 235 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  xlim(190, 220) + ylim(4000, 5000) +\n  labs(title = \"Plot 3\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 235 rows containing non-finite values (`stat_smooth()`).\n## Removed 235 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point(alpha = 0.25) + geom_smooth() +\n  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +\n  labs(title = \"Plot 4\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 2 rows containing missing values (`geom_point()`)."
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#setting-limits",
+    "href": "slides/06-coordinates-facets.html#setting-limits",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Setting limits",
+    "text": "Setting limits\n\nSetting scale limits: Any data outside the limits is thrown away\n\nscale_*_continuous(), xlim and ylim arguments\nxlim() and ylim()\n\nSetting coordinate system limits: Use all the data, but only display a small region of the plot (zooming in)\n\ncoord_cartesian(), xlim and ylim arguments"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-coord_fixed",
+    "href": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-coord_fixed",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Fixing aspect ratio with coord_fixed()",
+    "text": "Fixing aspect ratio with coord_fixed()\nUseful when having an aspect ratio of 1 makes sense, e.g. scores on two tests (reading and writing) on the same scale (0 to 100 points)\n\n\nggplot(hsb2, aes(x = read, y = write)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  geom_abline(intercept = 0, slope = 1, linetype = \"dashed\", color = \"gray\") +\n  labs(title = \"Not fixed\")\n\nggplot(hsb2, aes(x = read, y = write)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  geom_abline(intercept = 0, slope = 1, linetype = \"dashed\", color = \"gray\") +\n  coord_fixed() +\n  labs(title = \"Fixed\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-tunecoord_obs_pred",
+    "href": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-tunecoord_obs_pred",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Fixing aspect ratio with tune::coord_obs_pred()",
+    "text": "Fixing aspect ratio with tune::coord_obs_pred()\n\nCodecoord_cartesian()coord_fixed()coord_obs_pred()\n\n\n\ndata(solubility_test, package = \"modeldata\")\n\np <- ggplot(solubility_test, aes(x = solubility, y = prediction)) +\n  geom_abline(lty = 2) +\n  geom_point(alpha = 0.5)\n\n\n\n\np + coord_cartesian()\n\n\n\n\n\n\n\n\n\n\n\np + coord_fixed()\n\n\n\n\n\n\n\n\n\n\n\np + tune::coord_obs_pred()"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#transformations",
+    "href": "slides/06-coordinates-facets.html#transformations",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Transformations",
+    "text": "Transformations\n\nRaw axesscale_*_log10()coord_trans()log()\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  labs(title = \"Plot 1\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  scale_x_log10() + scale_y_log10() +\n  labs(title = \"Plot 2\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  coord_trans(x = \"log10\", y = \"log10\") +\n  labs(title = \"Plot 3\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = log(bill_depth_mm, base = 10),\n    y = log(body_mass_g, base = 10)\n  )\n) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(title = \"Plot 4\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#pie-charts-and-bullseye-charts-with-coord_polar",
+    "href": "slides/06-coordinates-facets.html#pie-charts-and-bullseye-charts-with-coord_polar",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Pie charts and bullseye charts with coord_polar()",
+    "text": "Pie charts and bullseye charts with coord_polar()\n\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  labs(title = \"Stacked bar chart\")\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  coord_polar(theta = \"y\") +\n  labs(title = \"Pie chart\")\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  coord_polar(theta = \"x\") +\n  labs(title = \"Bullseye chart\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#pie-charts",
+    "href": "slides/06-coordinates-facets.html#pie-charts",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Pie charts",
+    "text": "Pie charts\n\nWhat do you know about pie charts and data visualization best practices? Love ’em or lose ’em?"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#pie-charts-when-to-love-em-when-to-lose-em",
+    "href": "slides/06-coordinates-facets.html#pie-charts-when-to-love-em-when-to-lose-em",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Pie charts: when to love ’em, when to lose ’em",
+    "text": "Pie charts: when to love ’em, when to lose ’em\n\n\n❤️ For categorical variables with few levels, pie charts can work well\n\n💔 For categorical variables with many levels, pie charts are difficult to read"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#waffle-charts",
+    "href": "slides/06-coordinates-facets.html#waffle-charts",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Waffle charts",
+    "text": "Waffle charts\n\nLike with pie charts, work best when the number of levels represented is low\nUnlike pie charts, easier to compare proportions that represent non-simple fractions"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#waffle-charts-making-of",
+    "href": "slides/06-coordinates-facets.html#waffle-charts-making-of",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Waffle charts: making of",
+    "text": "Waffle charts: making of\n\n\nlibrary(waffle)\n\npenguins |>\n  count(species) |>\n  ggplot(aes(fill = species, values = n)) +\n  geom_waffle(color = \"white\",\n              flip = TRUE,\n              make_proportional = TRUE) +\n  labs(fill = NULL,\n       title = \"Penguin species\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#waffle-charts-enhanced-theme",
+    "href": "slides/06-coordinates-facets.html#waffle-charts-enhanced-theme",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Waffle charts: enhanced theme",
+    "text": "Waffle charts: enhanced theme\n\n\npenguins |>\n  count(species) |>\n  ggplot(aes(fill = species, values = n)) +\n  geom_waffle(color = \"white\", flip = TRUE, make_proportional = TRUE) +\n  labs(fill = NULL, title = \"Penguin species\") +\n  theme_enhance_waffle()"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#facet_",
+    "href": "slides/06-coordinates-facets.html#facet_",
+    "title": "Deep dive: coordinates + facets",
+    "section": "facet_*()",
+    "text": "facet_*()\n\n\n\nfacet_wrap()\n\n“wraps” a 1d ribbon of panels into 2d\ngenerally for faceting by a single variable\n\nfacet_grid() for faceting\n\nproduces a 2d grid of panels defined by variables which form the rows and columns\ngenerally for faceting by two variables\n\nfacet_null(): a single plot, the default"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#free-the-scales",
+    "href": "slides/06-coordinates-facets.html#free-the-scales",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Free the scales!",
+    "text": "Free the scales!\n\n\np <- ggplot(penguins, aes(x = flipper_length_mm,\n                          y = body_mass_g)) +\n  geom_point()\n\np + \n  facet_wrap(vars(species)) + \n  labs(title = \"Same scales\")\np + \n  facet_wrap(vars(species),\n             scales = \"free\") +\n  labs(title = \"Free scales\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#free-some-scales",
+    "href": "slides/06-coordinates-facets.html#free-some-scales",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Free some scales",
+    "text": "Free some scales\n\n\np +\n  facet_wrap(vars(species),\n             scales = \"free_x\") +\n  labs(title = \"Free x scale\")\n\np +\n  facet_wrap(vars(species),\n             scales = \"free_y\") +\n  labs(title = \"Free x scale\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#free-spaces",
+    "href": "slides/06-coordinates-facets.html#free-spaces",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Free spaces",
+    "text": "Free spaces\n\nggplot(penguins, aes(y = species, x = body_mass_g, fill = species)) +\n  geom_boxplot(show.legend = FALSE) +\n  facet_grid(island ~ ., scales = \"free_y\", space = \"free\") +\n  labs(title = \"Free y scale and spacing\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#highlighting-across-facets",
+    "href": "slides/06-coordinates-facets.html#highlighting-across-facets",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Highlighting across facets",
+    "text": "Highlighting across facets\n\npenguins_sans_species <- penguins |> select(-species)\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(data = penguins_sans_species, color = \"gray\") +\n  geom_point(aes(color = species)) +\n  facet_wrap(vars(species))"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#complete-themes",
+    "href": "slides/06-coordinates-facets.html#complete-themes",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Complete themes",
+    "text": "Complete themes"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#themes-from-ggthemes",
+    "href": "slides/06-coordinates-facets.html#themes-from-ggthemes",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Themes from ggthemes",
+    "text": "Themes from ggthemes"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#themes-and-color-scales-from-ggthemes",
+    "href": "slides/06-coordinates-facets.html#themes-and-color-scales-from-ggthemes",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Themes and color scales from ggthemes",
+    "text": "Themes and color scales from ggthemes\n\np + \n  aes(color = species) +\n  scale_color_wsj() +\n  theme_wsj() + \n  labs(title = \"Wall Street Journal\")"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#modifying-theme-elements",
+    "href": "slides/06-coordinates-facets.html#modifying-theme-elements",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Modifying theme elements",
+    "text": "Modifying theme elements\n\np + \n  labs(title = \"Palmer penguins\") +\n  theme(\n    plot.title = element_text(color = \"red\", face = \"bold\", family = \"Comic Sans MS\"),\n    plot.background = element_rect(color = \"red\", fill = \"mistyrose\")\n  )"
+  },
+  {
+    "objectID": "slides/06-coordinates-facets.html#project-1-1",
+    "href": "slides/06-coordinates-facets.html#project-1-1",
+    "title": "Deep dive: coordinates + facets",
+    "section": "Project #1",
+    "text": "Project #1\n\n\n\nInitial proposal\nDevelop as a team\nTake chances, make mistakes, get messy!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/03-look-at-data.html#recreate-the-visualization",
@@ -1916,208 +2105,5 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#announcements-1",
-    "href": "slides/06-coordinates-facets.html#announcements-1",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Announcements",
-    "text": "Announcements\n\nHomework 1 collected\nTeam projects begin tomorrow – look for team assignments in Canvas"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#agenda-for-today",
-    "href": "slides/06-coordinates-facets.html#agenda-for-today",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Agenda for today",
-    "text": "Agenda for today\n\nCoordinate systems\nFacets\nGroup collaboration"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#packages-figures",
-    "href": "slides/06-coordinates-facets.html#packages-figures",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(knitr)\nlibrary(openintro)\nlibrary(palmerpenguins)\nlibrary(ggrepel)\nlibrary(waffle)\nlibrary(broom)\n\n# set default theme for ggplot2\nggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))\n\n# dplyr print min and max\noptions(dplyr.print_max = 6, dplyr.print_min = 6)\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#coordinate-systems-purpose",
-    "href": "slides/06-coordinates-facets.html#coordinate-systems-purpose",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Coordinate systems: purpose",
-    "text": "Coordinate systems: purpose\n\nCombine the two position aesthetics (x and y) to produce a 2d position on the plot:\n\nlinear coordinate system: horizontal and vertical coordinates\npolar coordinate system: angle and radius\nmaps: latitude and longitude\n\nDraw axes and panel backgrounds in coordination with the coordinate systems"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#coordinate-systems-types",
-    "href": "slides/06-coordinates-facets.html#coordinate-systems-types",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Coordinate systems: types",
-    "text": "Coordinate systems: types\n\nLinear coordinate systems: preserve the shape of geoms\n\n\ncoord_cartesian(): the default Cartesian coordinate system, where the 2d position of an element is given by the combination of the x and y positions.\ncoord_flip(): Cartesian coordinate system with x and y axes flipped (won’t be using much now that geoms can take aesthetic mappings in x and y axes)\ncoord_fixed(): Cartesian coordinate system with a fixed aspect ratio. (useful only in limited circumstances)\n\n\n\nNon-linear coordinate systems: can change the shapes – a straight line may no longer be straight. The closest distance between two points may no longer be a straight line.\n\n\ncoord_trans(): Apply arbitrary transformations to x and y positions, after the data has been processed by the stat\ncoord_polar(): Polar coordinates\ncoord_map() / coord_quickmap() / coord_sf(): Map projections"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#setting-limits-what-the-plots-say",
-    "href": "slides/06-coordinates-facets.html#setting-limits-what-the-plots-say",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Setting limits: what the plots say",
-    "text": "Setting limits: what the plots say\n\nIdentify the differences between each plot. Focus on the range of the x and y axesas well as the contents of the plots.\n\n\n\n\n−+\n04:00\n\n\n\n\n\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  labs(title = \"Plot 1\")\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  scale_x_continuous(limits = c(190, 220)) +\n  scale_y_continuous(limits = c(4000, 5000)) +\n  labs(title = \"Plot 2\")\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  xlim(190, 220) + ylim(4000, 5000) +\n  labs(title = \"Plot 3\")\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +\n  labs(title = \"Plot 4\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#setting-limits-what-the-warnings-say",
-    "href": "slides/06-coordinates-facets.html#setting-limits-what-the-warnings-say",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Setting limits: what the warnings say",
-    "text": "Setting limits: what the warnings say\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  labs(title = \"Plot 1\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 2 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  scale_x_continuous(limits = c(190, 220)) +\n  scale_y_continuous(limits = c(4000, 5000)) +\n  labs(title = \"Plot 2\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 235 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 235 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  xlim(190, 220) + ylim(4000, 5000) +\n  labs(title = \"Plot 3\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 235 rows containing non-finite values (`stat_smooth()`).\n## Removed 235 rows containing missing values (`geom_point()`).\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +\n  geom_point() + geom_smooth() +\n  coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +\n  labs(title = \"Plot 4\")\n## `geom_smooth()` using method = 'loess' and formula = 'y ~ x'\n## Warning: Removed 2 rows containing non-finite values (`stat_smooth()`).\n## Warning: Removed 2 rows containing missing values (`geom_point()`)."
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#setting-limits",
-    "href": "slides/06-coordinates-facets.html#setting-limits",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Setting limits",
-    "text": "Setting limits\n\nSetting scale limits: Any data outside the limits is thrown away\n\nscale_*_continuous(), xlim and ylim arguments\nxlim() and ylim()\n\nSetting coordinate system limits: Use all the data, but only display a small region of the plot (zooming in)\n\ncoord_cartesian(), xlim and ylim arguments"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-coord_fixed",
-    "href": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-coord_fixed",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Fixing aspect ratio with coord_fixed()",
-    "text": "Fixing aspect ratio with coord_fixed()\nUseful when having an aspect ratio of 1 makes sense, e.g. scores on two tests (reading and writing) on the same scale (0 to 100 points)\n\n\nggplot(hsb2, aes(x = read, y = write)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  geom_abline(intercept = 0, slope = 1, linetype = \"dashed\", color = \"gray\") +\n  labs(title = \"Not fixed\")\n\nggplot(hsb2, aes(x = read, y = write)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  geom_abline(intercept = 0, slope = 1, linetype = \"dashed\", color = \"gray\") +\n  coord_fixed() +\n  labs(title = \"Fixed\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-tunecoord_obs_pred",
-    "href": "slides/06-coordinates-facets.html#fixing-aspect-ratio-with-tunecoord_obs_pred",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Fixing aspect ratio with tune::coord_obs_pred()",
-    "text": "Fixing aspect ratio with tune::coord_obs_pred()\n\nCodecoord_cartesian()coord_fixed()coord_obs_pred()\n\n\n\ndata(solubility_test, package = \"modeldata\")\n\np <- ggplot(solubility_test, aes(x = solubility, y = prediction)) +\n  geom_abline(lty = 2) +\n  geom_point(alpha = 0.5)\n\n\n\n\np + coord_cartesian()\n\n\n\n\n\n\n\n\n\n\n\np + coord_fixed()\n\n\n\n\n\n\n\n\n\n\n\np + tune::coord_obs_pred()"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#transformations",
-    "href": "slides/06-coordinates-facets.html#transformations",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Transformations",
-    "text": "Transformations\n\nRaw axesscale_*_log10()coord_trans()log()\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  labs(title = \"Plot 1\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  scale_x_log10() + scale_y_log10() +\n  labs(title = \"Plot 2\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +\n  geom_point() + geom_smooth(method = \"lm\") +\n  coord_trans(x = \"log10\", y = \"log10\") +\n  labs(title = \"Plot 3\")\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(\n  penguins,\n  aes(\n    x = log(bill_depth_mm, base = 10),\n    y = log(body_mass_g, base = 10)\n  )\n) +\n  geom_point() +\n  geom_smooth(method = \"lm\") +\n  labs(title = \"Plot 4\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#pie-charts-and-bullseye-charts-with-coord_polar",
-    "href": "slides/06-coordinates-facets.html#pie-charts-and-bullseye-charts-with-coord_polar",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Pie charts and bullseye charts with coord_polar()",
-    "text": "Pie charts and bullseye charts with coord_polar()\n\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  labs(title = \"Stacked bar chart\")\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  coord_polar(theta = \"y\") +\n  labs(title = \"Pie chart\")\n\nggplot(penguins, aes(x = 1, fill = species)) +\n  geom_bar() +\n  coord_polar(theta = \"x\") +\n  labs(title = \"Bullseye chart\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#pie-charts",
-    "href": "slides/06-coordinates-facets.html#pie-charts",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Pie charts",
-    "text": "Pie charts\n\nWhat do you know about pie charts and data visualization best practices? Love ’em or lose ’em?"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#pie-charts-when-to-love-em-when-to-lose-em",
-    "href": "slides/06-coordinates-facets.html#pie-charts-when-to-love-em-when-to-lose-em",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Pie charts: when to love ’em, when to lose ’em",
-    "text": "Pie charts: when to love ’em, when to lose ’em\n\n\n❤️ For categorical variables with few levels, pie charts can work well\n\n💔 For categorical variables with many levels, pie charts are difficult to read"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#waffle-charts",
-    "href": "slides/06-coordinates-facets.html#waffle-charts",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Waffle charts",
-    "text": "Waffle charts\n\nLike with pie charts, work best when the number of levels represented is low\nUnlike pie charts, easier to compare proportions that represent non-simple fractions"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#waffle-charts-making-of",
-    "href": "slides/06-coordinates-facets.html#waffle-charts-making-of",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Waffle charts: making of",
-    "text": "Waffle charts: making of\n\n\nlibrary(waffle)\n\npenguins |>\n  count(species) |>\n  ggplot(aes(fill = species, values = n)) +\n  geom_waffle(color = \"white\",\n              flip = TRUE,\n              make_proportional = TRUE) +\n  labs(fill = NULL,\n       title = \"Penguin species\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#waffle-charts-enhanced-theme",
-    "href": "slides/06-coordinates-facets.html#waffle-charts-enhanced-theme",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Waffle charts: enhanced theme",
-    "text": "Waffle charts: enhanced theme\n\n\npenguins |>\n  count(species) |>\n  ggplot(aes(fill = species, values = n)) +\n  geom_waffle(color = \"white\", flip = TRUE, make_proportional = TRUE) +\n  labs(fill = NULL, title = \"Penguin species\") +\n  theme_enhance_waffle()"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#coord_quickmap",
-    "href": "slides/06-coordinates-facets.html#coord_quickmap",
-    "title": "Deep dive: coordinates + facets",
-    "section": "coord_quickmap()",
-    "text": "coord_quickmap()\n.pull-left-narrow[ - Approximation that sets the aspect ratio to ensure that 1m of latitude and 1m of longitude are the same distance in the middle of the plot - Reasonable for smaller regions - Fast] .pull-right-wide[ .panelset[ .panel[.panel-name[Cartesian]\n\nggplot(map_data(\"italy\"), aes(long, lat, group = group)) +\n  geom_polygon(fill = \"white\", color = \"#008c45\") +\n  labs(x = NULL, y = NULL)\n\n\n\n\n\n\n\n\n] .panel[.panel-name[Quickmap]\n\nggplot(map_data(\"italy\"), aes(long, lat, group = group)) +\n  geom_polygon(fill = \"white\", color = \"#008c45\") +\n  labs(x = NULL, y = NULL) +\n  coord_quickmap()\n\n\n\n\n\n\n\n\n] ] ]"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#coord_map",
-    "href": "slides/06-coordinates-facets.html#coord_map",
-    "title": "Deep dive: coordinates + facets",
-    "section": "coord_map()",
-    "text": "coord_map()\n.pull-left-narrow[ - Uses the mapproj package - Uses Mercator projection by default, with many other options via mapproj::mapproject() - Slower than coord_quickmap()] .pull-right-wide[ .panelset[ .panel[.panel-name[Cartesian]\n\nggplot(map_data(\"state\"), aes(long, lat, group = group)) +\n  geom_polygon(fill = \"white\", color = \"#3c3b6e\") +\n  labs(x = NULL, y = NULL)\n\n\n\n\n\n\n\n\n] .panel[.panel-name[Mercator]\n\nggplot(map_data(\"state\"), aes(long, lat, group = group)) +\n  geom_polygon(fill = \"white\", color = \"#3c3b6e\") +\n  labs(x = NULL, y = NULL) +\n  coord_map()\n\n\n\n\n\n\n\n\n] .panel[.panel-name[Stereographic]\n\nggplot(map_data(\"state\"), aes(long, lat, group = group)) +\n  geom_polygon(fill = \"white\", color = \"#3c3b6e\") +\n  labs(x = NULL, y = NULL) +\n  coord_map(projection = \"stereographic\")\n\n\n\n\n\n\n\n\n] ] ]"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#facet_",
-    "href": "slides/06-coordinates-facets.html#facet_",
-    "title": "Deep dive: coordinates + facets",
-    "section": "facet_*()",
-    "text": "facet_*()\n\n\n\nfacet_wrap()\n\n“wraps” a 1d ribbon of panels into 2d\ngenerally for faceting by a single variable\n\nfacet_grid() for faceting\n\nproduces a 2d grid of panels defined by variables which form the rows and columns\ngenerally for faceting by two variables\n\nfacet_null(): a single plot, the default"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#free-the-scales",
-    "href": "slides/06-coordinates-facets.html#free-the-scales",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Free the scales!",
-    "text": "Free the scales!\n\n\np <- ggplot(penguins, aes(x = flipper_length_mm,\n                          y = body_mass_g)) +\n  geom_point()\n\np + \n  facet_wrap(vars(species)) + \n  labs(title = \"Same scales\")\np + \n  facet_wrap(vars(species),\n             scales = \"free\") +\n  labs(title = \"Free scales\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#free-some-scales",
-    "href": "slides/06-coordinates-facets.html#free-some-scales",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Free some scales",
-    "text": "Free some scales\n\n\np +\n  facet_wrap(vars(species),\n             scales = \"free_x\") +\n  labs(title = \"Free x scale\")\n\np +\n  facet_wrap(vars(species),\n             scales = \"free_y\") +\n  labs(title = \"Free x scale\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#free-spaces",
-    "href": "slides/06-coordinates-facets.html#free-spaces",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Free spaces",
-    "text": "Free spaces\n\nggplot(penguins, aes(y = species, x = body_mass_g, fill = species)) +\n  geom_boxplot(show.legend = FALSE) +\n  facet_grid(island ~ ., scales = \"free_y\", space = \"free\") +\n  labs(title = \"Free y scale and spacing\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#highlighting-across-facets",
-    "href": "slides/06-coordinates-facets.html#highlighting-across-facets",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Highlighting across facets",
-    "text": "Highlighting across facets\n\npenguins_sans_species <- penguins |> select(-species)\n\nggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g)) +\n  geom_point(data = penguins_sans_species, color = \"gray\") +\n  geom_point(aes(color = species)) +\n  facet_wrap(vars(species))"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#complete-themes",
-    "href": "slides/06-coordinates-facets.html#complete-themes",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Complete themes",
-    "text": "Complete themes"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#themes-from-ggthemes",
-    "href": "slides/06-coordinates-facets.html#themes-from-ggthemes",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Themes from ggthemes",
-    "text": "Themes from ggthemes"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#themes-and-color-scales-from-ggthemes",
-    "href": "slides/06-coordinates-facets.html#themes-and-color-scales-from-ggthemes",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Themes and color scales from ggthemes",
-    "text": "Themes and color scales from ggthemes\n\np + \n  aes(color = species) +\n  scale_color_wsj() +\n  theme_wsj() + \n  labs(title = \"Wall Street Journal\")"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#modifying-theme-elements",
-    "href": "slides/06-coordinates-facets.html#modifying-theme-elements",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Modifying theme elements",
-    "text": "Modifying theme elements\n\np + \n  labs(title = \"Palmer penguins\") +\n  theme(\n    plot.title = element_text(color = \"red\", face = \"bold\", family = \"Comic Sans MS\"),\n    plot.background = element_rect(color = \"red\", fill = \"mistyrose\")\n  )"
-  },
-  {
-    "objectID": "slides/06-coordinates-facets.html#project-1-1",
-    "href": "slides/06-coordinates-facets.html#project-1-1",
-    "title": "Deep dive: coordinates + facets",
-    "section": "Project #1",
-    "text": "Project #1\n\n\n\nInitial proposal\nDevelop as a team\nTake chances, make mistakes, get messy!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   }
 ]

@@ -27,7 +27,7 @@ library(patchwork)
 
 - Facets
 
-- Group collaboration
+- Themes (a little bit)
 
 # Setup
 
@@ -45,7 +45,7 @@ library(waffle)
 library(broom)
 
 # set default theme for ggplot2
-ggplot2::theme_set(ggplot2::theme_minimal(base_size = 14))
+theme_set(theme_minimal(base_size = 14))
 
 # dplyr print min and max
 options(dplyr.print_max = 6, dplyr.print_min = 6)
@@ -74,7 +74,7 @@ knitr:
 
 - Draw axes and panel backgrounds in coordination with the coordinate systems
 
-## Coordinate systems: types
+## Coordinate systems: types {.smaller}
 
 1. **Linear coordinate systems:** preserve the shape of geoms
 
@@ -90,7 +90,7 @@ knitr:
   - `coord_polar()`: Polar coordinates
   - `coord_map()` / `coord_quickmap()` / `coord_sf()`: Map projections
 
-## Setting limits: what the plots say
+## Setting limits: what the plots say {.smaller}
 
 ::: appex
 Identify the differences between each plot. Focus on the range of the `x` and `y` axes<br>as well as the contents of the plots.
@@ -99,7 +99,7 @@ Identify the differences between each plot. Focus on the range of the `x` and `y
 ```{r}
 #| cache: false
 #| echo: false
-countdown(minutes = 4, top = 0)
+countdown(minutes = 2, top = 0)
 ```
 
 :::: columns
@@ -108,26 +108,26 @@ countdown(minutes = 4, top = 0)
 
 ```{r}
 #| label: set-limits
-#| fig-show: hide
+#| eval: false
 #| code-line-numbers: "7,8,13,18"
 
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   labs(title = "Plot 1")
 
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   scale_x_continuous(limits = c(190, 220)) +
   scale_y_continuous(limits = c(4000, 5000)) +
   labs(title = "Plot 2")
 
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   xlim(190, 220) + ylim(4000, 5000) +
   labs(title = "Plot 3")
 
 ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +
   labs(title = "Plot 4")
 ```
@@ -140,27 +140,30 @@ ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
 #| label: set-limits-patchwork
 #| echo: false
 #| out.width: "100%"
+#| fig-width: 6
+#| fig-asp: 0.8
 
 {ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   labs(title = "Plot 1")} +
 
 {ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   scale_x_continuous(limits = c(190, 220)) +
   scale_y_continuous(limits = c(4000, 5000)) +
   labs(title = "Plot 2")} +
 
 {ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   xlim(190, 220) + ylim(4000, 5000) +
   labs(title = "Plot 3")} +
 
 {ggplot(penguins, aes(x = flipper_length_mm, y = body_mass_g, color = species)) +
-  geom_point() + geom_smooth() +
+  geom_point(alpha = 0.25) + geom_smooth() +
   coord_cartesian(xlim = c(190,220), ylim = c(4000, 5000)) +
   labs(title = "Plot 4")} &
-  theme_minimal(base_size = 10)
+  theme_minimal(base_size = 8) +
+  theme(legend.position = "bottom")
 ```
 
 :::
@@ -215,6 +218,7 @@ ggplot(hsb2, aes(x = read, y = write)) +
 
 ```{r}
 #| label: pred-data
+#| out.width: "60%"
 data(solubility_test, package = "modeldata")
 
 p <- ggplot(solubility_test, aes(x = solubility, y = prediction)) +
@@ -228,6 +232,7 @@ p <- ggplot(solubility_test, aes(x = solubility, y = prediction)) +
 ```{r}
 #| label: pred-default
 #| dependson: pred-data
+#| out.width: "60%"
 p + coord_cartesian()
 ```
 
@@ -236,6 +241,7 @@ p + coord_cartesian()
 ```{r}
 #| label: pred-fixed
 #| dependson: pred-data
+#| out.width: "60%"
 p + coord_fixed()
 ```
 
@@ -244,6 +250,7 @@ p + coord_fixed()
 ```{r}
 #| label: pred-tune
 #| dependson: pred-data
+#| out.width: "60%"
 p + tune::coord_obs_pred()
 ```
 
@@ -257,7 +264,6 @@ p + tune::coord_obs_pred()
 
 ```{r}
 #| output-location: column
-#| out.width: "100%"
 #| fig-width: 5
 ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
   geom_point() + geom_smooth(method = "lm") +
@@ -268,7 +274,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
 
 ```{r}
 #| output-location: column
-#| out.width: "100%"
 #| fig-width: 5
 #| code-line-numbers: "3"
 ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
@@ -281,7 +286,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
 
 ```{r}
 #| output-location: column
-#| out.width: "100%"
 #| fig-width: 5
 #| code-line-numbers: "3"
 ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
@@ -295,7 +299,6 @@ ggplot(penguins, aes(x = bill_depth_mm, y = body_mass_g)) +
 
 ```{r}
 #| output-location: column
-#| out.width: "100%"
 #| fig-width: 5
 #| code-line-numbers: "4-5"
 ggplot(
