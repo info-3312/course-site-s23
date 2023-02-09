@@ -196,6 +196,8 @@ The due dates for assignments are there to help you keep up with the course mate
     
     To use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.
     
+    If you use a slip day, **do not submit anything to Gradescope before the submission deadline**. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.
+
     If you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.
 - **Projects**: Late work is not accepted.
 
