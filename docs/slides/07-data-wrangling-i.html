@@ -503,51 +503,6 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="livecoding" class="slide level2">
 <h2>Livecoding</h2>
 <p>Reveal below for code developed during live coding session.</p>
-<div class="cell" data-layout-align="center" data-hash="07-data-wrangling-i_cache/revealjs/unnamed-chunk-6_09a436f6e1514b099fb458e26c3cf3b6">
-<details>
-<summary>Code</summary>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>scdb_case <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a href="#cb5-2"></a>  <span class="co"># select relevant columns</span></span>
-<span id="cb5-3"><a href="#cb5-3"></a>  <span class="fu">select</span>(term, majVotes, minVotes) <span class="sc">|&gt;</span></span>
-<span id="cb5-4"><a href="#cb5-4"></a>  <span class="co"># filter to include post 1945 term cases</span></span>
-<span id="cb5-5"><a href="#cb5-5"></a>  <span class="fu">filter</span>(term <span class="sc">&gt;=</span> <span class="dv">1945</span>) <span class="sc">|&gt;</span></span>
-<span id="cb5-6"><a href="#cb5-6"></a>  <span class="co"># calculate vote margin for each case</span></span>
-<span id="cb5-7"><a href="#cb5-7"></a>  <span class="fu">mutate</span>(<span class="at">vote_margin =</span> majVotes <span class="sc">-</span> minVotes) <span class="sc">|&gt;</span></span>
-<span id="cb5-8"><a href="#cb5-8"></a>  <span class="co"># calculate number of cases decided per term and vote margin</span></span>
-<span id="cb5-9"><a href="#cb5-9"></a>  <span class="fu">count</span>(term, vote_margin) <span class="sc">|&gt;</span></span>
-<span id="cb5-10"><a href="#cb5-10"></a>  <span class="co"># fill in all the missing combination of rows - plot won't look right otherwise</span></span>
-<span id="cb5-11"><a href="#cb5-11"></a>  <span class="fu">complete</span>(term, vote_margin, <span class="at">fill =</span> <span class="fu">list</span>(<span class="at">n =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb5-12"><a href="#cb5-12"></a>  <span class="co"># calculate percentages by term</span></span>
-<span id="cb5-13"><a href="#cb5-13"></a>  <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
-<span id="cb5-14"><a href="#cb5-14"></a>  <span class="fu">mutate</span>(</span>
-<span id="cb5-15"><a href="#cb5-15"></a>    <span class="at">n_pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
-<span id="cb5-16"><a href="#cb5-16"></a>    <span class="co"># convert vote_margin to factor variable for plotting</span></span>
-<span id="cb5-17"><a href="#cb5-17"></a>    <span class="at">vote_margin =</span> <span class="fu">factor</span>(<span class="at">x =</span> vote_margin),</span>
-<span id="cb5-18"><a href="#cb5-18"></a>    <span class="at">vote_margin =</span> <span class="fu">fct_rev</span>(<span class="at">f =</span> vote_margin)</span>
-<span id="cb5-19"><a href="#cb5-19"></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb5-20"><a href="#cb5-20"></a>  <span class="co"># generate graph</span></span>
-<span id="cb5-21"><a href="#cb5-21"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> term, <span class="at">y =</span> n_pct, <span class="at">fill =</span> vote_margin)) <span class="sc">+</span></span>
-<span id="cb5-22"><a href="#cb5-22"></a>  <span class="fu">geom_area</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>) <span class="sc">+</span></span>
-<span id="cb5-23"><a href="#cb5-23"></a>  <span class="co"># print the y-axis labels using percentages rather than proportions</span></span>
-<span id="cb5-24"><a href="#cb5-24"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
-<span id="cb5-25"><a href="#cb5-25"></a>  <span class="co"># change the color palette</span></span>
-<span id="cb5-26"><a href="#cb5-26"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span></span>
-<span id="cb5-27"><a href="#cb5-27"></a>  <span class="co"># label our graph</span></span>
-<span id="cb5-28"><a href="#cb5-28"></a>  <span class="fu">labs</span>(</span>
-<span id="cb5-29"><a href="#cb5-29"></a>    <span class="at">title =</span> <span class="st">"U.S. Supreme Court decisionmaking since 1945"</span>,</span>
-<span id="cb5-30"><a href="#cb5-30"></a>    <span class="at">subtitle =</span> <span class="st">"Split between majority and minority justice votes"</span>,</span>
-<span id="cb5-31"><a href="#cb5-31"></a>    <span class="at">x =</span> <span class="st">"Term"</span>,</span>
-<span id="cb5-32"><a href="#cb5-32"></a>    <span class="at">y =</span> <span class="st">"Percent of total cases decided"</span>,</span>
-<span id="cb5-33"><a href="#cb5-33"></a>    <span class="at">fill =</span> <span class="st">"Vote margin"</span>,</span>
-<span id="cb5-34"><a href="#cb5-34"></a>    <span class="at">caption =</span> <span class="st">"Source: The Supreme Court Database"</span></span>
-<span id="cb5-35"><a href="#cb5-35"></a>  ) <span class="sc">+</span></span>
-<span id="cb5-36"><a href="#cb5-36"></a>  <span class="co"># match subtitle and caption colors to area borders</span></span>
-<span id="cb5-37"><a href="#cb5-37"></a>  <span class="fu">theme</span>(</span>
-<span id="cb5-38"><a href="#cb5-38"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>),</span>
-<span id="cb5-39"><a href="#cb5-39"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>)</span>
-<span id="cb5-40"><a href="#cb5-40"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</details>
-</div>
 
 
 <img src="images/favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">

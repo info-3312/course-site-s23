@@ -150,9 +150,3 @@ scdb_case |>
 
 Reveal below for code developed during live coding session.
 
-```{r}
-#| ref.label: n-vote-margin
-#| fig-show: hide
-#| code-fold: true
-#| eval: false
-```
