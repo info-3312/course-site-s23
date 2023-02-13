@@ -3,6 +3,8 @@ title: "Look at data"
 subtitle: "Lecture 3"
 date: "January 31, 2023"
 format: revealjs
+resources:
+  - "data/instructional-staff.csv"
 ---
 
 ```{r}
