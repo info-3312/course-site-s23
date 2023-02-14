@@ -1,4 +1,5 @@
 ---
+title: "`data-wrangling-i` - live-coding guide"
 format: html
 ---
 
@@ -8,31 +9,34 @@ format: html
 2. Create a new R script or Quarto document
 3. Import `scdb_cases`
 
-```r
+```{r}
+library(tidyverse)
+library(scales)
+
 scdb_case <- read_csv("https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv")
 ```
 
 4. Select relevant columns for viewing purposes
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes)
 ```
 
-4. Filter data
+5. Filter data
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
   # filter to include post 1945 term cases
-  filter(term >= 1945) |>
+  filter(term >= 1945)
 ```
 
-5. Calculate vote margin variable
+6. Calculate vote margin variable
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -42,9 +46,9 @@ scdb_case |>
   mutate(vote_margin = majVotes - minVotes)
 ```
 
-6. Calculate number of cases decided per term and vote margin
+7. Calculate number of cases decided per term and vote margin
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -56,9 +60,9 @@ scdb_case |>
   count(term, vote_margin)
 ```
 
-7. Calculate percentages by term
+8. Calculate percentages by term
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -75,9 +79,9 @@ scdb_case |>
   )
 ```
 
-8. Generate basic plot
+9. Generate basic plot
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -97,9 +101,9 @@ scdb_case |>
   geom_area()
 ```
 
-9. Need to convert `vote_margin` to factor
+10. Need to convert `vote_margin` to factor
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -121,9 +125,9 @@ scdb_case |>
   geom_area()
 ```
 
-10. Why not adding up to 1? Check data frame for gaps. Need complete combinations of `term` and `vote_margin`
+11. Why not adding up to 1? Check data frame for gaps. Need complete combinations of `term` and `vote_margin`
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -142,9 +146,9 @@ scdb_case |>
   )
 ```
 
-11. Fill in missing combos with `tidyr::complete()`
+12. Fill in missing combos with `tidyr::complete()`
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -168,9 +172,9 @@ scdb_case |>
   geom_area()
 ```
 
-12. Add color to area borders. Label the y-axis
+13. Add color to area borders. Label the y-axis
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -196,9 +200,9 @@ scdb_case |>
   scale_y_continuous(labels = label_percent())
 ```
 
-13. Use appropriate color palette
+14. Use appropriate color palette
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -226,9 +230,9 @@ scdb_case |>
   scale_fill_viridis_d()
 ```
 
-14. Change order of stack using `fct_rev()`
+15. Change order of stack using `fct_rev()`
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
@@ -257,9 +261,9 @@ scdb_case |>
   scale_fill_viridis_d()
 ```
 
-15. Label the plot and color the subtitle and caption
+16. Label the plot and color the subtitle and caption
 
-```r
+```{r}
 scdb_case |>
   # select relevant columns
   select(term, majVotes, minVotes) |>
