@@ -1572,7 +1572,7 @@
     "href": "slides/07-data-wrangling-i.html#data-scotus",
     "title": "Data wrangling (I)",
     "section": "Data: SCOTUS",
-    "text": "Data: SCOTUS\n\nData from the Supreme Court of the United States\nObservations: Each row represents a case\n\n\nscdb_case <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv\")\n\n\nscdb_case <- read_csv(\"data/scdb-case.csv\")"
+    "text": "Data: SCOTUS\n\nData from the Supreme Court of the United States\nSource: Supreme Court Database\nObservations: Each row represents a case\n\n\nscdb_case <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv\")"
   },
   {
     "objectID": "slides/07-data-wrangling-i.html#scenario-1",

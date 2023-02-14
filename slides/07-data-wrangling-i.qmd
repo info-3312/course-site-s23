@@ -58,6 +58,7 @@ knitr:
 ## Data: SCOTUS
 
 -   Data from the Supreme Court of the United States
+-   Source: [Supreme Court Database](http://scdb.wustl.edu/)
 -   Observations: Each row represents a case
 
 ```{r}
@@ -67,6 +68,7 @@ scdb_case <- read_csv("https://info3312.infosci.cornell.edu/slides/data/scdb-cas
 
 ```{r}
 #| label: scotus
+#| include: false
 scdb_case <- read_csv("data/scdb-case.csv")
 ```
 
