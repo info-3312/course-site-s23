@@ -1,0 +1,1458 @@
+name,forecaster_type,alive,town,state,year,prediction
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2022,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2021,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2020,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2019,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2018,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2017,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2016,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2015,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2014,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2013,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2012,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2011,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2010,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2009,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2008,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2007,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2006,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2005,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2004,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2003,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2002,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2001,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,2000,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1999,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1998,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1997,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1996,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1995,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1994,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1993,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1992,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1991,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1990,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1989,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1988,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1987,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1986,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1985,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1984,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1983,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1982,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1981,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1980,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1979,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1978,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1977,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1976,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1975,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1974,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1973,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1972,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1971,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1970,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1969,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1968,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1967,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1966,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1965,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1964,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1963,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1962,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1961,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1960,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1959,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1958,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1957,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1956,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1955,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1954,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1953,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1952,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1951,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1950,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1949,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1948,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1947,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1946,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1945,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1944,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1941,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1940,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1939,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1938,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1937,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1936,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1935,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1934,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1933,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1932,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1931,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1930,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1929,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1928,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1927,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1926,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1925,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1924,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1923,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1922,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1921,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1920,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1919,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1918,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1917,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1916,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1915,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1914,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1913,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1912,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1911,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1910,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1909,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1908,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1907,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1906,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1905,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1904,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1903,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1902,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1901,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1900,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1898,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1890,Early Spring
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1888,Long Winter
+Punxsutawney Phil,Groundhog,TRUE,Punxsutawney,PA,1887,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2022,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2020,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2019,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2018,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2017,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2016,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2015,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2014,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2013,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2012,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2011,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2010,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2009,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2008,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2007,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2006,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2005,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2004,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2003,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2002,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2001,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,2000,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1999,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1998,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1997,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1996,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1995,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1993,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1992,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1991,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1990,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1989,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1988,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1987,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1986,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1985,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1984,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1983,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1982,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1981,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1980,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1979,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1978,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1977,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1975,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1974,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1973,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1972,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1971,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1970,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1969,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1968,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1967,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1966,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1965,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1964,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1963,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1962,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1961,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1960,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1959,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1958,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1957,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1956,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1955,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1954,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1953,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1952,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1951,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1950,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1949,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1948,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1947,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1946,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1945,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1944,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1942,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1941,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1940,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1939,Early Spring
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1938,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1937,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1936,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1935,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1934,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1933,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1932,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1931,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1929,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1926,Long Winter
+Octoraro Orphie,Stuffed Groundhog,FALSE,Quarryville,PA,1915,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2022,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2021,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2020,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2019,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2018,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2017,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2016,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2015,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2014,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2013,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2012,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2011,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2010,Early Spring
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2009,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2008,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2007,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2006,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2005,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2004,Long Winter
+Poor Richard,Stuffed Groundhog,FALSE,York,PA,2001,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2022,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2021,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2020,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2019,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2018,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2017,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2016,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2015,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2014,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2013,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2012,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2011,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2010,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2009,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2008,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2007,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2006,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2005,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2004,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2003,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2002,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2001,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,2000,Long Winter
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,1988,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,1987,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,1985,Early Spring
+Dunkirk Dave,Groundhog,TRUE,Dunkirk,NY,1983,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2022,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2021,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2020,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2019,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2018,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2017,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2016,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2015,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2014,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2013,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2012,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2011,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2010,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2009,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2008,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2007,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2006,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2005,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2004,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2003,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2002,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2001,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,2000,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1999,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1998,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1997,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1996,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1995,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1994,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1993,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1992,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1991,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1990,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1989,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1988,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1987,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1986,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1985,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1984,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1983,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1982,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1981,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1980,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1979,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1978,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1977,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1976,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1975,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1974,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1973,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1972,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1971,Long Winter
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1970,Early Spring
+Jimmy the Groundhog,Groundhog,TRUE,Sun Prairie,WI,1969,Long Winter
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2021,Early Spring
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2020,Early Spring
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2019,Long Winter
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2017,Long Winter
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2016,Long Winter
+Oscar the Groundhog,Groundhog,TRUE,Kutztown,PA,2014,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2022,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2021,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2020,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2019,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2018,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2017,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2016,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2015,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2014,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2013,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2012,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2011,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2010,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2009,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2008,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2006,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2005,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2004,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2003,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2001,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,2000,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1999,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1998,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1997,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1995,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1994,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1993,Long Winter
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1990,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1989,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1988,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1983,Early Spring
+French Creek Freddie,Groundhog,TRUE,French Creek,WV,1980,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2022,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2021,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2020,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2019,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2018,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2017,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2016,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2015,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2014,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2013,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2012,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2011,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2010,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2009,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2008,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2007,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2006,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2005,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2004,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2003,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2002,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2001,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,2000,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1999,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1998,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1997,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1996,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1995,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1994,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1993,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1992,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1991,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1990,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1989,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1988,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1987,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1986,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1985,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1984,Long Winter
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1983,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1982,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1981,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1980,Early Spring
+Concord Charlie,Unseen Groundhog,TRUE,Athens,WV,1979,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2022,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2021,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2020,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2019,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2018,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2017,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2016,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2015,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2014,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2013,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2012,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2011,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2010,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2009,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2008,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2007,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2006,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2005,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2004,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2003,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2002,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2001,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,2000,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1999,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1998,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1997,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1996,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1994,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1993,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1991,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1990,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1989,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1988,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1987,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1986,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1984,Long Winter
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1983,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1981,Early Spring
+Buckeye Chuck,Groundhog,TRUE,Marion,OH,1980,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2022,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2021,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2020,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2019,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2018,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2017,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2016,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2015,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2014,Long Winter
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2013,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2012,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2011,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2010,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2009,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2008,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2007,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2006,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2005,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,2000,Long Winter
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1997,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1995,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1994,Long Winter
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1993,Long Winter
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1988,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1985,Early Spring
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1984,Long Winter
+Staten Island Chuck,Groundhog,TRUE,Staten Island,NY,1982,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2022,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2021,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2020,Long Winter
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2019,Long Winter
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2018,Long Winter
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2017,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2016,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2015,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2014,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2013,Long Winter
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2012,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2011,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2010,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2008,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2007,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2005,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2004,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2003,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2001,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,2000,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1999,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1998,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1997,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1995,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1994,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1993,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1992,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1990,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1989,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1988,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1987,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1986,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1985,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1984,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1983,Early Spring
+General Beauregard Lee,Groundhog,TRUE,Jackson,GA,1982,Early Spring
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2022,Early Spring
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2020,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2019,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2018,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2017,Early Spring
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2016,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2015,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2014,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2013,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2012,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2011,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2010,Early Spring
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2009,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2008,Early Spring
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2007,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2006,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2005,Long Winter
+Uni,Taxidermy Mount Groundhog,FALSE,Myerstown,PA,2004,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2022,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2021,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2020,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2019,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2018,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2017,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2016,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2015,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2014,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2013,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2012,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2011,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2010,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2009,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2008,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2007,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2006,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2005,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,2000,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1999,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1997,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1994,Long Winter
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1987,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1986,Early Spring
+Lander Lil,Bronze Prairie Dog Statue,FALSE,Lander,WY,1985,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2022,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2021,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2020,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2019,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2018,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2017,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2016,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2015,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2014,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2013,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2012,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2011,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2010,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2009,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2008,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2007,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2006,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2005,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2004,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2003,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2002,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2001,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,2000,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1999,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1998,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1997,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1996,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1995,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1994,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1993,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1992,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1991,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1990,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1989,Long Winter
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1988,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1987,Early Spring
+Wiarton Willie,Groundhog,TRUE,Wiarton,ON,1985,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2021,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2020,Long Winter
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2019,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2018,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2017,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2016,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2015,Long Winter
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2014,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2013,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2012,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2011,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,2010,Early Spring
+Unadilla Bill,Stuffed Groundhog,FALSE,Unadilla,NE,1998,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2022,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2021,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2020,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2019,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2018,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2017,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2016,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2015,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2014,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2013,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2012,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2011,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2010,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2009,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2008,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2007,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2006,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2005,Long Winter
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2004,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2003,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2002,Early Spring
+Shubenacadie Sam,Groundhog,TRUE,Shubenacadie,NS,2000,Long Winter
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2022,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2021,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2020,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2019,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2018,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2017,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2016,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2015,Early Spring
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2014,Long Winter
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2013,Long Winter
+Sand Mountain Sam,Opossum,TRUE,Albertville,AL,2012,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2022,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2021,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2020,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2019,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2018,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2017,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2016,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2015,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2014,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2013,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2012,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2011,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2010,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2009,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2008,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2006,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2004,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2003,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2002,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2001,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,2000,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,1999,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,1998,Long Winter
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,1997,Early Spring
+Manitoba Merv,Groundhog Puppet,FALSE,Winnipeg,MB,1996,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2022,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2021,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2020,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2019,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2018,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2017,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2016,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2015,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2014,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2013,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2012,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2011,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2010,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2009,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2008,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2007,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2006,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2005,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2004,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2002,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2001,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,2000,Long Winter
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1999,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1998,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1997,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1996,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1995,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1994,Early Spring
+Gertie the Groundhog,Groundhog,TRUE,Hanna City,IL,1993,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2021,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2020,Early Spring
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2019,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2018,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2017,Early Spring
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2016,Early Spring
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2015,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2014,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2013,Early Spring
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2012,Long Winter
+Queen Charlotte,Groundhog,TRUE,Charlotte,NC,2010,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2022,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2020,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2019,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2018,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2017,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2016,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2015,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2014,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2013,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2012,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2011,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,2010,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2009,Long Winter
+Chuckles,Groundhog,TRUE,Manchester,CT,2008,Early Spring
+Chuckles,Groundhog,TRUE,Manchester,CT,1985,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2022,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2021,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2020,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2018,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2017,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2016,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2015,Early Spring
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2013,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2012,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2011,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2010,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2009,Long Winter
+Boise Bill,Stuffed Prairie Dog,FALSE,Boise,ID,2007,Long Winter
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2022,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2021,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2020,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2019,Long Winter
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2018,Long Winter
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2017,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2015,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2014,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2013,Long Winter
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2012,Early Spring
+Stonewall Jackson,Groundhog,TRUE,Wantage,NJ,2011,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2022,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2020,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2019,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2018,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2017,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2016,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2015,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2014,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2013,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2012,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2011,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2010,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2009,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2008,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2007,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2006,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2005,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2004,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2003,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2002,Long Winter
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,2001,Early Spring
+Schnogadahl Sammi,Taxidermy Groundhog,FALSE,Kresgeville,PA,1997,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2022,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2022,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2021,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2020,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2019,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2018,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2017,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2016,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2015,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2014,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2013,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2012,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2010,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2009,Long Winter
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2007,Early Spring
+Fenwick Flossie,Groundhog Mascot,TRUE,Pelham,ON,2005,Long Winter
+Sunset Sam,Guinea Pig,TRUE,Sunset City,UT,2020,Early Spring
+Sunset Sam,Guinea Pig,TRUE,Sunset City,UT,2019,Long Winter
+Sunset Sam,Guinea Pig,TRUE,Sunset City,UT,2018,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2022,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2021,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2020,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2019,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2018,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2017,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2016,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2015,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2014,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2013,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2012,Early Spring
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2011,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2010,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2009,Long Winter
+Holtsville Hal,Groundhog,TRUE,Holtsville,NY,2007,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2022,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2021,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2020,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2019,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2018,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2017,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2016,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2015,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2014,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2013,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2012,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2010,Long Winter
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2009,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2008,Early Spring
+Malverne Mel,Groundhog,TRUE,Malverne,NY,2007,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2022,Long Winter
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2021,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2020,Long Winter
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2019,Long Winter
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2018,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2017,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2016,Long Winter
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2015,Long Winter
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2014,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2013,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2012,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2011,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2010,Early Spring
+Two Rivers Tunnel,Groundhog,TRUE,Mira,NS,2002,Early Spring
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2022,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2021,Early Spring
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2020,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2019,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2018,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2017,Early Spring
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2016,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2015,Long Winter
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2014,Early Spring
+Mount Joy Minnie,Stuffed Groundhog,FALSE,Mount Joy,PA,2013,Long Winter
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2022,Long Winter
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2021,Early Spring
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2020,Early Spring
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2019,Early Spring
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2018,Long Winter
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2017,Early Spring
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2016,Long Winter
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2015,Early Spring
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2014,Long Winter
+Dover Doug,Groundhog Mascot,TRUE,Dover,PA,2011,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2022,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2021,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2020,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2019,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2018,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2017,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2016,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2015,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2014,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2013,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2012,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2011,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2010,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2009,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2006,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2005,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2004,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2003,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2002,Long Winter
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2001,Early Spring
+Sir Walter Wally,Groundhog,TRUE,Raleigh,NC,2000,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2022,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2021,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2020,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2019,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2018,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2017,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2016,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2015,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2014,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2013,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2012,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2010,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2009,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2008,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2007,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2006,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2005,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2004,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2003,Early Spring
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2002,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,2001,Long Winter
+Woodstock Willie,Groundhog,TRUE,Woodstock,IL,1999,Early Spring
+Woody,Groundhog,TRUE,Howell,MI,2022,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2021,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2020,Early Spring
+Woody,Groundhog,TRUE,Howell,MI,2019,Early Spring
+Woody,Groundhog,TRUE,Howell,MI,2018,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2017,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2016,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2014,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2013,Early Spring
+Woody,Groundhog,TRUE,Howell,MI,2012,Early Spring
+Woody,Groundhog,TRUE,Howell,MI,2011,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2010,Long Winter
+Woody,Groundhog,TRUE,Howell,MI,2008,Early Spring
+Ernest,Skunk,TRUE,Saint-Félicien,QC,2020,Early Spring
+Ernest,Skunk,TRUE,Saint-Félicien,QC,2019,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2022,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2021,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2020,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2019,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2018,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2017,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2016,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2015,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2014,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2013,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2012,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2011,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2010,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2009,Long Winter
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2008,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2006,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2005,Early Spring
+Balzac Billy,Gopher Mascot,TRUE,Balzac,AB,2004,Long Winter
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2022,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2021,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2020,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2019,Long Winter
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2018,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2017,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2016,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2014,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2013,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2012,Early Spring
+Beardsley Bart,Stuffed Prairie Dog,FALSE,Bridgeport,CT,2010,Early Spring
+Cocalico Cal,Groundhog Mascot,TRUE,Ephrata,PA,2015,Early Spring
+Cocalico Cal,Groundhog Mascot,TRUE,Ephrata,PA,2014,Early Spring
+Cocalico Cal,Groundhog Mascot,TRUE,Ephrata,PA,2013,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2022,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2021,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2020,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2019,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2018,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2017,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2016,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2015,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2014,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2013,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2012,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2011,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2010,Long Winter
+Ms. G,Groundhog,TRUE,Lincoln,MA,2009,Early Spring
+Ms. G,Groundhog,TRUE,Lincoln,MA,2008,Long Winter
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2022,Early Spring
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2021,Early Spring
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2020,Early Spring
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2019,Early Spring
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2018,Early Spring
+Will and Wiley,Grizzly Bears,TRUE,Oklahoma City,OK,2017,Long Winter
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2022,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2020,Long Winter
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2019,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2018,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2017,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2015,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2014,Early Spring
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2012,Long Winter
+Polk County Paula,Groundhog Mascot,TRUE,Des Moines,IA,2011,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2022,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2021,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2020,Long Winter
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2019,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2018,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2017,Long Winter
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2016,Long Winter
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2015,Early Spring
+Patty Pagoda,Groundhog Mascot,TRUE,Reading,PA,2014,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2021,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2020,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2019,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2018,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2017,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2016,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2015,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2014,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2013,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2012,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2011,Early Spring
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2009,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2006,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2004,Long Winter
+Susquehanna Sherman,Stuffed Groundhog,FALSE,Mount Wolf,PA,2003,Long Winter
+Bitterroot Bill,Stuffed Yellow-Bellied Marmot,FALSE,Stevensville,MT,2017,Long Winter
+Bitterroot Bill,Stuffed Yellow-Bellied Marmot,FALSE,Stevensville,MT,2015,Early Spring
+Bitterroot Bill,Stuffed Yellow-Bellied Marmot,FALSE,Stevensville,MT,2013,Long Winter
+Bitterroot Bill,Stuffed Yellow-Bellied Marmot,FALSE,Stevensville,MT,2012,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2022,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2021,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2020,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2019,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2018,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2017,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2016,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2015,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2014,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2013,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2012,Early Spring
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2011,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2010,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2008,Long Winter
+Stormy Marmot,Stuffed Yellow-Bellied Marmot,FALSE,Aurora,CO,2006,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2022,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2021,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2020,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2019,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2018,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2017,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2016,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2015,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2014,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2013,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2012,Long Winter
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2011,Early Spring
+Snohomish Slew,Bullfrog,TRUE,Snohomish,WA,2006,Long Winter
+Big Al,Alligator,TRUE,Beaumont,TX,2022,Long Winter
+Big Al,Alligator,TRUE,Beaumont,TX,2021,Long Winter
+Big Al,Alligator,TRUE,Beaumont,TX,2020,Early Spring
+Big Al,Alligator,TRUE,Beaumont,TX,2019,Long Winter
+Big Al,Alligator,TRUE,Beaumont,TX,2017,Early Spring
+Big Al,Alligator,TRUE,Beaumont,TX,2016,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2022,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2021,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2020,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2019,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2018,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2017,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2016,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2015,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2014,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2013,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2012,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2011,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2010,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2009,Long Winter
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2008,Early Spring
+Grover the Groundhog and Sweet Arrow Sue,Stuffed Groundhog,FALSE,Pine Grove,PA,2007,Early Spring
+Middlemiss Mike and family,Stuffed Groundhog,FALSE,Melbourne,ON,2022,Early Spring
+Middlemiss Mike and family,Stuffed Groundhog,FALSE,Melbourne,ON,2021,Early Spring
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2021,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2020,Early Spring
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2019,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2018,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2017,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2016,Early Spring
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2015,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2014,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2013,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2012,Long Winter
+Western Maryland Murray,Groundhog,TRUE,Cumberland,MD,2009,Long Winter
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2021,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2020,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2019,Long Winter
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2018,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2017,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2016,Long Winter
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2015,Long Winter
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2014,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2013,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2012,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2011,Early Spring
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2010,Long Winter
+Milltown Mel,Groundhog,TRUE,Milltown,NJ,2009,Long Winter
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2022,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2021,Long Winter
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2020,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2019,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2018,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2017,Long Winter
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2016,Long Winter
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2015,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2014,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2013,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2012,Early Spring
+Chilly Charlie,Groundhog Mascot,TRUE,Woodstock,ON,2010,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2021,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2020,Long Winter
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2019,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2018,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2017,Long Winter
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2015,Long Winter
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2014,Long Winter
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2013,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2012,Early Spring
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2011,Long Winter
+Essex Ed,Groundhog,TRUE,West Orange,NJ,2010,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2019,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2018,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2017,Early Spring
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2016,Early Spring
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2015,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2014,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2013,Early Spring
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2012,Early Spring
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2011,Long Winter
+Chattanooga Chuck,Groundhog,TRUE,Chattanooga,TN,2010,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2022,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2021,Early Spring
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2020,Early Spring
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2019,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2018,Early Spring
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2017,Early Spring
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2016,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2015,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2014,Early Spring
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2013,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2012,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2011,Long Winter
+Fred la marmotte,Groundhog,TRUE,Val-d'Espoir,QC,2010,Long Winter
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2022,Long Winter
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2021,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2020,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2019,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2018,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2017,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2016,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2015,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2014,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2013,Long Winter
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2012,Early Spring
+Bee Cave Bob,Armadillo,TRUE,Bee Cave,TX,2011,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2021,Early Spring
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2020,Early Spring
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2019,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2018,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2015,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2014,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2012,Long Winter
+Tinicum Tim,Groundhog Puppet,FALSE,Philadelphia,PA,2011,Early Spring
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2022,Long Winter
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2021,Early Spring
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2020,Early Spring
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2019,Long Winter
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2018,Early Spring
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2017,Early Spring
+Smith Lake Jake,Groundhog,TRUE,Smith Lake,AL,2016,Early Spring
+Potomac Phil,Taxidermy Groundhog,FALSE,Washington,DC,2022,Long Winter
+Potomac Phil,Taxidermy Groundhog,FALSE,Washington,DC,2021,Early Spring
+Potomac Phil,Taxidermy Groundhog,FALSE,Washington,DC,2020,Long Winter
+Potomac Phil,Taxidermy Groundhog,FALSE,Washington,DC,2019,Long Winter
+Potomac Phil,Taxidermy Groundhog,FALSE,Washington,DC,2018,Long Winter
+Chuck Wood,Animatronic Groundhog Puppet,FALSE,Quincy,CA,2022,Long Winter
+Chuck Wood,Animatronic Groundhog Puppet,FALSE,Quincy,CA,2021,Long Winter
+Chuck Wood,Animatronic Groundhog Puppet,FALSE,Quincy,CA,2020,Long Winter
+Chuck Wood,Animatronic Groundhog Puppet,FALSE,Quincy,CA,2019,Long Winter
+Chuck Wood,Animatronic Groundhog Puppet,FALSE,Quincy,CA,2014,Long Winter
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2020,Long Winter
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2018,Early Spring
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2017,Early Spring
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2016,Early Spring
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2015,Early Spring
+Shipoke Sheena,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2014,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2022,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2021,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2020,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2018,Long Winter
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2017,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2016,Long Winter
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2015,Early Spring
+Chesapeake Chuck,Groundhog,TRUE,Newport News,VA,2014,Long Winter
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2021,Early Spring
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2020,Early Spring
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2019,Long Winter
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2018,Long Winter
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2017,Long Winter
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2016,Early Spring
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2015,Long Winter
+Oil Springs Ollie,Groundhog,TRUE,Oil Springs,ON,2014,Long Winter
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2019,Early Spring
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2018,Early Spring
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2017,Long Winter
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2016,Long Winter
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2015,Early Spring
+Rufus,Stuffed Aplodontia Rufa,FALSE,Seattle,WA,2014,Long Winter
+Concord Casimir,Cat,TRUE,Concord,OH,2019,Early Spring
+Concord Casimir,Cat,TRUE,Concord,OH,2018,Long Winter
+Tater the Hedgehog,Hedgehog,TRUE,Kansas City,MO,2019,Early Spring
+Tater the Hedgehog,Hedgehog,TRUE,Kansas City,MO,2018,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2022,Long Winter
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2021,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2020,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2019,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2018,Long Winter
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2017,Long Winter
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2016,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2015,Early Spring
+Lawrenceville Lucy,Groundhog,TRUE,Lawrenceville,PA,2013,Early Spring
+Snerd,Groundhog,TRUE,Garner,NC,2022,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2021,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2021,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2020,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2019,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2018,Early Spring
+Snerd,Groundhog,TRUE,Garner,NC,2017,Long Winter
+Snerd,Groundhog,TRUE,Garner,NC,2016,Early Spring
+Snerd,Groundhog,TRUE,Garner,NC,2015,Early Spring
+Quilliam,Hedgehog,TRUE,Dayton,OH,2020,Long Winter
+Quilliam,Hedgehog,TRUE,Dayton,OH,2019,Early Spring
+Quilliam,Hedgehog,TRUE,Dayton,OH,2018,Long Winter
+Quilliam,Hedgehog,TRUE,Dayton,OH,2017,Early Spring
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2021,Long Winter
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2020,Long Winter
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2019,Early Spring
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2018,Long Winter
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2017,Early Spring
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2016,Early Spring
+Pisgah Pete,White Squirrel,TRUE,Brevard,NC,2015,Early Spring
+Sunny the Groundhog,Groundhog,TRUE,Racine,WI,2021,Early Spring
+Sunny the Groundhog,Groundhog,TRUE,Racine,WI,2020,Early Spring
+Sunny the Groundhog,Groundhog,TRUE,Racine,WI,2019,Early Spring
+Sunny the Groundhog,Groundhog,TRUE,Racine,WI,2016,Early Spring
+Sunny the Groundhog,Groundhog,TRUE,Racine,WI,2015,Long Winter
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2020,Long Winter
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2019,Early Spring
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2018,Long Winter
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2017,Early Spring
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2016,Early Spring
+Grubby the Groundhog,Groundhog,TRUE,Hope,IN,2015,Early Spring
+Scramble the Duck,Duck,TRUE,Eastford,CT,2021,Long Winter
+Scramble the Duck,Duck,TRUE,Eastford,CT,2020,Long Winter
+Scramble the Duck,Duck,TRUE,Eastford,CT,2019,Long Winter
+Scramble the Duck,Duck,TRUE,Eastford,CT,2018,Long Winter
+Scramble the Duck,Duck,TRUE,Eastford,CT,2017,Long Winter
+Scramble the Duck,Duck,TRUE,Eastford,CT,2016,Early Spring
+Scramble the Duck,Duck,TRUE,Eastford,CT,2015,Long Winter
+Woodburn Wild Charles Winchester,Groundhog,TRUE,Woodburn,IN,2022,Early Spring
+Woodburn Wild Charles Winchester,Groundhog,TRUE,Woodburn,IN,2021,Long Winter
+Woodburn Wild Charles Winchester,Groundhog,TRUE,Woodburn,IN,2018,Early Spring
+Woodburn Wild Charles Winchester,Groundhog,TRUE,Woodburn,IN,2017,Long Winter
+Woodburn Wild Charles Winchester,Groundhog,TRUE,Woodburn,IN,2015,Long Winter
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2022,Long Winter
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2021,Early Spring
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2020,Long Winter
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2019,Early Spring
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2018,Early Spring
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2017,Long Winter
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2016,Early Spring
+Snowy,Prarie Dog,TRUE,Pend Oreille County,WA,2015,Early Spring
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2022,Early Spring
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2020,Long Winter
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2019,Early Spring
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2018,Long Winter
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2017,Early Spring
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2016,Long Winter
+Benny the Bass,Bass,TRUE,Buckeye Lake,OH,2015,Long Winter
+Greta the Groundhog,Groundhog,TRUE,Chimney Rock,NC,2021,Long Winter
+Greta the Groundhog,Groundhog,TRUE,Chimney Rock,NC,2020,Early Spring
+Greta the Groundhog,Groundhog,TRUE,Chimney Rock,NC,2019,Long Winter
+Greta the Groundhog,Groundhog,TRUE,Chimney Rock,NC,2018,Long Winter
+Greta the Groundhog,Groundhog,TRUE,Chimney Rock,NC,2017,Early Spring
+Hutty the Hog,Groundhog,TRUE,Kansas City,MO,2018,Early Spring
+Buttercup,Groundhog,TRUE,West Dundee,IL,2019,Early Spring
+Buttercup,Groundhog,TRUE,West Dundee,IL,2018,Long Winter
+Buttercup,Groundhog,TRUE,West Dundee,IL,2017,Long Winter
+Buttercup,Groundhog,TRUE,West Dundee,IL,2016,Early Spring
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2022,Early Spring
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2021,Early Spring
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2020,Long Winter
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2019,Long Winter
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2018,Long Winter
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2017,Long Winter
+Murray the Groundhog,Groundhog,TRUE,Alton,IL,2016,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2022,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2021,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2020,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2019,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2018,Long Winter
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2017,Early Spring
+Harleysville Hank,Stuffed Groundhog,FALSE,Harleysville,PA,2016,Long Winter
+Otis the Hedgehog,Hedgehog,TRUE,West Orange,NJ,2016,Long Winter
+Winnipeg Wyn,Groundhog,TRUE,Winnipeg,MB,2020,Early Spring
+Winnipeg Wyn,Groundhog,TRUE,Winnipeg,MB,2019,Early Spring
+Winnipeg Wyn,Groundhog,TRUE,Winnipeg,MB,2018,Long Winter
+Winnipeg Wyn,Groundhog,TRUE,Winnipeg,MB,2017,Long Winter
+Buffalo Bert,Groundhog,TRUE,Buffalo,NY,2022,Long Winter
+Buffalo Bert,Groundhog,TRUE,Buffalo,NY,2021,Long Winter
+Buffalo Bert,Groundhog,TRUE,Buffalo,NY,2020,Long Winter
+Buffalo Bert,Groundhog,TRUE,Buffalo,NY,2019,Long Winter
+Buffalo Bert,Groundhog,TRUE,Buffalo,NY,2018,Long Winter
+Dozer,Groundhog,TRUE,Jeffersonville,IN,2020,Long Winter
+Dozer,Groundhog,TRUE,Jeffersonville,IN,2019,Early Spring
+Dozer,Groundhog,TRUE,Jeffersonville,IN,2018,Long Winter
+Dozer,Groundhog,TRUE,Jeffersonville,IN,2017,Long Winter
+Mt. Gretna Grady,Stuffed Groundhog,FALSE,Mt. Gretna,PA,2022,Long Winter
+Mt. Gretna Grady,Stuffed Groundhog,FALSE,Mt. Gretna,PA,2020,Early Spring
+Mt. Gretna Grady,Stuffed Groundhog,FALSE,Mt. Gretna,PA,2019,Long Winter
+Mt. Gretna Grady,Stuffed Groundhog,FALSE,Mt. Gretna,PA,2018,Long Winter
+Minnie the skunk,Skunk,TRUE,Racine,WI,2018,Long Winter
+Lucy the Lobster,Lobster,TRUE,Barrington Passage,NS,2022,Long Winter
+Lucy the Lobster,Lobster,TRUE,Barrington Passage,NS,2020,Long Winter
+Lucy the Lobster,Lobster,TRUE,Barrington Passage,NS,2019,Long Winter
+Lucy the Lobster,Lobster,TRUE,Barrington Passage,NS,2018,Early Spring
+Quigley,Groundhog,TRUE,Quogue,NY,2021,Early Spring
+Quigley,Groundhog,TRUE,Quogue,NY,2020,Early Spring
+Quigley,Groundhog,TRUE,Quogue,NY,2019,Early Spring
+Quigley,Groundhog,TRUE,Quogue,NY,2018,Early Spring
+Big Tex,Alligator,TRUE,Beaumont,TX,2018,Long Winter
+Gordy the Groundhog,Groundhog,TRUE,Milwaukee,WI,2022,Early Spring
+Gordy the Groundhog,Groundhog,TRUE,Milwaukee,WI,2021,Early Spring
+Gordy the Groundhog,Groundhog,TRUE,Milwaukee,WI,2020,Long Winter
+Gordy the Groundhog,Groundhog,TRUE,Milwaukee,WI,2019,Early Spring
+Birmingham Jill,Opossum,TRUE,Birmingham,AL,2021,Long Winter
+Birmingham Jill,Opossum,TRUE,Birmingham,AL,2019,Long Winter
+Sweet Pea,Groundhog,TRUE,Newport News,VA,2019,Long Winter
+Nancy the Hedgehog,Hedgehog,TRUE,Portland,OR,2019,Early Spring
+Clucksatawney Henrietta,Chicken,TRUE,Katonah,NY,2022,Early Spring
+Clucksatawney Henrietta,Chicken,TRUE,Katonah,NY,2021,Early Spring
+Clucksatawney Henrietta,Chicken,TRUE,Katonah,NY,2020,Early Spring
+Clucksatawney Henrietta,Chicken,TRUE,Katonah,NY,2019,Early Spring
+Arboretum Annie,Groundhog,TRUE,Dallas,TX,2021,Long Winter
+Arboretum Annie,Groundhog,TRUE,Dallas,TX,2020,Early Spring
+Arboretum Annie,Groundhog,TRUE,Dallas,TX,2019,Early Spring
+Prairie Dog Poppy,Prairie Dog,TRUE,Medicine Park,OK,2022,Long Winter
+Prairie Dog Poppy,Prairie Dog,TRUE,Medicine Park,OK,2020,Long Winter
+Prairie Dog Poppy,Prairie Dog,TRUE,Medicine Park,OK,2019,Early Spring
+Haddon Harry the Groundhog,Groundhog Mascot,TRUE,Haddon Township,NJ,2020,Early Spring
+Poppy the Groundhog,Groundhog,TRUE,Millersville,PA,2022,Long Winter
+Poppy the Groundhog,Groundhog,TRUE,Millersville,PA,2021,Early Spring
+Poppy the Groundhog,Groundhog,TRUE,Millersville,PA,2020,Early Spring
+First Coast Friz,Aardvark,TRUE,Jacksonville,FL,2020,Early Spring
+Birmingham Bilbo,Owl,TRUE,Birmingham,AL,2020,Long Winter
+Yonah the Groundhog,Groundhog,TRUE,Cleveland,GA,2022,Early Spring
+Yonah the Groundhog,Groundhog,TRUE,Cleveland,GA,2021,Long Winter
+Yonah the Groundhog,Groundhog,TRUE,Cleveland,GA,2020,Early Spring
+Roxbury Rita,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2022,Long Winter
+Roxbury Rita,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2021,Early Spring
+Roxbury Rita,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2020,Early Spring
+Stumptown Fil,Beaver,TRUE,Portland,OR,2022,Early Spring
+Stumptown Fil,Beaver,TRUE,Portland,OR,2021,Long Winter
+Stumptown Fil,Beaver,TRUE,Portland,OR,2020,Early Spring
+Parish,Nutria,TRUE,New Orleans,LA,2022,Early Spring
+Parish,Nutria,TRUE,New Orleans,LA,2021,Early Spring
+Parish,Nutria,TRUE,New Orleans,LA,2020,Long Winter
+Landing Lily,Groundhog Sock Puppet,FALSE,Landing,NJ,2022,Early Spring
+Landing Lily,Groundhog Sock Puppet,FALSE,Landing,NJ,2021,Early Spring
+Landing Lily,Groundhog Sock Puppet,FALSE,Landing,NJ,2020,Early Spring
+HuckyBlueToo,Groundhog,TRUE,Holland,OH,2020,Long Winter
+Great Neck Greta,Groundhog,TRUE,Great Neck,NY,2020,Early Spring
+Edgewater Elsie,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2022,Early Spring
+Edgewater Elsie,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2021,Early Spring
+Edgewater Elsie,Groundhog Sock Puppet,FALSE,Roxbury,NJ,2020,Early Spring
+Hope the Groundhog,Groundhog,TRUE,Hope,IN,2022,Early Spring
+Hope the Groundhog,Groundhog,TRUE,Hope,IN,2021,Long Winter
+Phoebe,Hedgehog,TRUE,Manchester,CT,2021,Long Winter
+Jewels,Alpaca,TRUE,West Dundee,IL,2021,Early Spring
+Odyssey the Otter,Otter Mascot,TRUE,Dayton,OH,2021,Long Winter
+Chopper and Marlu,Marmots,TRUE,Nanaimo,BC,2021,Long Winter
+Bridget the Groundhog,Stuffed Groundhog,FALSE,Seattle,WA,2021,Early Spring
+MT Parker,Stuffed Groundhog,FALSE,Lancaster,PA,2022,Long Winter
+MT Parker,Stuffed Groundhog,FALSE,Lancaster,PA,2021,Early Spring
+Pouch,Opossum,TRUE,Athens,GA,2021,Long Winter
+Willie the Groundhog,Groundhog,TRUE,Indianapolis,IN,2022,Long Winter
+Willie the Groundhog,Groundhog,TRUE,Indianapolis,IN,2021,Long Winter
+Queen City Charlie,Groundhog Mascot,TRUE,Cumberland,MD,2022,Early Spring
+Unadilla Billie,Stuffed Groundhog,FALSE,Unadilla,NE,2022,Early Spring
+Okanagan Okie,Yellow-Bellied Marmot,TRUE,Vernon,BC,2022,Early Spring
+Pisgah Penny,White Squirrel,TRUE,Brevard,NC,2022,Early Spring
+Essex Edwina,Groundhog,TRUE,West Orange,NJ,2022,Early Spring
+Heaven's Wildlife Harvey,Groundhog,TRUE,Oil Springs,ON,2022,Early Spring
+Pumpkin,Groundhog,TRUE,Chimney Rock,NC,2022,Early Spring
+Scramble the Duck Jr.,Duck,TRUE,Eastford,CT,2022,Long Winter
+Eric,Guinea Pig,TRUE,Toronto,ON,2022,Early Spring
+Monty,Dog Dressed As A Bear Pretending To Be A Groundhog,TRUE,Harrisburg,PA,2022,Long Winter
+Hucky Bella Rose,Groundhog,TRUE,Holland,OH,2022,Long Winter
+Seattle Sue,Stuffed Mountain Beaver,FALSE,Seattle,WA,2022,Early Spring
+Pennsburg Polly and Pennsburg Pete,Groundhog Mascot/Stuffed Groundhog,FALSE,Pennsburg,PA,2022,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2018,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2017,Early Spring
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2016,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2014,Early Spring
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2013,Early Spring
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2012,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2011,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2010,Early Spring
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2009,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2006,Long Winter
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2005,Early Spring
+Birmingham Bill,Groundhog,TRUE,Birmingham,AL,2004,Early Spring
+Pierre C. Shadeaux,Nutria,TRUE,New Iberia,LA,2020,Early Spring
+Pierre C. Shadeaux,Nutria,TRUE,New Iberia,LA,2018,Early Spring
+Fufu the Hedgehog,Hedgehog,TRUE,Portland,OR,2018,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2019,Long Winter
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2018,Long Winter
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2017,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2016,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2015,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2013,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2012,Early Spring
+T-Boy the Nutria,Nutria,TRUE,New Orleans,LA,2011,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2022,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2021,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2020,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2019,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2018,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2017,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2016,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2015,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2014,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2013,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2012,Early Spring
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2011,Long Winter
+Flatiron Freddy,Stuffed Yellow-Bellied Marmot,FALSE,Boulder,CO,2010,Long Winter
+Luna,Hedgehog,TRUE,Chattanooga,TN,2019,Long Winter
+Van Isle Violet,Marmot,TRUE,Nanaimo,BC,2022,Long Winter
+Van Isle Violet,Marmot,TRUE,Nanaimo,BC,2020,Long Winter
+Grover Cleveland Undergrounder,Groundhog,TRUE,Zanesville,OH,2022,Early Spring
+Grover Cleveland Undergrounder,Groundhog,TRUE,Zanesville,OH,2021,Long Winter
+Grover Cleveland Undergrounder,Groundhog,TRUE,Zanesville,OH,2020,Early Spring
+Grover Cleveland Undergrounder,Groundhog,TRUE,Zanesville,OH,2019,Early Spring
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2022,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2021,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2020,Early Spring
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2019,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2017,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2015,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2014,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2013,Long Winter
+Bowman Bill,Groundhog Puppet,FALSE,Stephens City,VA,2011,Long Winter
+Starr Lions,Lion Statues,FALSE,Greenfield,WI,2022,Early Spring
+Starr Lions,Lion Statues,FALSE,Greenfield,WI,2021,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2022,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2021,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2020,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2019,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2018,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2017,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2016,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2015,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2014,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2013,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2012,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2011,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2010,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2009,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2008,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2007,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2006,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2005,Early Spring
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2004,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2003,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2002,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2001,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,2000,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,1999,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,1998,Long Winter
+Prairie Dog Pete,Prairie Dog,TRUE,Lubbock,TX,1997,Long Winter
+Madoc Mike,Groundhog,TRUE,Madoc,ON,2014,Long Winter
+Madoc Mike,Groundhog,TRUE,Madoc,ON,2013,Early Spring
+Madoc Mike,Groundhog,TRUE,Madoc,ON,2009,Long Winter
+Madoc Mike,Groundhog,TRUE,Madoc,ON,2002,Long Winter
+Madoc Mike,Groundhog,TRUE,Madoc,ON,2000,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2022,Early Spring
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2021,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2020,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2019,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2018,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2017,Long Winter
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2016,Early Spring
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2012,Early Spring
+Wildwood Willie,Stuffed Groundhog,FALSE,Toledo,OH,2011,Early Spring

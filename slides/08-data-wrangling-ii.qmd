@@ -1,0 +1,395 @@
+---
+title: "Data wrangling (I)"
+subtitle: "Lecture 7"
+date: "February 14, 2023"
+format: revealjs
+resources:
+  - "data/prognosticators.csv"
+  - "data/weather-region.csv"
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+library(patchwork)
+```
+
+# Announcements
+
+## Announcements
+
+- Draft proposal rendered + committed + pushed to GitHub by 11:59pm tonight
+- Peer evaluations in lab tomorrow
+
+## Agenda for today
+
+- Transforming and reshaping a single data frame
+- Transforming and reshaping multiple data frames
+
+# Setup
+
+## Packages + figures
+
+```{r}
+#| cache: false
+# load packages
+library(tidyverse)
+library(scales)
+
+# set default theme for ggplot2
+theme_set(theme_minimal(base_size = 12))
+```
+
+### YAML options
+
+```yaml
+knitr:
+  opts_chunk:
+    fig.width: 7
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    out.width: "80%"
+```
+
+# From last time
+
+## Data: SCOTUS
+
+-   Data from the Supreme Court of the United States
+-   Source: [Supreme Court Database](http://scdb.wustl.edu/)
+-   Observations: Each row represents a case
+
+```{r}
+#| eval: false
+scdb_case <- read_csv("https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv")
+```
+
+```{r}
+#| label: scotus
+#| include: false
+scdb_case <- read_csv("data/scdb-case.csv")
+```
+
+## Scenario 1
+
+::: hand
+We...
+
+have a single data frame
+
+want to slice it, and dice it, and juice it, and process it, so we can plot it
+:::
+
+## What percentage of cases in each term are decided by an **n**-vote margin (i.e. 5-4, 6-3, etc.)
+
+::: task
+Let's recreate this visualization!
+:::
+
+```{r}
+#| label: n-vote-margin
+#| echo: false
+
+scdb_case |>
+  # select relevant columns
+  select(term, majVotes, minVotes) |>
+  # filter to include post 1945 term cases
+  filter(term >= 1945) |>
+  # calculate vote margin for each case
+  mutate(vote_margin = majVotes - minVotes) |>
+  # calculate number of cases decided per term and vote margin
+  count(term, vote_margin) |>
+  # fill in all the missing combination of rows - plot won't look right otherwise
+  complete(term, vote_margin, fill = list(n = 0)) |>
+  # calculate percentages by term
+  group_by(term) |>
+  mutate(
+    n_pct = n / sum(n),
+    # convert vote_margin to factor variable for plotting
+    vote_margin = factor(x = vote_margin),
+    vote_margin = fct_rev(f = vote_margin)
+  ) |>
+  # generate graph
+  ggplot(mapping = aes(x = term, y = n_pct, fill = vote_margin)) +
+  geom_area(color = "cornsilk4") +
+  # print the y-axis labels using percentages rather than proportions
+  scale_y_continuous(labels = label_percent()) +
+  # change the color palette
+  scale_fill_viridis_d() +
+  # label our graph
+  labs(
+    title = "U.S. Supreme Court decisionmaking since 1945",
+    subtitle = "Split between majority and minority justice votes",
+    x = "Term",
+    y = "Percent of total cases decided",
+    fill = "Vote margin",
+    caption = "Source: The Supreme Court Database"
+  ) +
+  # match subtitle and caption colors to area borders
+  theme(
+    plot.subtitle = element_text(color = "cornsilk4"),
+    plot.caption = element_text(color = "cornsilk4")
+  )
+```
+
+## Livecoding
+
+Reveal below for code developed during live coding session.
+
+# Bringing together multiple data frames
+
+## Scenario 2
+
+::: hand
+We...
+
+have **multiple** data frames
+
+want to want to bring them together so we can plot them
+:::
+
+## Introduction to relational data
+
+* Multiple tables of data that when combined together answer research questions
+* Relations define the important element, not just the individual tables
+* Relations are defined between a pair of tables
+* Relational verbs
+    * Mutating joins
+    * Filtering joins
+
+---
+
+![](https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/08/Pictures/_33b2ca74-0cc1-11e8-ba67-a8387f729390.jpeg){fig-align="center"}
+
+---
+
+```{r}
+#| output-location: column
+superheroes <- tribble(
+  ~name, ~alignment, ~gender, ~publisher,
+  "Magneto", "bad", "male", "Marvel",
+  "Batman", "good", "male", "DC",
+  "Sabrina", "good", "female", "Archie Comics"
+)
+
+publishers <- tribble(
+  ~publisher, ~yr_founded,
+  "DC", 1934,
+  "Marvel", 1939,
+  "Image", 1992
+)
+
+superheroes
+publishers
+```
+
+```{r}
+#| include: false
+
+library(tidyexplain)
+```
+
+```{r}
+#| label: anim-opts
+#| include: false
+set_anim_options(anim_opts = anim_options(text_size = 4, cell_width = 2, title_size = 14))
+```
+
+# Mutating joins
+
+## `inner_join()`
+
+```{r}
+#| label: ijsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_inner_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `inner_join()`
+
+```{r}
+#| label: ijsp
+inner_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `left_join()`
+
+```{r}
+#| label: ljsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_left_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `left_join()`
+
+```{r}
+#| label: ljsp
+left_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `right_join()`
+
+```{r}
+#| label: rjsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_right_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `right_join()`
+
+```{r}
+#| label: rjsp
+right_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `right_join()` reversed
+
+```{r}
+#| label: rjsp-alt-anim
+#| dependson: anim-opts
+#| echo: false
+animate_left_join(x = publishers, y = superheroes, by = "publisher")
+```
+
+## `full_join()`
+
+```{r}
+#| label: fjsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_full_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `full_join()`
+
+```{r}
+#| label: fjsp
+full_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+# Filtering joins
+
+## `semi_join()`
+
+```{r}
+#| label: sjsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_semi_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `semi_join()`
+
+```{r}
+#| label: sjsp
+semi_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `anti_join()`
+
+```{r}
+#| label: ajsp-anim
+#| dependson: anim-opts
+#| echo: false
+animate_anti_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+## `anti_join()`
+
+```{r}
+#| label: ajsp
+anti_join(x = superheroes, y = publishers, by = "publisher")
+```
+
+# Assessing prognosticator performance
+
+![](https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif)
+
+## The prognosticator of all prognosticators
+
+{{< video https://www.youtube.com/embed/iDs12Qd27R8 width="1456" height="819" >}}
+
+## Import the data
+
+```{r}
+#| eval: false
+seers <- read_csv("https://info3312.infosci.cornell.edu/slides/data/prognosticators.csv")
+weather <- read_csv("https://info3312.infosci.cornell.edu/slides/data/weather-region.csv")
+```
+
+```{r}
+#| label: seers
+#| include: false
+seers <- read_csv("data/prognosticators.csv")
+weather <- read_csv("data/weather-region.csv")
+```
+
+```{r}
+#| label: seers-glimpse
+
+glimpse(seers)
+glimpse(weather)
+```
+
+---
+
+![](images/08/climate-regions.gif){fig-alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries."}
+
+## Prognosticator accuracy rates
+
+::: task
+Let's recreate this visualization!
+:::
+
+```{r}
+#| label: seers-accuracy-rate
+#| echo: false
+
+# join the data frames
+seers_weather <- inner_join(
+  x = seers, y = weather,
+  by = c("state" = "state_abb", "year")
+) |>
+  # calculate if prediction was correct
+  mutate(correct_pred = prediction == outcome)
+
+# calculate summary statistics
+seers_summary <- seers_weather |>
+  group_by(region) |>
+  summarize(
+    preds_rate = mean(correct_pred),
+    preds_n = n(),
+    preds_se = sqrt((preds_rate * (1 - preds_rate)) / preds_n)
+  )
+
+# generate the plot
+seers_summary |>
+  mutate(region = fct_reorder(.f = region, .x = preds_rate)) |>
+  ggplot(mapping = aes(x = preds_rate, y = region)) +
+  geom_point(mapping = aes(size = preds_n)) +
+  geom_linerange(mapping = aes(xmin = preds_rate - preds_se,
+                               xmax = preds_rate + preds_se)) +
+  scale_x_continuous(labels = label_percent()) +
+  labs(
+    title = "Prognosticator accuracy rate for late winter/early spring",
+    subtitle = "By climate region",
+    x = "Prediction accuracy",
+    y = NULL,
+    size = "Total number\nof predictions",
+    caption = "Source: Countdown to Groundhog Day & NOAA"
+  ) +
+  theme_minimal()
+```
+
+## Livecoding
+
+Reveal below for code developed during live coding session.
+
+

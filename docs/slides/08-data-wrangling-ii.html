@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.2.313">
 
   <meta name="author" content="Dr.&nbsp;Benjamin Soltoff">
-  <title>INFO 3312/5312 - Welcome to INFO 3312/5312</title>
+  <title>INFO 3312/5312 - Data wrangling (I)</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -385,10 +385,8 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../site_libs/countdown/countdown.css" rel="stylesheet">
-  <script src="../site_libs/countdown/countdown.js"></script>
-<meta property="og:title" content="INFO 3312/5312 - Welcome to INFO 3312/5312">
-<meta property="og:description" content="Lecture 1">
+<meta property="og:title" content="INFO 3312/5312 - Data wrangling (I)">
+<meta property="og:description" content="Lecture 7">
 <meta property="og:site-name" content="INFO 3312/5312">
 </head>
 <body class="quarto-light">
@@ -396,8 +394,8 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Welcome to INFO 3312/5312</h1>
-  <p class="subtitle">Lecture 1</p>
+  <h1 class="title">Data wrangling (I)</h1>
+  <p class="subtitle">Lecture 7</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -410,699 +408,340 @@ Dr.&nbsp;Benjamin Soltoff
     </div>
 </div>
 
-  <p class="date">1/24/23</p>
+  <p class="date">2/14/23</p>
 </section>
 <section>
-<section id="agenda" class="title-slide slide level1 center">
-<h1>Agenda</h1>
+<section id="announcements" class="title-slide slide level1 center">
+<h1>Announcements</h1>
 
 </section>
-<section id="agenda-1" class="slide level2">
-<h2>Agenda</h2>
-<ul>
-<li>Staff intros</li>
-<li>Themes of the course</li>
-<li>Facts, truth, and beauty</li>
-<li>What makes a good visualization?</li>
-<li>Course overview</li>
-<li>This week’s tasks</li>
-</ul>
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-3_3bf04daff1d24523c0a2bec334120068">
-
-</div>
-</section></section>
-<section>
-<section id="staff-intros" class="title-slide slide level1 center">
-<h1>Staff intros</h1>
-
-</section>
-<section id="meet-the-instructor" class="slide level2">
-<h2>Meet the instructor</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>Dr.&nbsp;Benjamin Soltoff</p>
-<p>Lecturer in Information Science</p>
-<p>Gates Hall 216</p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/ben-soltoff.jpg" alt="Headshot of Dr. Benjamin Soltoff"></p>
-</figure>
-</div>
-</div>
-</div>
-</section>
-<section id="meet-the-course-team" class="slide level2">
-<h2>Meet the course team</h2>
-<ul>
-<li>Chuanrui L (grad TA)</li>
-<li>Jessica Z</li>
-<li>Kevin S</li>
-<li>Lincy C</li>
-<li>Michelle P</li>
-</ul>
-</section>
-<section id="meet-each-other" class="slide level2">
-<h2>Meet each other!</h2>
-<div class="cell" data-layout-align="center">
-<div class="cell-output-display">
-<div class="countdown countdown-fullscreen" id="timer_1487587b" data-update-every="1" tabindex="0" style="top:0;right:0;bottom:0;left:0;margin:0;padding:0;font-size:15vw;">
-<div class="countdown-controls"><button class="countdown-bump-down">−</button><button class="countdown-bump-up">+</button></div>
-<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
-</div>
-</div>
-</div>
-</section>
-<section id="themes-what-why-and-how" class="slide level2 smaller">
-<h2>Themes: what, why, and how</h2>
-<ul>
-<li><strong>What:</strong> the communication (e.g.&nbsp;plot, table, report)
-<ul>
-<li>Specific types of visualizations for a particular purpose (e.g., maps for spatial data, Sankey diagrams for proportions, etc.)</li>
-<li>Tooling to produce them (e.g., specific R packages)</li>
-</ul></li>
-</ul>
-<div class="fragment">
-<ul>
-<li><strong>How:</strong> the process
-<ul>
-<li>Start with a design (sketch + pseudo code)</li>
-<li>Pre-process data (e.g., wrangle, reshape, join, etc.)</li>
-<li>Map data to aesthetics</li>
-<li>Make visual encoding decisions (e.g., address accessibility concerns)</li>
-<li>Post-process for visual appeal and annotation</li>
-</ul></li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li><strong>Why:</strong> the theory
-<ul>
-<li>Tie together “how” and “what” through the grammar of graphics</li>
-<li>Extend to underlying theory of cognition and information processing</li>
-</ul></li>
-</ul>
-</div>
-</section></section>
-<section>
-<section id="facts-truth-and-beauty" class="title-slide slide level1 center">
-<h1>Facts, truth, and beauty</h1>
-
-</section>
-<section id="what-is-truth" class="slide level2">
-<h2>What is truth?</h2>
-<ul>
-<li>Core principles of the universe?</li>
-<li>Underlying trends in society?</li>
-<li>Something transcendental?</li>
-<li>Reality?</li>
-</ul>
-</section>
-<section id="how-do-we-find-truth" class="slide level2">
-<h2>How do we find truth?</h2>
-<h3 id="science">Science!</h3>
-
-<img data-src="images/01/ndgt-scientism.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="but-wait" class="slide level2">
-<h2>But wait!</h2>
-<h3 id="beware-of-scientism">Beware of scientism!</h3>
-<div class="appex">
-<p>“… promotion of science as the best or only objective means by which society should determine normative and epistemological values”</p>
-</div>
-
-<aside><div>
-<p><a href="https://en.wikipedia.org/wiki/Scientism">Source: Wikipedia</a></p>
-</div></aside></section>
-<section id="science-is-not-the-only-way" class="slide level2">
-<h2>Science is not the only way</h2>
-<ul>
-<li>Art</li>
-<li>Music</li>
-<li>Literature</li>
-<li>Religion</li>
-<li>Nature</li>
-</ul>
-</section>
-<section id="nothing-here-is-factual" class="slide level2">
-<h2>Nothing here is factual…</h2>
-<p>…but it all reveals truth</p>
-<div class="columns">
-<div class="column" style="width:25%;">
-<h4 id="cosette">Cosette</h4>
-<p><img data-src="images/01/les-mis.jpg"></p>
-</div><div class="column" style="width:25%;">
-<h4 id="the-bible">The Bible</h4>
-<p><img data-src="images/01/jesus.jpeg"></p>
-</div><div class="column" style="width:50%;">
-<h4 id="beethovens-9th-symphony">Beethoven’s 9th symphony</h4>
-<p><img data-src="images/01/beethoven.png"></p>
-</div>
-</div>
-</section>
-<section id="facts-neq-truth" class="slide level2">
-<h2><strong>Facts <span class="math inline">\(\neq\)</span> truth</strong></h2>
-<div class="fragment">
-<p>Where does truth come when there are no facts?</p>
-</div>
-<div class="fragment">
-<p><span class="orange">Beauty</span></p>
-</div>
-</section>
-<section id="beauty-in-science" class="slide level2">
-<h2>Beauty in science</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="cell" data-layout-align="center" data-fig.caption="Frank Wilczek's A Beautiful Question" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-6_66eded492de8f865e15bfc04eb2abaaf">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/beautiful-question.jpg" style="width:50.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:60%;">
-<p>This is also true for science and math and other more factual realms</p>
-</div>
-</div>
-</section>
-<section id="content-form" class="slide level2">
-<h2>Content + form</h2>
-<p>Art is how we translate core, essential <strong>content</strong> (or truth!) to different <strong>forms</strong> for specific <strong>audiences</strong>.</p>
-</section>
-<section id="truth-is-beautiful" class="slide level2">
-<h2>Truth is beautiful</h2>
-<div class="fragment">
-<p>Truth <span class="math inline">\(\neq\)</span> facts</p>
-</div>
-<div class="fragment">
-<p>Truth comes from aesthetic combination of content and form</p>
-</div>
-<div class="fragment">
-<p>Facts require beauty to be true</p>
-</div>
-<div class="fragment">
-<p>We want to blend <strong>facts</strong> with <strong>beauty</strong> to find <strong>truth</strong></p>
-</div>
-</section></section>
-<section>
-<section id="data-truth-and-beauty" class="title-slide slide level1 center">
-<h1>Data, truth, and beauty</h1>
-
-</section>
-<section id="just-show-me-the-data" class="slide level2">
-<h2>Just show me the data!</h2>
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/load-datasaurus-dozen_c25346f26b0b2ed2afcefe54c66119dd">
-
-</div>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/head-datasaurus_4e7d1ae0aa7c7f94200e15a1afb95ec6">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">head</span>(my_data, <span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 10 × 2
-       x     y
-   &lt;dbl&gt; &lt;dbl&gt;
- 1  55.4  97.2
- 2  51.5  96.0
- 3  46.2  94.5
- 4  42.8  91.4
- 5  40.8  88.3
- 6  38.7  84.9
- 7  35.6  79.9
- 8  33.1  77.6
- 9  29.0  74.5
-10  26.2  71.4</code></pre>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/summary-datasaurus_5e2711c2efd296ac74499ff9fc51d866">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">mean</span>(my_data<span class="sc">$</span>x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 54.26327</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a><span class="fu">mean</span>(my_data<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 47.83225</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a><span class="fu">cor</span>(my_data<span class="sc">$</span>x, my_data<span class="sc">$</span>y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] -0.06447185</code></pre>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="oh-no" class="slide level2">
-<h2>oh no</h2>
-
-<img data-src="01-welcome-info3312_files/figure-revealjs/datasaurus-graph-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="raw-data-is-not-enough" class="slide level2">
-<h2>Raw data is not enough</h2>
-
-<img data-src="01-welcome-info3312_files/figure-revealjs/datasaurus-graph-static-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
-<section id="humans-love-patterns" class="slide level2">
-<h2>Humans love patterns</h2>
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-12_f89cc6faceeed67b2ee052dc3aef64f0">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/pattern-processing.png" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-
-<aside><div>
-<p>https://doi.org/10.3389/fnins.2014.00265</p>
-</div></aside></section>
-<section id="sometimes-we-love-them-too-much" class="slide level2">
-<h2>(Sometimes we love them too much)</h2>
-<p><strong>Pareidolia</strong>: seeing patterns that aren’t there</p>
-<div class="columns">
-<div class="column fragment fade-in-then-semi-out" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-13_17af2924640e7ed297769aab642f7694">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/pareidolia-1.jpg" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column fragment" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-14_36f37dcc2c2b2871f87d62ad4dbb8b67">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/pareidolia-3.jpg" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="beauty-is-necessary-to-see-patterns" class="slide level2">
-<h2>Beauty is necessary to see patterns</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-15_354d50f4ad353d2c3a42d84a85500199">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/amount-diffs-table.png" style="width:80.0%" alt="Amount donated table"></p>
-</figure>
-</div>
-</div>
-</div>
-</div><div class="column fragment fade-in-then-semi-out" style="width:50%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-16_25b5dedcc03bd52603e900f4a497968e">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/amount-diffs.png" style="width:80.0%" alt="Amount donated graph"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="beautiful-visualizations" class="title-slide slide level1 center">
-<h1>Beautiful visualizations</h1>
-
-</section>
-<section id="what-makes-a-great-visualization" class="slide level2">
-<h2>What makes a great visualization?</h2>
-<ul>
-<li>Truthful</li>
-<li>Functional</li>
-<li>Beautiful</li>
-<li>Insightful</li>
-<li>Enlightening</li>
-</ul>
-
-<aside><div>
-<p>Source: Alberto Cairo, <em>The Truthful Art</em></p>
-</div></aside></section>
-<section id="what-makes-a-great-visualization-1" class="slide level2">
-<h2>What makes a great visualization?</h2>
-<blockquote>
-<p>Graphical excellence is the <strong>well-designed presentation of interesting data</strong>—a matter of substance, of statistics, and of design … [It] consists of complex ideas communicated with clarity, precision, and efficiency. … [It] is that which <strong>gives to the viewer the greatest number of ideas in the shortest time with the least ink in the smallest space</strong> … [It] is nearly always multivariate … And graphical excellence requires <strong>telling the truth about the data</strong>.</p>
-</blockquote>
-
-<aside><div>
-<p>Edward Tufte, <em>The Visual Display of Quantitative Information</em>, p.&nbsp;51</p>
-</div></aside></section>
-<section id="what-makes-a-great-visualization-2" class="slide level2">
-<h2>What makes a great visualization?</h2>
-<ul>
-<li>Good aesthetics</li>
-<li>No substantive issues</li>
-<li>No perceptual issues</li>
-<li>Honesty + good judgment</li>
-</ul>
-
-<aside><div>
-<p>Kieran Healy, <em>Data Visualization: A Practical Introduction</em></p>
-</div></aside></section>
-<section id="whats-wrong" class="slide level2">
-<h2>What’s wrong?</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
-<ul>
-<li>Aesthetic issues</li>
-<li>Substantive issues</li>
-<li>Perceptual issues</li>
-<li>Honesty + judgment issues</li>
-</ul>
-</div><div class="column" style="width:80%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-17_dc91bd17b464cea96abe97ba241f5b8f">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/pie-genus.png" style="width:75.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="whats-wrong-1" class="slide level2">
-<h2>What’s wrong?</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
-<ul>
-<li>Aesthetic issues</li>
-<li>Substantive issues</li>
-<li>Perceptual issues</li>
-<li>Honesty + judgment issues</li>
-</ul>
-</div><div class="column" style="width:80%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-18_e42f226e4d4d0f7a94a524db24d3c33a">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/changing-face-of-america.png" style="width:65.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="whats-wrong-2" class="slide level2">
-<h2>What’s wrong?</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
-<ul>
-<li>Aesthetic issues</li>
-<li>Substantive issues</li>
-<li>Perceptual issues</li>
-<li>Honesty + judgment issues</li>
-</ul>
-</div><div class="column" style="width:80%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/unnamed-chunk-19_239ba985c726be1b2293f945c98cef9c">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/death_penalty.jpg" style="width:75.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="whats-right" class="slide level2">
-<h2>What’s right?</h2>
-<div class="columns">
-<div class="column" style="width:20%;">
-<ul>
-<li>Aesthetic issues</li>
-<li>Substantive issues</li>
-<li>Perceptual issues</li>
-<li>Honesty + judgment issues</li>
-</ul>
-</div><div class="column" style="width:80%;">
-<div class="cell" data-layout-align="center" data-hash="01-welcome-info3312_cache/revealjs/flatten-the-curve_bb6d81b1f8b5559dac73ffc0e99b0932">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="01-welcome-info3312_files/figure-revealjs/flatten-the-curve-1.png" style="width:80.0%"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="course-overview" class="title-slide slide level1 center">
-<h1>Course overview</h1>
-
-</section>
-<section id="homepage" class="slide level2">
-<h2>Homepage</h2>
-<p><a href="https://info3312.infosci.cornell.edu/" class="uri">https://info3312.infosci.cornell.edu/</a></p>
-<ul>
-<li>All course materials</li>
-<li>Links to Canvas, GitHub, RStudio Workbench, etc.</li>
-<li>Let’s take a tour!</li>
-</ul>
-</section>
-<section id="course-toolkit" class="slide level2">
-<h2>Course toolkit</h2>
-<p>All linked from the course website:</p>
-<ul>
-<li>GitHub organization: <a href="https://github.coecis.cornell.edu/info3312-s23">github.coecis.cornell.edu/info3312-s23</a></li>
-<li>RStudio Workbench: <a href="https://rstudio-workbench.infosci.cornell.edu/">rstudio-workbench.infosci.cornell.edu</a></li>
-<li>Communication: <a href="https://github.coecis.cornell.edu/orgs/info3312-s23/discussions">GitHub Discussions</a></li>
-<li>Assignment submission and feedback: <a href="https://www.gradescope.com/courses/498453">Gradescope</a></li>
-</ul>
-<div class="callout callout-important callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Important</strong></p>
-</div>
-<div class="callout-content">
-<p>Make sure you can access RStudio Workbench before lab on Friday.</p>
-</div>
-</div>
-</div>
-</section>
-<section id="activities-prepare-participate-perform" class="slide level2">
-<h2>Activities: Prepare, Participate, Perform</h2>
-<div>
-<ul>
-<li class="fragment"><p><strong>Prepare:</strong> Introduce new content and prepare for lectures by completing the readings</p></li>
-<li class="fragment"><p><strong>Participate:</strong> Attend and actively participate in lectures and labs, office hours, team meetings</p></li>
-<li class="fragment"><p><strong>Perform:</strong> Put together what you’ve learned to analyze real-world data</p>
-<ul>
-<li class="fragment">Homework assignments x 6(-ish) (individual)</li>
-<li class="fragment">Two team projects</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="teams" class="slide level2">
-<h2>Teams</h2>
-<ul>
-<li>Team assignments
-<ul>
-<li>Assigned by course staff</li>
-<li>Peer evaluation after completion</li>
-</ul></li>
-<li>Expectations and roles
-<ul>
-<li>Everyone is expected to contribute equal <em>effort</em></li>
-<li>Everyone is expected to understand <em>all</em> code turned in</li>
-<li>Individual contribution evaluated by peer evaluation, commits, etc.</li>
-</ul></li>
-</ul>
-</section>
-<section id="grading" class="slide level2">
-<h2>Grading</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Percentage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Homework</td>
-<td>50%</td>
-</tr>
-<tr class="even">
-<td>Project 1</td>
-<td>20%</td>
-</tr>
-<tr class="odd">
-<td>Project 2</td>
-<td>30%</td>
-</tr>
-</tbody>
-</table>
-<p>See <a href="../course-syllabus.html">course syllabus</a> for how the final letter grade will be determined.</p>
-</section>
-<section id="info-5312" class="slide level2">
-<h2>INFO 5312</h2>
-<p>Additional expectations:</p>
-<ul>
-<li>INFO 5312 homework will at times be graded against a more stringent rubric</li>
-<li>INFO 5312 students will be grouped together for all projects</li>
-<li>Project rubric line items will have more stringent criteria for INFO 5312 students</li>
-<li>INFO 5312 students will complete an additional individual project during the semester</li>
-</ul>
-</section>
-<section id="info-5312-1" class="slide level2">
-<h2>INFO 5312</h2>
-<table>
-<thead>
-<tr class="header">
-<th>Category</th>
-<th>Percentage</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Homework</td>
-<td>40%</td>
-</tr>
-<tr class="even">
-<td>Project 1</td>
-<td>15%</td>
-</tr>
-<tr class="odd">
-<td>Project 2</td>
-<td>25%</td>
-</tr>
-<tr class="even">
-<td>Individual project</td>
-<td>20%</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="minute-rule" class="slide level2">
-<h2>15 minute rule</h2>
-<p></p><div id="tweet-65695"></div><script>tweet={"url":"https:\/\/twitter.com\/math_rachel\/status\/764931533383749632","author_name":"Rachel Thomas","author_url":"https:\/\/twitter.com\/math_rachel","html":"\u003Cblockquote class=\"twitter-tweet\" align=\"center\"\u003E\u003Cp lang=\"en\" dir=\"ltr\"\u003E15 min rule: when stuck, you HAVE to try on your own for 15 min; after 15 min, you HAVE to ask for help.- Brain AMA \u003Ca href=\"https:\/\/t.co\/MS7FnjXoGH\"\u003Epic.twitter.com\/MS7FnjXoGH\u003C\/a\u003E\u003C\/p\u003E&mdash; Rachel Thomas (@math_rachel) \u003Ca href=\"https:\/\/twitter.com\/math_rachel\/status\/764931533383749632?ref_src=twsrc%5Etfw\"\u003EAugust 14, 2016\u003C\/a\u003E\u003C\/blockquote\u003E\n\u003Cscript async src=\"https:\/\/platform.twitter.com\/widgets.js\" charset=\"utf-8\"\u003E\u003C\/script\u003E\n","width":550,"height":null,"type":"rich","cache_age":"3153600000","provider_name":"Twitter","provider_url":"https:\/\/twitter.com","version":"1.0"};document.getElementById("tweet-65695").innerHTML = tweet["html"];</script><p></p>
-</section>
-<section id="support" class="slide level2">
-<h2>Support</h2>
-<ul>
-<li>Attend office hours</li>
-<li>Ask and answer questions on the discussion forum</li>
-<li>Reserve email for questions on personal matters and/or grades</li>
-<li>Read the <a href="../course-support.html">course support</a> page</li>
-</ul>
-</section>
-<section id="announcements" class="slide level2">
+<section id="announcements-1" class="slide level2">
 <h2>Announcements</h2>
 <ul>
-<li>Posted on Canvas (Announcements tool), be sure to check regularly (or forward announcements to your email)</li>
-<li>I’ll assume that you’ve read an announcement by the next “business” day</li>
+<li>Draft proposal rendered + committed + pushed to GitHub by 11:59pm tonight</li>
+<li>Peer evaluations in lab tomorrow</li>
 </ul>
 </section>
-<section id="diversity-inclusion" class="slide level2">
-<h2>Diversity + inclusion</h2>
-<div>
+<section id="agenda-for-today" class="slide level2">
+<h2>Agenda for today</h2>
 <ul>
-<li class="fragment"><strong>I want you to feel like you belong in this class and are respected</strong></li>
-<li class="fragment">We are committed to full inclusion in education for all persons</li>
-<li class="fragment">If you feel that we have failed these goals, please either let us know or <a href="https://diversity.cornell.edu/our-commitments/bias-reporting-cornell">report it</a>, and we will address the issue</li>
-</ul>
-</div>
-</section>
-<section id="accessibility" class="slide level2">
-<h2>Accessibility</h2>
-<p>I want this course to be accessible to students with all abilities. Please feel free to let me know if there are circumstances affecting your ability to participate in class.</p>
-<ul>
-<li><a href="https://sds.cornell.edu"><span class="red">Office of Student Disability Services</span></a></li>
-<li><a href="https://health.cornell.edu/services/counseling-psychiatry">Cornell Health CAPS (Counseling &amp; Psychological Services)</a></li>
-<li><a href="https://dos.cornell.edu/undocumented-daca-support/undergraduate-admissions-financial-aid">Undocumented/DACA Student support</a></li>
+<li>Transforming and reshaping a single data frame</li>
+<li>Transforming and reshaping multiple data frames</li>
 </ul>
 </section></section>
 <section>
-<section id="course-policies" class="title-slide slide level1 center">
-<h1>Course policies</h1>
+<section id="setup" class="title-slide slide level1 center">
+<h1>Setup</h1>
 
 </section>
-<section id="late-work-waivers-regrades-policy" class="slide level2">
-<h2>Late work, waivers, regrades policy</h2>
+<section id="packages-figures" class="slide level2">
+<h2>Packages + figures</h2>
+<div class="cell" data-layout-align="center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="co"># load packages</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-3"><a href="#cb1-3"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a><span class="co"># set default theme for ggplot2</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<h3 id="yaml-options">YAML options</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource yaml number-lines code-with-copy"><code class="sourceCode yaml"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">knitr</span><span class="kw">:</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="at">  </span><span class="fu">opts_chunk</span><span class="kw">:</span></span>
+<span id="cb2-3"><a href="#cb2-3"></a><span class="at">    </span><span class="fu">fig.width</span><span class="kw">:</span><span class="at"> </span><span class="dv">7</span></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="at">    </span><span class="fu">fig.asp</span><span class="kw">:</span><span class="at"> </span><span class="fl">0.618</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a><span class="at">    </span><span class="fu">fig.retina</span><span class="kw">:</span><span class="at"> </span><span class="dv">2</span></span>
+<span id="cb2-6"><a href="#cb2-6"></a><span class="at">    </span><span class="fu">dpi</span><span class="kw">:</span><span class="at"> </span><span class="dv">150</span></span>
+<span id="cb2-7"><a href="#cb2-7"></a><span class="at">    </span><span class="fu">out.width</span><span class="kw">:</span><span class="at"> </span><span class="st">"80%"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="from-last-time" class="title-slide slide level1 center">
+<h1>From last time</h1>
+
+</section>
+<section id="data-scotus" class="slide level2">
+<h2>Data: SCOTUS</h2>
 <ul>
-<li>We have policies!</li>
-<li>Read about them on the <a href="../course-syllabus.html">course syllabus</a> and refer back to them when you need it</li>
+<li>Data from the Supreme Court of the United States</li>
+<li>Source: <a href="http://scdb.wustl.edu/">Supreme Court Database</a></li>
+<li>Observations: Each row represents a case</li>
+</ul>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-3_e7fe02cb8faf949da2e381e26f619b6e">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>scdb_case <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="scenario-1" class="slide level2">
+<h2>Scenario 1</h2>
+<div class="hand">
+<p>We…</p>
+<p>have a single data frame</p>
+<p>want to slice it, and dice it, and juice it, and process it, so we can plot it</p>
+</div>
+</section>
+<section id="what-percentage-of-cases-in-each-term-are-decided-by-an-n-vote-margin-i.e.-5-4-6-3-etc." class="slide level2">
+<h2>What percentage of cases in each term are decided by an <strong>n</strong>-vote margin (i.e.&nbsp;5-4, 6-3, etc.)</h2>
+<div class="task">
+<p>Let’s recreate this visualization!</p>
+</div>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/n-vote-margin-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="livecoding" class="slide level2">
+<h2>Livecoding</h2>
+<p>Reveal below for code developed during live coding session.</p>
+</section></section>
+<section>
+<section id="bringing-together-multiple-data-frames" class="title-slide slide level1 center">
+<h1>Bringing together multiple data frames</h1>
+
+</section>
+<section id="scenario-2" class="slide level2">
+<h2>Scenario 2</h2>
+<div class="hand">
+<p>We…</p>
+<p>have <strong>multiple</strong> data frames</p>
+<p>want to want to bring them together so we can plot them</p>
+</div>
+</section>
+<section id="introduction-to-relational-data" class="slide level2">
+<h2>Introduction to relational data</h2>
+<ul>
+<li>Multiple tables of data that when combined together answer research questions</li>
+<li>Relations define the important element, not just the individual tables</li>
+<li>Relations are defined between a pair of tables</li>
+<li>Relational verbs
+<ul>
+<li>Mutating joins</li>
+<li>Filtering joins</li>
+</ul></li>
 </ul>
 </section>
 <section class="slide level2">
 
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/01/chatgpt-warning.png" style="width:70.0%" alt="A web comic where the professor is facing the classroom and debating whether or not to warn students about ChatGPT."></p>
-</figure>
+
+<img data-src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/08/Pictures/_33b2ca74-0cc1-11e8-ba67-a8387f729390.jpeg" class="r-stretch quarto-figure-center"></section>
+<section class="slide level2">
+
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-6_36e5c9af33932a7d6f85ae38404737ab">
+<div class="column">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>superheroes <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="sc">~</span>name, <span class="sc">~</span>alignment, <span class="sc">~</span>gender, <span class="sc">~</span>publisher,</span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="st">"Magneto"</span>, <span class="st">"bad"</span>, <span class="st">"male"</span>, <span class="st">"Marvel"</span>,</span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="st">"Batman"</span>, <span class="st">"good"</span>, <span class="st">"male"</span>, <span class="st">"DC"</span>,</span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="st">"Sabrina"</span>, <span class="st">"good"</span>, <span class="st">"female"</span>, <span class="st">"Archie Comics"</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>)</span>
+<span id="cb4-7"><a href="#cb4-7"></a></span>
+<span id="cb4-8"><a href="#cb4-8"></a>publishers <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="sc">~</span>publisher, <span class="sc">~</span>yr_founded,</span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="st">"DC"</span>, <span class="dv">1934</span>,</span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="st">"Marvel"</span>, <span class="dv">1939</span>,</span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="st">"Image"</span>, <span class="dv">1992</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>)</span>
+<span id="cb4-14"><a href="#cb4-14"></a></span>
+<span id="cb4-15"><a href="#cb4-15"></a>superheroes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 4
+  name    alignment gender publisher    
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;        
+1 Magneto bad       male   Marvel       
+2 Batman  good      male   DC           
+3 Sabrina good      female Archie Comics</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>publishers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  publisher yr_founded
+  &lt;chr&gt;          &lt;dbl&gt;
+1 DC              1934
+2 Marvel          1939
+3 Image           1992</code></pre>
+</div>
+</div>
+</div>
+</section></section>
+<section>
+<section id="mutating-joins" class="title-slide slide level1 center">
+<h1>Mutating joins</h1>
+
+</section>
+<section id="inner_join" class="slide level2">
+<h2><code>inner_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/ijsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="inner_join-1" class="slide level2">
+<h2><code>inner_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ijsp_bfa85a3ea4fe593dabbb5863a827cd6b">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">inner_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 5
+  name    alignment gender publisher yr_founded
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;
+1 Magneto bad       male   Marvel          1939
+2 Batman  good      male   DC              1934</code></pre>
+</div>
+</div>
+</section>
+<section id="left_join" class="slide level2">
+<h2><code>left_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/ljsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="left_join-1" class="slide level2">
+<h2><code>left_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ljsp_b9535d6dafd89ab88d04714a9dcbc43c">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">left_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  name    alignment gender publisher     yr_founded
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt;
+1 Magneto bad       male   Marvel              1939
+2 Batman  good      male   DC                  1934
+3 Sabrina good      female Archie Comics         NA</code></pre>
+</div>
+</div>
+</section>
+<section id="right_join" class="slide level2">
+<h2><code>right_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/rjsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="right_join-1" class="slide level2">
+<h2><code>right_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/rjsp_badf5e7f4c6a758c7a0e072cf46bc2b8">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">right_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 5
+  name    alignment gender publisher yr_founded
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;          &lt;dbl&gt;
+1 Magneto bad       male   Marvel          1939
+2 Batman  good      male   DC              1934
+3 &lt;NA&gt;    &lt;NA&gt;      &lt;NA&gt;   Image           1992</code></pre>
+</div>
+</div>
+</section>
+<section id="right_join-reversed" class="slide level2">
+<h2><code>right_join()</code> reversed</h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/rjsp-alt-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="full_join" class="slide level2">
+<h2><code>full_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/fjsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="full_join-1" class="slide level2">
+<h2><code>full_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/fjsp_97c21f5194772147d42fcfc10e0d9e8c">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">full_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 4 × 5
+  name    alignment gender publisher     yr_founded
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;              &lt;dbl&gt;
+1 Magneto bad       male   Marvel              1939
+2 Batman  good      male   DC                  1934
+3 Sabrina good      female Archie Comics         NA
+4 &lt;NA&gt;    &lt;NA&gt;      &lt;NA&gt;   Image               1992</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="filtering-joins" class="title-slide slide level1 center">
+<h1>Filtering joins</h1>
+
+</section>
+<section id="semi_join" class="slide level2">
+<h2><code>semi_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/sjsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="semi_join-1" class="slide level2">
+<h2><code>semi_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/sjsp_0502a31efdd55c8b543cfdf3e4673d3f">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">semi_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 2 × 4
+  name    alignment gender publisher
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;    
+1 Magneto bad       male   Marvel   
+2 Batman  good      male   DC       </code></pre>
+</div>
+</div>
+</section>
+<section id="anti_join" class="slide level2">
+<h2><code>anti_join()</code></h2>
+
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/ajsp-anim-1.gif" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="anti_join-1" class="slide level2">
+<h2><code>anti_join()</code></h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ajsp_5e130a05b118a393ff786d89c1f57dec">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">anti_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+  name    alignment gender publisher    
+  &lt;chr&gt;   &lt;chr&gt;     &lt;chr&gt;  &lt;chr&gt;        
+1 Sabrina good      female Archie Comics</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="assessing-prognosticator-performance" class="title-slide slide level1 center">
+<h1>Assessing prognosticator performance</h1>
+
+<img data-src="https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif" class="r-stretch"></section>
+<section id="the-prognosticator-of-all-prognosticators" class="slide level2">
+<h2>The prognosticator of all prognosticators</h2>
+<iframe src="https://www.youtube.com/embed/iDs12Qd27R8" width="1456" height="819" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+</section>
+<section id="import-the-data" class="slide level2">
+<h2>Import the data</h2>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-22_5dedea46bbb24856ad27fc7b147936f9">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>seers <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/prognosticators.csv"</span>)</span>
+<span id="cb20-2"><a href="#cb20-2"></a>weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/weather-region.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/seers-glimpse_c411946e9832b53ecdd657e799b8502a">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">glimpse</span>(seers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,457
+Columns: 7
+$ name            &lt;chr&gt; "Punxsutawney Phil", "Punxsutawney Phil", "Punxsutawne…
+$ forecaster_type &lt;chr&gt; "Groundhog", "Groundhog", "Groundhog", "Groundhog", "G…
+$ alive           &lt;lgl&gt; TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, …
+$ town            &lt;chr&gt; "Punxsutawney", "Punxsutawney", "Punxsutawney", "Punxs…
+$ state           &lt;chr&gt; "PA", "PA", "PA", "PA", "PA", "PA", "PA", "PA", "PA", …
+$ year            &lt;dbl&gt; 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, …
+$ prediction      &lt;chr&gt; "Long Winter", "Long Winter", "Early Spring", "Early S…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">glimpse</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 5,424
+Columns: 13
+$ region         &lt;chr&gt; "Northeast", "Northeast", "Northeast", "Northeast", "No…
+$ state_abb      &lt;chr&gt; "CT", "CT", "CT", "CT", "CT", "CT", "CT", "CT", "CT", "…
+$ id             &lt;dbl&gt; 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, …
+$ year           &lt;dbl&gt; 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1…
+$ avg_temp       &lt;dbl&gt; 28.00, 29.20, 24.90, 23.15, 28.05, 22.05, 27.50, 21.55,…
+$ temp_hist      &lt;dbl&gt; 25.58333, 26.09000, 26.16667, 25.85667, 25.63333, 25.52…
+$ temp_hist_sd   &lt;dbl&gt; 4.245360, 4.241218, 4.103158, 4.124311, 3.907804, 4.016…
+$ temp_sd        &lt;dbl&gt; 4.118598, 4.118598, 4.118598, 4.118598, 4.118598, 4.118…
+$ precip         &lt;dbl&gt; 4.005, 2.520, 2.810, 3.570, 3.765, 2.920, 2.330, 3.425,…
+$ precip_hist    &lt;dbl&gt; 3.476667, 3.526667, 3.378000, 3.411000, 3.446333, 3.352…
+$ precip_hist_sd &lt;dbl&gt; 1.1784719, 1.2081292, 1.1442431, 1.1620681, 1.2039309, …
+$ precip_sd      &lt;dbl&gt; 0.9641827, 0.9641827, 0.9641827, 0.9641827, 0.9641827, …
+$ outcome        &lt;chr&gt; "Early Spring", "Early Spring", "Early Spring", "Late W…</code></pre>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/08/climate-regions.gif" alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries." class="r-stretch"></section>
+<section id="prognosticator-accuracy-rates" class="slide level2">
+<h2>Prognosticator accuracy rates</h2>
+<div class="task">
+<p>Let’s recreate this visualization!</p>
 </div>
 
-<aside><div>
-<p>Source: <a href="https://www.reddit.com/r/Professors/comments/107eme3/drew_this_after_a_week_of_inner_turmoil_about/">r/Professors</a></p>
-</div></aside></section>
-<section id="collaboration-policy" class="slide level2">
-<h2>Collaboration policy</h2>
-<ul>
-<li><p>Only work that is clearly assigned as team work should be completed collaboratively.</p></li>
-<li><p>Homeworks must be completed individually. You may <strong>not</strong> directly share answers / code with others, however you are welcome to discuss the problems in general and ask for advice.</p></li>
-</ul>
-</section>
-<section id="sharing-reusing-code-policy" class="slide level2">
-<h2>Sharing / reusing code policy</h2>
-<ul>
-<li><p>We are aware that a huge volume of code is available on the web, and many tasks may have solutions posted</p></li>
-<li><p>Unless explicitly stated otherwise, this course’s policy is that you may make use of any online resources (e.g.&nbsp;RStudio Community, StackOverflow, etc.) but you must explicitly cite where you obtained any code you directly use or use as inspiration in your solution(s).</p></li>
-<li><p>Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism, regardless of source.</p></li>
-<li><p>All code must be written by you, the human being.</p></li>
-</ul>
-</section>
-<section id="academic-integrity" class="slide level2">
-<h2>Academic integrity</h2>
-<ol type="1">
-<li>A student shall in no way misrepresent his or her work.</li>
-<li>A student shall in no way fraudulently or unfairly advance his or her academic position.</li>
-<li>A student shall refuse to be a party to another student’s failure to maintain academic integrity.</li>
-<li>A student shall not in any other manner violate the principle of academic integrity.</li>
-</ol>
+<img data-src="08-data-wrangling-ii_files/figure-revealjs/seers-accuracy-rate-1.png" style="width:80.0%" class="r-stretch quarto-figure-center"></section>
+<section id="livecoding-1" class="slide level2">
+<h2>Livecoding</h2>
+<p>Reveal below for code developed during live coding session.</p>
 
-<aside><div>
-<p>Source: <a href="https://theuniversityfaculty.cornell.edu/dean/academic-integrity/code-of-academic-integrity/">Cornell University Code of Academic Integrity</a></p>
-</div></aside></section>
-<section id="most-importantly" class="slide level2">
-<h2>Most importantly!</h2>
-<p>Ask if you’re not sure if something violates a policy!</p>
-</section>
-<section id="this-weeks-tasks" class="slide level2">
-<h2>This week’s tasks</h2>
-<ul>
-<li>Log in to <a href="https://github.coecis.cornell.edu">Cornell’s GitHub</a> - you already have an account!</li>
-<li>Read the syllabus</li>
-</ul>
-</section>
-<section id="something-personal" class="slide level2">
-<h2>Something personal</h2>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/personal/beverly-donut.jpg" alt="My daughter eating a peppermint mochi donut at Paris Baguette."></p>
-</figure>
-</div>
 
-<p><img src="images/favicon.png" class="slide-logo"></p>
-<div class="footer footer-default">
+<img src="images/favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">
 <p><a href="https://info3312.infosci.cornell.edu">🔗 info3312.infosci.cornell.edu</a></p>
 </div>
 </section></section>
@@ -1491,5 +1130,4 @@ Dr.&nbsp;Benjamin Soltoff
     </script>
     
 
-<script src="https://platform.twitter.com/widgets.js"></script>
 </body></html>
