@@ -61,7 +61,20 @@ Each team will review the proposals of two other teams. The peer review will be 
 
 The peer review assignments are as follows:
 
-TODO
+|Reviewer      |Reviewee                     |
+|:-------------|:----------------------------|
+|Calm Spider   |Weedy Flies, Undead Avians   |
+|Elated Piglet |Calm Spider, Weedy Flies     |
+|Female Baboon |Elated Piglet, Calm Spider   |
+|Gray Mara     |Juice Carp, Iambic Hoiho     |
+|Iambic Hoiho  |Gray Mara, Juice Carp        |
+|Juice Carp    |Iambic Hoiho, Gray Mara      |
+|Ripe Huia     |Female Baboon, Elated Piglet |
+|Sleepy Weevil |Ripe Huia, Female Baboon     |
+|Swampy Morpho |Sleepy Weevil, Ripe Huia     |
+|Tan Dugong    |Swampy Morpho, Sleepy Weevil |
+|Undead Avians |Tan Dugong, Swampy Morpho    |
+|Weedy Flies   |Undead Avians, Tan Dugong    |
 
 Teams will develop the review together, with discussion among all team members, but only one team member will submit it as an issue on the project repo. To do so, go to the *Issues* tab, click on the green *New issue* button on the top right, and then click on the green *Get started* button for the issue template titled *Peer review*.
 
