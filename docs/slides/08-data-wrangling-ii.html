@@ -487,6 +487,51 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="livecoding" class="slide level2">
 <h2>Livecoding</h2>
 <p>Reveal below for code developed during live coding session.</p>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-6_874c389ed1eaf8ee55d4e125e6c4dff4">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>scdb_case <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2"></a>  <span class="co"># select relevant columns</span></span>
+<span id="cb4-3"><a href="#cb4-3"></a>  <span class="fu">select</span>(term, majVotes, minVotes) <span class="sc">|&gt;</span></span>
+<span id="cb4-4"><a href="#cb4-4"></a>  <span class="co"># filter to include post 1945 term cases</span></span>
+<span id="cb4-5"><a href="#cb4-5"></a>  <span class="fu">filter</span>(term <span class="sc">&gt;=</span> <span class="dv">1945</span>) <span class="sc">|&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6"></a>  <span class="co"># calculate vote margin for each case</span></span>
+<span id="cb4-7"><a href="#cb4-7"></a>  <span class="fu">mutate</span>(<span class="at">vote_margin =</span> majVotes <span class="sc">-</span> minVotes) <span class="sc">|&gt;</span></span>
+<span id="cb4-8"><a href="#cb4-8"></a>  <span class="co"># calculate number of cases decided per term and vote margin</span></span>
+<span id="cb4-9"><a href="#cb4-9"></a>  <span class="fu">count</span>(term, vote_margin) <span class="sc">|&gt;</span></span>
+<span id="cb4-10"><a href="#cb4-10"></a>  <span class="co"># fill in all the missing combination of rows - plot won't look right otherwise</span></span>
+<span id="cb4-11"><a href="#cb4-11"></a>  <span class="fu">complete</span>(term, vote_margin, <span class="at">fill =</span> <span class="fu">list</span>(<span class="at">n =</span> <span class="dv">0</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12"></a>  <span class="co"># calculate percentages by term</span></span>
+<span id="cb4-13"><a href="#cb4-13"></a>  <span class="fu">group_by</span>(term) <span class="sc">|&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb4-15"><a href="#cb4-15"></a>    <span class="at">n_pct =</span> n <span class="sc">/</span> <span class="fu">sum</span>(n),</span>
+<span id="cb4-16"><a href="#cb4-16"></a>    <span class="co"># convert vote_margin to factor variable for plotting</span></span>
+<span id="cb4-17"><a href="#cb4-17"></a>    <span class="at">vote_margin =</span> <span class="fu">factor</span>(<span class="at">x =</span> vote_margin),</span>
+<span id="cb4-18"><a href="#cb4-18"></a>    <span class="at">vote_margin =</span> <span class="fu">fct_rev</span>(<span class="at">f =</span> vote_margin)</span>
+<span id="cb4-19"><a href="#cb4-19"></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb4-20"><a href="#cb4-20"></a>  <span class="co"># generate graph</span></span>
+<span id="cb4-21"><a href="#cb4-21"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> term, <span class="at">y =</span> n_pct, <span class="at">fill =</span> vote_margin)) <span class="sc">+</span></span>
+<span id="cb4-22"><a href="#cb4-22"></a>  <span class="fu">geom_area</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>) <span class="sc">+</span></span>
+<span id="cb4-23"><a href="#cb4-23"></a>  <span class="co"># print the y-axis labels using percentages rather than proportions</span></span>
+<span id="cb4-24"><a href="#cb4-24"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb4-25"><a href="#cb4-25"></a>  <span class="co"># change the color palette</span></span>
+<span id="cb4-26"><a href="#cb4-26"></a>  <span class="fu">scale_fill_viridis_d</span>() <span class="sc">+</span></span>
+<span id="cb4-27"><a href="#cb4-27"></a>  <span class="co"># label our graph</span></span>
+<span id="cb4-28"><a href="#cb4-28"></a>  <span class="fu">labs</span>(</span>
+<span id="cb4-29"><a href="#cb4-29"></a>    <span class="at">title =</span> <span class="st">"U.S. Supreme Court decisionmaking since 1945"</span>,</span>
+<span id="cb4-30"><a href="#cb4-30"></a>    <span class="at">subtitle =</span> <span class="st">"Split between majority and minority justice votes"</span>,</span>
+<span id="cb4-31"><a href="#cb4-31"></a>    <span class="at">x =</span> <span class="st">"Term"</span>,</span>
+<span id="cb4-32"><a href="#cb4-32"></a>    <span class="at">y =</span> <span class="st">"Percent of total cases decided"</span>,</span>
+<span id="cb4-33"><a href="#cb4-33"></a>    <span class="at">fill =</span> <span class="st">"Vote margin"</span>,</span>
+<span id="cb4-34"><a href="#cb4-34"></a>    <span class="at">caption =</span> <span class="st">"Source: The Supreme Court Database"</span></span>
+<span id="cb4-35"><a href="#cb4-35"></a>  ) <span class="sc">+</span></span>
+<span id="cb4-36"><a href="#cb4-36"></a>  <span class="co"># match subtitle and caption colors to area borders</span></span>
+<span id="cb4-37"><a href="#cb4-37"></a>  <span class="fu">theme</span>(</span>
+<span id="cb4-38"><a href="#cb4-38"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>),</span>
+<span id="cb4-39"><a href="#cb4-39"></a>    <span class="at">plot.caption =</span> <span class="fu">element_text</span>(<span class="at">color =</span> <span class="st">"cornsilk4"</span>)</span>
+<span id="cb4-40"><a href="#cb4-40"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 </section></section>
 <section>
 <section id="bringing-together-multiple-data-frames" class="title-slide slide level1 center">
@@ -520,23 +565,23 @@ Dr.&nbsp;Benjamin Soltoff
 <img data-src="https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2018/02/08/Pictures/_33b2ca74-0cc1-11e8-ba67-a8387f729390.jpeg" class="r-stretch quarto-figure-center"></section>
 <section class="slide level2">
 
-<div class="cell columns column-output-location" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-6_36e5c9af33932a7d6f85ae38404737ab">
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-7_3a37a5b3e779cc5f05020ce1c216da3f">
 <div class="column">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1"></a>superheroes <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb4-2"><a href="#cb4-2"></a>  <span class="sc">~</span>name, <span class="sc">~</span>alignment, <span class="sc">~</span>gender, <span class="sc">~</span>publisher,</span>
-<span id="cb4-3"><a href="#cb4-3"></a>  <span class="st">"Magneto"</span>, <span class="st">"bad"</span>, <span class="st">"male"</span>, <span class="st">"Marvel"</span>,</span>
-<span id="cb4-4"><a href="#cb4-4"></a>  <span class="st">"Batman"</span>, <span class="st">"good"</span>, <span class="st">"male"</span>, <span class="st">"DC"</span>,</span>
-<span id="cb4-5"><a href="#cb4-5"></a>  <span class="st">"Sabrina"</span>, <span class="st">"good"</span>, <span class="st">"female"</span>, <span class="st">"Archie Comics"</span></span>
-<span id="cb4-6"><a href="#cb4-6"></a>)</span>
-<span id="cb4-7"><a href="#cb4-7"></a></span>
-<span id="cb4-8"><a href="#cb4-8"></a>publishers <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
-<span id="cb4-9"><a href="#cb4-9"></a>  <span class="sc">~</span>publisher, <span class="sc">~</span>yr_founded,</span>
-<span id="cb4-10"><a href="#cb4-10"></a>  <span class="st">"DC"</span>, <span class="dv">1934</span>,</span>
-<span id="cb4-11"><a href="#cb4-11"></a>  <span class="st">"Marvel"</span>, <span class="dv">1939</span>,</span>
-<span id="cb4-12"><a href="#cb4-12"></a>  <span class="st">"Image"</span>, <span class="dv">1992</span></span>
-<span id="cb4-13"><a href="#cb4-13"></a>)</span>
-<span id="cb4-14"><a href="#cb4-14"></a></span>
-<span id="cb4-15"><a href="#cb4-15"></a>superheroes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>superheroes <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="sc">~</span>name, <span class="sc">~</span>alignment, <span class="sc">~</span>gender, <span class="sc">~</span>publisher,</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="st">"Magneto"</span>, <span class="st">"bad"</span>, <span class="st">"male"</span>, <span class="st">"Marvel"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>  <span class="st">"Batman"</span>, <span class="st">"good"</span>, <span class="st">"male"</span>, <span class="st">"DC"</span>,</span>
+<span id="cb5-5"><a href="#cb5-5"></a>  <span class="st">"Sabrina"</span>, <span class="st">"good"</span>, <span class="st">"female"</span>, <span class="st">"Archie Comics"</span></span>
+<span id="cb5-6"><a href="#cb5-6"></a>)</span>
+<span id="cb5-7"><a href="#cb5-7"></a></span>
+<span id="cb5-8"><a href="#cb5-8"></a>publishers <span class="ot">&lt;-</span> <span class="fu">tribble</span>(</span>
+<span id="cb5-9"><a href="#cb5-9"></a>  <span class="sc">~</span>publisher, <span class="sc">~</span>yr_founded,</span>
+<span id="cb5-10"><a href="#cb5-10"></a>  <span class="st">"DC"</span>, <span class="dv">1934</span>,</span>
+<span id="cb5-11"><a href="#cb5-11"></a>  <span class="st">"Marvel"</span>, <span class="dv">1939</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>  <span class="st">"Image"</span>, <span class="dv">1992</span></span>
+<span id="cb5-13"><a href="#cb5-13"></a>)</span>
+<span id="cb5-14"><a href="#cb5-14"></a></span>
+<span id="cb5-15"><a href="#cb5-15"></a>superheroes</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 4
@@ -546,7 +591,7 @@ Dr.&nbsp;Benjamin Soltoff
 2 Batman  good      male   DC           
 3 Sabrina good      female Archie Comics</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>publishers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>publishers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
   publisher yr_founded
@@ -570,7 +615,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="inner_join-1" class="slide level2">
 <h2><code>inner_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ijsp_bfa85a3ea4fe593dabbb5863a827cd6b">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a><span class="fu">inner_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">inner_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 5
   name    alignment gender publisher yr_founded
@@ -587,7 +632,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="left_join-1" class="slide level2">
 <h2><code>left_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ljsp_b9535d6dafd89ab88d04714a9dcbc43c">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="fu">left_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a><span class="fu">left_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   name    alignment gender publisher     yr_founded
@@ -605,7 +650,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="right_join-1" class="slide level2">
 <h2><code>right_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/rjsp_badf5e7f4c6a758c7a0e072cf46bc2b8">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1"></a><span class="fu">right_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1"></a><span class="fu">right_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   name    alignment gender publisher yr_founded
@@ -627,7 +672,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="full_join-1" class="slide level2">
 <h2><code>full_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/fjsp_97c21f5194772147d42fcfc10e0d9e8c">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1"></a><span class="fu">full_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1"></a><span class="fu">full_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 5
   name    alignment gender publisher     yr_founded
@@ -651,7 +696,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="semi_join-1" class="slide level2">
 <h2><code>semi_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/sjsp_0502a31efdd55c8b543cfdf3e4673d3f">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1"></a><span class="fu">semi_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1"></a><span class="fu">semi_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 4
   name    alignment gender publisher
@@ -668,7 +713,7 @@ Dr.&nbsp;Benjamin Soltoff
 <section id="anti_join-1" class="slide level2">
 <h2><code>anti_join()</code></h2>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/ajsp_5e130a05b118a393ff786d89c1f57dec">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1"></a><span class="fu">anti_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1"></a><span class="fu">anti_join</span>(<span class="at">x =</span> superheroes, <span class="at">y =</span> publishers, <span class="at">by =</span> <span class="st">"publisher"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 4
   name    alignment gender publisher    
@@ -676,24 +721,23 @@ Dr.&nbsp;Benjamin Soltoff
 1 Sabrina good      female Archie Comics</code></pre>
 </div>
 </div>
-</section></section>
-<section>
-<section id="assessing-prognosticator-performance" class="title-slide slide level1 center">
-<h1>Assessing prognosticator performance</h1>
+</section>
+<section id="assessing-prognosticator-performance" class="slide level2">
+<h2>Assessing prognosticator performance</h2>
 
-<img data-src="https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif" class="r-stretch"></section>
+<img data-src="https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif" class="r-stretch quarto-figure-center"></section>
 <section id="the-prognosticator-of-all-prognosticators" class="slide level2">
 <h2>The prognosticator of all prognosticators</h2>
 <iframe src="https://www.youtube.com/embed/iDs12Qd27R8" width="1456" height="819" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 </section>
 <section id="import-the-data" class="slide level2">
 <h2>Import the data</h2>
-<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-22_5dedea46bbb24856ad27fc7b147936f9">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1"></a>seers <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/prognosticators.csv"</span>)</span>
-<span id="cb20-2"><a href="#cb20-2"></a>weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/weather-region.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-23_71d76f7f1b982ebfed301532626737d2">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a>seers <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/prognosticators.csv"</span>)</span>
+<span id="cb21-2"><a href="#cb21-2"></a>weather <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"https://info3312.infosci.cornell.edu/slides/data/weather-region.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/seers-glimpse_c411946e9832b53ecdd657e799b8502a">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1"></a><span class="fu">glimpse</span>(seers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1"></a><span class="fu">glimpse</span>(seers)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 1,457
 Columns: 7
@@ -705,7 +749,7 @@ $ state           &lt;chr&gt; "PA", "PA", "PA", "PA", "PA", "PA", "PA", "PA", "P
 $ year            &lt;dbl&gt; 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, …
 $ prediction      &lt;chr&gt; "Long Winter", "Long Winter", "Early Spring", "Early S…</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1"></a><span class="fu">glimpse</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1"></a><span class="fu">glimpse</span>(weather)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Rows: 5,424
 Columns: 13
@@ -728,7 +772,7 @@ $ outcome        &lt;chr&gt; "Early Spring", "Early Spring", "Early Spring", "La
 <section class="slide level2">
 
 
-<img data-src="images/08/climate-regions.gif" alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries." class="r-stretch"></section>
+<img data-src="images/08/climate-regions.gif" alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries." class="r-stretch quarto-figure-center"></section>
 <section id="prognosticator-accuracy-rates" class="slide level2">
 <h2>Prognosticator accuracy rates</h2>
 <div class="task">

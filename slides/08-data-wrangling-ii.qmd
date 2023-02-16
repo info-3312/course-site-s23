@@ -140,6 +140,12 @@ scdb_case |>
 
 Reveal below for code developed during live coding session.
 
+```{r}
+#| ref.label: n-vote-margin
+#| fig-show: hide
+#| code-fold: true
+```
+
 # Bringing together multiple data frames
 
 ## Scenario 2
@@ -308,9 +314,9 @@ animate_anti_join(x = superheroes, y = publishers, by = "publisher")
 anti_join(x = superheroes, y = publishers, by = "publisher")
 ```
 
-# Assessing prognosticator performance
+## Assessing prognosticator performance
 
-![](https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif)
+![](https://media.giphy.com/media/j66bdOePN0JtBuqYn4/giphy.gif){fig-align="center"}
 
 ## The prognosticator of all prognosticators
 
@@ -340,7 +346,7 @@ glimpse(weather)
 
 ---
 
-![](images/08/climate-regions.gif){fig-alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries."}
+![](images/08/climate-regions.gif){fig-alt="The nine regions as defined by the National Climatic Data Center and regularly used in climate summaries." fig-align="center"}
 
 ## Prognosticator accuracy rates
 
