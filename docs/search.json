@@ -1187,7 +1187,7 @@
     "href": "slides/08-data-wrangling-ii.html#livecoding-1",
     "title": "Data wrangling (II)",
     "section": "Livecoding",
-    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\n\n🔗 info3312.infosci.cornell.edu"
+    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\nCode\n# join the data frames\nseers_weather <- inner_join(\n  x = seers, y = weather,\n  by = c(\"state\" = \"state_abb\", \"year\")\n) |>\n  # calculate if prediction was correct\n  mutate(correct_pred = prediction == outcome)\n\n# calculate summary statistics\nseers_summary <- seers_weather |>\n  group_by(region) |>\n  summarize(\n    preds_rate = mean(correct_pred),\n    preds_n = n(),\n    preds_se = sqrt((preds_rate * (1 - preds_rate)) / preds_n)\n  )\n\n# generate the plot\nseers_summary |>\n  mutate(region = fct_reorder(.f = region, .x = preds_rate)) |>\n  ggplot(mapping = aes(x = preds_rate, y = region)) +\n  geom_point(mapping = aes(size = preds_n)) +\n  geom_linerange(mapping = aes(xmin = preds_rate - preds_se,\n                               xmax = preds_rate + preds_se)) +\n  scale_x_continuous(labels = label_percent()) +\n  labs(\n    title = \"Prognosticator accuracy rate for late winter/early spring\",\n    subtitle = \"By climate region\",\n    x = \"Prediction accuracy\",\n    y = NULL,\n    size = \"Total number\\nof predictions\",\n    caption = \"Source: Countdown to Groundhog Day & NOAA\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/04-geoms.html#announcements",

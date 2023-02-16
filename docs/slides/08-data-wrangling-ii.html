@@ -800,6 +800,45 @@ $ outcome        &lt;chr&gt; "Early Spring", "Early Spring", "Early Spring", "La
 <section id="livecoding-1" class="slide level2">
 <h2>Livecoding</h2>
 <p>Reveal below for code developed during live coding session.</p>
+<div class="cell" data-layout-align="center" data-hash="08-data-wrangling-ii_cache/revealjs/unnamed-chunk-27_c2afe691e0879dd5b1f2d6dae31b6859">
+<details>
+<summary>Code</summary>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1"></a><span class="co"># join the data frames</span></span>
+<span id="cb26-2"><a href="#cb26-2"></a>seers_weather <span class="ot">&lt;-</span> <span class="fu">inner_join</span>(</span>
+<span id="cb26-3"><a href="#cb26-3"></a>  <span class="at">x =</span> seers, <span class="at">y =</span> weather,</span>
+<span id="cb26-4"><a href="#cb26-4"></a>  <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"state"</span> <span class="ot">=</span> <span class="st">"state_abb"</span>, <span class="st">"year"</span>)</span>
+<span id="cb26-5"><a href="#cb26-5"></a>) <span class="sc">|&gt;</span></span>
+<span id="cb26-6"><a href="#cb26-6"></a>  <span class="co"># calculate if prediction was correct</span></span>
+<span id="cb26-7"><a href="#cb26-7"></a>  <span class="fu">mutate</span>(<span class="at">correct_pred =</span> prediction <span class="sc">==</span> outcome)</span>
+<span id="cb26-8"><a href="#cb26-8"></a></span>
+<span id="cb26-9"><a href="#cb26-9"></a><span class="co"># calculate summary statistics</span></span>
+<span id="cb26-10"><a href="#cb26-10"></a>seers_summary <span class="ot">&lt;-</span> seers_weather <span class="sc">|&gt;</span></span>
+<span id="cb26-11"><a href="#cb26-11"></a>  <span class="fu">group_by</span>(region) <span class="sc">|&gt;</span></span>
+<span id="cb26-12"><a href="#cb26-12"></a>  <span class="fu">summarize</span>(</span>
+<span id="cb26-13"><a href="#cb26-13"></a>    <span class="at">preds_rate =</span> <span class="fu">mean</span>(correct_pred),</span>
+<span id="cb26-14"><a href="#cb26-14"></a>    <span class="at">preds_n =</span> <span class="fu">n</span>(),</span>
+<span id="cb26-15"><a href="#cb26-15"></a>    <span class="at">preds_se =</span> <span class="fu">sqrt</span>((preds_rate <span class="sc">*</span> (<span class="dv">1</span> <span class="sc">-</span> preds_rate)) <span class="sc">/</span> preds_n)</span>
+<span id="cb26-16"><a href="#cb26-16"></a>  )</span>
+<span id="cb26-17"><a href="#cb26-17"></a></span>
+<span id="cb26-18"><a href="#cb26-18"></a><span class="co"># generate the plot</span></span>
+<span id="cb26-19"><a href="#cb26-19"></a>seers_summary <span class="sc">|&gt;</span></span>
+<span id="cb26-20"><a href="#cb26-20"></a>  <span class="fu">mutate</span>(<span class="at">region =</span> <span class="fu">fct_reorder</span>(<span class="at">.f =</span> region, <span class="at">.x =</span> preds_rate)) <span class="sc">|&gt;</span></span>
+<span id="cb26-21"><a href="#cb26-21"></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> preds_rate, <span class="at">y =</span> region)) <span class="sc">+</span></span>
+<span id="cb26-22"><a href="#cb26-22"></a>  <span class="fu">geom_point</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">size =</span> preds_n)) <span class="sc">+</span></span>
+<span id="cb26-23"><a href="#cb26-23"></a>  <span class="fu">geom_linerange</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">xmin =</span> preds_rate <span class="sc">-</span> preds_se,</span>
+<span id="cb26-24"><a href="#cb26-24"></a>                               <span class="at">xmax =</span> preds_rate <span class="sc">+</span> preds_se)) <span class="sc">+</span></span>
+<span id="cb26-25"><a href="#cb26-25"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> <span class="fu">label_percent</span>()) <span class="sc">+</span></span>
+<span id="cb26-26"><a href="#cb26-26"></a>  <span class="fu">labs</span>(</span>
+<span id="cb26-27"><a href="#cb26-27"></a>    <span class="at">title =</span> <span class="st">"Prognosticator accuracy rate for late winter/early spring"</span>,</span>
+<span id="cb26-28"><a href="#cb26-28"></a>    <span class="at">subtitle =</span> <span class="st">"By climate region"</span>,</span>
+<span id="cb26-29"><a href="#cb26-29"></a>    <span class="at">x =</span> <span class="st">"Prediction accuracy"</span>,</span>
+<span id="cb26-30"><a href="#cb26-30"></a>    <span class="at">y =</span> <span class="cn">NULL</span>,</span>
+<span id="cb26-31"><a href="#cb26-31"></a>    <span class="at">size =</span> <span class="st">"Total number</span><span class="sc">\n</span><span class="st">of predictions"</span>,</span>
+<span id="cb26-32"><a href="#cb26-32"></a>    <span class="at">caption =</span> <span class="st">"Source: Countdown to Groundhog Day &amp; NOAA"</span></span>
+<span id="cb26-33"><a href="#cb26-33"></a>  ) <span class="sc">+</span></span>
+<span id="cb26-34"><a href="#cb26-34"></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+</div>
 
 
 <img src="images/favicon.png" class="slide-logo r-stretch"><div class="footer footer-default">

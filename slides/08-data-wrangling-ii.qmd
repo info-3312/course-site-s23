@@ -422,4 +422,8 @@ seers_summary |>
 
 Reveal below for code developed during live coding session.
 
-
+```{r}
+#| ref.label: seers-accuracy-rate
+#| fig-show: hide
+#| code-fold: true
+```
