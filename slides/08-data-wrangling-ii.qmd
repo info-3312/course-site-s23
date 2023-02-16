@@ -23,6 +23,30 @@ library(patchwork)
 
 - Draft proposal rendered + committed + pushed to GitHub by 11:59pm tonight
 - Peer evaluations in lab tomorrow
+- Homework 2 distributed tomorrow
+
+:::: columns
+
+::: {.column .fragment width="50%"}
+
+**Option A**
+
+- Homework due next Wednesday
+- Grades and feedback likely before February Break
+- **Some methods you need for the assignment will be taught next Tuesday**
+
+:::
+
+::: {.column .fragment width="50%"}
+
+**Option B**
+
+- Homework due next Friday
+- Grades and feedback **after** February Break (and probably after project \#1)
+
+:::
+
+::::
 
 ## Agenda for today
 
