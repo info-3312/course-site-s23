@@ -69,6 +69,8 @@ website:
         contents:
           - href: hw/hw-01.qmd
             text: Homework 01
+          - href: hw/hw-02.qmd
+            text: Homework 02
       - section: "Projects"
         contents:
           - href: project-1.qmd

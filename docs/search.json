@@ -161,6 +161,76 @@
     "text": "Grading\n\nExercise 1: 10 points\nExercise 2: 10 points\nExercise 3: 10 points\nExercise 4: 10 points\nExercise 5: 10 points\nTotal: 50 points"
   },
   {
+    "objectID": "hw/hw-02.html",
+    "href": "hw/hw-02.html",
+    "title": "Homework 2",
+    "section": "",
+    "text": "Important\n\n\n\nThis homework is due Friday, February 24 at 11:59pm ET."
+  },
+  {
+    "objectID": "hw/hw-02.html#packages",
+    "href": "hw/hw-02.html#packages",
+    "title": "Homework 2",
+    "section": "Packages",
+    "text": "Packages\n\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(ggridges)\nlibrary(fs)\nlibrary(dsbox)"
+  },
+  {
+    "objectID": "hw/hw-02.html#guidelines-tips",
+    "href": "hw/hw-02.html#guidelines-tips",
+    "title": "Homework 2",
+    "section": "Guidelines + tips",
+    "text": "Guidelines + tips\nAs we’ve discussed in lecture, your plots should include an informative title, axes should be labeled, and careful consideration should be given to aesthetic choices.\nRemember that continuing to develop a sound workflow for reproducible data analysis is important as you complete this homework and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\nNote\n\n\n\nNote: Do not let R output answer the question for you unless the question specifically asks for just a plot. For example, if the question asks for the number of columns in the data set, please type out the number of columns. You are subject to lose points if you do not."
+  },
+  {
+    "objectID": "hw/hw-02.html#workflow-formatting",
+    "href": "hw/hw-02.html#workflow-formatting",
+    "title": "Homework 2",
+    "section": "Workflow + formatting",
+    "text": "Workflow + formatting\nMake sure to\n\nUpdate author name on your document.\nLabel all code chunks informatively and concisely.\nFollow the Tidyverse code style guidelines.\nMake at least 3 commits.\nResize figures where needed, avoid tiny or huge plots.\nTurn in an organized, well formatted document."
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-1",
+    "href": "hw/hw-02.html#exercise-1",
+    "title": "Homework 2",
+    "section": "Exercise 1",
+    "text": "Exercise 1\nA new day, a new plot, a new geom. The goal of this exercise is to learn about a new type of plot (ridgeline plot) and to learn how to make it.\nUse the geom_density_ridges() function from the ggridges package to make a ridge plot of of Airbnb review scores of Edinburgh neighborhoods. The neighborhoods should be ordered by their median review scores. The data can be found in the dsbox package, and it’s called edibnb. Also include an interpretation for your visualization. You should review feedback from your Homework 1 to make sure you capture anything you may have missed previously.\n\n\n\n\n\n\nNote\n\n\n\nThis is not a geom we introduced in class, so seeing an example of it in action will be helpful. Read the package README at https://wilkelab.org/ggridges and/or the introduction vignette at https://wilkelab.org/ggridges/articles/introduction.html. There is more information than you need for this question in the vignette; the first section on Geoms should be sufficient to help you get started.\n\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-2",
+    "href": "hw/hw-02.html#exercise-2",
+    "title": "Homework 2",
+    "section": "Exercise 2",
+    "text": "Exercise 2\nKey lyme pie. The goal of this exercise is to recreate a pie chart in R and then improve it by presenting the same information as a bar graph. The pie chart to be recreate is below and it comes from the Lyme Disease Association. (Source: https://lymediseaseassociation.org/resources/2018-reported-lyme-cases-top-15-states.)\n\n\n\n\n\nBelow are the steps I recommend you follow and some guidance on what (not) to worry about:\n\nFirst, create the data frame: Use the annotations in the visualization provided to do this. You should create the new data frame using the tibble() or the tribble() functions.\nThen, recreate the pie chart: When recreating the pie chart you do not need to\n\nmake it a 3D pie chart (2D is sufficient)\nmatch the colors (default ggplot2 colors or any other color palette is fine)\nannotate the plot in the same way (just the legend is sufficient)\nmatch the entire caption (see below for what we want you to match)\n\nHowever you should,\n\nmake a 2D pie chart\npresent a legend on the right that shows the mapping of the colors to states\nmatch the title text, location, and alignment\nmatch the text, location, and alignment of the first two lines of the caption\n\nFinally, improve the visualization by presenting this information in the form of a bar graph. And as an additional challenge, imagine you’re working for the state of Connecticut, so highlight that bar corresponding to that state in some way. Write a sentence or two describing why you chose to highlight the Connecticut info the way you did.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-3",
+    "href": "hw/hw-02.html#exercise-3",
+    "title": "Homework 2",
+    "section": "Exercise 3",
+    "text": "Exercise 3\nForeign Connected PACs. Only American citizens (and immigrants with green cards) can contribute to federal politics, but the American divisions of foreign companies can form political action committees (PACs) and collect contributions from their American employees. (Source: https://www.opensecrets.org/political-action-committees-pacs/foreign-connected-pacs/2020).\nIn this exercise you will work with data from contributions to US political parties from foreign-connected PACs. The data is stored in CSV files in the data directory of your repository/project. There are 11 files, each for an election cycle between 2000 and 2020. You can load all of the data at once using the code below.\n# get a list of files with \"Foreign Connected PAC\" in their names\nlist_of_files <- dir_ls(path = \"data\", regexp = \"Foreign Connected PAC\")\n\n# read all files and row bind them\n# keeping track of the file name in a new column called year\npac <- read_csv(list_of_files, id = \"year\")\nThe ultimate goal of this exercise is to recreate yet another plot. But there is a nontrivial amount of data wrangling and tidying that needs to happen before you can do that. Below are the steps you should follow so that you can obtain the necessary interim objects we will be looking for as we review your work.\n\nFirst, clean the names of the variables in the dataset with a new function from the janitor package: clean_names(). Then clean and transform the data such that you have something like the following at the end.\n## # A tibble: 2,184 × 6\n##     year pac_name_affiliate        country_of_orig… parent_company   dems repubs\n##    <int> <chr>                     <chr>            <chr>           <dbl>  <dbl>\n##  1  2000 7-Eleven                  Japan            Ito-Yokado       1500   7000\n##  2  2000 ABB Group                 Switzerland      Asea Brown Bov… 17000  28500\n##  3  2000 Accenture                 UK               Accenture plc   23000  52984\n##  4  2000 ACE INA                   UK               ACE Group       12500  26000\n##  5  2000 Acuson Corp (Siemens AG)  Germany          Siemens AG       2000      0\n##  6  2000 Adtranz (DaimlerChrysler) Germany          DaimlerChrysle… 10000    500\n##  7  2000 AE Staley Manufacturing … UK               Tate & Lyle     10000  14000\n##  8  2000 AEGON USA (AEGON NV)      Netherlands      Aegon NV        10500  47750\n##  9  2000 AIM Management Group      UK               AMVESCAP        10000  15000\n## 10  2000 Air Liquide America       France           L'Air Liquide …     0      0\n## # … with 2,174 more rows\nThen, pivot the data longer such that instead of dems and repubs columns you have a column called party with levels Democrat and Republican and another column called amount that contains the amount of contribution.\nThen, For each election cycle (year) calculate the total amount of contributions to Democrat and Republican parties from PACs with country_of_origin UK. The resulting summary table should have two rows for each year of data, one for Democrat and one for Republican contributions.\nThen, recreate the following visualization.\n\n\n\n\n\n\n\nFinally, remake the same visualization, but for a different country. I recommend you choose a country with a substantial number of contributions to US politics. Interpret the new visualization that you make.\n\n\nNow is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding."
+  },
+  {
+    "objectID": "hw/hw-02.html#exercise-4",
+    "href": "hw/hw-02.html#exercise-4",
+    "title": "Homework 2",
+    "section": "Exercise 4",
+    "text": "Exercise 4\nHop on. We have two datasets we’ll work with in this exercise:\n\ndata/flights.rds: All flights out of New York City (JFK, Laguardia, and Newark) in 2020.\ndata/planes.rds: Plane metadata for plane tailnumbers found in the FAA aircraft registry in 2020.\n\nThe tasks for this question are outlined below:\n\nLoad the datasets and then join them such that each row is a flight out of New York City. Use tailnum as the unique identifier to join by. The resulting dataset should contain flights with tailnums that exist in both datasets and should be named nyc_flights_planes. Then, report the number of rows and columns in nyc_flights_planes.\n\n\n\n\n\n\n\nNote\n\n\n\nIt’s possible that not all flights in flights.rds have a corresponding plane in planes.rds.\n\n\n\nCreate a new variable called size that categorizes the planes into four: small, medium, large, and jumbo. You can do this based on any information in the data that makes sense to you to use, but you should explain your reasoning and justify the cutoffs you use (with citations and/or additional visualizations of other variables in the data).\nCreate a visualization like the one below. Note that the size of the airplane emoji increases with plane size. The data presented in your plot will most likely look different than mine because you might use different criteria to determine size of the plane, and that’s ok! And the sizes of the plane emojis may not be the same either as it’s difficult (if not impossible) to tell from the plot what font sizes I used. Just match the general look and layout of the plot.\n\n\n\n\n\n\n\nNote\n\n\n\nSince ultimately you’ll be displaying an emoji in a plot in an R Markdown document, you need to add the following chunk option to the chunk where you make this plot: dev: \"ragg_png\". Otherwise the emojis will not show up (or will show up as empty rectangles) when you knit your document. If you’re interested in learning more about modern text features in R, I recommend the following blog post: https://www.tidyverse.org/blog/2021/02/modern-text-features.\n\n\n\n\n\n\n\n\nTime to get creative! Create another plot that displays some flight patterns in 2020. Your plot should be based on the joined nyc_flights_planes dataset and the new variable you created, size, must be one of the variables you represented. You’re free to choose any other variables you want for your plot. Along with your plot, provide an interpretation.\n\n\n Render, commit, and push one last time.\nMake sure that you commit and push all changed documents and your Git pane is completely empty before proceding."
+  },
+  {
+    "objectID": "hw/hw-02.html#submission",
+    "href": "hw/hw-02.html#submission",
+    "title": "Homework 2",
+    "section": "Submission",
+    "text": "Submission\n\nGo to http://www.gradescope.com and click Log in in the top right corner.\nClick School Credentials \\(\\rightarrow\\) Cornell University NetID and log in using your NetID credentials.\nClick on your INFO 3312 course.\nClick on the assignment, and you’ll be prompted to submit it.\nMark all the pages associated with exercise. All the pages of homework lab should be associated with at least one question (i.e., should be “checked”)."
+  },
+  {
+    "objectID": "hw/hw-02.html#grading",
+    "href": "hw/hw-02.html#grading",
+    "title": "Homework 2",
+    "section": "Grading",
+    "text": "Grading\n\nExercise 1: 10 points\nExercise 2: 10 points\nExercise 3: 15 points\nExercise 4: 15 points\nTotal: 50 points"
+  },
+  {
     "objectID": "prepare/02-09.html",
     "href": "prepare/02-09.html",
     "title": "Prepare",
@@ -1160,6 +1230,13 @@
     "title": "Data wrangling (II)",
     "section": "anti_join()",
     "text": "anti_join()\n\nanti_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 1 × 4\n  name    alignment gender publisher    \n  <chr>   <chr>     <chr>  <chr>        \n1 Sabrina good      female Archie Comics"
+  },
+  {
+    "objectID": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
+    "href": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
+    "title": "Data wrangling (II)",
+    "section": "Assessing prognosticator performance",
+    "text": "Assessing prognosticator performance"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#the-prognosticator-of-all-prognosticators",
@@ -2364,12 +2441,5 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
-  },
-  {
-    "objectID": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
-    "href": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
-    "title": "Data wrangling (II)",
-    "section": "Assessing prognosticator performance",
-    "text": "Assessing prognosticator performance"
   }
 ]
