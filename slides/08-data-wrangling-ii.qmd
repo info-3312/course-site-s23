@@ -1,7 +1,7 @@
 ---
-title: "Data wrangling (I)"
-subtitle: "Lecture 7"
-date: "February 14, 2023"
+title: "Data wrangling (II)"
+subtitle: "Lecture 8"
+date: "February 16, 2023"
 format: revealjs
 resources:
   - "data/prognosticators.csv"

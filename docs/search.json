@@ -1010,182 +1010,182 @@
   {
     "objectID": "slides/08-data-wrangling-ii.html#announcements-1",
     "href": "slides/08-data-wrangling-ii.html#announcements-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Announcements",
     "text": "Announcements\n\nDraft proposal rendered + committed + pushed to GitHub by 11:59pm tonight\nPeer evaluations in lab tomorrow\nHomework 2 distributed tomorrow\n\n\n\nOption A\n\nHomework due next Wednesday\nGrades and feedback likely before February Break\nSome methods you need for the assignment will be taught next Tuesday\n\n\nOption B\n\nHomework due next Friday\nGrades and feedback after February Break (and probably after project #1)"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#agenda-for-today",
     "href": "slides/08-data-wrangling-ii.html#agenda-for-today",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Agenda for today",
     "text": "Agenda for today\n\nTransforming and reshaping a single data frame\nTransforming and reshaping multiple data frames"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#packages-figures",
     "href": "slides/08-data-wrangling-ii.html#packages-figures",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Packages + figures",
     "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#data-scotus",
     "href": "slides/08-data-wrangling-ii.html#data-scotus",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Data: SCOTUS",
     "text": "Data: SCOTUS\n\nData from the Supreme Court of the United States\nSource: Supreme Court Database\nObservations: Each row represents a case\n\n\nscdb_case <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/scdb-case.csv\")"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#scenario-1",
     "href": "slides/08-data-wrangling-ii.html#scenario-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Scenario 1",
     "text": "Scenario 1\n\nWe…\nhave a single data frame\nwant to slice it, and dice it, and juice it, and process it, so we can plot it"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#what-percentage-of-cases-in-each-term-are-decided-by-an-n-vote-margin-i.e.-5-4-6-3-etc.",
     "href": "slides/08-data-wrangling-ii.html#what-percentage-of-cases-in-each-term-are-decided-by-an-n-vote-margin-i.e.-5-4-6-3-etc.",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "What percentage of cases in each term are decided by an n-vote margin (i.e. 5-4, 6-3, etc.)",
     "text": "What percentage of cases in each term are decided by an n-vote margin (i.e. 5-4, 6-3, etc.)\n\nLet’s recreate this visualization!"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#livecoding",
     "href": "slides/08-data-wrangling-ii.html#livecoding",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Livecoding",
     "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\nCode\nscdb_case |>\n  # select relevant columns\n  select(term, majVotes, minVotes) |>\n  # filter to include post 1945 term cases\n  filter(term >= 1945) |>\n  # calculate vote margin for each case\n  mutate(vote_margin = majVotes - minVotes) |>\n  # calculate number of cases decided per term and vote margin\n  count(term, vote_margin) |>\n  # fill in all the missing combination of rows - plot won't look right otherwise\n  complete(term, vote_margin, fill = list(n = 0)) |>\n  # calculate percentages by term\n  group_by(term) |>\n  mutate(\n    n_pct = n / sum(n),\n    # convert vote_margin to factor variable for plotting\n    vote_margin = factor(x = vote_margin),\n    vote_margin = fct_rev(f = vote_margin)\n  ) |>\n  # generate graph\n  ggplot(mapping = aes(x = term, y = n_pct, fill = vote_margin)) +\n  geom_area(color = \"cornsilk4\") +\n  # print the y-axis labels using percentages rather than proportions\n  scale_y_continuous(labels = label_percent()) +\n  # change the color palette\n  scale_fill_viridis_d() +\n  # label our graph\n  labs(\n    title = \"U.S. Supreme Court decisionmaking since 1945\",\n    subtitle = \"Split between majority and minority justice votes\",\n    x = \"Term\",\n    y = \"Percent of total cases decided\",\n    fill = \"Vote margin\",\n    caption = \"Source: The Supreme Court Database\"\n  ) +\n  # match subtitle and caption colors to area borders\n  theme(\n    plot.subtitle = element_text(color = \"cornsilk4\"),\n    plot.caption = element_text(color = \"cornsilk4\")\n  )"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#scenario-2",
     "href": "slides/08-data-wrangling-ii.html#scenario-2",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Scenario 2",
     "text": "Scenario 2\n\nWe…\nhave multiple data frames\nwant to want to bring them together so we can plot them"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#introduction-to-relational-data",
     "href": "slides/08-data-wrangling-ii.html#introduction-to-relational-data",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Introduction to relational data",
     "text": "Introduction to relational data\n\nMultiple tables of data that when combined together answer research questions\nRelations define the important element, not just the individual tables\nRelations are defined between a pair of tables\nRelational verbs\n\nMutating joins\nFiltering joins"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#inner_join",
     "href": "slides/08-data-wrangling-ii.html#inner_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "inner_join()",
     "text": "inner_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#inner_join-1",
     "href": "slides/08-data-wrangling-ii.html#inner_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "inner_join()",
     "text": "inner_join()\n\ninner_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 2 × 5\n  name    alignment gender publisher yr_founded\n  <chr>   <chr>     <chr>  <chr>          <dbl>\n1 Magneto bad       male   Marvel          1939\n2 Batman  good      male   DC              1934"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#left_join",
     "href": "slides/08-data-wrangling-ii.html#left_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "left_join()",
     "text": "left_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#left_join-1",
     "href": "slides/08-data-wrangling-ii.html#left_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "left_join()",
     "text": "left_join()\n\nleft_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 3 × 5\n  name    alignment gender publisher     yr_founded\n  <chr>   <chr>     <chr>  <chr>              <dbl>\n1 Magneto bad       male   Marvel              1939\n2 Batman  good      male   DC                  1934\n3 Sabrina good      female Archie Comics         NA"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#right_join",
     "href": "slides/08-data-wrangling-ii.html#right_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "right_join()",
     "text": "right_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#right_join-1",
     "href": "slides/08-data-wrangling-ii.html#right_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "right_join()",
     "text": "right_join()\n\nright_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 3 × 5\n  name    alignment gender publisher yr_founded\n  <chr>   <chr>     <chr>  <chr>          <dbl>\n1 Magneto bad       male   Marvel          1939\n2 Batman  good      male   DC              1934\n3 <NA>    <NA>      <NA>   Image           1992"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#right_join-reversed",
     "href": "slides/08-data-wrangling-ii.html#right_join-reversed",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "right_join() reversed",
     "text": "right_join() reversed"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#full_join",
     "href": "slides/08-data-wrangling-ii.html#full_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "full_join()",
     "text": "full_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#full_join-1",
     "href": "slides/08-data-wrangling-ii.html#full_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "full_join()",
     "text": "full_join()\n\nfull_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 4 × 5\n  name    alignment gender publisher     yr_founded\n  <chr>   <chr>     <chr>  <chr>              <dbl>\n1 Magneto bad       male   Marvel              1939\n2 Batman  good      male   DC                  1934\n3 Sabrina good      female Archie Comics         NA\n4 <NA>    <NA>      <NA>   Image               1992"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#semi_join",
     "href": "slides/08-data-wrangling-ii.html#semi_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "semi_join()",
     "text": "semi_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#semi_join-1",
     "href": "slides/08-data-wrangling-ii.html#semi_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "semi_join()",
     "text": "semi_join()\n\nsemi_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 2 × 4\n  name    alignment gender publisher\n  <chr>   <chr>     <chr>  <chr>    \n1 Magneto bad       male   Marvel   \n2 Batman  good      male   DC"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#anti_join",
     "href": "slides/08-data-wrangling-ii.html#anti_join",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "anti_join()",
     "text": "anti_join()"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#anti_join-1",
     "href": "slides/08-data-wrangling-ii.html#anti_join-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "anti_join()",
     "text": "anti_join()\n\nanti_join(x = superheroes, y = publishers, by = \"publisher\")\n\n# A tibble: 1 × 4\n  name    alignment gender publisher    \n  <chr>   <chr>     <chr>  <chr>        \n1 Sabrina good      female Archie Comics"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#the-prognosticator-of-all-prognosticators",
     "href": "slides/08-data-wrangling-ii.html#the-prognosticator-of-all-prognosticators",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "The prognosticator of all prognosticators",
     "text": "The prognosticator of all prognosticators"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#import-the-data",
     "href": "slides/08-data-wrangling-ii.html#import-the-data",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Import the data",
     "text": "Import the data\n\nseers <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/prognosticators.csv\")\nweather <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/weather-region.csv\")\n\n\nglimpse(seers)\n\nRows: 1,457\nColumns: 7\n$ name            <chr> \"Punxsutawney Phil\", \"Punxsutawney Phil\", \"Punxsutawne…\n$ forecaster_type <chr> \"Groundhog\", \"Groundhog\", \"Groundhog\", \"Groundhog\", \"G…\n$ alive           <lgl> TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, TRUE, …\n$ town            <chr> \"Punxsutawney\", \"Punxsutawney\", \"Punxsutawney\", \"Punxs…\n$ state           <chr> \"PA\", \"PA\", \"PA\", \"PA\", \"PA\", \"PA\", \"PA\", \"PA\", \"PA\", …\n$ year            <dbl> 2022, 2021, 2020, 2019, 2018, 2017, 2016, 2015, 2014, …\n$ prediction      <chr> \"Long Winter\", \"Long Winter\", \"Early Spring\", \"Early S…\n\nglimpse(weather)\n\nRows: 5,424\nColumns: 13\n$ region         <chr> \"Northeast\", \"Northeast\", \"Northeast\", \"Northeast\", \"No…\n$ state_abb      <chr> \"CT\", \"CT\", \"CT\", \"CT\", \"CT\", \"CT\", \"CT\", \"CT\", \"CT\", \"…\n$ id             <dbl> 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, 101, …\n$ year           <dbl> 1909, 1910, 1911, 1912, 1913, 1914, 1915, 1916, 1917, 1…\n$ avg_temp       <dbl> 28.00, 29.20, 24.90, 23.15, 28.05, 22.05, 27.50, 21.55,…\n$ temp_hist      <dbl> 25.58333, 26.09000, 26.16667, 25.85667, 25.63333, 25.52…\n$ temp_hist_sd   <dbl> 4.245360, 4.241218, 4.103158, 4.124311, 3.907804, 4.016…\n$ temp_sd        <dbl> 4.118598, 4.118598, 4.118598, 4.118598, 4.118598, 4.118…\n$ precip         <dbl> 4.005, 2.520, 2.810, 3.570, 3.765, 2.920, 2.330, 3.425,…\n$ precip_hist    <dbl> 3.476667, 3.526667, 3.378000, 3.411000, 3.446333, 3.352…\n$ precip_hist_sd <dbl> 1.1784719, 1.2081292, 1.1442431, 1.1620681, 1.2039309, …\n$ precip_sd      <dbl> 0.9641827, 0.9641827, 0.9641827, 0.9641827, 0.9641827, …\n$ outcome        <chr> \"Early Spring\", \"Early Spring\", \"Early Spring\", \"Late W…"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#prognosticator-accuracy-rates",
     "href": "slides/08-data-wrangling-ii.html#prognosticator-accuracy-rates",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Prognosticator accuracy rates",
     "text": "Prognosticator accuracy rates\n\nLet’s recreate this visualization!"
   },
   {
     "objectID": "slides/08-data-wrangling-ii.html#livecoding-1",
     "href": "slides/08-data-wrangling-ii.html#livecoding-1",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Livecoding",
     "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
@@ -2368,7 +2368,7 @@
   {
     "objectID": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
     "href": "slides/08-data-wrangling-ii.html#assessing-prognosticator-performance",
-    "title": "Data wrangling (I)",
+    "title": "Data wrangling (II)",
     "section": "Assessing prognosticator performance",
     "text": "Assessing prognosticator performance"
   }
