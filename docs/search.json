@@ -238,6 +238,13 @@
     "text": "📖 Read:\n\nWickham et. al., chapter 16 + chapter 17"
   },
   {
+    "objectID": "prepare/02-21.html",
+    "href": "prepare/02-21.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nWickham et. al., chapter 6"
+  },
+  {
     "objectID": "prepare/01-31.html",
     "href": "prepare/01-31.html",
     "title": "Prepare",
@@ -291,7 +298,7 @@
     "href": "prepare/02-14.html",
     "title": "Prepare",
     "section": "",
-    "text": "📖 Read:\n\nWickham et. al., chapter 4 + chapter 6"
+    "text": "📖 Read:\n\nWickham et. al., chapter 4"
   },
   {
     "objectID": "project-tips-resources.html",
@@ -1594,6 +1601,125 @@
     "title": "Deep dive: geoms",
     "section": "Activity: Pick a geom",
     "text": "Activity: Pick a geom\n\nFor each of the following problems, suggest a useful geom:\n\nDisplay how the value of variable has changed over time\nShow the detailed distribution of a single continuous variable\nFocus attention on the overall relationship between two variables in a large dataset\nLabel outlying points in a single variable\n\n\n\n\n\n−+\n03:00\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#announcements-1",
+    "href": "slides/09-data-wrangling-iii.html#announcements-1",
+    "title": "Data wrangling (III)",
+    "section": "Announcements",
+    "text": "Announcements\n\nRevised proposals submitted last night\nI will leave written feedback on each proposal tomorrow(?)\nHomework 2 due by 11:59pm on Friday"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#agenda-for-today",
+    "href": "slides/09-data-wrangling-iii.html#agenda-for-today",
+    "title": "Data wrangling (III)",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\nTidying data frames"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#packages-figures",
+    "href": "slides/09-data-wrangling-iii.html#packages-figures",
+    "title": "Data wrangling (III)",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(scales)\nlibrary(ggthemes)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\""
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#tidy-data-1",
+    "href": "slides/09-data-wrangling-iii.html#tidy-data-1",
+    "title": "Data wrangling (III)",
+    "section": "Tidy data",
+    "text": "Tidy data\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst)"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#tidy-data-2",
+    "href": "slides/09-data-wrangling-iii.html#tidy-data-2",
+    "title": "Data wrangling (III)",
+    "section": "Tidy data",
+    "text": "Tidy data\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst)"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#tidy-data-3",
+    "href": "slides/09-data-wrangling-iii.html#tidy-data-3",
+    "title": "Data wrangling (III)",
+    "section": "Tidy data",
+    "text": "Tidy data\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst)"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#tidy-data-4",
+    "href": "slides/09-data-wrangling-iii.html#tidy-data-4",
+    "title": "Data wrangling (III)",
+    "section": "Tidy data",
+    "text": "Tidy data\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst)"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#tidy-data-5",
+    "href": "slides/09-data-wrangling-iii.html#tidy-data-5",
+    "title": "Data wrangling (III)",
+    "section": "Tidy data",
+    "text": "Tidy data\n\n\nIllustrations from the Openscapes blog Tidy Data for reproducibility, efficiency, and collaboration by Julia Lowndes and Allison Horst)"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#common-tidying-tasks",
+    "href": "slides/09-data-wrangling-iii.html#common-tidying-tasks",
+    "title": "Data wrangling (III)",
+    "section": "Common tidying tasks",
+    "text": "Common tidying tasks\n\nPivoting\n\nLonger\nWider\n\nSeparating\nUniting"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#pivot-longer",
+    "href": "slides/09-data-wrangling-iii.html#pivot-longer",
+    "title": "Data wrangling (III)",
+    "section": "Pivot longer",
+    "text": "Pivot longer\n\n\n\ntable4a\n\n# A tibble: 3 × 3\n  country     `1999` `2000`\n* <chr>        <int>  <int>\n1 Afghanistan    745   2666\n2 Brazil       37737  80488\n3 China       212258 213766\n\n\n\n\npivot_longer(\n  data = table4a,\n  cols = c(`1999`, `2000`),\n  names_to = \"year\",\n  values_to = \"cases\"\n)\n\n# A tibble: 6 × 3\n  country     year   cases\n  <chr>       <chr>  <int>\n1 Afghanistan 1999     745\n2 Afghanistan 2000    2666\n3 Brazil      1999   37737\n4 Brazil      2000   80488\n5 China       1999  212258\n6 China       2000  213766"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#pivot-wider",
+    "href": "slides/09-data-wrangling-iii.html#pivot-wider",
+    "title": "Data wrangling (III)",
+    "section": "Pivot wider",
+    "text": "Pivot wider\n\n\n\ntable2\n\n# A tibble: 12 × 4\n   country      year type            count\n   <chr>       <int> <chr>           <int>\n 1 Afghanistan  1999 cases             745\n 2 Afghanistan  1999 population   19987071\n 3 Afghanistan  2000 cases            2666\n 4 Afghanistan  2000 population   20595360\n 5 Brazil       1999 cases           37737\n 6 Brazil       1999 population  172006362\n 7 Brazil       2000 cases           80488\n 8 Brazil       2000 population  174504898\n 9 China        1999 cases          212258\n10 China        1999 population 1272915272\n11 China        2000 cases          213766\n12 China        2000 population 1280428583\n\n\n\n\npivot_wider(\n  data = table2,\n  names_from = type,\n  values_from = count\n)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  <chr>       <int>  <int>      <int>\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#separating",
+    "href": "slides/09-data-wrangling-iii.html#separating",
+    "title": "Data wrangling (III)",
+    "section": "Separating",
+    "text": "Separating\n\n\n\ntable3\n\n# A tibble: 6 × 3\n  country      year rate             \n* <chr>       <int> <chr>            \n1 Afghanistan  1999 745/19987071     \n2 Afghanistan  2000 2666/20595360    \n3 Brazil       1999 37737/172006362  \n4 Brazil       2000 80488/174504898  \n5 China        1999 212258/1272915272\n6 China        2000 213766/1280428583\n\n\n\n\nseparate(\n  data = table3,\n  col = rate,\n  into = c(\n    \"cases\",\n    \"population\"\n  ),\n  convert = TRUE\n)\n\n# A tibble: 6 × 4\n  country      year  cases population\n  <chr>       <int>  <int>      <int>\n1 Afghanistan  1999    745   19987071\n2 Afghanistan  2000   2666   20595360\n3 Brazil       1999  37737  172006362\n4 Brazil       2000  80488  174504898\n5 China        1999 212258 1272915272\n6 China        2000 213766 1280428583"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#uniting",
+    "href": "slides/09-data-wrangling-iii.html#uniting",
+    "title": "Data wrangling (III)",
+    "section": "Uniting",
+    "text": "Uniting\n\n\n\ntable5\n\n# A tibble: 6 × 4\n  country     century year  rate             \n* <chr>       <chr>   <chr> <chr>            \n1 Afghanistan 19      99    745/19987071     \n2 Afghanistan 20      00    2666/20595360    \n3 Brazil      19      99    37737/172006362  \n4 Brazil      20      00    80488/174504898  \n5 China       19      99    212258/1272915272\n6 China       20      00    213766/1280428583\n\n\n\n\nunite(\n  data = table5,\n  col = \"year\",\n  century, year\n)\n\n# A tibble: 6 × 3\n  country     year  rate             \n  <chr>       <chr> <chr>            \n1 Afghanistan 19_99 745/19987071     \n2 Afghanistan 20_00 2666/20595360    \n3 Brazil      19_99 37737/172006362  \n4 Brazil      20_00 80488/174504898  \n5 China       19_99 212258/1272915272\n6 China       20_00 213766/1280428583"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#uniting-1",
+    "href": "slides/09-data-wrangling-iii.html#uniting-1",
+    "title": "Data wrangling (III)",
+    "section": "Uniting",
+    "text": "Uniting\n\n\n\ntable5\n\n# A tibble: 6 × 4\n  country     century year  rate             \n* <chr>       <chr>   <chr> <chr>            \n1 Afghanistan 19      99    745/19987071     \n2 Afghanistan 20      00    2666/20595360    \n3 Brazil      19      99    37737/172006362  \n4 Brazil      20      00    80488/174504898  \n5 China       19      99    212258/1272915272\n6 China       20      00    213766/1280428583\n\n\n\n\nunite(\n  data = table5,\n  col = \"year\",\n  century, year,\n  # remove underscore\n  sep = \"\"\n)\n\n# A tibble: 6 × 3\n  country     year  rate             \n  <chr>       <chr> <chr>            \n1 Afghanistan 1999  745/19987071     \n2 Afghanistan 2000  2666/20595360    \n3 Brazil      1999  37737/172006362  \n4 Brazil      2000  80488/174504898  \n5 China       1999  212258/1272915272\n6 China       2000  213766/1280428583"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#uniting-2",
+    "href": "slides/09-data-wrangling-iii.html#uniting-2",
+    "title": "Data wrangling (III)",
+    "section": "Uniting",
+    "text": "Uniting\n\n\n\ntable5\n\n# A tibble: 6 × 4\n  country     century year  rate             \n* <chr>       <chr>   <chr> <chr>            \n1 Afghanistan 19      99    745/19987071     \n2 Afghanistan 20      00    2666/20595360    \n3 Brazil      19      99    37737/172006362  \n4 Brazil      20      00    80488/174504898  \n5 China       19      99    212258/1272915272\n6 China       20      00    213766/1280428583\n\n\n\n\nunite(\n  data = table5,\n  col = \"year\",\n  century, year,\n  # remove underscore\n  sep = \"\"\n) |>\n  # store as numeric\n  mutate(year = parse_number(year))\n\n# A tibble: 6 × 3\n  country      year rate             \n  <chr>       <dbl> <chr>            \n1 Afghanistan  1999 745/19987071     \n2 Afghanistan  2000 2666/20595360    \n3 Brazil       1999 37737/172006362  \n4 Brazil       2000 80488/174504898  \n5 China        1999 212258/1272915272\n6 China        2000 213766/1280428583"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-1",
+    "href": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-1",
+    "title": "Data wrangling (III)",
+    "section": "Pivoting Cornell degrees",
+    "text": "Pivoting Cornell degrees\n\nLet’s recreate this visualization!"
+  },
+  {
+    "objectID": "slides/09-data-wrangling-iii.html#livecoding",
+    "href": "slides/09-data-wrangling-iii.html#livecoding",
+    "title": "Data wrangling (III)",
+    "section": "Livecoding",
+    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/05-stats-scales-guides.html#project-1-1",

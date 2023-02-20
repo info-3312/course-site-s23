@@ -5,4 +5,4 @@ categories: "prepare"
 ---
 
 - 📖 Read:
-    - Wickham et. al., [chapter 4](https://r4ds.hadley.nz/data-transform.html) + [chapter 6](https://r4ds.hadley.nz/data-tidy.html)
+    - Wickham et. al., [chapter 4](https://r4ds.hadley.nz/data-transform.html)

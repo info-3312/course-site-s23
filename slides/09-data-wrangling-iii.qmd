@@ -1,0 +1,397 @@
+---
+title: "Data wrangling (III)"
+subtitle: "Lecture 9"
+date: "February 16, 2023"
+format: revealjs
+resources:
+  - "data/cornell-degrees.csv"
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+library(patchwork)
+```
+
+# Announcements
+
+## Announcements
+
+- Revised proposals submitted last night
+- I will leave written feedback on each proposal tomorrow(?)
+- Homework 2 due by 11:59pm on Friday
+
+## Agenda for today
+
+- Tidying data frames
+
+# Setup
+
+## Packages + figures
+
+```{r}
+#| cache: false
+# load packages
+library(tidyverse)
+library(scales)
+library(ggthemes)
+
+# set default theme for ggplot2
+theme_set(theme_minimal(base_size = 12))
+```
+
+### YAML options
+
+```yaml
+knitr:
+  opts_chunk:
+    fig.width: 7
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    out.width: "80%"
+```
+
+# Tidy data
+
+## Tidy data
+
+```{r}
+#| echo: false
+#| out.width: "70%"
+#| fig.alt: "Stylized text providing an overview of Tidy Data. The top reads 'Tidy data
+#| is a standard way of mapping the meaning of a dataset to its structure. - Hadley
+#| Wickham.' On the left reads 'In tidy data: each variable forms a column; each
+#| observation forms a row; each cell is a single measurement.' There is an example
+#| table on the lower right with columns ‘id’, ‘name’ and ‘color’ with observations for
+#| different cats, illustrating tidy data structure."
+include_graphics(path = "images/09/tidydata_1.jpg")
+```
+
+::: footnote
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [*Tidy Data for reproducibility, efficiency, and collaboration*](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst)
+:::
+
+## Tidy data
+
+```{r}
+#| echo: false
+#| out.width: "70%"
+#| fig.alt: "There are two sets of anthropomorphized data tables. The top group of
+#| three tables are all rectangular and smiling, with a shared speech bubble reading
+#| 'our columns are variables and our rows are observations!'. Text to the left of that
+#| group reads 'The standard structure of tidy data means that 'tidy datasets are all
+#| alike…' The lower group of four tables are all different shapes, look ragged and
+#| concerned, and have different speech bubbles reading (from left to right) 'my column
+#| are values and my rows are variables', 'I have variables in columns AND in rows', 'I
+#| have multiple variables in a single column', and 'I don’t even KNOW what my deal is.'
+#| Next to the frazzled data tables is text '...but every messy dataset is messy in its
+#| own way. -Hadley Wickham.'"
+include_graphics(path = "images/09/tidydata_2.jpg")
+```
+
+::: footnote
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [*Tidy Data for reproducibility, efficiency, and collaboration*](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst)
+:::
+
+## Tidy data
+
+```{r}
+#| echo: false
+#| out.width: "70%"
+#| fig.alt: "On the left is a happy cute fuzzy monster holding a rectangular data frame
+#| with a tool that fits the data frame shape. On the workbench behind the monster are
+#| other data frames of similar rectangular shape, and neatly arranged tools that also
+#| look like they would fit those data frames. The workbench looks uncluttered and tidy.
+#| The text above the tidy workbench reads 'When working with tidy data, we can use the
+#| same tools in similar ways for different datasets…' On the right is a cute monster
+#| looking very frustrated, using duct tape and other tools to haphazardly tie data
+#| tables together, each in a different way. The monster is in front of a messy,
+#| cluttered workbench. The text above the frustrated monster reads '...but working with
+#| untidy data often means reinventing the wheel with one-time approaches that are hard
+#| to iterate or reuse.'"
+include_graphics(path = "images/09/tidydata_3.jpg")
+```
+
+::: footnote
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [*Tidy Data for reproducibility, efficiency, and collaboration*](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst)
+:::
+
+## Tidy data
+
+```{r}
+#| echo: false
+#| out.width: "70%"
+#| fig.alt: "Digital illustration of a cute fuzzy monster holding a brief case that
+#| says 'tidy data,' standing beside a friendly looking data table character, being
+#| welcomed with cheers by many other data tables and another cute monster jumping with
+#| joy."
+include_graphics(path = "images/09/tidydata_6.jpg")
+```
+
+::: footnote
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [*Tidy Data for reproducibility, efficiency, and collaboration*](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst)
+:::
+
+## Tidy data
+
+```{r}
+#| echo: false
+#| out.width: "70%"
+#| fig.alt: "Digital illustration of two cute fuzzy monsters sitting on a park bench
+#| with a smiling data table between them, all eating ice cream together. In text above
+#| the illustration are the hand drawn words 'make friends with tidy data.'"
+include_graphics(path = "images/09/tidydata_7.jpg")
+```
+
+::: footnote
+Illustrations from the [Openscapes](https://www.openscapes.org/) blog [*Tidy Data for reproducibility, efficiency, and collaboration*](https://www.openscapes.org/blog/2020/10/12/tidy-data/) by Julia Lowndes and Allison Horst)
+:::
+
+## Common tidying tasks
+
+* Pivoting
+    * Longer
+    * Wider
+* Separating
+* Uniting
+
+## Pivot longer
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "spread-columns"
+table4a
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "pivot-longer"
+pivot_longer(
+  data = table4a,
+  cols = c(`1999`, `2000`),
+  names_to = "year",
+  values_to = "cases"
+)
+```
+
+:::
+
+::::
+
+## Pivot wider
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "spread-rows"
+table2
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "pivot-wider"
+pivot_wider(
+  data = table2,
+  names_from = type,
+  values_from = count
+)
+```
+
+:::
+
+::::
+
+## Separating
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "merged-columns"
+table3
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "separate"
+separate(
+  data = table3,
+  col = rate,
+  into = c(
+    "cases",
+    "population"
+  ),
+  convert = TRUE
+)
+```
+
+:::
+
+::::
+
+## Uniting
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "merged-rows"
+table5
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "unite"
+unite(
+  data = table5,
+  col = "year",
+  century, year
+)
+```
+
+:::
+
+::::
+
+## Uniting
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| ref.label: "merged-rows"
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "unite-underscore"
+unite(
+  data = table5,
+  col = "year",
+  century, year,
+  # remove underscore
+  sep = ""
+)
+```
+
+:::
+
+::::
+
+## Uniting
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| ref.label: "merged-rows"
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: "unite-parse"
+unite(
+  data = table5,
+  col = "year",
+  century, year,
+  # remove underscore
+  sep = ""
+) |>
+  # store as numeric
+  mutate(year = parse_number(year))
+```
+
+:::
+
+::::
+
+# Pivoting Cornell degrees
+
+## Pivoting Cornell degrees
+
+::: task
+Let's recreate this visualization!
+:::
+
+```{r}
+#| label: cornell-degrees
+#| echo: false
+
+# import data file
+cornell_deg <- read_csv("data/cornell-degrees.csv")
+
+cornell_deg |>
+  pivot_longer(
+    cols = -field_of_study,
+    names_to = "year",
+    names_transform = parse_number,
+    values_to = "pct"
+  ) |>
+  separate(col = field_of_study, into = c(NA, NA, "field"), sep = "\\.") |>
+  mutate(
+    field = str_replace(string = field, pattern = "_", replacement = " "),
+    field = str_to_title(string = field),
+    field = fct_relevel(
+      field, "Engineering", "Business Marketing", "Computer",
+      "Biological", "Agriculture", "Social Science"
+    )
+  ) |>
+  relocate(field) |>
+  ggplot(aes(x = year, y = pct, color = field)) +
+  geom_point() +
+  geom_line() +
+  scale_x_continuous(limits = c(2000, 2020), breaks = seq(2000, 2020, 4)) +
+  scale_color_colorblind() +
+  scale_y_continuous(labels = label_percent()) +
+  labs(
+    x = "Graduation year",
+    y = "Percent of degrees awarded",
+    color = "Field of study",
+    title = "Cornell University degrees awarded from 2001-2020",
+    subtitle = "Only the top six fields as of 2020",
+    caption = "Source: Department of Education\nhttps://collegescorecard.ed.gov/"
+  ) +
+  theme_minimal()
+```
+
+## Livecoding
+
+Reveal below for code developed during live coding session.
+
+```{r}
+#| fig-show: hide
+#| code-fold: true
+```
