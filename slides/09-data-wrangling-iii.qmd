@@ -342,6 +342,23 @@ unite(
 
 ## Pivoting Cornell degrees
 
+```{r}
+#| eval: false
+cornell_deg <- read_csv("https://info3312.infosci.cornell.edu/slides/data/cornell-degrees.csv")
+```
+
+```{r}
+#| label: cornell-import
+#| include: false
+cornell_deg <- read_csv("data/cornell-degrees.csv")
+```
+
+```{r}
+cornell_deg
+```
+
+## Pivoting Cornell degrees
+
 ::: task
 Let's recreate this visualization!
 :::
