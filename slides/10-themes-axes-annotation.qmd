@@ -44,6 +44,10 @@ library(WDI)
 library(ggrepel)
 library(ggtext)
 
+# setup custom fonts
+library(showtext)
+font_add_google(name = "Roboto Condensed")
+
 # set default theme for ggplot2
 theme_set(theme_gray(base_size = 12))
 ```
@@ -1275,11 +1279,8 @@ Change the base theme and font to match the text labels.
 #| output-location: column
 #| fig-width: 8
 #| out.width: "100%"
-#| code-line-numbers: "3-4,36"
+#| code-line-numbers: "33"
 set.seed(123)
-
-library(showtext)
-font_add_google(name = "Roboto Condensed")
 
 ggplot(
   data = co2_rankings,
@@ -1325,11 +1326,8 @@ Use HTML and Markdown syntax to customize the visual appearance of the title and
 #| output-location: column
 #| fig-width: 8
 #| out.width: "100%"
-#| code-line-numbers: "31-32"
+#| code-line-numbers: "28-29"
 set.seed(123)
-
-library(showtext)
-font_add_google(name = "Roboto Condensed")
 
 ggplot(
   data = co2_rankings,
@@ -1375,11 +1373,8 @@ Ensure rendering of HTML/Markdown syntax with `ggtext::element_markdown()`.
 #| output-location: column
 #| fig-width: 8
 #| out.width: "100%"
-#| code-line-numbers: "37-41"
+#| code-line-numbers: "34-38"
 set.seed(123)
-
-library(showtext)
-font_add_google(name = "Roboto Condensed")
 
 ggplot(
   data = co2_rankings,

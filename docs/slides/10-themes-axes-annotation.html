@@ -447,8 +447,12 @@ Dr.&nbsp;Benjamin Soltoff
 <span id="cb1-10"><a href="#cb1-10"></a><span class="fu">library</span>(ggrepel)</span>
 <span id="cb1-11"><a href="#cb1-11"></a><span class="fu">library</span>(ggtext)</span>
 <span id="cb1-12"><a href="#cb1-12"></a></span>
-<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># set default theme for ggplot2</span></span>
-<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">theme_set</span>(<span class="fu">theme_gray</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-13"><a href="#cb1-13"></a><span class="co"># setup custom fonts</span></span>
+<span id="cb1-14"><a href="#cb1-14"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-15"><a href="#cb1-15"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Roboto Condensed"</span>)</span>
+<span id="cb1-16"><a href="#cb1-16"></a></span>
+<span id="cb1-17"><a href="#cb1-17"></a><span class="co"># set default theme for ggplot2</span></span>
+<span id="cb1-18"><a href="#cb1-18"></a><span class="fu">theme_set</span>(<span class="fu">theme_gray</span>(<span class="at">base_size =</span> <span class="dv">12</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="yaml-options" class="slide level2">
@@ -1714,44 +1718,41 @@ $ income        &lt;chr&gt; "Low income", "Low income", "Low income", "Low incom
 <div class="task">
 <p>Change the base theme and font to match the text labels.</p>
 </div>
-<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-13_7a72a9afd045fc23db1f0b0e918ceb5d">
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-13_62704d7385032c107f96475a061dff3b">
 <div class="column">
-<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="3-4,36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<div class="sourceCode cell-code" id="cb43" data-code-line-numbers="33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb43-2"><a href="#cb43-2"></a></span>
-<span id="cb43-3"><a href="#cb43-3"></a><span class="fu">library</span>(showtext)</span>
-<span id="cb43-4"><a href="#cb43-4"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Roboto Condensed"</span>)</span>
-<span id="cb43-5"><a href="#cb43-5"></a></span>
-<span id="cb43-6"><a href="#cb43-6"></a><span class="fu">ggplot</span>(</span>
-<span id="cb43-7"><a href="#cb43-7"></a>  <span class="at">data =</span> co2_rankings,</span>
-<span id="cb43-8"><a href="#cb43-8"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
-<span id="cb43-9"><a href="#cb43-9"></a>) <span class="sc">+</span></span>
-<span id="cb43-10"><a href="#cb43-10"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
-<span id="cb43-11"><a href="#cb43-11"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
-<span id="cb43-12"><a href="#cb43-12"></a>  <span class="fu">geom_label_repel</span>(</span>
-<span id="cb43-13"><a href="#cb43-13"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
-<span id="cb43-14"><a href="#cb43-14"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
-<span id="cb43-15"><a href="#cb43-15"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
-<span id="cb43-16"><a href="#cb43-16"></a>  ) <span class="sc">+</span></span>
-<span id="cb43-17"><a href="#cb43-17"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb43-18"><a href="#cb43-18"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
-<span id="cb43-19"><a href="#cb43-19"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb43-20"><a href="#cb43-20"></a>  ) <span class="sc">+</span></span>
-<span id="cb43-21"><a href="#cb43-21"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb43-22"><a href="#cb43-22"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
-<span id="cb43-23"><a href="#cb43-23"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb43-24"><a href="#cb43-24"></a>  ) <span class="sc">+</span></span>
-<span id="cb43-25"><a href="#cb43-25"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb43-26"><a href="#cb43-26"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb43-27"><a href="#cb43-27"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb43-28"><a href="#cb43-28"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb43-29"><a href="#cb43-29"></a>  <span class="fu">labs</span>(</span>
-<span id="cb43-30"><a href="#cb43-30"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
-<span id="cb43-31"><a href="#cb43-31"></a>    <span class="at">title =</span> <span class="st">"Changes in CO2 emission rankings between 1995 and 2014"</span>,</span>
-<span id="cb43-32"><a href="#cb43-32"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that improved or worsened more than 25 positions in the rankings highlighted"</span>,</span>
-<span id="cb43-33"><a href="#cb43-33"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
-<span id="cb43-34"><a href="#cb43-34"></a>  ) <span class="sc">+</span></span>
-<span id="cb43-35"><a href="#cb43-35"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb43-36"><a href="#cb43-36"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb43-3"><a href="#cb43-3"></a><span class="fu">ggplot</span>(</span>
+<span id="cb43-4"><a href="#cb43-4"></a>  <span class="at">data =</span> co2_rankings,</span>
+<span id="cb43-5"><a href="#cb43-5"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
+<span id="cb43-6"><a href="#cb43-6"></a>) <span class="sc">+</span></span>
+<span id="cb43-7"><a href="#cb43-7"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
+<span id="cb43-8"><a href="#cb43-8"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
+<span id="cb43-9"><a href="#cb43-9"></a>  <span class="fu">geom_label_repel</span>(</span>
+<span id="cb43-10"><a href="#cb43-10"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
+<span id="cb43-11"><a href="#cb43-11"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
+<span id="cb43-12"><a href="#cb43-12"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
+<span id="cb43-13"><a href="#cb43-13"></a>  ) <span class="sc">+</span></span>
+<span id="cb43-14"><a href="#cb43-14"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb43-15"><a href="#cb43-15"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
+<span id="cb43-16"><a href="#cb43-16"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb43-17"><a href="#cb43-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb43-18"><a href="#cb43-18"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb43-19"><a href="#cb43-19"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
+<span id="cb43-20"><a href="#cb43-20"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb43-21"><a href="#cb43-21"></a>  ) <span class="sc">+</span></span>
+<span id="cb43-22"><a href="#cb43-22"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb43-23"><a href="#cb43-23"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb43-24"><a href="#cb43-24"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb43-25"><a href="#cb43-25"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb43-26"><a href="#cb43-26"></a>  <span class="fu">labs</span>(</span>
+<span id="cb43-27"><a href="#cb43-27"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
+<span id="cb43-28"><a href="#cb43-28"></a>    <span class="at">title =</span> <span class="st">"Changes in CO2 emission rankings between 1995 and 2014"</span>,</span>
+<span id="cb43-29"><a href="#cb43-29"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that improved or worsened more than 25 positions in the rankings highlighted"</span>,</span>
+<span id="cb43-30"><a href="#cb43-30"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
+<span id="cb43-31"><a href="#cb43-31"></a>  ) <span class="sc">+</span></span>
+<span id="cb43-32"><a href="#cb43-32"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb43-33"><a href="#cb43-33"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1768,44 +1769,41 @@ $ income        &lt;chr&gt; "Low income", "Low income", "Low income", "Low incom
 <div class="task">
 <p>Use HTML and Markdown syntax to customize the visual appearance of the title and subtitle.</p>
 </div>
-<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-14_7931c47078ee231d874c80af74287a01">
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-14_5c8f1fff410e1360e8802615e44f8a2c">
 <div class="column">
-<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="31-32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<div class="sourceCode cell-code" id="cb44" data-code-line-numbers="28-29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb44-2"><a href="#cb44-2"></a></span>
-<span id="cb44-3"><a href="#cb44-3"></a><span class="fu">library</span>(showtext)</span>
-<span id="cb44-4"><a href="#cb44-4"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Roboto Condensed"</span>)</span>
-<span id="cb44-5"><a href="#cb44-5"></a></span>
-<span id="cb44-6"><a href="#cb44-6"></a><span class="fu">ggplot</span>(</span>
-<span id="cb44-7"><a href="#cb44-7"></a>  <span class="at">data =</span> co2_rankings,</span>
-<span id="cb44-8"><a href="#cb44-8"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
-<span id="cb44-9"><a href="#cb44-9"></a>) <span class="sc">+</span></span>
-<span id="cb44-10"><a href="#cb44-10"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
-<span id="cb44-11"><a href="#cb44-11"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
-<span id="cb44-12"><a href="#cb44-12"></a>  <span class="fu">geom_label_repel</span>(</span>
-<span id="cb44-13"><a href="#cb44-13"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
-<span id="cb44-14"><a href="#cb44-14"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
-<span id="cb44-15"><a href="#cb44-15"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
-<span id="cb44-16"><a href="#cb44-16"></a>  ) <span class="sc">+</span></span>
-<span id="cb44-17"><a href="#cb44-17"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb44-18"><a href="#cb44-18"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
-<span id="cb44-19"><a href="#cb44-19"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb44-20"><a href="#cb44-20"></a>  ) <span class="sc">+</span></span>
-<span id="cb44-21"><a href="#cb44-21"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb44-22"><a href="#cb44-22"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
-<span id="cb44-23"><a href="#cb44-23"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb44-24"><a href="#cb44-24"></a>  ) <span class="sc">+</span></span>
-<span id="cb44-25"><a href="#cb44-25"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb44-26"><a href="#cb44-26"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb44-27"><a href="#cb44-27"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb44-28"><a href="#cb44-28"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb44-29"><a href="#cb44-29"></a>  <span class="fu">labs</span>(</span>
-<span id="cb44-30"><a href="#cb44-30"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
-<span id="cb44-31"><a href="#cb44-31"></a>    <span class="at">title =</span> <span class="st">"Changes in CO&lt;sub&gt;2&lt;/sub&gt; emission rankings between 1995 and 2014"</span>, <span class="co">#&lt;&lt;</span></span>
-<span id="cb44-32"><a href="#cb44-32"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that &lt;span style='color: #0074D9'&gt;**improved**&lt;/span&gt; or &lt;span style='color: #FF4136'&gt;**worsened**&lt;/span&gt; more than 25 positions in the rankings highlighted"</span>, <span class="co">#&lt;&lt;</span></span>
-<span id="cb44-33"><a href="#cb44-33"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
-<span id="cb44-34"><a href="#cb44-34"></a>  ) <span class="sc">+</span></span>
-<span id="cb44-35"><a href="#cb44-35"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb44-36"><a href="#cb44-36"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb44-3"><a href="#cb44-3"></a><span class="fu">ggplot</span>(</span>
+<span id="cb44-4"><a href="#cb44-4"></a>  <span class="at">data =</span> co2_rankings,</span>
+<span id="cb44-5"><a href="#cb44-5"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
+<span id="cb44-6"><a href="#cb44-6"></a>) <span class="sc">+</span></span>
+<span id="cb44-7"><a href="#cb44-7"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
+<span id="cb44-8"><a href="#cb44-8"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
+<span id="cb44-9"><a href="#cb44-9"></a>  <span class="fu">geom_label_repel</span>(</span>
+<span id="cb44-10"><a href="#cb44-10"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
+<span id="cb44-11"><a href="#cb44-11"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
+<span id="cb44-12"><a href="#cb44-12"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
+<span id="cb44-13"><a href="#cb44-13"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-14"><a href="#cb44-14"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb44-15"><a href="#cb44-15"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
+<span id="cb44-16"><a href="#cb44-16"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb44-17"><a href="#cb44-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-18"><a href="#cb44-18"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb44-19"><a href="#cb44-19"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
+<span id="cb44-20"><a href="#cb44-20"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb44-21"><a href="#cb44-21"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-22"><a href="#cb44-22"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb44-23"><a href="#cb44-23"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb44-24"><a href="#cb44-24"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb44-25"><a href="#cb44-25"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb44-26"><a href="#cb44-26"></a>  <span class="fu">labs</span>(</span>
+<span id="cb44-27"><a href="#cb44-27"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
+<span id="cb44-28"><a href="#cb44-28"></a>    <span class="at">title =</span> <span class="st">"Changes in CO&lt;sub&gt;2&lt;/sub&gt; emission rankings between 1995 and 2014"</span>, <span class="co">#&lt;&lt;</span></span>
+<span id="cb44-29"><a href="#cb44-29"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that &lt;span style='color: #0074D9'&gt;**improved**&lt;/span&gt; or &lt;span style='color: #FF4136'&gt;**worsened**&lt;/span&gt; more than 25 positions in the rankings highlighted"</span>, <span class="co">#&lt;&lt;</span></span>
+<span id="cb44-30"><a href="#cb44-30"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
+<span id="cb44-31"><a href="#cb44-31"></a>  ) <span class="sc">+</span></span>
+<span id="cb44-32"><a href="#cb44-32"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb44-33"><a href="#cb44-33"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1822,49 +1820,46 @@ $ income        &lt;chr&gt; "Low income", "Low income", "Low income", "Low incom
 <div class="task">
 <p>Ensure rendering of HTML/Markdown syntax with <code>ggtext::element_markdown()</code>.</p>
 </div>
-<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-15_0ed05e8bc72d5d490ba6be58fbc51f1c">
+<div class="cell columns column-output-location" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/pretty-plot-15_c084b5942cd3005bcf6398219e708f1b">
 <div class="column">
-<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="37-41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<div class="sourceCode cell-code" id="cb45" data-code-line-numbers="34-38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
 <span id="cb45-2"><a href="#cb45-2"></a></span>
-<span id="cb45-3"><a href="#cb45-3"></a><span class="fu">library</span>(showtext)</span>
-<span id="cb45-4"><a href="#cb45-4"></a><span class="fu">font_add_google</span>(<span class="at">name =</span> <span class="st">"Roboto Condensed"</span>)</span>
-<span id="cb45-5"><a href="#cb45-5"></a></span>
-<span id="cb45-6"><a href="#cb45-6"></a><span class="fu">ggplot</span>(</span>
-<span id="cb45-7"><a href="#cb45-7"></a>  <span class="at">data =</span> co2_rankings,</span>
-<span id="cb45-8"><a href="#cb45-8"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
-<span id="cb45-9"><a href="#cb45-9"></a>) <span class="sc">+</span></span>
-<span id="cb45-10"><a href="#cb45-10"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
-<span id="cb45-11"><a href="#cb45-11"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
-<span id="cb45-12"><a href="#cb45-12"></a>  <span class="fu">geom_label_repel</span>(</span>
-<span id="cb45-13"><a href="#cb45-13"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
-<span id="cb45-14"><a href="#cb45-14"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
-<span id="cb45-15"><a href="#cb45-15"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
-<span id="cb45-16"><a href="#cb45-16"></a>  ) <span class="sc">+</span></span>
-<span id="cb45-17"><a href="#cb45-17"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb45-18"><a href="#cb45-18"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
-<span id="cb45-19"><a href="#cb45-19"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb45-20"><a href="#cb45-20"></a>  ) <span class="sc">+</span></span>
-<span id="cb45-21"><a href="#cb45-21"></a>  <span class="fu">annotate</span>(</span>
-<span id="cb45-22"><a href="#cb45-22"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
-<span id="cb45-23"><a href="#cb45-23"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
-<span id="cb45-24"><a href="#cb45-24"></a>  ) <span class="sc">+</span></span>
-<span id="cb45-25"><a href="#cb45-25"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb45-26"><a href="#cb45-26"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
-<span id="cb45-27"><a href="#cb45-27"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb45-28"><a href="#cb45-28"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
-<span id="cb45-29"><a href="#cb45-29"></a>  <span class="fu">labs</span>(</span>
-<span id="cb45-30"><a href="#cb45-30"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
-<span id="cb45-31"><a href="#cb45-31"></a>    <span class="at">title =</span> <span class="st">"Changes in CO&lt;sub&gt;2&lt;/sub&gt; emission rankings between 1995 and 2014"</span>,</span>
-<span id="cb45-32"><a href="#cb45-32"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that &lt;span style='color: #0074D9'&gt;**improved**&lt;/span&gt; or &lt;span style='color: #FF4136'&gt;**worsened**&lt;/span&gt; more than 25 positions in the rankings highlighted"</span>,</span>
-<span id="cb45-33"><a href="#cb45-33"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
-<span id="cb45-34"><a href="#cb45-34"></a>  ) <span class="sc">+</span></span>
-<span id="cb45-35"><a href="#cb45-35"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
-<span id="cb45-36"><a href="#cb45-36"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>) <span class="sc">+</span></span>
-<span id="cb45-37"><a href="#cb45-37"></a>  <span class="fu">theme</span>(</span>
-<span id="cb45-38"><a href="#cb45-38"></a>    <span class="at">plot.title =</span> <span class="fu">element_markdown</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">1.6</span>)),</span>
-<span id="cb45-39"><a href="#cb45-39"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">1.3</span>)),</span>
-<span id="cb45-40"><a href="#cb45-40"></a>    <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="at">units =</span> <span class="st">"lines"</span>)</span>
-<span id="cb45-41"><a href="#cb45-41"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb45-3"><a href="#cb45-3"></a><span class="fu">ggplot</span>(</span>
+<span id="cb45-4"><a href="#cb45-4"></a>  <span class="at">data =</span> co2_rankings,</span>
+<span id="cb45-5"><a href="#cb45-5"></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> rank_1995, <span class="at">y =</span> rank_2014)</span>
+<span id="cb45-6"><a href="#cb45-6"></a>) <span class="sc">+</span></span>
+<span id="cb45-7"><a href="#cb45-7"></a>  <span class="fu">annotate</span>(<span class="at">geom =</span> <span class="st">"segment"</span>, <span class="at">x =</span> <span class="dv">0</span>, <span class="at">xend =</span> <span class="dv">172</span>, <span class="at">y =</span> <span class="dv">0</span>, <span class="at">yend =</span> <span class="dv">178</span>) <span class="sc">+</span></span>
+<span id="cb45-8"><a href="#cb45-8"></a>  <span class="fu">geom_point</span>(<span class="fu">aes</span>(<span class="at">color =</span> better_big_change)) <span class="sc">+</span></span>
+<span id="cb45-9"><a href="#cb45-9"></a>  <span class="fu">geom_label_repel</span>(</span>
+<span id="cb45-10"><a href="#cb45-10"></a>    <span class="at">data =</span> <span class="fu">filter</span>(co2_rankings, big_change <span class="sc">==</span> <span class="cn">TRUE</span>),</span>
+<span id="cb45-11"><a href="#cb45-11"></a>    <span class="fu">aes</span>(<span class="at">label =</span> country, <span class="at">fill =</span> better_big_change),</span>
+<span id="cb45-12"><a href="#cb45-12"></a>    <span class="at">color =</span> <span class="st">"white"</span>, <span class="at">family =</span> <span class="st">"Roboto Condensed"</span></span>
+<span id="cb45-13"><a href="#cb45-13"></a>  ) <span class="sc">+</span></span>
+<span id="cb45-14"><a href="#cb45-14"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb45-15"><a href="#cb45-15"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">170</span>, <span class="at">y =</span> <span class="dv">6</span>, <span class="at">label =</span> <span class="st">"Outliers improving"</span>,</span>
+<span id="cb45-16"><a href="#cb45-16"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb45-17"><a href="#cb45-17"></a>  ) <span class="sc">+</span></span>
+<span id="cb45-18"><a href="#cb45-18"></a>  <span class="fu">annotate</span>(</span>
+<span id="cb45-19"><a href="#cb45-19"></a>    <span class="at">geom =</span> <span class="st">"text"</span>, <span class="at">x =</span> <span class="dv">2</span>, <span class="at">y =</span> <span class="dv">170</span>, <span class="at">label =</span> <span class="st">"Outliers worsening"</span>,</span>
+<span id="cb45-20"><a href="#cb45-20"></a>    <span class="at">family =</span> <span class="st">"Roboto Condensed"</span>, <span class="at">fontface =</span> <span class="st">"italic"</span>, <span class="at">hjust =</span> <span class="dv">0</span>, <span class="at">color =</span> <span class="st">"grey50"</span></span>
+<span id="cb45-21"><a href="#cb45-21"></a>  ) <span class="sc">+</span></span>
+<span id="cb45-22"><a href="#cb45-22"></a>  <span class="fu">scale_color_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"grey50"</span>, <span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb45-23"><a href="#cb45-23"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"#0074D9"</span>, <span class="st">"#FF4136"</span>)) <span class="sc">+</span></span>
+<span id="cb45-24"><a href="#cb45-24"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb45-25"><a href="#cb45-25"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">expand =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>), <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">0</span>, <span class="dv">175</span>, <span class="dv">25</span>)) <span class="sc">+</span></span>
+<span id="cb45-26"><a href="#cb45-26"></a>  <span class="fu">labs</span>(</span>
+<span id="cb45-27"><a href="#cb45-27"></a>    <span class="at">x =</span> <span class="st">"Rank in 1995"</span>, <span class="at">y =</span> <span class="st">"Rank in 2014"</span>,</span>
+<span id="cb45-28"><a href="#cb45-28"></a>    <span class="at">title =</span> <span class="st">"Changes in CO&lt;sub&gt;2&lt;/sub&gt; emission rankings between 1995 and 2014"</span>,</span>
+<span id="cb45-29"><a href="#cb45-29"></a>    <span class="at">subtitle =</span> <span class="st">"Countries that &lt;span style='color: #0074D9'&gt;**improved**&lt;/span&gt; or &lt;span style='color: #FF4136'&gt;**worsened**&lt;/span&gt; more than 25 positions in the rankings highlighted"</span>,</span>
+<span id="cb45-30"><a href="#cb45-30"></a>    <span class="at">caption =</span> <span class="st">"Source: The World Bank.</span><span class="sc">\n</span><span class="st">Countries with populations of less than 200,000 excluded."</span></span>
+<span id="cb45-31"><a href="#cb45-31"></a>  ) <span class="sc">+</span></span>
+<span id="cb45-32"><a href="#cb45-32"></a>  <span class="fu">guides</span>(<span class="at">color =</span> <span class="st">"none"</span>, <span class="at">fill =</span> <span class="st">"none"</span>) <span class="sc">+</span></span>
+<span id="cb45-33"><a href="#cb45-33"></a>  <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"Roboto Condensed"</span>) <span class="sc">+</span></span>
+<span id="cb45-34"><a href="#cb45-34"></a>  <span class="fu">theme</span>(</span>
+<span id="cb45-35"><a href="#cb45-35"></a>    <span class="at">plot.title =</span> <span class="fu">element_markdown</span>(<span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">1.6</span>)),</span>
+<span id="cb45-36"><a href="#cb45-36"></a>    <span class="at">plot.subtitle =</span> <span class="fu">element_markdown</span>(<span class="at">size =</span> <span class="fu">rel</span>(<span class="fl">1.3</span>)),</span>
+<span id="cb45-37"><a href="#cb45-37"></a>    <span class="at">plot.margin =</span> <span class="fu">unit</span>(<span class="fu">c</span>(<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">0.5</span>, <span class="fl">0.5</span>), <span class="at">units =</span> <span class="st">"lines"</span>)</span>
+<span id="cb45-38"><a href="#cb45-38"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
@@ -1878,7 +1873,7 @@ $ income        &lt;chr&gt; "Low income", "Low income", "Low income", "Low incom
 </section>
 <section id="final-plot" class="slide level2">
 <h2>Final plot</h2>
-<div class="cell" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/unnamed-chunk-58_ceaf0d31e4c19df47fea1a58ee8ef7a0">
+<div class="cell" data-layout-align="center" data-hash="10-themes-axes-annotation_cache/revealjs/unnamed-chunk-58_e9f7c31a40054f778ee5b3af50a6c655">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure>
