@@ -1,0 +1,11 @@
+---
+title: "Prepare"
+subtitle: "Due: March 02, 2023"
+categories: "prepare"
+---
+
+- 📖 Read:
+    - Wilke [chapter 4](https://clauswilke.com/dataviz/color-basics.html) + [chapter 19](https://clauswilke.com/dataviz/color-pitfalls.html)
+- 📖 (Optional) Read:
+    - [How to create an organizational color palette](https://blog.datawrapper.de/colors-for-data-vis-style-guides/)
+    - [Any blog posts by Lisa Charlotte Muth](https://blog.datawrapper.de/category/color-in-data-vis/) - excellent series of posts on using color in data visualization. None of the posts have direct examples in R but provide a detailed overview of considerations in selecting color palettes.

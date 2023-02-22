@@ -231,6 +231,13 @@
     "text": "Grading\n\nExercise 1: 10 points\nExercise 2: 10 points\nExercise 3: 15 points\nExercise 4: 15 points\nTotal: 50 points"
   },
   {
+    "objectID": "prepare/02-23.html",
+    "href": "prepare/02-23.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nWickham et. al., chapter 18 + chapter 8\nWilke chapter 22 + chapter 23\n\n📖 (Optional) Read:\n\nSummary of CRAP graphic design principles by Garr Reynolds, Presentation Zen\nNaomi Robbins, Are Grid Lines Useful or Chartjunk?\nStephen Few, Grid Lines in Graphs are Rarely Useful"
+  },
+  {
     "objectID": "prepare/02-09.html",
     "href": "prepare/02-09.html",
     "title": "Prepare",
@@ -243,6 +250,13 @@
     "title": "Prepare",
     "section": "",
     "text": "📖 Read:\n\nWickham et. al., chapter 6"
+  },
+  {
+    "objectID": "prepare/03-02.html",
+    "href": "prepare/03-02.html",
+    "title": "Prepare",
+    "section": "",
+    "text": "📖 Read:\n\nWilke chapter 4 + chapter 19\n\n📖 (Optional) Read:\n\nHow to create an organizational color palette\nAny blog posts by Lisa Charlotte Muth - excellent series of posts on using color in data visualization. None of the posts have direct examples in R but provide a detailed overview of considerations in selecting color palettes."
   },
   {
     "objectID": "prepare/01-31.html",
@@ -438,7 +452,7 @@
     "href": "index.html",
     "title": "INFO 3312/5312: Data Communication",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\n\n    \nW\nFeb 8\n\n\n\n\n\n\nHW 1 due\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\nHW 2 released\n    5\nTu\nFeb 21\nLec 9\nData wrangling III\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nOptimizing color spaces\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nCalling bullshit I\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nCalling bullshit II\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nCalling bullshit III\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nCalling bullshit IV\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nScience, art, or somewhere in-between?\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nGraphical perception and cognition\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nData feminism I\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nData feminism II\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text + network data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\n???"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\n\n    \nW\nFeb 8\n\n\n\n\n\n\nHW 1 due\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\nHW 2 released\n    5\nTu\nFeb 21\nLec 9\nData wrangling III\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nOptimizing color spaces\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nCalling bullshit I\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nCalling bullshit II\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nCalling bullshit III\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nCalling bullshit IV\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nScience, art, or somewhere in-between?\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nGraphical perception and cognition\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nData feminism I\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nData feminism II\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text + network data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\n???"
   },
   {
     "objectID": "project-1.html",
@@ -1715,11 +1729,452 @@
     "text": "Pivoting Cornell degrees\n\ncornell_deg <- read_csv(\"https://info3312.infosci.cornell.edu/slides/data/cornell-degrees.csv\")\n\n\ncornell_deg\n\n# A tibble: 6 × 21\n  field_…¹ `2001` `2002` `2003` `2004` `2005` `2006` `2007` `2008` `2009` `2010`\n  <chr>     <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>  <dbl>\n1 academi… 0.239  0.290  0.173  0.161   0.168 0.170  0.181  0.183  0.181  0.179 \n2 academi… 0.112  0.0979 0.110  0.198   0.157 0.168  0.151  0.136  0.148  0.129 \n3 academi… 0.0859 0.0745 0.0463 0.0327  0.032 0.0221 0.0263 0.0262 0.0264 0.0297\n4 academi… 0.071  0.0709 0.112  0.100   0.109 0.107  0.116  0.122  0.117  0.12  \n5 academi… 0      0      0.122  0.112   0.109 0.110  0.126  0.134  0.128  0.12  \n6 academi… 0.161  0.160  0.105  0.0973  0.113 0.099  0.102  0.0975 0.0983 0.0994\n# … with 10 more variables: `2011` <dbl>, `2012` <dbl>, `2013` <dbl>,\n#   `2014` <dbl>, `2015` <dbl>, `2016` <dbl>, `2017` <dbl>, `2018` <dbl>,\n#   `2019` <dbl>, `2020` <dbl>, and abbreviated variable name ¹​field_of_study"
   },
   {
+    "objectID": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-2",
+    "href": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-2",
+    "title": "Data wrangling (III)",
+    "section": "Pivoting Cornell degrees",
+    "text": "Pivoting Cornell degrees\n\nLet’s recreate this visualization!"
+  },
+  {
     "objectID": "slides/09-data-wrangling-iii.html#livecoding",
     "href": "slides/09-data-wrangling-iii.html#livecoding",
     "title": "Data wrangling (III)",
     "section": "Livecoding",
     "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#announcements-1",
+    "href": "slides/10-themes-axes-annotation.html#announcements-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Announcements",
+    "text": "Announcements\n\nHomework 2 due tomorrow\nFeedback for project 1 proposals posted as issue on GitHub\nLab tomorrow: finish homework 2 and/or make progress on project 1"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#agenda-for-today",
+    "href": "slides/10-themes-axes-annotation.html#agenda-for-today",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\nThemes\nAxes\nAnnotations"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#packages-figures",
+    "href": "slides/10-themes-axes-annotation.html#packages-figures",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(scales)\nlibrary(ggthemes)\nlibrary(ggpomological)\nlibrary(colorspace)\nlibrary(lubridate)\nlibrary(hrbrthemes)\nlibrary(WDI)\nlibrary(ggrepel)\nlibrary(ggtext)\n\n# setup custom fonts\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# set default theme for ggplot2\ntheme_set(theme_gray(base_size = 12))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#yaml-options",
+    "href": "slides/10-themes-axes-annotation.html#yaml-options",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "YAML options",
+    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#is-that-gray-background-okay",
+    "href": "slides/10-themes-axes-annotation.html#is-that-gray-background-okay",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Is that gray background okay?",
+    "text": "Is that gray background okay?\n\n\nIt adds contrast! Some people just don’t like it 🤷"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#like-this",
+    "href": "slides/10-themes-axes-annotation.html#like-this",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Like this!",
+    "text": "Like this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  theme_tufte()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#and-this",
+    "href": "slides/10-themes-axes-annotation.html#and-this",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "And this!",
+    "text": "And this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  theme_solarized()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#or-this",
+    "href": "slides/10-themes-axes-annotation.html#or-this",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Or this!",
+    "text": "Or this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  scale_color_economist() +\n  theme_economist()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#and-even-this",
+    "href": "slides/10-themes-axes-annotation.html#and-even-this",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "And even this!",
+    "text": "And even this!\n\n\nlibrary(ggpomological)\nlibrary(showtext)\n\nfont_add_google(\"Homemade Apple\")\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  scale_color_pomological() +\n  theme_pomological_fancy()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#theme-system",
+    "href": "slides/10-themes-axes-annotation.html#theme-system",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Theme system",
+    "text": "Theme system\n\n\nSource: ggplot2 theme elements demonstration"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#theme-elements",
+    "href": "slides/10-themes-axes-annotation.html#theme-elements",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Theme elements",
+    "text": "Theme elements\nEach element in the plot can be targeted\n\n\nPlot title = plot.title\nGrid lines = panel.grid\nLegend background = legend.background"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#theme-functions",
+    "href": "slides/10-themes-axes-annotation.html#theme-functions",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Theme functions",
+    "text": "Theme functions\nUse special functions to manipulate specific elements\n\n\nText-based things = element_text()\nRectangular things (backgrounds) = element_rect()\nLine-based things (axis lines, grid lines) = element_line()\nDisable element completely = element_blank()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#how-to-learn-theme",
+    "href": "slides/10-themes-axes-annotation.html#how-to-learn-theme",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "How to learn theme()",
+    "text": "How to learn theme()\n\n\nThe theme() function has 94 possible arguments\nYou can get hyper-specific with things like axis.ticks.length.x.bottom\nThe only way to learn how to use theme() is to use it and tinker with it"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#gapminder",
+    "href": "slides/10-themes-axes-annotation.html#gapminder",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "gapminder",
+    "text": "gapminder\n\nlibrary(gapminder)\ngapminder\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   <fct>       <fct>     <int>   <dbl>    <int>     <dbl>\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# … with 1,694 more rows"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#basic-plot",
+    "href": "slides/10-themes-axes-annotation.html#basic-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Basic plot",
+    "text": "Basic plot\n\nCodePlot\n\n\n\ngapminder_filtered <- gapminder |>\n  filter(year > 2000)\n\nbase_plot <- ggplot(\n  data = gapminder_filtered,\n  mapping = aes(\n    x = gdpPercap, y = lifeExp,\n    color = continent, size = pop\n  )\n) +\n  geom_point() +\n  # Use dollars, and get rid of the cents part (i.e. $300 instead of $300.00)\n  scale_x_log10(labels = label_dollar(scale_cut = cut_short_scale())) +\n  # Format with commas\n  scale_size_continuous(labels = label_comma()) +\n  # Use dark 3\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  labs(\n    x = \"GDP per capita\", y = \"Life expectancy\",\n    color = \"Continent\", size = \"Population\",\n    title = \"Here's a cool title\",\n    subtitle = \"And here's a neat subtitle\",\n    caption = \"Source: The Gapminder Project\"\n  ) +\n  facet_wrap(facets = vars(year))\n\nbase_plot"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#change-the-theme",
+    "href": "slides/10-themes-axes-annotation.html#change-the-theme",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Change the theme",
+    "text": "Change the theme\n\nbase_plot +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
+    "href": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Create a custom theme",
+    "text": "Create a custom theme\n\n# add new font family\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# change base font\nmy_pretty_theme <- theme_minimal(base_family = \"Roboto Condensed\", base_size = 14) +\n  theme(\n    # Remove minor grid lines\n    panel.grid.minor = element_blank(),\n    # Bold, bigger title\n    plot.title = element_text(face = \"bold\", size = rel(1.7)),\n    # Plain, slightly bigger subtitle that is grey\n    plot.subtitle = element_text(face = \"plain\", size = rel(1.3), color = \"grey70\"),\n    # Italic, smaller, grey caption that is left-aligned\n    plot.caption = element_text(\n      face = \"italic\", size = rel(0.7),\n      color = \"grey70\", hjust = 0\n    ),\n    # Bold legend titles\n    legend.title = element_text(face = \"bold\"),\n    # Bold, slightly larger facet titles that are left-aligned for the sake of repetition\n    strip.text = element_text(face = \"bold\", size = rel(1.1), hjust = 0),\n    # Bold axis titles\n    axis.title = element_text(face = \"bold\"),\n    # Add some space above the x-axis title and make it left-aligned\n    axis.title.x = element_text(margin = margin(t = 10), hjust = 0),\n    # Add some space to the right of the y-axis title and make it top-aligned\n    axis.title.y = element_text(margin = margin(r = 10), hjust = 1),\n    # Add a light grey background to the facet titles, with no borders\n    strip.background = element_rect(fill = \"grey90\", color = NA),\n    # Add a thin grey border around all the plots to tie in the facet titles\n    panel.border = element_rect(color = \"grey90\", fill = NA)\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
+    "href": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Applied to existing plot",
+    "text": "Applied to existing plot\n\nbase_plot +\n  my_pretty_theme"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
+    "href": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Applied to another plot",
+    "text": "Applied to another plot\n\nCodePlot\n\n\n\nlibrary(palmerpenguins)\n\npenguins_example <- ggplot(\n  data = drop_na(penguins, sex),\n  mapping = aes(x = bill_length_mm, y = body_mass_g, color = str_to_title(sex))\n) +\n  geom_point(size = 3, alpha = 0.5) +\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  scale_y_continuous(labels = label_comma()) +\n  facet_wrap(vars(species)) +\n  labs(\n    x = \"Bill length (mm)\", y = \"Body mass (g)\", color = \"Sex\",\n    title = \"Gentoo penguins are the largest\",\n    subtitle = \"But females are typically smaller than males\",\n    caption = \"Here's a caption\"\n  ) +\n  my_pretty_theme\n\npenguins_example"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#axis-breaks",
+    "href": "slides/10-themes-axes-annotation.html#axis-breaks",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Axis breaks",
+    "text": "Axis breaks\n\nHow can the following figure be improved with custom breaks in axes, if at all?"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#context-matters",
+    "href": "slides/10-themes-axes-annotation.html#context-matters",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Context matters",
+    "text": "Context matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(from = 2000, to = 2020, by = 2))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#conciseness-matters",
+    "href": "slides/10-themes-axes-annotation.html#conciseness-matters",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Conciseness matters",
+    "text": "Conciseness matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(2000, 2020, 4))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#precision-matters",
+    "href": "slides/10-themes-axes-annotation.html#precision-matters",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Precision matters",
+    "text": "Precision matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(2000, 2020, 4)) +\n  labs(x = \"Election year\")"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#little-details-matter",
+    "href": "slides/10-themes-axes-annotation.html#little-details-matter",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Little details matter",
+    "text": "Little details matter"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#obsession-with-tiny-details",
+    "href": "slides/10-themes-axes-annotation.html#obsession-with-tiny-details",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Obsession with tiny details",
+    "text": "Obsession with tiny details"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#human-focused-design",
+    "href": "slides/10-themes-axes-annotation.html#human-focused-design",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Human-focused design",
+    "text": "Human-focused design\n\n\n“This is what customers pay us for – to sweat all these details so it’s easy and pleasant for them to use our computers.”"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#graph-details-redundant-coding",
+    "href": "slides/10-themes-axes-annotation.html#graph-details-redundant-coding",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Graph details: Redundant coding",
+    "text": "Graph details: Redundant coding"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#graph-details-consistent-ordering",
+    "href": "slides/10-themes-axes-annotation.html#graph-details-consistent-ordering",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Graph details: Consistent ordering",
+    "text": "Graph details: Consistent ordering"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#details-matter",
+    "href": "slides/10-themes-axes-annotation.html#details-matter",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Details matter",
+    "text": "Details matter\nWorrying about tiny details in graphs…\n\n…makes them easier for your audience to understand\n\n\n…improves their beauty\n\n\n…enhances the truth"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#including-text-on-a-plot",
+    "href": "slides/10-themes-axes-annotation.html#including-text-on-a-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Including text on a plot",
+    "text": "Including text on a plot\nLabel actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\nAdd arbitrary annotations\nannotate()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points-1",
+    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Label actual data points",
+    "text": "Label actual data points\n\n\nlibrary(gapminder)\n\ngapminder_europe <- gapminder |>\n  filter(\n    year == 2007,\n    continent == \"Europe\"\n  )\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_text(aes(label = country))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points-2",
+    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points-2",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Label actual data points",
+    "text": "Label actual data points\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label(aes(label = country))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#solution-1-repel-labels",
+    "href": "slides/10-themes-axes-annotation.html#solution-1-repel-labels",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Solution 1: Repel labels",
+    "text": "Solution 1: Repel labels\n\n\nlibrary(ggrepel)\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_text_repel(aes(label = country))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#solution-1-repel-labels-1",
+    "href": "slides/10-themes-axes-annotation.html#solution-1-repel-labels-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Solution 1: Repel labels",
+    "text": "Solution 1: Repel labels\n\n\nlibrary(ggrepel)\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label_repel(aes(label = country)) #<<"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#solution-2a-dont-use-so-many-labels",
+    "href": "slides/10-themes-axes-annotation.html#solution-2a-dont-use-so-many-labels",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Solution 2a: Don’t use so many labels",
+    "text": "Solution 2a: Don’t use so many labels\n\n\ngapminder_europe <- gapminder_europe |>\n  mutate(\n    should_be_labeled = country %in% c(\n      \"Albania\",\n      \"Norway\",\n      \"Hungary\"\n    )\n  )\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label_repel(\n    data = filter(\n      gapminder_europe,\n      should_be_labeled == TRUE\n    ),\n    aes(label = country)\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#solution-2b-use-other-aesthetics-too",
+    "href": "slides/10-themes-axes-annotation.html#solution-2b-use-other-aesthetics-too",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Solution 2b: Use other aesthetics too",
+    "text": "Solution 2b: Use other aesthetics too\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point(aes(color = should_be_labeled)) +\n  geom_label_repel(\n    data = filter(\n      gapminder_europe,\n      should_be_labeled == TRUE\n    ),\n    aes(\n      label = country,\n      fill = should_be_labeled\n    ),\n    color = \"white\"\n  ) +\n  scale_color_manual(values = c(\n    \"grey50\",\n    \"red\"\n  )) +\n  scale_fill_manual(values = c(\"red\")) +\n  guides(color = \"none\", fill = \"none\")"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#highlight-non-text-things-too",
+    "href": "slides/10-themes-axes-annotation.html#highlight-non-text-things-too",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "(Highlight non-text things too!)",
+    "text": "(Highlight non-text things too!)\n\n\n# Color just Oceania\ngapminder_highlighted <- gapminder |>\n  mutate(\n    is_oceania =\n      ifelse(continent == \"Oceania\",\n        TRUE, FALSE\n      )\n  )\n\nggplot(\n  gapminder_highlighted,\n  aes(\n    x = year, y = lifeExp,\n    group = country,\n    color = is_oceania,\n    size = is_oceania\n  )\n) +\n  geom_line() +\n  scale_color_manual(values = c(\n    \"grey70\",\n    \"red\"\n  )) +\n  scale_size_manual(values = c(0.1, 0.5)) +\n  guides(color = \"none\", size = \"none\") +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#including-text-on-a-plot-1",
+    "href": "slides/10-themes-axes-annotation.html#including-text-on-a-plot-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Including text on a plot",
+    "text": "Including text on a plot\nLabel actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\nAdd arbitrary annotations\nannotate()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations",
+    "href": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Adding arbitrary annotations",
+    "text": "Adding arbitrary annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"text\",\n    x = 40000, y = 76,\n    label = \"Some text!\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations-1",
+    "href": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Adding arbitrary annotations",
+    "text": "Adding arbitrary annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"label\",\n    x = 40000, y = 76,\n    label = \"Some text!\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#any-geom-works",
+    "href": "slides/10-themes-axes-annotation.html#any-geom-works",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Any geom works",
+    "text": "Any geom works\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  # This is evil though!!!\n  # We just invented a point\n  annotate(\n    geom = \"point\",\n    x = 40000, y = 76\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#any-geom-works-1",
+    "href": "slides/10-themes-axes-annotation.html#any-geom-works-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Any geom works",
+    "text": "Any geom works\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"rect\",\n    xmin = 30000, xmax = 50000,\n    ymin = 78, ymax = 82,\n    fill = \"red\", alpha = 0.2\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#use-multiple-annotations",
+    "href": "slides/10-themes-axes-annotation.html#use-multiple-annotations",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Use multiple annotations",
+    "text": "Use multiple annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"rect\",\n    xmin = 30000, xmax = 50000,\n    ymin = 78, ymax = 82,\n    fill = \"red\", alpha = 0.2\n  ) +\n  annotate(\n    geom = \"label\",\n    x = 40000, y = 76.5,\n    label = \"Rich and long-living\"\n  ) +\n  annotate(\n    geom = \"segment\",\n    x = 40000, xend = 40000,\n    y = 76.8, yend = 77.8,\n    arrow = arrow(\n      length = unit(0.1, \"in\")\n    )\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#world-development-indicators",
+    "href": "slides/10-themes-axes-annotation.html#world-development-indicators",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "World development indicators",
+    "text": "World development indicators\n\nwdi_co2_raw <- read_csv(\"data/wdi_co2.csv\")\n\n\n\nwdi_clean <- wdi_co2_raw |>\n  filter(region != \"Aggregates\") |>\n  select(iso2c, iso3c, country, year,\n    population = SP.POP.TOTL,\n    co2_emissions = EN.ATM.CO2E.PC,\n    gdp_per_cap = NY.GDP.PCAP.KD,\n    region, income\n  )\n\nglimpse(wdi_clean)\n\n\nRows: 4,536\nColumns: 9\n$ iso2c         <chr> \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"A…\n$ iso3c         <chr> \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", …\n$ country       <chr> \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanista…\n$ year          <dbl> 2015, 1997, 2014, 2003, 2000, 2002, 2010, 2011, 2001, 20…\n$ population    <dbl> 33753499, 17788819, 32716210, 22645130, 19542982, 210002…\n$ co2_emissions <dbl> 0.17627802, 0.06183660, 0.14916154, 0.05387472, 0.038888…\n$ gdp_per_cap   <dbl> 592.4765, NA, 602.5170, 363.1015, NA, 359.7663, 569.2827…\n$ region        <chr> \"South Asia\", \"South Asia\", \"South Asia\", \"South Asia\", …\n$ income        <chr> \"Low income\", \"Low income\", \"Low income\", \"Low income\", …"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#clean-and-reshape-data",
+    "href": "slides/10-themes-axes-annotation.html#clean-and-reshape-data",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Clean and reshape data",
+    "text": "Clean and reshape data\n\nco2_rankings <- wdi_clean |>\n  # Get rid of smaller countries\n  filter(population > 200000) |>\n  # Only look at two years\n  filter(year %in% c(1995, 2014)) |>\n  # Get rid of all the rows that have missing values in co2_emissions\n  drop_na(co2_emissions) |>\n  # Look at each year individually and rank countries based on their emissions that year\n  group_by(year) |>\n  mutate(ranking = rank(co2_emissions)) |>\n  ungroup() |>\n  # Only select required columns\n  select(iso3c, country, year, region, income, ranking) |>\n  # pivot long\n  pivot_wider(names_from = year, names_prefix = \"rank_\", values_from = ranking) |>\n  # Find the difference in ranking between 2014 and 1995\n  mutate(rank_diff = rank_2014 - rank_1995) |>\n  # Remove all rows where there's a missing value in the rank_diff column\n  drop_na(rank_diff) |>\n  # Make an indicator variable that is true of the absolute value of the\n  # difference in rankings is greater than 25\n  mutate(big_change = ifelse(abs(rank_diff) >= 25, TRUE, FALSE)) |>\n  # Make another indicator variable that indicates if the rank improved by a\n  # lot, worsened by a lot, or didn't change much.\n  mutate(better_big_change = case_when(\n    rank_diff <= -25 ~ \"Rank improved\",\n    rank_diff >= 25 ~ \"Rank worsened\",\n    TRUE ~ \"Rank changed a little\"\n  ))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#clean-and-reshape-data-1",
+    "href": "slides/10-themes-axes-annotation.html#clean-and-reshape-data-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Clean and reshape data",
+    "text": "Clean and reshape data\n\nhead(wdi_clean)\n\n# A tibble: 6 × 9\n  iso2c iso3c country      year population co2_emissions gdp_per…¹ region income\n  <chr> <chr> <chr>       <dbl>      <dbl>         <dbl>     <dbl> <chr>  <chr> \n1 AF    AFG   Afghanistan  2015   33753499        0.176       592. South… Low i…\n2 AF    AFG   Afghanistan  1997   17788819        0.0618       NA  South… Low i…\n3 AF    AFG   Afghanistan  2014   32716210        0.149       603. South… Low i…\n4 AF    AFG   Afghanistan  2003   22645130        0.0539      363. South… Low i…\n5 AF    AFG   Afghanistan  2000   19542982        0.0389       NA  South… Low i…\n6 AF    AFG   Afghanistan  2002   21000256        0.0490      360. South… Low i…\n# … with abbreviated variable name ¹​gdp_per_cap\n\n\n\nhead(co2_rankings)\n\n# A tibble: 6 × 9\n  iso3c country     region        income rank_…¹ rank_…² rank_…³ big_c…⁴ bette…⁵\n  <chr> <chr>       <chr>         <chr>    <dbl>   <dbl>   <dbl> <lgl>   <chr>  \n1 AFG   Afghanistan South Asia    Low i…      12      15      -3 FALSE   Rank c…\n2 ALB   Albania     Europe & Cen… Upper…      72      51      21 FALSE   Rank c…\n3 DZA   Algeria     Middle East … Lower…     107      94      13 FALSE   Rank c…\n4 AGO   Angola      Sub-Saharan … Lower…      64      64       0 FALSE   Rank c…\n5 ARG   Argentina   Latin Americ… Upper…     113      99      14 FALSE   Rank c…\n6 ARM   Armenia     Europe & Cen… Upper…      79      69      10 FALSE   Rank c…\n# … with abbreviated variable names ¹​rank_2014, ²​rank_1995, ³​rank_diff,\n#   ⁴​big_change, ⁵​better_big_change"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-1",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-1",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nSet the random seed for reproducibility.\n\n\n\nset.seed(123)"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-2",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-2",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nInitialize the ggplot() object.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n)"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-3",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-3",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nCreate a basic scatterplot, color-coded based on rank changes.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  geom_point(aes(color = better_big_change))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-4",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-4",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nLabel points for countries with a “big” change.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-5",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-5",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nAdd a reference line in the background to show what it would look like if countries did not change rank order. Note xend and yend differ due to new countries forming during the 20 year period.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-6",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-6",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nAnnotate the plot to clarify outliers that are improving.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-7",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-7",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nAnnotate the plot to clarify the outliers that are worsening.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-8",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-8",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nChoose a custom color palette to highlight the outliers.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\"))"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-9",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-9",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nUse the same colors for the labels. Only need the last two values in the original palette.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) #<<"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-10",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-10",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nAdjust the axis labeling and remove the padding on both axes.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) + #<<\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) #<<"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-11",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-11",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nAdd human-readable titles, labels, etc.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-12",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-12",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nGet rid of the legends - unnecessary.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\")"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-13",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-13",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nChange the base theme and font to match the text labels.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\")"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-14",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-14",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nUse HTML and Markdown syntax to customize the visual appearance of the title and subtitle.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO<sub>2</sub> emission rankings between 1995 and 2014\", #<<\n    subtitle = \"Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted\", #<<\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\")"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-15",
+    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-15",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Plot the data and annotate",
+    "text": "Plot the data and annotate\n\nEnsure rendering of HTML/Markdown syntax with ggtext::element_markdown().\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO<sub>2</sub> emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\") +\n  theme(\n    plot.title = element_markdown(face = \"bold\", size = rel(1.6)),\n    plot.subtitle = element_markdown(size = rel(1.3)),\n    plot.margin = unit(c(0.5, 1, 0.5, 0.5), units = \"lines\")\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#final-plot",
+    "href": "slides/10-themes-axes-annotation.html#final-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Final plot",
+    "text": "Final plot\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/05-stats-scales-guides.html#project-1-1",
@@ -2567,509 +3022,5 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
-  },
-  {
-    "objectID": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-2",
-    "href": "slides/09-data-wrangling-iii.html#pivoting-cornell-degrees-2",
-    "title": "Data wrangling (III)",
-    "section": "Pivoting Cornell degrees",
-    "text": "Pivoting Cornell degrees\n\nLet’s recreate this visualization!"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#announcements-1",
-    "href": "slides/10-themes-axes-annotation.html#announcements-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Announcements",
-    "text": "Announcements\n\nHomework 2 due tomorrow\nFeedback for project 1 proposals posted as issue on GitHub\nLab tomorrow: finish homework 2 and/or make progress on project 1"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#agenda-for-today",
-    "href": "slides/10-themes-axes-annotation.html#agenda-for-today",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Agenda for today",
-    "text": "Agenda for today\n\nThemes\nAxes\nAnnotations"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#packages-figures",
-    "href": "slides/10-themes-axes-annotation.html#packages-figures",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(scales)\nlibrary(ggthemes)\nlibrary(ggpomological)\nlibrary(colorspace)\nlibrary(lubridate)\nlibrary(hrbrthemes)\nlibrary(WDI)\nlibrary(ggrepel)\nlibrary(ggtext)\n\n# setup custom fonts\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# set default theme for ggplot2\ntheme_set(theme_gray(base_size = 12))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#yaml-options",
-    "href": "slides/10-themes-axes-annotation.html#yaml-options",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "YAML options",
-    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#is-that-gray-background-okay",
-    "href": "slides/10-themes-axes-annotation.html#is-that-gray-background-okay",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Is that gray background okay?",
-    "text": "Is that gray background okay?\n\n\nIt adds contrast! Some people just don’t like it 🤷"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#like-this",
-    "href": "slides/10-themes-axes-annotation.html#like-this",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Like this!",
-    "text": "Like this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  theme_tufte()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#and-this",
-    "href": "slides/10-themes-axes-annotation.html#and-this",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "And this!",
-    "text": "And this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  theme_solarized()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#one-magic-powerful-function",
-    "href": "slides/10-themes-axes-annotation.html#one-magic-powerful-function",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "One magic, powerful function",
-    "text": "One magic, powerful function\n–\n.huge[theme()]"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#axis-breaks",
-    "href": "slides/10-themes-axes-annotation.html#axis-breaks",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Axis breaks",
-    "text": "Axis breaks\n\nHow can the following figure be improved with custom breaks in axes, if at all?"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#context-matters",
-    "href": "slides/10-themes-axes-annotation.html#context-matters",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Context matters",
-    "text": "Context matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(from = 2000, to = 2020, by = 2))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#conciseness-matters",
-    "href": "slides/10-themes-axes-annotation.html#conciseness-matters",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Conciseness matters",
-    "text": "Conciseness matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(2000, 2020, 4))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#precision-matters",
-    "href": "slides/10-themes-axes-annotation.html#precision-matters",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Precision matters",
-    "text": "Precision matters\n\npac_plot +\n  scale_x_continuous(breaks = seq(2000, 2020, 4)) +\n  labs(x = \"Election year\")"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points",
-    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Label actual data points",
-    "text": "Label actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\n–"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#add-arbitrary-annotations",
-    "href": "slides/10-themes-axes-annotation.html#add-arbitrary-annotations",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Add arbitrary annotations",
-    "text": "Add arbitrary annotations\nannotate()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points-3",
-    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points-3",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Label actual data points",
-    "text": "Label actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\n–"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#add-arbitrary-annotations-1",
-    "href": "slides/10-themes-axes-annotation.html#add-arbitrary-annotations-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Add arbitrary annotations",
-    "text": "Add arbitrary annotations\nannotate()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#world-development-indicators",
-    "href": "slides/10-themes-axes-annotation.html#world-development-indicators",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "World development indicators",
-    "text": "World development indicators\n\nwdi_co2_raw <- read_csv(\"data/wdi_co2.csv\")\n\n\n\nwdi_clean <- wdi_co2_raw |>\n  filter(region != \"Aggregates\") |>\n  select(iso2c, iso3c, country, year,\n    population = SP.POP.TOTL,\n    co2_emissions = EN.ATM.CO2E.PC,\n    gdp_per_cap = NY.GDP.PCAP.KD,\n    region, income\n  )\n\nglimpse(wdi_clean)\n\n\nRows: 4,536\nColumns: 9\n$ iso2c         <chr> \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"AF\", \"A…\n$ iso3c         <chr> \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", \"AFG\", …\n$ country       <chr> \"Afghanistan\", \"Afghanistan\", \"Afghanistan\", \"Afghanista…\n$ year          <dbl> 2015, 1997, 2014, 2003, 2000, 2002, 2010, 2011, 2001, 20…\n$ population    <dbl> 33753499, 17788819, 32716210, 22645130, 19542982, 210002…\n$ co2_emissions <dbl> 0.17627802, 0.06183660, 0.14916154, 0.05387472, 0.038888…\n$ gdp_per_cap   <dbl> 592.4765, NA, 602.5170, 363.1015, NA, 359.7663, 569.2827…\n$ region        <chr> \"South Asia\", \"South Asia\", \"South Asia\", \"South Asia\", …\n$ income        <chr> \"Low income\", \"Low income\", \"Low income\", \"Low income\", …"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#clean-and-reshape-data",
-    "href": "slides/10-themes-axes-annotation.html#clean-and-reshape-data",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Clean and reshape data",
-    "text": "Clean and reshape data\n\nco2_rankings <- wdi_clean |>\n  # Get rid of smaller countries\n  filter(population > 200000) |>\n  # Only look at two years\n  filter(year %in% c(1995, 2014)) |>\n  # Get rid of all the rows that have missing values in co2_emissions\n  drop_na(co2_emissions) |>\n  # Look at each year individually and rank countries based on their emissions that year\n  group_by(year) |>\n  mutate(ranking = rank(co2_emissions)) |>\n  ungroup() |>\n  # Only select required columns\n  select(iso3c, country, year, region, income, ranking) |>\n  # pivot long\n  pivot_wider(names_from = year, names_prefix = \"rank_\", values_from = ranking) |>\n  # Find the difference in ranking between 2014 and 1995\n  mutate(rank_diff = rank_2014 - rank_1995) |>\n  # Remove all rows where there's a missing value in the rank_diff column\n  drop_na(rank_diff) |>\n  # Make an indicator variable that is true of the absolute value of the\n  # difference in rankings is greater than 25\n  mutate(big_change = ifelse(abs(rank_diff) >= 25, TRUE, FALSE)) |>\n  # Make another indicator variable that indicates if the rank improved by a\n  # lot, worsened by a lot, or didn't change much.\n  mutate(better_big_change = case_when(\n    rank_diff <= -25 ~ \"Rank improved\",\n    rank_diff >= 25 ~ \"Rank worsened\",\n    TRUE ~ \"Rank changed a little\"\n  ))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#clean-and-reshape-data-1",
-    "href": "slides/10-themes-axes-annotation.html#clean-and-reshape-data-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Clean and reshape data",
-    "text": "Clean and reshape data\n\nhead(wdi_clean)\n\n# A tibble: 6 × 9\n  iso2c iso3c country      year population co2_emissions gdp_per…¹ region income\n  <chr> <chr> <chr>       <dbl>      <dbl>         <dbl>     <dbl> <chr>  <chr> \n1 AF    AFG   Afghanistan  2015   33753499        0.176       592. South… Low i…\n2 AF    AFG   Afghanistan  1997   17788819        0.0618       NA  South… Low i…\n3 AF    AFG   Afghanistan  2014   32716210        0.149       603. South… Low i…\n4 AF    AFG   Afghanistan  2003   22645130        0.0539      363. South… Low i…\n5 AF    AFG   Afghanistan  2000   19542982        0.0389       NA  South… Low i…\n6 AF    AFG   Afghanistan  2002   21000256        0.0490      360. South… Low i…\n# … with abbreviated variable name ¹​gdp_per_cap\n\n\n\nhead(co2_rankings)\n\n# A tibble: 6 × 9\n  iso3c country     region        income rank_…¹ rank_…² rank_…³ big_c…⁴ bette…⁵\n  <chr> <chr>       <chr>         <chr>    <dbl>   <dbl>   <dbl> <lgl>   <chr>  \n1 AFG   Afghanistan South Asia    Low i…      12      15      -3 FALSE   Rank c…\n2 ALB   Albania     Europe & Cen… Upper…      72      51      21 FALSE   Rank c…\n3 DZA   Algeria     Middle East … Lower…     107      94      13 FALSE   Rank c…\n4 AGO   Angola      Sub-Saharan … Lower…      64      64       0 FALSE   Rank c…\n5 ARG   Argentina   Latin Americ… Upper…     113      99      14 FALSE   Rank c…\n6 ARM   Armenia     Europe & Cen… Upper…      79      69      10 FALSE   Rank c…\n# … with abbreviated variable names ¹​rank_2014, ²​rank_1995, ³​rank_diff,\n#   ⁴​big_change, ⁵​better_big_change"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#or-this",
-    "href": "slides/10-themes-axes-annotation.html#or-this",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Or this!",
-    "text": "Or this!\n\n\nlibrary(ggthemes)\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  scale_color_economist() +\n  theme_economist()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#and-even-this",
-    "href": "slides/10-themes-axes-annotation.html#and-even-this",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "And even this!",
-    "text": "And even this!\n\n\nlibrary(ggpomological)\nlibrary(showtext)\n\nfont_add_google(\"Homemade Apple\")\n\nggplot(penguins, aes(\n  x = bill_depth_mm,\n  y = bill_length_mm,\n  color = species\n)) +\n  geom_point(size = 2) +\n  scale_color_pomological() +\n  theme_pomological_fancy()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#theme-system",
-    "href": "slides/10-themes-axes-annotation.html#theme-system",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Theme system",
-    "text": "Theme system\n\n\nSource: ggplot2 theme elements demonstration"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#theme-elements",
-    "href": "slides/10-themes-axes-annotation.html#theme-elements",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Theme elements",
-    "text": "Theme elements\nEach element in the plot can be targeted\n\n\nPlot title = plot.title\nGrid lines = panel.grid\nLegend background = legend.background"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#theme-functions",
-    "href": "slides/10-themes-axes-annotation.html#theme-functions",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Theme functions",
-    "text": "Theme functions\nUse special functions to manipulate specific elements\n\n\nText-based things = element_text()\nRectangular things (backgrounds) = element_rect()\nLine-based things (axis lines, grid lines) = element_line()\nDisable element completely = element_blank()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#how-to-learn-theme",
-    "href": "slides/10-themes-axes-annotation.html#how-to-learn-theme",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "How to learn theme()",
-    "text": "How to learn theme()\n\n\nThe theme() function has 94 possible arguments\nYou can get hyper-specific with things like axis.ticks.length.x.bottom\nThe only way to learn how to use theme() is to use it and tinker with it"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#handlive-coding",
-    "href": "slides/10-themes-axes-annotation.html#handlive-coding",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": ".hand[Live coding]",
-    "text": ".hand[Live coding]\n# install if necessary\ninstall.packages(c(\"tidyverse\", \"here\", \"colorspace\",\n                   \"scales\", \"ggrepel\", \"ggtext\", \"usethis\"))\n\nusethis::use_course(\"uc-dataviz/themes-annotations\")\nTODO"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#live-coding",
-    "href": "slides/10-themes-axes-annotation.html#live-coding",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Live coding",
-    "text": "Live coding\n# install if necessary\ninstall.packages(c(\"tidyverse\", \"here\", \"colorspace\",\n                   \"scales\", \"ggrepel\", \"ggtext\", \"usethis\"))\n\nusethis::use_course(\"uc-dataviz/themes-annotations\")\nTODO"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#little-details-matter",
-    "href": "slides/10-themes-axes-annotation.html#little-details-matter",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Little details matter",
-    "text": "Little details matter"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#obsession-with-tiny-details",
-    "href": "slides/10-themes-axes-annotation.html#obsession-with-tiny-details",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Obsession with tiny details",
-    "text": "Obsession with tiny details"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#human-focused-design",
-    "href": "slides/10-themes-axes-annotation.html#human-focused-design",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Human-focused design",
-    "text": "Human-focused design\n\n\n“This is what customers pay us for – to sweat all these details so it’s easy and pleasant for them to use our computers.”"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#graph-details-redundant-coding",
-    "href": "slides/10-themes-axes-annotation.html#graph-details-redundant-coding",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Graph details: Redundant coding",
-    "text": "Graph details: Redundant coding"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#graph-details-consistent-ordering",
-    "href": "slides/10-themes-axes-annotation.html#graph-details-consistent-ordering",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Graph details: Consistent ordering",
-    "text": "Graph details: Consistent ordering"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#details-matter",
-    "href": "slides/10-themes-axes-annotation.html#details-matter",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Details matter",
-    "text": "Details matter\nWorrying about tiny details in graphs…\n\n…makes them easier for your audience to understand\n\n\n…improves their beauty\n\n\n…enhances the truth"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#including-text-on-a-plot",
-    "href": "slides/10-themes-axes-annotation.html#including-text-on-a-plot",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Including text on a plot",
-    "text": "Including text on a plot\nLabel actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\nAdd arbitrary annotations\nannotate()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points-1",
-    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Label actual data points",
-    "text": "Label actual data points\n\n\nlibrary(gapminder)\n\ngapminder_europe <- gapminder |>\n  filter(\n    year == 2007,\n    continent == \"Europe\"\n  )\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_text(aes(label = country))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#label-actual-data-points-2",
-    "href": "slides/10-themes-axes-annotation.html#label-actual-data-points-2",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Label actual data points",
-    "text": "Label actual data points\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label(aes(label = country))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#solution-1-repel-labels",
-    "href": "slides/10-themes-axes-annotation.html#solution-1-repel-labels",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Solution 1: Repel labels",
-    "text": "Solution 1: Repel labels\n\n\nlibrary(ggrepel)\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_text_repel(aes(label = country))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#solution-1-repel-labels-1",
-    "href": "slides/10-themes-axes-annotation.html#solution-1-repel-labels-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Solution 1: Repel labels",
-    "text": "Solution 1: Repel labels\n\n\nlibrary(ggrepel)\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label_repel(aes(label = country)) #<<"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#solution-2a-dont-use-so-many-labels",
-    "href": "slides/10-themes-axes-annotation.html#solution-2a-dont-use-so-many-labels",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Solution 2a: Don’t use so many labels",
-    "text": "Solution 2a: Don’t use so many labels\n\n\ngapminder_europe <- gapminder_europe |>\n  mutate(\n    should_be_labeled = country %in% c(\n      \"Albania\",\n      \"Norway\",\n      \"Hungary\"\n    )\n  )\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  geom_label_repel(\n    data = filter(\n      gapminder_europe,\n      should_be_labeled == TRUE\n    ),\n    aes(label = country)\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#solution-2b-use-other-aesthetics-too",
-    "href": "slides/10-themes-axes-annotation.html#solution-2b-use-other-aesthetics-too",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Solution 2b: Use other aesthetics too",
-    "text": "Solution 2b: Use other aesthetics too\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point(aes(color = should_be_labeled)) +\n  geom_label_repel(\n    data = filter(\n      gapminder_europe,\n      should_be_labeled == TRUE\n    ),\n    aes(\n      label = country,\n      fill = should_be_labeled\n    ),\n    color = \"white\"\n  ) +\n  scale_color_manual(values = c(\n    \"grey50\",\n    \"red\"\n  )) +\n  scale_fill_manual(values = c(\"red\")) +\n  guides(color = \"none\", fill = \"none\")"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#highlight-non-text-things-too",
-    "href": "slides/10-themes-axes-annotation.html#highlight-non-text-things-too",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "(Highlight non-text things too!)",
-    "text": "(Highlight non-text things too!)\n\n\n# Color just Oceania\ngapminder_highlighted <- gapminder |>\n  mutate(\n    is_oceania =\n      ifelse(continent == \"Oceania\",\n        TRUE, FALSE\n      )\n  )\n\nggplot(\n  gapminder_highlighted,\n  aes(\n    x = year, y = lifeExp,\n    group = country,\n    color = is_oceania,\n    size = is_oceania\n  )\n) +\n  geom_line() +\n  scale_color_manual(values = c(\n    \"grey70\",\n    \"red\"\n  )) +\n  scale_size_manual(values = c(0.1, 0.5)) +\n  guides(color = \"none\", size = \"none\") +\n  theme_minimal()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#including-text-on-a-plot-1",
-    "href": "slides/10-themes-axes-annotation.html#including-text-on-a-plot-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Including text on a plot",
-    "text": "Including text on a plot\nLabel actual data points\ngeom_text(), geom_label(), geom_text_repel(), etc.\nAdd arbitrary annotations\nannotate()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations",
-    "href": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Adding arbitrary annotations",
-    "text": "Adding arbitrary annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"text\",\n    x = 40000, y = 76,\n    label = \"Some text!\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations-1",
-    "href": "slides/10-themes-axes-annotation.html#adding-arbitrary-annotations-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Adding arbitrary annotations",
-    "text": "Adding arbitrary annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"label\",\n    x = 40000, y = 76,\n    label = \"Some text!\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#any-geom-works",
-    "href": "slides/10-themes-axes-annotation.html#any-geom-works",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Any geom works",
-    "text": "Any geom works\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  # This is evil though!!!\n  # We just invented a point\n  annotate(\n    geom = \"point\",\n    x = 40000, y = 76\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#any-geom-works-1",
-    "href": "slides/10-themes-axes-annotation.html#any-geom-works-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Any geom works",
-    "text": "Any geom works\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"rect\",\n    xmin = 30000, xmax = 50000,\n    ymin = 78, ymax = 82,\n    fill = \"red\", alpha = 0.2\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#use-multiple-annotations",
-    "href": "slides/10-themes-axes-annotation.html#use-multiple-annotations",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Use multiple annotations",
-    "text": "Use multiple annotations\n\n\nggplot(\n  gapminder_europe,\n  aes(x = gdpPercap, y = lifeExp)\n) +\n  geom_point() +\n  annotate(\n    geom = \"rect\",\n    xmin = 30000, xmax = 50000,\n    ymin = 78, ymax = 82,\n    fill = \"red\", alpha = 0.2\n  ) +\n  annotate(\n    geom = \"label\",\n    x = 40000, y = 76.5,\n    label = \"Rich and long-living\"\n  ) +\n  annotate(\n    geom = \"segment\",\n    x = 40000, xend = 40000,\n    y = 76.8, yend = 77.8,\n    arrow = arrow(\n      length = unit(0.1, \"in\")\n    )\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-1",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-1",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nSet the random seed for reproducibility.\n\n\n\nset.seed(123)"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-2",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-2",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nInitialize the ggplot() object.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n)"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-3",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-3",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nCreate a basic scatterplot, color-coded based on rank changes.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  geom_point(aes(color = better_big_change))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-4",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-4",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nLabel points for countries with a “big” change.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-5",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-5",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nAdd a reference line in the background to show what it would look like if countries did not change rank order. Note xend and yend differ due to new countries forming during the 20 year period.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-6",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-6",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nAnnotate the plot to clarify outliers that are improving.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-7",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-7",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nAnnotate the plot to clarify the outliers that are worsening.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-8",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-8",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nChoose a custom color palette to highlight the outliers.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\"))"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-9",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-9",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nUse the same colors for the labels. Only need the last two values in the original palette.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) #<<"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-10",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-10",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nAdjust the axis labeling and remove the padding on both axes.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) + #<<\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) #<<"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-11",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-11",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nAdd human-readable titles, labels, etc.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-12",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-12",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nGet rid of the legends - unnecessary.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\")"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-13",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-13",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nChange the base theme and font to match the text labels.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO2 emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that improved or worsened more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\")"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-14",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-14",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nUse HTML and Markdown syntax to customize the visual appearance of the title and subtitle.\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO<sub>2</sub> emission rankings between 1995 and 2014\", #<<\n    subtitle = \"Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted\", #<<\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\")"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-15",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-15",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\nEnsure rendering of HTML/Markdown syntax with ggtext::element_markdown().\n\n\n\nset.seed(123)\n\nggplot(\n  data = co2_rankings,\n  mapping = aes(x = rank_1995, y = rank_2014)\n) +\n  annotate(geom = \"segment\", x = 0, xend = 172, y = 0, yend = 178) +\n  geom_point(aes(color = better_big_change)) +\n  geom_label_repel(\n    data = filter(co2_rankings, big_change == TRUE),\n    aes(label = country, fill = better_big_change),\n    color = \"white\", family = \"Roboto Condensed\"\n  ) +\n  annotate(\n    geom = \"text\", x = 170, y = 6, label = \"Outliers improving\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 1, color = \"grey50\"\n  ) +\n  annotate(\n    geom = \"text\", x = 2, y = 170, label = \"Outliers worsening\",\n    family = \"Roboto Condensed\", fontface = \"italic\", hjust = 0, color = \"grey50\"\n  ) +\n  scale_color_manual(values = c(\"grey50\", \"#0074D9\", \"#FF4136\")) +\n  scale_fill_manual(values = c(\"#0074D9\", \"#FF4136\")) +\n  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +\n  labs(\n    x = \"Rank in 1995\", y = \"Rank in 2014\",\n    title = \"Changes in CO<sub>2</sub> emission rankings between 1995 and 2014\",\n    subtitle = \"Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted\",\n    caption = \"Source: The World Bank.\\nCountries with populations of less than 200,000 excluded.\"\n  ) +\n  guides(color = \"none\", fill = \"none\") +\n  theme_bw(base_family = \"Roboto Condensed\") +\n  theme(\n    plot.title = element_markdown(face = \"bold\", size = rel(1.6)),\n    plot.subtitle = element_markdown(size = rel(1.3)),\n    plot.margin = unit(c(0.5, 1, 0.5, 0.5), units = \"lines\")\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-16",
-    "href": "slides/10-themes-axes-annotation.html#plot-the-data-and-annotate-16",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Plot the data and annotate",
-    "text": "Plot the data and annotate\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#final-plot",
-    "href": "slides/10-themes-axes-annotation.html#final-plot",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Final plot",
-    "text": "Final plot\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#gapminder",
-    "href": "slides/10-themes-axes-annotation.html#gapminder",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "gapminder",
-    "text": "gapminder\n\nlibrary(gapminder)\ngapminder\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   <fct>       <fct>     <int>   <dbl>    <int>     <dbl>\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# … with 1,694 more rows"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#basic-plot",
-    "href": "slides/10-themes-axes-annotation.html#basic-plot",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Basic plot",
-    "text": "Basic plot\n\nCodePlot\n\n\n\ngapminder_filtered <- gapminder |>\n  filter(year > 2000)\n\nbase_plot <- ggplot(\n  data = gapminder_filtered,\n  mapping = aes(\n    x = gdpPercap, y = lifeExp,\n    color = continent, size = pop\n  )\n) +\n  geom_point() +\n  # Use dollars, and get rid of the cents part (i.e. $300 instead of $300.00)\n  scale_x_log10(labels = label_dollar(scale_cut = cut_short_scale())) +\n  # Format with commas\n  scale_size_continuous(labels = label_comma()) +\n  # Use dark 3\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  labs(\n    x = \"GDP per capita\", y = \"Life expectancy\",\n    color = \"Continent\", size = \"Population\",\n    title = \"Here's a cool title\",\n    subtitle = \"And here's a neat subtitle\",\n    caption = \"Source: The Gapminder Project\"\n  ) +\n  facet_wrap(facets = vars(year))\n\nbase_plot"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#change-the-theme",
-    "href": "slides/10-themes-axes-annotation.html#change-the-theme",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Change the theme",
-    "text": "Change the theme\n\nbase_plot +\n  theme_minimal()"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
-    "href": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Create a custom theme",
-    "text": "Create a custom theme\n\n# add new font family\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# change base font\nmy_pretty_theme <- theme_minimal(base_family = \"Roboto Condensed\", base_size = 14) +\n  theme(\n    # Remove minor grid lines\n    panel.grid.minor = element_blank(),\n    # Bold, bigger title\n    plot.title = element_text(face = \"bold\", size = rel(1.7)),\n    # Plain, slightly bigger subtitle that is grey\n    plot.subtitle = element_text(face = \"plain\", size = rel(1.3), color = \"grey70\"),\n    # Italic, smaller, grey caption that is left-aligned\n    plot.caption = element_text(\n      face = \"italic\", size = rel(0.7),\n      color = \"grey70\", hjust = 0\n    ),\n    # Bold legend titles\n    legend.title = element_text(face = \"bold\"),\n    # Bold, slightly larger facet titles that are left-aligned for the sake of repetition\n    strip.text = element_text(face = \"bold\", size = rel(1.1), hjust = 0),\n    # Bold axis titles\n    axis.title = element_text(face = \"bold\"),\n    # Add some space above the x-axis title and make it left-aligned\n    axis.title.x = element_text(margin = margin(t = 10), hjust = 0),\n    # Add some space to the right of the y-axis title and make it top-aligned\n    axis.title.y = element_text(margin = margin(r = 10), hjust = 1),\n    # Add a light grey background to the facet titles, with no borders\n    strip.background = element_rect(fill = \"grey90\", color = NA),\n    # Add a thin grey border around all the plots to tie in the facet titles\n    panel.border = element_rect(color = \"grey90\", fill = NA)\n  )"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
-    "href": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Applied to existing plot",
-    "text": "Applied to existing plot\n\nbase_plot +\n  my_pretty_theme"
-  },
-  {
-    "objectID": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
-    "href": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
-    "title": "Deep dive: themes + axes + annotation",
-    "section": "Applied to another plot",
-    "text": "Applied to another plot\n\nCodePlot\n\n\n\nlibrary(palmerpenguins)\n\npenguins_example <- ggplot(\n  data = drop_na(penguins, sex),\n  mapping = aes(x = bill_length_mm, y = body_mass_g, color = str_to_title(sex))\n) +\n  geom_point(size = 3, alpha = 0.5) +\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  scale_y_continuous(labels = label_comma()) +\n  facet_wrap(vars(species)) +\n  labs(\n    x = \"Bill length (mm)\", y = \"Body mass (g)\", color = \"Sex\",\n    title = \"Gentoo penguins are the largest\",\n    subtitle = \"But females are typically smaller than males\",\n    caption = \"Here's a caption\"\n  ) +\n  my_pretty_theme\n\npenguins_example"
   }
 ]
