@@ -2580,7 +2580,7 @@
     "href": "slides/10-themes-axes-annotation.html#announcements-1",
     "title": "Deep dive: themes + axes + annotation",
     "section": "Announcements",
-    "text": "Announcements\nTODO"
+    "text": "Announcements\n\nHomework 2 due tomorrow\nFeedback for project 1 proposals posted as issue on GitHub\nLab tomorrow: finish homework 2 and/or make progress on project 1"
   },
   {
     "objectID": "slides/10-themes-axes-annotation.html#agenda-for-today",
@@ -2594,7 +2594,7 @@
     "href": "slides/10-themes-axes-annotation.html#packages-figures",
     "title": "Deep dive: themes + axes + annotation",
     "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(ggthemes)\nlibrary(ggpomological)\nlibrary(colorspace)\nlibrary(lubridate)\nlibrary(hrbrthemes)\nlibrary(WDI)\nlibrary(ggrepel)\nlibrary(ggtext)\n\n# setup custom fonts\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# set default theme for ggplot2\ntheme_set(theme_gray(base_size = 12))"
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(palmerpenguins)\nlibrary(scales)\nlibrary(ggthemes)\nlibrary(ggpomological)\nlibrary(colorspace)\nlibrary(lubridate)\nlibrary(hrbrthemes)\nlibrary(WDI)\nlibrary(ggrepel)\nlibrary(ggtext)\n\n# setup custom fonts\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# set default theme for ggplot2\ntheme_set(theme_gray(base_size = 12))"
   },
   {
     "objectID": "slides/10-themes-axes-annotation.html#yaml-options",
@@ -3029,5 +3029,47 @@
     "title": "Deep dive: themes + axes + annotation",
     "section": "Final plot",
     "text": "Final plot\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#gapminder",
+    "href": "slides/10-themes-axes-annotation.html#gapminder",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "gapminder",
+    "text": "gapminder\n\nlibrary(gapminder)\ngapminder\n\n# A tibble: 1,704 × 6\n   country     continent  year lifeExp      pop gdpPercap\n   <fct>       <fct>     <int>   <dbl>    <int>     <dbl>\n 1 Afghanistan Asia       1952    28.8  8425333      779.\n 2 Afghanistan Asia       1957    30.3  9240934      821.\n 3 Afghanistan Asia       1962    32.0 10267083      853.\n 4 Afghanistan Asia       1967    34.0 11537966      836.\n 5 Afghanistan Asia       1972    36.1 13079460      740.\n 6 Afghanistan Asia       1977    38.4 14880372      786.\n 7 Afghanistan Asia       1982    39.9 12881816      978.\n 8 Afghanistan Asia       1987    40.8 13867957      852.\n 9 Afghanistan Asia       1992    41.7 16317921      649.\n10 Afghanistan Asia       1997    41.8 22227415      635.\n# … with 1,694 more rows"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#basic-plot",
+    "href": "slides/10-themes-axes-annotation.html#basic-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Basic plot",
+    "text": "Basic plot\n\nCodePlot\n\n\n\ngapminder_filtered <- gapminder |>\n  filter(year > 2000)\n\nbase_plot <- ggplot(\n  data = gapminder_filtered,\n  mapping = aes(\n    x = gdpPercap, y = lifeExp,\n    color = continent, size = pop\n  )\n) +\n  geom_point() +\n  # Use dollars, and get rid of the cents part (i.e. $300 instead of $300.00)\n  scale_x_log10(labels = label_dollar(scale_cut = cut_short_scale())) +\n  # Format with commas\n  scale_size_continuous(labels = label_comma()) +\n  # Use dark 3\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  labs(\n    x = \"GDP per capita\", y = \"Life expectancy\",\n    color = \"Continent\", size = \"Population\",\n    title = \"Here's a cool title\",\n    subtitle = \"And here's a neat subtitle\",\n    caption = \"Source: The Gapminder Project\"\n  ) +\n  facet_wrap(facets = vars(year))\n\nbase_plot"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#change-the-theme",
+    "href": "slides/10-themes-axes-annotation.html#change-the-theme",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Change the theme",
+    "text": "Change the theme\n\nbase_plot +\n  theme_minimal()"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
+    "href": "slides/10-themes-axes-annotation.html#create-a-custom-theme",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Create a custom theme",
+    "text": "Create a custom theme\n\n# add new font family\nlibrary(showtext)\nfont_add_google(name = \"Roboto Condensed\")\n\n# change base font\nmy_pretty_theme <- theme_minimal(base_family = \"Roboto Condensed\", base_size = 14) +\n  theme(\n    # Remove minor grid lines\n    panel.grid.minor = element_blank(),\n    # Bold, bigger title\n    plot.title = element_text(face = \"bold\", size = rel(1.7)),\n    # Plain, slightly bigger subtitle that is grey\n    plot.subtitle = element_text(face = \"plain\", size = rel(1.3), color = \"grey70\"),\n    # Italic, smaller, grey caption that is left-aligned\n    plot.caption = element_text(\n      face = \"italic\", size = rel(0.7),\n      color = \"grey70\", hjust = 0\n    ),\n    # Bold legend titles\n    legend.title = element_text(face = \"bold\"),\n    # Bold, slightly larger facet titles that are left-aligned for the sake of repetition\n    strip.text = element_text(face = \"bold\", size = rel(1.1), hjust = 0),\n    # Bold axis titles\n    axis.title = element_text(face = \"bold\"),\n    # Add some space above the x-axis title and make it left-aligned\n    axis.title.x = element_text(margin = margin(t = 10), hjust = 0),\n    # Add some space to the right of the y-axis title and make it top-aligned\n    axis.title.y = element_text(margin = margin(r = 10), hjust = 1),\n    # Add a light grey background to the facet titles, with no borders\n    strip.background = element_rect(fill = \"grey90\", color = NA),\n    # Add a thin grey border around all the plots to tie in the facet titles\n    panel.border = element_rect(color = \"grey90\", fill = NA)\n  )"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
+    "href": "slides/10-themes-axes-annotation.html#applied-to-existing-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Applied to existing plot",
+    "text": "Applied to existing plot\n\nbase_plot +\n  my_pretty_theme"
+  },
+  {
+    "objectID": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
+    "href": "slides/10-themes-axes-annotation.html#applied-to-another-plot",
+    "title": "Deep dive: themes + axes + annotation",
+    "section": "Applied to another plot",
+    "text": "Applied to another plot\n\nCodePlot\n\n\n\nlibrary(palmerpenguins)\n\npenguins_example <- ggplot(\n  data = drop_na(penguins, sex),\n  mapping = aes(x = bill_length_mm, y = body_mass_g, color = str_to_title(sex))\n) +\n  geom_point(size = 3, alpha = 0.5) +\n  scale_color_discrete_qualitative(palette = \"Dark 3\") +\n  scale_y_continuous(labels = label_comma()) +\n  facet_wrap(vars(species)) +\n  labs(\n    x = \"Bill length (mm)\", y = \"Body mass (g)\", color = \"Sex\",\n    title = \"Gentoo penguins are the largest\",\n    subtitle = \"But females are typically smaller than males\",\n    caption = \"Here's a caption\"\n  ) +\n  my_pretty_theme\n\npenguins_example"
   }
 ]
