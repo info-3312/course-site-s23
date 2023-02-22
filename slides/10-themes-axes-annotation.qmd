@@ -1,0 +1,1430 @@
+---
+title: "Deep dive: themes + axes + annotation"
+subtitle: "Lecture 10"
+date: "February 23, 2023"
+format: revealjs
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+library(patchwork)
+```
+
+# Announcements
+
+## Announcements
+
+TODO
+
+## Agenda for today
+
+- Themes
+- Axes
+- Annotations
+
+# Setup
+
+## Packages + figures
+
+```{r}
+#| cache: false
+# load packages
+library(tidyverse)
+library(palmerpenguins)
+library(ggthemes)
+library(ggpomological)
+library(colorspace)
+library(lubridate)
+library(hrbrthemes)
+library(WDI)
+library(ggrepel)
+library(ggtext)
+
+# set default theme for ggplot2
+theme_set(theme_gray(base_size = 12))
+```
+
+## YAML options
+
+```yaml
+knitr:
+  opts_chunk:
+    fig.width: 7
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    out.width: "80%"
+    fig.showtext: true
+```
+
+# Themes
+
+## Is that gray background okay?
+
+```{r}
+#| label: standard-grey
+#| echo: false
+#| out.width: 60%
+ggplot(penguins, aes(x = bill_depth_mm, y = bill_length_mm, color = species)) +
+  geom_point(size = 2)
+```
+
+. . .
+
+It adds contrast! Some people just don't like it `r emo::ji("shrug")`
+
+---
+
+```{r}
+#| label: alternatives
+#| echo: false
+#| fig.align: center
+include_graphics(path = "https://i.imgur.com/9luIDwf.gif")
+```
+
+## Like this!
+
+```{r}
+#| label: hrbrlight
+#| warning: false
+#| code-line-numbers: "9"
+#| output-location: column
+#| fig-width: 5
+library(ggthemes)
+
+ggplot(penguins, aes(
+  x = bill_depth_mm,
+  y = bill_length_mm,
+  color = species
+)) +
+  geom_point(size = 2) +
+  theme_tufte()
+```
+
+## And this!
+
+```{r}
+#| label: hrbrdark
+#| warning: false
+#| code-line-numbers: "9"
+#| output-location: column
+#| fig-width: 5
+library(ggthemes)
+
+ggplot(penguins, aes(
+  x = bill_depth_mm,
+  y = bill_length_mm,
+  color = species
+)) +
+  geom_point(size = 2) +
+  theme_solarized()
+```
+
+## Or this!
+
+```{r}
+#| label: economist
+#| warning: false
+#| code-line-numbers: "9-10"
+#| output-location: column
+#| fig-width: 5
+library(ggthemes)
+
+ggplot(penguins, aes(
+  x = bill_depth_mm,
+  y = bill_length_mm,
+  color = species
+)) +
+  geom_point(size = 2) +
+  scale_color_economist() +
+  theme_economist()
+```
+
+## And even this!
+
+```{r}
+#| label: pomological
+#| warning: false
+#| code-line-numbers: "12-13"
+#| output-location: column
+#| fig-width: 5
+library(ggpomological)
+library(showtext)
+
+font_add_google("Homemade Apple")
+
+ggplot(penguins, aes(
+  x = bill_depth_mm,
+  y = bill_length_mm,
+  color = species
+)) +
+  geom_point(size = 2) +
+  scale_color_pomological() +
+  theme_pomological_fancy()
+```
+
+# One magic, powerful function
+
+. . .
+
+[`theme()`]{.hand}
+
+# The anatomy of a `ggplot()` theme
+
+## Theme system
+
+```{r}
+#| echo: false
+include_graphics(path = "images/10/theme_elements-1024x755.png")
+```
+
+::: footnote
+Source: [`ggplot2` theme elements demonstration](https://henrywang.nl/ggplot2-theme-elements-demonstration/)
+:::
+
+## Theme elements
+
+### Each element in the plot can be targeted
+
+::: incremental
+- Plot title = `plot.title`
+- Grid lines = `panel.grid`
+- Legend background = `legend.background`
+:::
+
+## Theme functions
+
+### Use special functions to manipulate specific elements
+
+::: incremental
+
+- Text-based things = `element_text()`
+- Rectangular things (backgrounds) = `element_rect()`
+- Line-based things (axis lines, grid lines) = `element_line()`
+- Disable element completely = `element_blank()`
+
+:::
+
+## How to learn `theme()`
+
+::: incremental
+
+- The `theme()` function has **94** possible arguments
+- You can get hyper-specific with things like `axis.ticks.length.x.bottom`
+- The only way to learn how to use `theme()` is to use it and tinker with it
+
+:::
+
+## Live coding
+
+```r
+# install if necessary
+install.packages(c("tidyverse", "here", "colorspace",
+                   "scales", "ggrepel", "ggtext", "usethis"))
+
+usethis::use_course("uc-dataviz/themes-annotations")
+```
+
+TODO
+
+# Axes
+
+## Axis breaks
+
+::: task
+How can the following figure be improved with custom breaks in axes, if at all?
+:::
+
+```{r}
+#| echo: false
+#| message: false
+#| out.width: 70%
+pac_plot <- read_rds(file = "data/pac-uk-default.rds")
+pac_plot
+```
+
+## Context matters
+
+```{r}
+#| message: false
+#| warning: false
+#| out.width: 70%
+#| code-line-numbers: "2"
+pac_plot +
+  scale_x_continuous(breaks = seq(from = 2000, to = 2020, by = 2))
+```
+
+## Conciseness matters
+
+```{r}
+#| message: false
+#| warning: false
+#| out.width: 70%
+#| code-line-numbers: "2"
+pac_plot +
+  scale_x_continuous(breaks = seq(2000, 2020, 4))
+```
+
+## Precision matters
+
+```{r}
+#| message: false
+#| warning: false
+#| out.width: 70%
+#| code-line-numbers: "3"
+pac_plot +
+  scale_x_continuous(breaks = seq(2000, 2020, 4)) +
+  labs(x = "Election year")
+```
+
+# Fretting the little things
+
+## Little details matter
+
+:::: columns
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+include_graphics(path = "images/10/stevejobs.jpg")
+```
+:::
+
+::: {.column .fragment width="50%"}
+```{r}
+#| echo: false
+include_graphics(path = "images/10/apple_iie.jpg")
+```
+:::
+
+::::
+
+## Obsession with tiny details
+
+:::: columns
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+include_graphics(path = "images/10/ibm-circuit.jpg")
+```
+:::
+
+::: {.column .fragment width="50%"}
+```{r}
+#| echo: false
+include_graphics(path = "images/10/apple-iie-circuit.jpg")
+```
+:::
+
+::::
+
+## Human-focused design
+
+::: large
+> "This is what customers pay us for -- to sweat all these details so it's easy and pleasant for them to use our computers."
+:::
+
+## Graph details: Redundant coding
+
+```{r}
+#| include: false
+#| cache: false
+# switch back to minimal theme
+ggplot2::theme_set(ggplot2::theme_minimal(base_size = 16))
+```
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig.width: 6.0
+#| out.width: 100%
+penguins_bad <- ggplot(penguins, aes(x = bill_depth_mm, y = flipper_length_mm, color = species, fill = species)) +
+  geom_point(size = 2.5, stroke = 0.5, shape = 21, alpha = 0.6) +
+  scale_color_manual(values = darken(c("#009E73", "#56B4E9", "#E69F00"), 0.3)) +
+  scale_fill_manual(values = c("#009E73", "#56B4E9", "#E69F00")) +
+  labs(
+    x = "Bill depth (mm)",
+    y = "Flipper length (mm)",
+    color = NULL,
+    fill = NULL
+  )
+
+cowplot::stamp_bad(penguins_bad)
+```
+
+:::
+
+::: {.column .fragment width="50%"}
+
+```{r}
+#| echo: false
+#| fig.width: 6.0
+#| out.width: 100%
+penguins_good <- ggplot(penguins, aes(x = bill_depth_mm, y = flipper_length_mm, color = species, fill = species, shape = species)) +
+  geom_point(size = 2.5, stroke = 0.5, alpha = 0.6) +
+  scale_color_manual(values = darken(c("#56B4E9", "#E69F00", "#009E73"), 0.3)) +
+  scale_fill_manual(values = c("#56B4E9", "#E69F00", "#009E73")) +
+  labs(
+    x = "Bill depth (mm)",
+    y = "Flipper length (mm)",
+    color = NULL,
+    fill = NULL,
+    shape = NULL
+  )
+
+cowplot::stamp_good(penguins_good)
+```
+
+:::
+
+::::
+
+## Graph details: Consistent ordering
+
+:::: columns
+
+::: {.column width="50%"}
+
+```{r}
+#| echo: false
+#| fig.width: 6.0
+#| out.width: 100%
+tech_stocks <- read_csv("data/tech_stocks.csv") |>
+  mutate(date = ymd(date)) |>
+  select(company, date, price_indexed)
+
+price_plot_base <- ggplot(tech_stocks, aes(x = date, y = price_indexed, color = company)) +
+  geom_line(size = 0.66, na.rm = TRUE) +
+  scale_color_manual(
+    values = c(
+      Facebook = "#000000",
+      Alphabet = "#E69F00",
+      Microsoft = "#56B4E9",
+      Apple = "#009E73"
+    ),
+    name = "",
+    breaks = c("Alphabet", "Apple", "Facebook", "Microsoft")
+  ) +
+  scale_x_date(
+    name = "year",
+    limits = c(ymd("2012-06-01"), ymd("2017-05-31")),
+    expand = c(0, 0)
+  ) +
+  scale_y_continuous(
+    name = "stock price, indexed",
+    limits = c(0, 560),
+    expand = c(0, 0)
+  )
+
+cowplot::stamp_bad(price_plot_base)
+```
+
+:::
+
+::: {.column .fragment width="50%"}
+
+```{r}
+#| echo: false
+#| fig.width: 6.0
+#| out.width: 100%
+price_plot_base_good <- ggplot(tech_stocks, aes(x = date, y = price_indexed, color = company)) +
+  scale_color_manual(
+    values = c(
+      Facebook = "#000000",
+      Alphabet = "#E69F00",
+      Microsoft = "#56B4E9",
+      Apple = "#009E73"
+    ),
+    name = "",
+    breaks = c("Facebook", "Alphabet", "Microsoft", "Apple")
+  ) +
+  scale_x_date(
+    name = "year",
+    limits = c(ymd("2012-06-01"), ymd("2017-05-31")),
+    expand = c(0, 0)
+  ) +
+  scale_y_continuous(
+    name = "stock price, indexed",
+    limits = c(0, 560),
+    expand = c(0, 0)
+  )
+
+cowplot::stamp_good(price_plot_base_good +
+  geom_line(size = 0.66, na.rm = TRUE))
+```
+
+:::
+
+::::
+
+## Details matter
+
+Worrying about tiny details in graphs...
+
+. . .
+
+...makes them easier for your audience to understand
+
+. . .
+
+...improves their beauty
+
+. . .
+
+...enhances the truth
+
+# Text in plots
+
+## Including text on a plot
+
+### Label actual data points
+
+`geom_text()`, `geom_label()`, `geom_text_repel()`, etc.
+
+. . .
+
+### Add arbitrary annotations
+
+`annotate()`
+
+## Label actual data points
+
+```{r}
+#| label: gapminder-text-bad
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "14"
+library(gapminder)
+
+gapminder_europe <- gapminder |>
+  filter(
+    year == 2007,
+    continent == "Europe"
+  )
+
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  geom_text(aes(label = country))
+```
+
+## Label actual data points
+
+```{r}
+#| label: gapminder-label-bad
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "6"
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  geom_label(aes(label = country))
+```
+
+## Solution 1: Repel labels
+
+```{r}
+#| label: gapminder-repel
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "1,8"
+library(ggrepel)
+
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  geom_text_repel(aes(label = country))
+```
+
+## Solution 1: Repel labels
+
+```{r}
+#| label: gapminder-repel-label
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "1,8"
+library(ggrepel)
+
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  geom_label_repel(aes(label = country)) #<<
+```
+
+## Solution 2a: Don't use so many labels
+
+```{r}
+#| label: gapminder-repel-filtered
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "16-19"
+gapminder_europe <- gapminder_europe |>
+  mutate(
+    should_be_labeled = country %in% c(
+      "Albania",
+      "Norway",
+      "Hungary"
+    )
+  )
+
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  geom_label_repel(
+    data = filter(
+      gapminder_europe,
+      should_be_labeled == TRUE
+    ),
+    aes(label = country)
+  )
+```
+
+## Solution 2b: Use other aesthetics too
+
+```{r}
+#| label: gapminder-repel-filtered-fancy
+#| output-location: column
+#| fig-width: 5
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point(aes(color = should_be_labeled)) +
+  geom_label_repel(
+    data = filter(
+      gapminder_europe,
+      should_be_labeled == TRUE
+    ),
+    aes(
+      label = country,
+      fill = should_be_labeled
+    ),
+    color = "white"
+  ) +
+  scale_color_manual(values = c(
+    "grey50",
+    "red"
+  )) +
+  scale_fill_manual(values = c("red")) +
+  guides(color = "none", fill = "none")
+```
+
+## (Highlight non-text things too!)
+
+```{r}
+#| label: gapminder-highlight
+#| output-location: column
+#| fig-width: 5
+# Color just Oceania
+gapminder_highlighted <- gapminder |>
+  mutate(
+    is_oceania =
+      ifelse(continent == "Oceania",
+        TRUE, FALSE
+      )
+  )
+
+ggplot(
+  gapminder_highlighted,
+  aes(
+    x = year, y = lifeExp,
+    group = country,
+    color = is_oceania,
+    size = is_oceania
+  )
+) +
+  geom_line() +
+  scale_color_manual(values = c(
+    "grey70",
+    "red"
+  )) +
+  scale_size_manual(values = c(0.1, 0.5)) +
+  guides(color = "none", size = "none") +
+  theme_minimal()
+```
+
+## Including text on a plot
+
+### Label actual data points
+
+`geom_text()`, `geom_label()`, `geom_text_repel()`, etc.
+
+. . .
+
+### Add arbitrary annotations
+
+`annotate()`
+
+## Adding arbitrary annotations
+
+```{r}
+#| label: gapminder-annotate-1
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "6-10"
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  annotate(
+    geom = "text",
+    x = 40000, y = 76,
+    label = "Some text!"
+  )
+```
+
+## Adding arbitrary annotations
+
+```{r}
+#| label: gapminder-annotate-2
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "7"
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  annotate(
+    geom = "label",
+    x = 40000, y = 76,
+    label = "Some text!"
+  )
+```
+
+## Any geom works
+
+```{r}
+#| label: gapminder-annotate-3
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "6,7,9"
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  # This is evil though!!!
+  # We just invented a point
+  annotate(
+    geom = "point",
+    x = 40000, y = 76
+  )
+```
+
+## Any geom works
+
+```{r}
+#| label: gapminder-annotate-4
+#| output-location: column
+#| fig-width: 5
+#| code-line-numbers: "7"
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  annotate(
+    geom = "rect",
+    xmin = 30000, xmax = 50000,
+    ymin = 78, ymax = 82,
+    fill = "red", alpha = 0.2
+  )
+```
+
+## Use multiple annotations
+
+```{r}
+#| label: gapminder-annotate-5
+#| output-location: column
+#| fig-width: 5
+ggplot(
+  gapminder_europe,
+  aes(x = gdpPercap, y = lifeExp)
+) +
+  geom_point() +
+  annotate(
+    geom = "rect",
+    xmin = 30000, xmax = 50000,
+    ymin = 78, ymax = 82,
+    fill = "red", alpha = 0.2
+  ) +
+  annotate(
+    geom = "label",
+    x = 40000, y = 76.5,
+    label = "Rich and long-living"
+  ) +
+  annotate(
+    geom = "segment",
+    x = 40000, xend = 40000,
+    y = 76.8, yend = 77.8,
+    arrow = arrow(
+      length = unit(0.1, "in")
+    )
+  )
+```
+
+# Complex annotations
+
+## World development indicators
+
+```{r}
+#| label: get-wdi-fake
+#| include: false
+#| eval: false
+indicators <- c(
+  "SP.POP.TOTL", # Population
+  "EN.ATM.CO2E.PC", # CO2 emissions
+  "NY.GDP.PCAP.KD"
+) # GDP per capita
+
+wdi_co2_raw <- WDI(
+  country = "all", indicators, extra = TRUE,
+  start = 1995, end = 2015
+)
+```
+
+```{r}
+#| label: save-wdi
+#| eval: false
+#| include: false
+write_csv(wdi_co2_raw, "data/wdi_co2.csv")
+```
+
+```{r}
+#| label: load-data-wdi-real
+wdi_co2_raw <- read_csv("data/wdi_co2.csv")
+```
+
+```{r}
+#| label: clean-data-wdi
+#| output-location: column
+wdi_clean <- wdi_co2_raw |>
+  filter(region != "Aggregates") |>
+  select(iso2c, iso3c, country, year,
+    population = SP.POP.TOTL,
+    co2_emissions = EN.ATM.CO2E.PC,
+    gdp_per_cap = NY.GDP.PCAP.KD,
+    region, income
+  )
+
+glimpse(wdi_clean)
+```
+
+## Clean and reshape data {.smaller}
+
+```{r}
+#| label: rearrange-data
+co2_rankings <- wdi_clean |>
+  # Get rid of smaller countries
+  filter(population > 200000) |>
+  # Only look at two years
+  filter(year %in% c(1995, 2014)) |>
+  # Get rid of all the rows that have missing values in co2_emissions
+  drop_na(co2_emissions) |>
+  # Look at each year individually and rank countries based on their emissions that year
+  group_by(year) |>
+  mutate(ranking = rank(co2_emissions)) |>
+  ungroup() |>
+  # Only select required columns
+  select(iso3c, country, year, region, income, ranking) |>
+  # pivot long
+  pivot_wider(names_from = year, names_prefix = "rank_", values_from = ranking) |>
+  # Find the difference in ranking between 2014 and 1995
+  mutate(rank_diff = rank_2014 - rank_1995) |>
+  # Remove all rows where there's a missing value in the rank_diff column
+  drop_na(rank_diff) |>
+  # Make an indicator variable that is true of the absolute value of the
+  # difference in rankings is greater than 25
+  mutate(big_change = ifelse(abs(rank_diff) >= 25, TRUE, FALSE)) |>
+  # Make another indicator variable that indicates if the rank improved by a
+  # lot, worsened by a lot, or didn't change much.
+  mutate(better_big_change = case_when(
+    rank_diff <= -25 ~ "Rank improved",
+    rank_diff >= 25 ~ "Rank worsened",
+    TRUE ~ "Rank changed a little"
+  ))
+```
+
+## Clean and reshape data
+
+```{r}
+#| label: show-head-original
+head(wdi_clean)
+```
+
+```{r}
+#| label: show-head-new
+head(co2_rankings)
+```
+
+# Plot the data and annotate
+
+## Plot the data and annotate {.smaller}
+
+```{r}
+#| cache: false
+#| include: false
+theme_set(theme_grey())
+```
+
+::: task
+Set the random seed for reproducibility.
+:::
+
+```{r}
+#| label: pretty-plot-0
+#| warning: false
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "1"
+set.seed(123)
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Initialize the `ggplot()` object.
+:::
+
+```{r}
+#| label: pretty-plot-1
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "3-6"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+)
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Create a basic scatterplot, color-coded based on rank changes.
+:::
+
+```{r}
+#| label: pretty-plot-2
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "7"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  geom_point(aes(color = better_big_change))
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Label points for countries with a "big" change.
+:::
+
+```{r}
+#| label: pretty-plot-3
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "8-12"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  )
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Add a reference line in the background to show what it would look like if countries did not change rank order. Note `xend` and `yend` differ due to new countries forming during the 20 year period.
+:::
+
+```{r}
+#| label: pretty-plot-5
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "7"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  )
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Annotate the plot to clarify outliers that are improving.
+:::
+
+```{r}
+#| label: pretty-plot-6
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "14-17"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  )
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Annotate the plot to clarify the outliers that are worsening.
+:::
+
+```{r}
+#| label: pretty-plot-7
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "18-21"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  )
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Choose a custom color palette to highlight the outliers.
+:::
+
+```{r}
+#| label: pretty-plot-8
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "22"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136"))
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Use the same colors for the labels. Only need the last two values in the original palette.
+:::
+
+```{r}
+#| label: pretty-plot-9
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "23"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) #<<
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Adjust the axis labeling and remove the padding on both axes.
+:::
+
+```{r}
+#| label: pretty-plot-10
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "24-25"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) + #<<
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) #<<
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Add human-readable titles, labels, etc.
+:::
+
+```{r}
+#| label: pretty-plot-11
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "26-31"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  labs(
+    x = "Rank in 1995", y = "Rank in 2014",
+    title = "Changes in CO2 emission rankings between 1995 and 2014",
+    subtitle = "Countries that improved or worsened more than 25 positions in the rankings highlighted",
+    caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
+  )
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Get rid of the legends - unnecessary.
+:::
+
+```{r}
+#| label: pretty-plot-12
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "32"
+set.seed(123)
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  labs(
+    x = "Rank in 1995", y = "Rank in 2014",
+    title = "Changes in CO2 emission rankings between 1995 and 2014",
+    subtitle = "Countries that improved or worsened more than 25 positions in the rankings highlighted",
+    caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
+  ) +
+  guides(color = "none", fill = "none")
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Change the base theme and font to match the text labels.
+:::
+
+```{r}
+#| label: pretty-plot-13
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "3-4,36"
+set.seed(123)
+
+library(showtext)
+font_add_google(name = "Roboto Condensed")
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  labs(
+    x = "Rank in 1995", y = "Rank in 2014",
+    title = "Changes in CO2 emission rankings between 1995 and 2014",
+    subtitle = "Countries that improved or worsened more than 25 positions in the rankings highlighted",
+    caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
+  ) +
+  guides(color = "none", fill = "none") +
+  theme_bw(base_family = "Roboto Condensed")
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Use HTML and Markdown syntax to customize the visual appearance of the title and subtitle.
+:::
+
+```{r}
+#| label: pretty-plot-14
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "31-32"
+set.seed(123)
+
+library(showtext)
+font_add_google(name = "Roboto Condensed")
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  labs(
+    x = "Rank in 1995", y = "Rank in 2014",
+    title = "Changes in CO<sub>2</sub> emission rankings between 1995 and 2014", #<<
+    subtitle = "Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted", #<<
+    caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
+  ) +
+  guides(color = "none", fill = "none") +
+  theme_bw(base_family = "Roboto Condensed")
+```
+
+## Plot the data and annotate {.smaller}
+
+::: task
+Ensure rendering of HTML/Markdown syntax with `ggtext::element_markdown()`.
+:::
+
+```{r}
+#| label: pretty-plot-15
+#| output-location: column
+#| fig-width: 8
+#| out.width: "100%"
+#| code-line-numbers: "37-41"
+set.seed(123)
+
+library(showtext)
+font_add_google(name = "Roboto Condensed")
+
+ggplot(
+  data = co2_rankings,
+  mapping = aes(x = rank_1995, y = rank_2014)
+) +
+  annotate(geom = "segment", x = 0, xend = 172, y = 0, yend = 178) +
+  geom_point(aes(color = better_big_change)) +
+  geom_label_repel(
+    data = filter(co2_rankings, big_change == TRUE),
+    aes(label = country, fill = better_big_change),
+    color = "white", family = "Roboto Condensed"
+  ) +
+  annotate(
+    geom = "text", x = 170, y = 6, label = "Outliers improving",
+    family = "Roboto Condensed", fontface = "italic", hjust = 1, color = "grey50"
+  ) +
+  annotate(
+    geom = "text", x = 2, y = 170, label = "Outliers worsening",
+    family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
+  ) +
+  scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
+  scale_fill_manual(values = c("#0074D9", "#FF4136")) +
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  labs(
+    x = "Rank in 1995", y = "Rank in 2014",
+    title = "Changes in CO<sub>2</sub> emission rankings between 1995 and 2014",
+    subtitle = "Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted",
+    caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
+  ) +
+  guides(color = "none", fill = "none") +
+  theme_bw(base_family = "Roboto Condensed") +
+  theme(
+    plot.title = element_markdown(face = "bold", size = rel(1.6)),
+    plot.subtitle = element_markdown(size = rel(1.3)),
+    plot.margin = unit(c(0.5, 1, 0.5, 0.5), units = "lines")
+  )
+```
+
+## Final plot
+
+```{r}
+#| ref.label: pretty-plot-15
+#| echo: false
+#| warning: false
+#| out.width: 90%
+#| fig.width: 10.0
+```
