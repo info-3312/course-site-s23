@@ -172,7 +172,7 @@ table4a
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "pivot-longer"
@@ -201,7 +201,7 @@ table2
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "pivot-wider"
@@ -229,7 +229,7 @@ table3
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "separate"
@@ -261,7 +261,7 @@ table5
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "unite"
@@ -289,7 +289,7 @@ unite(
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "unite-underscore"
@@ -319,7 +319,7 @@ unite(
 
 :::
 
-::: {.column width="50%"}
+::: {.column .fragment width="50%"}
 
 ```{r}
 #| label: "unite-parse"
@@ -409,6 +409,7 @@ cornell_deg |>
 Reveal below for code developed during live coding session.
 
 ```{r}
+#| ref.label: cornell-degrees
 #| fig-show: hide
 #| code-fold: true
 ```

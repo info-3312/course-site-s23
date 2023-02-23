@@ -1740,7 +1740,7 @@
     "href": "slides/09-data-wrangling-iii.html#livecoding",
     "title": "Data wrangling (III)",
     "section": "Livecoding",
-    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+    "text": "Livecoding\nReveal below for code developed during live coding session.\n\n\nCode\n# import data file\ncornell_deg <- read_csv(\"data/cornell-degrees.csv\")\n\ncornell_deg |>\n  pivot_longer(\n    cols = -field_of_study,\n    names_to = \"year\",\n    names_transform = parse_number,\n    values_to = \"pct\"\n  ) |>\n  separate(col = field_of_study, into = c(NA, NA, \"field\"), sep = \"\\\\.\") |>\n  mutate(\n    field = str_replace(string = field, pattern = \"_\", replacement = \" \"),\n    field = str_to_title(string = field),\n    field = fct_relevel(\n      field, \"Engineering\", \"Business Marketing\", \"Computer\",\n      \"Biological\", \"Agriculture\", \"Social Science\"\n    )\n  ) |>\n  relocate(field) |>\n  ggplot(aes(x = year, y = pct, color = field)) +\n  geom_point() +\n  geom_line() +\n  scale_x_continuous(limits = c(2000, 2020), breaks = seq(2000, 2020, 4)) +\n  scale_color_colorblind() +\n  scale_y_continuous(labels = label_percent()) +\n  labs(\n    x = \"Graduation year\",\n    y = \"Percent of degrees awarded\",\n    color = \"Field of study\",\n    title = \"Cornell University degrees awarded from 2001-2020\",\n    subtitle = \"Only the top six fields as of 2020\",\n    caption = \"Source: Department of Education\\nhttps://collegescorecard.ed.gov/\"\n  ) +\n  theme_minimal()\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/10-themes-axes-annotation.html#announcements-1",
