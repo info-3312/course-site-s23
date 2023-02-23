@@ -20,7 +20,7 @@ library(patchwork)
 
 - Homework 2 due tomorrow
 - Feedback for project 1 proposals posted as issue on GitHub
-- Lab tomorrow: finish homework 2 and/or make progress on project 1
+- Lab tomorrow -- finish homework 2 and/or make progress on project 1
 
 ## Agenda for today
 
@@ -101,6 +101,7 @@ include_graphics(path = "https://i.imgur.com/9luIDwf.gif")
 #| code-line-numbers: "9"
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 library(ggthemes)
 
 ggplot(penguins, aes(
@@ -120,6 +121,7 @@ ggplot(penguins, aes(
 #| code-line-numbers: "9"
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 library(ggthemes)
 
 ggplot(penguins, aes(
@@ -139,6 +141,7 @@ ggplot(penguins, aes(
 #| code-line-numbers: "9-10"
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 library(ggthemes)
 
 ggplot(penguins, aes(
@@ -156,9 +159,10 @@ ggplot(penguins, aes(
 ```{r}
 #| label: pomological
 #| warning: false
-#| code-line-numbers: "12-13"
+#| code-line-numbers: "2,4,12-13"
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 library(ggpomological)
 library(showtext)
 
@@ -350,6 +354,7 @@ base_plot +
 ```{r}
 #| ref.label: penguins-custom-theme
 #| fig-show: hide
+#| code-line-numbers: "16,17"
 ```
 
 ### Plot
@@ -361,7 +366,7 @@ base_plot +
 
 library(palmerpenguins)
 
-penguins_example <- ggplot(
+ggplot(
   data = drop_na(penguins, sex),
   mapping = aes(x = bill_length_mm, y = body_mass_g, color = str_to_title(sex))
 ) +
@@ -376,8 +381,6 @@ penguins_example <- ggplot(
     caption = "Here's a caption"
   ) +
   my_pretty_theme
-
-penguins_example
 ```
 
 :::
@@ -652,6 +655,7 @@ Worrying about tiny details in graphs...
 #| label: gapminder-text-bad
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "14"
 library(gapminder)
 
@@ -675,6 +679,7 @@ ggplot(
 #| label: gapminder-label-bad
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "6"
 ggplot(
   gapminder_europe,
@@ -690,6 +695,7 @@ ggplot(
 #| label: gapminder-repel
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "1,8"
 library(ggrepel)
 
@@ -707,6 +713,7 @@ ggplot(
 #| label: gapminder-repel-label
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "1,8"
 library(ggrepel)
 
@@ -715,7 +722,7 @@ ggplot(
   aes(x = gdpPercap, y = lifeExp)
 ) +
   geom_point() +
-  geom_label_repel(aes(label = country)) #<<
+  geom_label_repel(aes(label = country))
 ```
 
 ## Solution 2a: Don't use so many labels
@@ -724,6 +731,7 @@ ggplot(
 #| label: gapminder-repel-filtered
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "16-19"
 gapminder_europe <- gapminder_europe |>
   mutate(
@@ -754,6 +762,7 @@ ggplot(
 #| label: gapminder-repel-filtered-fancy
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 ggplot(
   gapminder_europe,
   aes(x = gdpPercap, y = lifeExp)
@@ -784,11 +793,12 @@ ggplot(
 #| label: gapminder-highlight
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 # Color just Oceania
 gapminder_highlighted <- gapminder |>
   mutate(
     is_oceania =
-      ifelse(continent == "Oceania",
+      if_else(continent == "Oceania",
         TRUE, FALSE
       )
   )
@@ -830,6 +840,7 @@ ggplot(
 #| label: gapminder-annotate-1
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "6-10"
 ggplot(
   gapminder_europe,
@@ -849,6 +860,7 @@ ggplot(
 #| label: gapminder-annotate-2
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "7"
 ggplot(
   gapminder_europe,
@@ -868,6 +880,7 @@ ggplot(
 #| label: gapminder-annotate-3
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "6,7,9"
 ggplot(
   gapminder_europe,
@@ -888,6 +901,7 @@ ggplot(
 #| label: gapminder-annotate-4
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 #| code-line-numbers: "7"
 ggplot(
   gapminder_europe,
@@ -908,6 +922,7 @@ ggplot(
 #| label: gapminder-annotate-5
 #| output-location: column
 #| fig-width: 5
+#| out.width: "100%"
 ggplot(
   gapminder_europe,
   aes(x = gdpPercap, y = lifeExp)
@@ -1006,7 +1021,7 @@ co2_rankings <- wdi_clean |>
   drop_na(rank_diff) |>
   # Make an indicator variable that is true of the absolute value of the
   # difference in rankings is greater than 25
-  mutate(big_change = ifelse(abs(rank_diff) >= 25, TRUE, FALSE)) |>
+  mutate(big_change = if_else(abs(rank_diff) >= 25, TRUE, FALSE)) |>
   # Make another indicator variable that indicates if the rank improved by a
   # lot, worsened by a lot, or didn't change much.
   mutate(better_big_change = case_when(
@@ -1282,7 +1297,7 @@ ggplot(
     family = "Roboto Condensed", fontface = "italic", hjust = 0, color = "grey50"
   ) +
   scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
-  scale_fill_manual(values = c("#0074D9", "#FF4136")) #<<
+  scale_fill_manual(values = c("#0074D9", "#FF4136"))
 ```
 
 ## Plot the data and annotate {.smaller}
@@ -1320,8 +1335,8 @@ ggplot(
   ) +
   scale_color_manual(values = c("grey50", "#0074D9", "#FF4136")) +
   scale_fill_manual(values = c("#0074D9", "#FF4136")) +
-  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) + #<<
-  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) #<<
+  scale_x_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
+  scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25))
 ```
 
 ## Plot the data and annotate {.smaller}
@@ -1501,8 +1516,8 @@ ggplot(
   scale_y_continuous(expand = c(0, 0), breaks = seq(0, 175, 25)) +
   labs(
     x = "Rank in 1995", y = "Rank in 2014",
-    title = "Changes in CO<sub>2</sub> emission rankings between 1995 and 2014", #<<
-    subtitle = "Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted", #<<
+    title = "Changes in CO<sub>2</sub> emission rankings between 1995 and 2014",
+    subtitle = "Countries that <span style='color: #0074D9'>**improved**</span> or <span style='color: #FF4136'>**worsened**</span> more than 25 positions in the rankings highlighted",
     caption = "Source: The World Bank.\nCountries with populations of less than 200,000 excluded."
   ) +
   guides(color = "none", fill = "none") +
