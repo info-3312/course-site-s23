@@ -716,16 +716,6 @@ include_graphics(path = "images/11/treemap.png")
 Source: [Lisa Charlotte Muth](https://blog.datawrapper.de/category/color-in-data-vis/)
 :::
 
-## Double-encoded line chart
-
-```{r}
-include_graphics(path = "images/11/double-encode-lines.png")
-```
-
-::: aside
-Source: [Lisa Charlotte Muth](https://blog.datawrapper.de/category/color-in-data-vis/)
-:::
-
 ## Shades to distinguish subcategories
 
 ```{r}
@@ -1244,12 +1234,9 @@ vermilion	     | #D55E00   | 213, 94, 0
 reddish purple | #CC79A7   | 204, 121, 167
 black	         | #000000   | 0, 0, 0
 
-## Apply it!
+## `ae-colorspace`
 
-```r
-# install if necessary
-install.packages(c("tidyverse", "here", "colorspace",
-                   "scales", "ggthemes", "usethis"))
-
-usethis::use_course("uc-dataviz/choosing-colors")
-```
+::: appex
+- Go to the course [GitHub org](https://github.coecis.cornell.edu/info2950-s23/) and find your `ae-colorspace` (repo name will be suffixed with your GitHub name).
+- Clone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises.
+:::

@@ -3435,5 +3435,12 @@
     "title": "Optimizing color spaces",
     "section": "Qualitative palettes",
     "text": "Qualitative palettes"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ae-colorspace",
+    "href": "slides/11-optimizing-color-spaces.html#ae-colorspace",
+    "title": "Optimizing color spaces",
+    "section": "ae-colorspace",
+    "text": "ae-colorspace\n\n\nGo to the course GitHub org and find your ae-colorspace (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises.\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   }
 ]
