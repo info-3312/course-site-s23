@@ -452,7 +452,7 @@
     "href": "index.html",
     "title": "INFO 3312/5312: Data Communication",
     "section": "",
-    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\n\n    \nW\nFeb 8\n\n\n\n\n\n\nHW 1 due\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\nHW 2 released\n    5\nTu\nFeb 21\nLec 9\nData wrangling III\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nOptimizing color spaces\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nCalling bullshit I\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nCalling bullshit II\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nCalling bullshit III\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nCalling bullshit IV\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nScience, art, or somewhere in-between?\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nGraphical perception and cognition\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nData feminism I\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nData feminism II\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text + network data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\n???"
+    "text": "This page contains an outline of the topics, content, and assignments for the semester. Note that this schedule will be updated as the semester progresses and the timeline of topics and assignments might be updated throughout the semester.\n\n\n\n\n\n\n\n\n\n\n  \n  \n    \n      week\n      dow\n      date\n      what\n      topic\n      prepare\n      slides\n      hw\n      project\n      notes\n    \n  \n  \n    1\nTu\nJan 24\nLec 1\nWelcome to the course\n\n\n\n\n\n    \nTh\nJan 26\nLec 2\nGrammar of Graphics\n\n\n\n\n\n    \nF\nJan 27\nLab\nMeet the toolkit\n\n\n\n\n\n    2\nTu\nJan 31\nLec 3\nLooking at data\n\n\n\n\n\n    \nTh\nFeb 2\nLec 4\nDeep dive: geoms\n\n\n\n\n\n    \nF\nFeb 3\nLab\n\n\n\n\n\nHW 1 released\n    3\nTu\nFeb 7\nLec 5\nDeep dive: stats + scales + guides\n\n\n\n\n\n    \nTh\nFeb 9\nLec 6\nDeep dive: coordinate systems + faceting\n\n\n\n\n\n    \nF\nFeb 10\nLab\nStart project 1 proposals\n\n\n\n\n\n    4\nTu\nFeb 14\nLec 7\nData wrangling I\n\n\n\n\n\n    \nTh\nFeb 16\nLec 8\nData wrangling II\n\n\n\n\n\n    \nF\nFeb 17\nLab\nPeer review project 1 proposals\n\n\n\n\nHW 2 released\n    5\nTu\nFeb 21\nLec 9\nData wrangling III\n\n\n\n\n\n    \nTh\nFeb 23\nLec 10\nDeep dive: themes + axes + annotation\n\n\n\n\n\n    \nF\nFeb 24\nLab\n\n\n\n\n\n\n    6\nTu\nFeb 28\nLecture\nNo class (February Break)\n\n\n\n\n\n    \nTh\nMar 2\nLec 11\nOptimizing color spaces\n\n\n\n\n\n    \nF\nMar 3\nLab\nProject 1 presentations\n\n\n\n\n\n    7\nTu\nMar 7\nLec 12\nLiterate programming and Quarto documents\n\n\n\n\n\n    \nTh\nMar 9\nLec 13\nPublishing reproducible documents\n\n\n\n\n\n    \nF\nMar 10\nLab\n\n\n\n\n\n\n    8\nTu\nMar 14\nLec 14\nHow Charts Lie I\n\n\n\n\n\n    \nTh\nMar 16\nLec 15\nHow Charts Lie II\n\n\n\n\n\n    \nF\nMar 17\nLab\n\n\n\n\n\n\n    9\nTu\nMar 21\nLec 16\nVisualizing time series data I\n\n\n\n\n\n    \nTh\nMar 23\nLec 17\nVisualizing time series data II\n\n\n\n\n\n    \nF\nMar 24\nLab\n\n\n\n\n\n\n    10\nTu\nMar 28\nLec 18\nComparisons\n\n\n\n\n\n    \nTh\nMar 30\nLec 19\nTBD\n\n\n\n\n\n    \nF\nMar 31\nLab\n\n\n\n\n\n\n    11\nTu\nApr 4\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nTh\nApr 6\nLecture\nNo class (Spring Break)\n\n\n\n\n\n    \nF\nApr 7\nLab\nNo class (Spring Break)\n\n\n\n\n\n    12\nTu\nApr 11\nLec 20\nVisualizing spatial data I\n\n\n\n\n\n    \nTh\nApr 13\nLec 21\nVisualizing spatial data II\n\n\n\n\n\n    \nF\nApr 14\nLab\n\n\n\n\n\n\n    13\nTu\nApr 18\nLec 22\nVisualizing text data\n\n\n\n\n\n    \nTh\nApr 20\nLec 23\nAnimation\n\n\n\n\n\n    \nF\nApr 21\nLab\n\n\n\n\n\n\n    14\nTu\nApr 25\nLec 24\nInteractive reporting\n\n\n\n\n\n    \nTh\nApr 27\nLec 25\nInteractive visualization\n\n\n\n\n\n    \nF\nApr 28\nLab\n\n\n\n\n\n\n    15\nTu\nMay 2\nLec 26\nTables\n\n\n\n\n\n    \nTh\nMay 4\nLec 27\nImplementing accessibility\n\n\n\n\n\n    \nF\nMay 5\nLab\nProject 2 presentations\n\n\n\n\n\n    16\nTu\nMay 9\nLec 28\nTBD"
   },
   {
     "objectID": "project-1.html",
@@ -2387,6 +2387,328 @@
     "text": "Splitting legend labels\n\n\np_pctpell_avgfacsal_type +\n  labs(\n    x = \"Percent of students receiving a Pell grant\",\n    y = \"Average faculty salary (USD)\",\n    color = \"College type\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
+    "objectID": "slides/11-optimizing-color-spaces.html#announcements-1",
+    "href": "slides/11-optimizing-color-spaces.html#announcements-1",
+    "title": "Optimizing color spaces",
+    "section": "Announcements",
+    "text": "Announcements\nTODO"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#packages-figures",
+    "href": "slides/11-optimizing-color-spaces.html#packages-figures",
+    "title": "Optimizing color spaces",
+    "section": "Packages + figures",
+    "text": "Packages + figures"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#yaml-options",
+    "href": "slides/11-optimizing-color-spaces.html#yaml-options",
+    "title": "Optimizing color spaces",
+    "section": "YAML options",
+    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#qualitative-scale-example",
+    "href": "slides/11-optimizing-color-spaces.html#qualitative-scale-example",
+    "title": "Optimizing color spaces",
+    "section": "Qualitative scale example",
+    "text": "Qualitative scale example\n\nOkabe-ItoColorBrewer Set1ColorBrewer Set3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-1",
+    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-1",
+    "title": "Optimizing color spaces",
+    "section": "Uses of color in data visualization",
+    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#sequential-scale-example",
+    "href": "slides/11-optimizing-color-spaces.html#sequential-scale-example",
+    "title": "Optimizing color spaces",
+    "section": "Sequential scale example",
+    "text": "Sequential scale example\n\nViridisInfernoCividis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-2",
+    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-2",
+    "title": "Optimizing color spaces",
+    "section": "Uses of color in data visualization",
+    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#diverging-scale-example",
+    "href": "slides/11-optimizing-color-spaces.html#diverging-scale-example",
+    "title": "Optimizing color spaces",
+    "section": "Diverging scale example",
+    "text": "Diverging scale example\n\nColorBrewer PiYGCarto EarthBlue-Red\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-3",
+    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-3",
+    "title": "Optimizing color spaces",
+    "section": "Uses of color in data visualization",
+    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)\n\n\n\n\n\n\n\n\n\nHighlight"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#highlight-example",
+    "href": "slides/11-optimizing-color-spaces.html#highlight-example",
+    "title": "Optimizing color spaces",
+    "section": "Highlight example",
+    "text": "Highlight example\n\nGrays with accentsOkabe-Ito accentColorBrewer accent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-4",
+    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-4",
+    "title": "Optimizing color spaces",
+    "section": "Uses of color in data visualization",
+    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)\n\n\n\n\n\n\n\n\n\nHighlight"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#choosing-a-color-scale-1",
+    "href": "slides/11-optimizing-color-spaces.html#choosing-a-color-scale-1",
+    "title": "Optimizing color spaces",
+    "section": "Choosing a color scale",
+    "text": "Choosing a color scale\n\nEmphasis on interpretability and accessibility\nDefault palettes are less than desirable\nVariables may require transformations"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#default-palette-in-ggplot2",
+    "href": "slides/11-optimizing-color-spaces.html#default-palette-in-ggplot2",
+    "title": "Optimizing color spaces",
+    "section": "Default palette in ggplot2",
+    "text": "Default palette in ggplot2"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#suboptimal-default-choices",
+    "href": "slides/11-optimizing-color-spaces.html#suboptimal-default-choices",
+    "title": "Optimizing color spaces",
+    "section": "Suboptimal default choices",
+    "text": "Suboptimal default choices"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#common-forms-of-color-vision-deficiency",
+    "href": "slides/11-optimizing-color-spaces.html#common-forms-of-color-vision-deficiency",
+    "title": "Optimizing color spaces",
+    "section": "Common forms of color vision deficiency",
+    "text": "Common forms of color vision deficiency\nRed-green\n\nDeuteranomaly\nProtanomaly\nProtanopia and deuteranopia\n\nBlue-yellow\n\nTritanomaly\nTritanopia\n\nComplete color vision deficiency\n\nMonochromacy"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency",
+    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency",
+    "title": "Optimizing color spaces",
+    "section": "Inspecting for color vision deficiency",
+    "text": "Inspecting for color vision deficiency"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency-1",
+    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency-1",
+    "title": "Optimizing color spaces",
+    "section": "Inspecting for color vision deficiency",
+    "text": "Inspecting for color vision deficiency\n\nlibrary(colorblindr)\ncvd_grid(plot = pen_fig)"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency",
+    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency",
+    "title": "Optimizing color spaces",
+    "section": "Inspecting for color deficiency",
+    "text": "Inspecting for color deficiency"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency-1",
+    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency-1",
+    "title": "Optimizing color spaces",
+    "section": "Inspecting for color deficiency",
+    "text": "Inspecting for color deficiency"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#when-to-use-quantitative-or-qualitative-color-scales",
+    "href": "slides/11-optimizing-color-spaces.html#when-to-use-quantitative-or-qualitative-color-scales",
+    "title": "Optimizing color spaces",
+    "section": "When to use quantitative or qualitative color scales?",
+    "text": "When to use quantitative or qualitative color scales?\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables",
+    "href": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables",
+    "title": "Optimizing color spaces",
+    "section": "Use qualitative for nominal variables",
+    "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
+    "href": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
+    "title": "Optimizing color spaces",
+    "section": "Use qualitative for nominal variables",
+    "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#quantitative-neq-continuous",
+    "href": "slides/11-optimizing-color-spaces.html#quantitative-neq-continuous",
+    "title": "Optimizing color spaces",
+    "section": "Quantitative \\(\\neq\\) continuous",
+    "text": "Quantitative \\(\\neq\\) continuous\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#shades-to-emphasize-order",
+    "href": "slides/11-optimizing-color-spaces.html#shades-to-emphasize-order",
+    "title": "Optimizing color spaces",
+    "section": "Shades to emphasize order",
+    "text": "Shades to emphasize order\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#shades-to-distinguish-subcategories",
+    "href": "slides/11-optimizing-color-spaces.html#shades-to-distinguish-subcategories",
+    "title": "Optimizing color spaces",
+    "section": "Shades to distinguish subcategories",
+    "text": "Shades to distinguish subcategories\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions",
+    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions",
+    "title": "Optimizing color spaces",
+    "section": "ggplot2 color scale functions",
+    "text": "ggplot2 color scale functions\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess",
+    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess",
+    "title": "Optimizing color spaces",
+    "section": "ggplot2 color scale functions are a bit of a mess",
+    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-1",
+    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-1",
+    "title": "Optimizing color spaces",
+    "section": "ggplot2 color scale functions are a bit of a mess",
+    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-2",
+    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-2",
+    "title": "Optimizing color spaces",
+    "section": "ggplot2 color scale functions are a bit of a mess",
+    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential\n\n\nscale_color_gradient2()\ncolor\ncontinuous\ndiverging"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-3",
+    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-3",
+    "title": "Optimizing color spaces",
+    "section": "ggplot2 color scale functions are a bit of a mess",
+    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential\n\n\nscale_color_gradient2()\ncolor\ncontinuous\ndiverging\n\n\nscale_fill_viridis_c()\ncolor\ncontinuous\nsequential\n\n\nscale_fill_viridis_d()\nfill\ndiscrete\nsequential\n\n\nscale_color_brewer()\ncolor\ndiscrete\nqualitative, diverging, sequential\n\n\nscale_fill_brewer()\nfill\ndiscrete\nqualitative, diverging, sequential\n\n\nscale_color_distiller()\ncolor\ncontinuous\nqualitative, diverging, sequential\n\n\n\n\n… and there are many many more"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples",
+    "href": "slides/11-optimizing-color-spaces.html#examples",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic()\n  # no fill scale defined, default is scale_fill_gradient()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-1",
+    "href": "slides/11-optimizing-color-spaces.html#examples-1",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_gradient()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-2",
+    "href": "slides/11-optimizing-color-spaces.html#examples-2",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-3",
+    "href": "slides/11-optimizing-color-spaces.html#examples-3",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c(option = \"B\", begin = 0.15)"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-4",
+    "href": "slides/11-optimizing-color-spaces.html#examples-4",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_distiller(palette = \"YlGnBu\")"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#the-colorspace-package-creates-some-order",
+    "href": "slides/11-optimizing-color-spaces.html#the-colorspace-package-creates-some-order",
+    "title": "Optimizing color spaces",
+    "section": "The colorspace package creates some order",
+    "text": "The colorspace package creates some order\nScale name: scale_<aesthetic>_<datatype>_<colorscale>()\n\n\n<aesthetic>: name of the aesthetic (fill, color, colour)\n<datatype>: type of variable plotted (discrete, continuous, binned)\n<colorscale>: type of the color scale (qualitative, sequential, diverging, divergingx)\n\n\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type    \n\n\n\n\nscale_color_discrete_qualitative()\ncolor\ndiscrete\nqualitative\n\n\nscale_fill_continuous_sequential()\nfill\ncontinuous\nsequential\n\n\nscale_colour_continuous_divergingx()\ncolour\ncontinuous\ndiverging"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-5",
+    "href": "slides/11-optimizing-color-spaces.html#examples-5",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"YlGnBu\")"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-6",
+    "href": "slides/11-optimizing-color-spaces.html#examples-6",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Viridis\")"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-7",
+    "href": "slides/11-optimizing-color-spaces.html#examples-7",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Inferno\", begin = 0.15)"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-8",
+    "href": "slides/11-optimizing-color-spaces.html#examples-8",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10()\n  # no color scale defined, default is scale_color_hue()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-9",
+    "href": "slides/11-optimizing-color-spaces.html#examples-9",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_hue()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-10",
+    "href": "slides/11-optimizing-color-spaces.html#examples-10",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_discrete_qualitative(palette = \"Dark 2\")"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-11",
+    "href": "slides/11-optimizing-color-spaces.html#examples-11",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggthemes)  # for scale_color_colorblind()\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_colorblind()"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#examples-12",
+    "href": "slides/11-optimizing-color-spaces.html#examples-12",
+    "title": "Optimizing color spaces",
+    "section": "Examples",
+    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_manual(\n    values = c(\n      West = \"#E69F00\", South = \"#56B4E9\",\n      Midwest = \"#009E73\", Northeast = \"#F0E442\"\n    )\n  )"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#okabe-ito-rgb-codes",
+    "href": "slides/11-optimizing-color-spaces.html#okabe-ito-rgb-codes",
+    "title": "Optimizing color spaces",
+    "section": "Okabe-Ito RGB codes",
+    "text": "Okabe-Ito RGB codes\n\n\n\n\nName\nHex code   \nR, G, B (0-255)\n\n\n\n\norange\n#E69F00\n230, 159, 0\n\n\nsky blue\n#56B4E9\n86, 180, 233\n\n\nbluish green\n#009E73\n0, 158, 115\n\n\nyellow\n#F0E442\n240, 228, 66\n\n\nblue\n#0072B2\n0, 114, 178\n\n\nvermilion\n#D55E00\n213, 94, 0\n\n\nreddish purple\n#CC79A7\n204, 121, 167\n\n\nblack\n#000000\n0, 0, 0"
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#ae-colorspace",
+    "href": "slides/11-optimizing-color-spaces.html#ae-colorspace",
+    "title": "Optimizing color spaces",
+    "section": "ae-colorspace",
+    "text": "ae-colorspace\n\n\nGo to the course GitHub org and find your ae-colorspace (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises.\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "slides/07-data-wrangling-i.html#announcements-1",
     "href": "slides/07-data-wrangling-i.html#announcements-1",
     "title": "Data wrangling (I)",
@@ -3022,425 +3344,5 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#announcements-1",
-    "href": "slides/11-optimizing-color-spaces.html#announcements-1",
-    "title": "Optimizing color spaces",
-    "section": "Announcements",
-    "text": "Announcements\nTODO"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#packages-figures",
-    "href": "slides/11-optimizing-color-spaces.html#packages-figures",
-    "title": "Optimizing color spaces",
-    "section": "Packages + figures",
-    "text": "Packages + figures"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#yaml-options",
-    "href": "slides/11-optimizing-color-spaces.html#yaml-options",
-    "title": "Optimizing color spaces",
-    "section": "YAML options",
-    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions",
-    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions",
-    "title": "Optimizing color spaces",
-    "section": "ggplot2 color scale functions",
-    "text": "ggplot2 color scale functions\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess",
-    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess",
-    "title": "Optimizing color spaces",
-    "section": "ggplot2 color scale functions are a bit of a mess",
-    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-1",
-    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-1",
-    "title": "Optimizing color spaces",
-    "section": "ggplot2 color scale functions are a bit of a mess",
-    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-2",
-    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-2",
-    "title": "Optimizing color spaces",
-    "section": "ggplot2 color scale functions are a bit of a mess",
-    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential\n\n\nscale_color_gradient2()\ncolor\ncontinuous\ndiverging"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-3",
-    "href": "slides/11-optimizing-color-spaces.html#ggplot2-color-scale-functions-are-a-bit-of-a-mess-3",
-    "title": "Optimizing color spaces",
-    "section": "ggplot2 color scale functions are a bit of a mess",
-    "text": "ggplot2 color scale functions are a bit of a mess\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type\n\n\n\n\nscale_color_hue()                    \ncolor\ndiscrete        \nqualitative                                                  \n\n\nscale_fill_hue()\nfill\ndiscrete\nqualitative\n\n\nscale_color_gradient()\ncolor\ncontinuous\nsequential\n\n\nscale_color_gradient2()\ncolor\ncontinuous\ndiverging\n\n\nscale_fill_viridis_c()\ncolor\ncontinuous\nsequential\n\n\nscale_fill_viridis_d()\nfill\ndiscrete\nsequential\n\n\nscale_color_brewer()\ncolor\ndiscrete\nqualitative, diverging, sequential\n\n\nscale_fill_brewer()\nfill\ndiscrete\nqualitative, diverging, sequential\n\n\nscale_color_distiller()\ncolor\ncontinuous\nqualitative, diverging, sequential\n\n\n\n\n… and there are many many more"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples",
-    "href": "slides/11-optimizing-color-spaces.html#examples",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic()\n  # no fill scale defined, default is scale_fill_gradient()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-1",
-    "href": "slides/11-optimizing-color-spaces.html#examples-1",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_gradient()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-2",
-    "href": "slides/11-optimizing-color-spaces.html#examples-2",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-3",
-    "href": "slides/11-optimizing-color-spaces.html#examples-3",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c(option = \"B\", begin = 0.15)"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-4",
-    "href": "slides/11-optimizing-color-spaces.html#examples-4",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_distiller(palette = \"YlGnBu\")"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#the-colorspace-package-creates-some-order",
-    "href": "slides/11-optimizing-color-spaces.html#the-colorspace-package-creates-some-order",
-    "title": "Optimizing color spaces",
-    "section": "The colorspace package creates some order",
-    "text": "The colorspace package creates some order\nScale name: scale_<aesthetic>_<datatype>_<colorscale>()\n\n\n<aesthetic>: name of the aesthetic (fill, color, colour)\n<datatype>: type of variable plotted (discrete, continuous, binned)\n<colorscale>: type of the color scale (qualitative, sequential, diverging, divergingx)\n\n\n\n\n\n\n\n\n\n\n\n\nScale function\nAesthetic    \nData type\nPalette type    \n\n\n\n\nscale_color_discrete_qualitative()\ncolor\ndiscrete\nqualitative\n\n\nscale_fill_continuous_sequential()\nfill\ncontinuous\nsequential\n\n\nscale_colour_continuous_divergingx()\ncolour\ncontinuous\ndiverging"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-5",
-    "href": "slides/11-optimizing-color-spaces.html#examples-5",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"YlGnBu\")"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-6",
-    "href": "slides/11-optimizing-color-spaces.html#examples-6",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Viridis\")"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-7",
-    "href": "slides/11-optimizing-color-spaces.html#examples-7",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Inferno\", begin = 0.15)"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-8",
-    "href": "slides/11-optimizing-color-spaces.html#examples-8",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10()\n  # no color scale defined, default is scale_color_hue()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-9",
-    "href": "slides/11-optimizing-color-spaces.html#examples-9",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_hue()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-10",
-    "href": "slides/11-optimizing-color-spaces.html#examples-10",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_discrete_qualitative(palette = \"Dark 2\")"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-11",
-    "href": "slides/11-optimizing-color-spaces.html#examples-11",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggthemes)  # for scale_color_colorblind()\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_colorblind()"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#examples-12",
-    "href": "slides/11-optimizing-color-spaces.html#examples-12",
-    "title": "Optimizing color spaces",
-    "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_manual(\n    values = c(\n      West = \"#E69F00\", South = \"#56B4E9\",\n      Midwest = \"#009E73\", Northeast = \"#F0E442\"\n    )\n  )"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#okabe-ito-rgb-codes",
-    "href": "slides/11-optimizing-color-spaces.html#okabe-ito-rgb-codes",
-    "title": "Optimizing color spaces",
-    "section": "Okabe-Ito RGB codes",
-    "text": "Okabe-Ito RGB codes\n\n\n\n\nName\nHex code   \nR, G, B (0-255)\n\n\n\n\norange\n#E69F00\n230, 159, 0\n\n\nsky blue\n#56B4E9\n86, 180, 233\n\n\nbluish green\n#009E73\n0, 158, 115\n\n\nyellow\n#F0E442\n240, 228, 66\n\n\nblue\n#0072B2\n0, 114, 178\n\n\nvermilion\n#D55E00\n213, 94, 0\n\n\nreddish purple\n#CC79A7\n204, 121, 167\n\n\nblack\n#000000\n0, 0, 0"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#apply-it",
-    "href": "slides/11-optimizing-color-spaces.html#apply-it",
-    "title": "Optimizing color spaces",
-    "section": "Apply it!",
-    "text": "Apply it!\n# install if necessary\ninstall.packages(c(\"tidyverse\", \"here\", \"colorspace\",\n                   \"scales\", \"ggthemes\", \"usethis\"))\n\nusethis::use_course(\"uc-dataviz/choosing-colors\")\n\n\n\n🔗 info3312.infosci.cornell.edu"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#qualitative-scale-example",
-    "href": "slides/11-optimizing-color-spaces.html#qualitative-scale-example",
-    "title": "Optimizing color spaces",
-    "section": "Qualitative scale example",
-    "text": "Qualitative scale example\n\nOkabe-ItoColorBrewer Set1ColorBrewer Set3\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#qualitative-scale-example-1",
-    "href": "slides/11-optimizing-color-spaces.html#qualitative-scale-example-1",
-    "title": "Optimizing color spaces",
-    "section": "Qualitative scale example",
-    "text": "Qualitative scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: ColorBrewer Set1\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#qualitative-scale-example-2",
-    "href": "slides/11-optimizing-color-spaces.html#qualitative-scale-example-2",
-    "title": "Optimizing color spaces",
-    "section": "Qualitative scale example",
-    "text": "Qualitative scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: ColorBrewer Set3\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-1",
-    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-1",
-    "title": "Optimizing color spaces",
-    "section": "Uses of color in data visualization",
-    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#sequential-scale-example",
-    "href": "slides/11-optimizing-color-spaces.html#sequential-scale-example",
-    "title": "Optimizing color spaces",
-    "section": "Sequential scale example",
-    "text": "Sequential scale example\n\nViridisInfernoCividis\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#sequential-scale-example-1",
-    "href": "slides/11-optimizing-color-spaces.html#sequential-scale-example-1",
-    "title": "Optimizing color spaces",
-    "section": "Sequential scale example",
-    "text": "Sequential scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: Inferno\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#sequential-scale-example-2",
-    "href": "slides/11-optimizing-color-spaces.html#sequential-scale-example-2",
-    "title": "Optimizing color spaces",
-    "section": "Sequential scale example",
-    "text": "Sequential scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: Cividis\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-2",
-    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-2",
-    "title": "Optimizing color spaces",
-    "section": "Uses of color in data visualization",
-    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#diverging-scale-example",
-    "href": "slides/11-optimizing-color-spaces.html#diverging-scale-example",
-    "title": "Optimizing color spaces",
-    "section": "Diverging scale example",
-    "text": "Diverging scale example\n\nColorBrewer PiYGCarto EarthBlue-Red\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#diverging-scale-example-1",
-    "href": "slides/11-optimizing-color-spaces.html#diverging-scale-example-1",
-    "title": "Optimizing color spaces",
-    "section": "Diverging scale example",
-    "text": "Diverging scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: Carto Earth\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#diverging-scale-example-2",
-    "href": "slides/11-optimizing-color-spaces.html#diverging-scale-example-2",
-    "title": "Optimizing color spaces",
-    "section": "Diverging scale example",
-    "text": "Diverging scale example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: Blue-Red\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-3",
-    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-3",
-    "title": "Optimizing color spaces",
-    "section": "Uses of color in data visualization",
-    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)\n\n\n\n\n\n\n\n\n\nHighlight"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#highlight-example",
-    "href": "slides/11-optimizing-color-spaces.html#highlight-example",
-    "title": "Optimizing color spaces",
-    "section": "Highlight example",
-    "text": "Highlight example\n\nGrays with accentsOkabe-Ito accentColorBrewer accent\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#highlight-example-1",
-    "href": "slides/11-optimizing-color-spaces.html#highlight-example-1",
-    "title": "Optimizing color spaces",
-    "section": "Highlight example",
-    "text": "Highlight example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: Okabe-Ito accent\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#highlight-example-2",
-    "href": "slides/11-optimizing-color-spaces.html#highlight-example-2",
-    "title": "Optimizing color spaces",
-    "section": "Highlight example",
-    "text": "Highlight example\n\n\n\n\n\n\n\n\n\n\n\nPalette name: ColorBrewer accent\nFigure redrawn from Claus O. Wilke. Fundamentals of Data Visualization. O’Reilly, 2019."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-4",
-    "href": "slides/11-optimizing-color-spaces.html#uses-of-color-in-data-visualization-4",
-    "title": "Optimizing color spaces",
-    "section": "Uses of color in data visualization",
-    "text": "Uses of color in data visualization\n\n\n\n\n\nDistinguish categories (qualitative)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (sequential)\n\n\n\n\n\n\n\n\n\nRepresent numeric values (diverging)\n\n\n\n\n\n\n\n\n\nHighlight"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#choosing-a-color-scale-1",
-    "href": "slides/11-optimizing-color-spaces.html#choosing-a-color-scale-1",
-    "title": "Optimizing color spaces",
-    "section": "Choosing a color scale",
-    "text": "Choosing a color scale\n\nEmphasis on interpretability and accessibility\nDefault palettes are less than desirable\nVariables may require transformations"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#default-palette-in-ggplot2",
-    "href": "slides/11-optimizing-color-spaces.html#default-palette-in-ggplot2",
-    "title": "Optimizing color spaces",
-    "section": "Default palette in ggplot2",
-    "text": "Default palette in ggplot2"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#suboptimal-default-choices",
-    "href": "slides/11-optimizing-color-spaces.html#suboptimal-default-choices",
-    "title": "Optimizing color spaces",
-    "section": "Suboptimal default choices",
-    "text": "Suboptimal default choices"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#common-forms-of-color-vision-deficiency",
-    "href": "slides/11-optimizing-color-spaces.html#common-forms-of-color-vision-deficiency",
-    "title": "Optimizing color spaces",
-    "section": "Common forms of color vision deficiency",
-    "text": "Common forms of color vision deficiency\nRed-green\n\nDeuteranomaly\nProtanomaly\nProtanopia and deuteranopia\n\nBlue-yellow\n\nTritanomaly\nTritanopia\n\nComplete color vision deficiency\n\nMonochromacy"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency",
-    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency",
-    "title": "Optimizing color spaces",
-    "section": "Inspecting for color vision deficiency",
-    "text": "Inspecting for color vision deficiency"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency-1",
-    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-vision-deficiency-1",
-    "title": "Optimizing color spaces",
-    "section": "Inspecting for color vision deficiency",
-    "text": "Inspecting for color vision deficiency\n\nlibrary(colorblindr)\ncvd_grid(plot = pen_fig)"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency",
-    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency",
-    "title": "Optimizing color spaces",
-    "section": "Inspecting for color deficiency",
-    "text": "Inspecting for color deficiency"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency-1",
-    "href": "slides/11-optimizing-color-spaces.html#inspecting-for-color-deficiency-1",
-    "title": "Optimizing color spaces",
-    "section": "Inspecting for color deficiency",
-    "text": "Inspecting for color deficiency"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#when-to-use-quantitative-or-qualitative-color-scales",
-    "href": "slides/11-optimizing-color-spaces.html#when-to-use-quantitative-or-qualitative-color-scales",
-    "title": "Optimizing color spaces",
-    "section": "When to use quantitative or qualitative color scales?",
-    "text": "When to use quantitative or qualitative color scales?\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables",
-    "href": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables",
-    "title": "Optimizing color spaces",
-    "section": "Use qualitative for nominal variables",
-    "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
-    "href": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
-    "title": "Optimizing color spaces",
-    "section": "Use qualitative for nominal variables",
-    "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#quantitative-neq-continuous",
-    "href": "slides/11-optimizing-color-spaces.html#quantitative-neq-continuous",
-    "title": "Optimizing color spaces",
-    "section": "Quantitative \\(\\neq\\) continuous",
-    "text": "Quantitative \\(\\neq\\) continuous\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#shades-to-emphasize-order",
-    "href": "slides/11-optimizing-color-spaces.html#shades-to-emphasize-order",
-    "title": "Optimizing color spaces",
-    "section": "Shades to emphasize order",
-    "text": "Shades to emphasize order\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#double-encoded-line-chart",
-    "href": "slides/11-optimizing-color-spaces.html#double-encoded-line-chart",
-    "title": "Optimizing color spaces",
-    "section": "Double-encoded line chart",
-    "text": "Double-encoded line chart\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#shades-to-distinguish-subcategories",
-    "href": "slides/11-optimizing-color-spaces.html#shades-to-distinguish-subcategories",
-    "title": "Optimizing color spaces",
-    "section": "Shades to distinguish subcategories",
-    "text": "Shades to distinguish subcategories\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#sequential-palettes",
-    "href": "slides/11-optimizing-color-spaces.html#sequential-palettes",
-    "title": "Optimizing color spaces",
-    "section": "Sequential palettes",
-    "text": "Sequential palettes"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#diverging-palettes",
-    "href": "slides/11-optimizing-color-spaces.html#diverging-palettes",
-    "title": "Optimizing color spaces",
-    "section": "Diverging palettes",
-    "text": "Diverging palettes"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#diverging-flexible-palettes",
-    "href": "slides/11-optimizing-color-spaces.html#diverging-flexible-palettes",
-    "title": "Optimizing color spaces",
-    "section": "Diverging (flexible) palettes",
-    "text": "Diverging (flexible) palettes"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#qualitative-palettes",
-    "href": "slides/11-optimizing-color-spaces.html#qualitative-palettes",
-    "title": "Optimizing color spaces",
-    "section": "Qualitative palettes",
-    "text": "Qualitative palettes"
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#ae-colorspace",
-    "href": "slides/11-optimizing-color-spaces.html#ae-colorspace",
-    "title": "Optimizing color spaces",
-    "section": "ae-colorspace",
-    "text": "ae-colorspace\n\n\nGo to the course GitHub org and find your ae-colorspace (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises.\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   }
 ]
