@@ -20,7 +20,15 @@ library(patchwork)
 
 ## Announcements
 
-TODO
+::: incremental
+
+- Project 1 due tomorrow by 10am
+    - In-class presentations
+    - Write-up
+- Use the "Build" tab to render the entire website
+- Carefully review project instructions
+
+:::
 
 # Setup
 
