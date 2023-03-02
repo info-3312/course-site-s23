@@ -2398,7 +2398,7 @@
     "href": "slides/11-optimizing-color-spaces.html#packages-figures",
     "title": "Optimizing color spaces",
     "section": "Packages + figures",
-    "text": "Packages + figures"
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(readxl)\nlibrary(here)\nlibrary(patchwork)\nlibrary(knitr)\nlibrary(palmerpenguins)\nlibrary(colorblindr)\nlibrary(tidycensus)\nlibrary(scales)\nlibrary(RColorBrewer)\nlibrary(ggrepel)\nlibrary(cowplot)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#yaml-options",
@@ -2524,7 +2524,7 @@
     "href": "slides/11-optimizing-color-spaces.html#when-to-use-quantitative-or-qualitative-color-scales",
     "title": "Optimizing color spaces",
     "section": "When to use quantitative or qualitative color scales?",
-    "text": "When to use quantitative or qualitative color scales?\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+    "text": "When to use quantitative or qualitative color scales?\n\nQuantitative \\(\\equiv\\) numerical\nQualitative \\(\\equiv\\) categorical\n\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables",
@@ -2601,35 +2601,35 @@
     "href": "slides/11-optimizing-color-spaces.html#examples",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic()\n  # no fill scale defined, default is scale_fill_gradient()"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-1",
     "href": "slides/11-optimizing-color-spaces.html#examples-1",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_gradient()"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_gradient()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-2",
     "href": "slides/11-optimizing-color-spaces.html#examples-2",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c()"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-3",
     "href": "slides/11-optimizing-color-spaces.html#examples-3",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c(option = \"B\", begin = 0.15)"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_viridis_c(option = \"B\", begin = 0.15)"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-4",
     "href": "slides/11-optimizing-color-spaces.html#examples-4",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_distiller(palette = \"YlGnBu\")"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_distiller(palette = \"YlGnBu\")"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#the-colorspace-package-creates-some-order",
@@ -2643,56 +2643,56 @@
     "href": "slides/11-optimizing-color-spaces.html#examples-5",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"YlGnBu\")"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"YlGnBu\")"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-6",
     "href": "slides/11-optimizing-color-spaces.html#examples-6",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Viridis\")"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Viridis\")"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-7",
     "href": "slides/11-optimizing-color-spaces.html#examples-7",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Inferno\", begin = 0.15)"
+    "text": "Examples\n\nggplot(temps_months, aes(x = month, y = location, fill = mean)) + \n  geom_tile(width = 0.95, height = 0.95) + \n  coord_fixed(expand = FALSE) +\n  theme_classic() +\n  scale_fill_continuous_sequential(palette = \"Inferno\", begin = 0.15)"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-8",
     "href": "slides/11-optimizing-color-spaces.html#examples-8",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10()\n  # no color scale defined, default is scale_color_hue()"
+    "text": "Examples\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-9",
     "href": "slides/11-optimizing-color-spaces.html#examples-9",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_hue()"
+    "text": "Examples\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_hue()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-10",
     "href": "slides/11-optimizing-color-spaces.html#examples-10",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_discrete_qualitative(palette = \"Dark 2\")"
+    "text": "Examples\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_discrete_qualitative(palette = \"Dark 2\")"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-11",
     "href": "slides/11-optimizing-color-spaces.html#examples-11",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nlibrary(ggthemes)  # for scale_color_colorblind()\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_colorblind()"
+    "text": "Examples\n\nlibrary(ggthemes)  # for scale_color_colorblind()\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_colorblind()"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#examples-12",
     "href": "slides/11-optimizing-color-spaces.html#examples-12",
     "title": "Optimizing color spaces",
     "section": "Examples",
-    "text": "Examples\n\nOutputCode\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_manual(\n    values = c(\n      West = \"#E69F00\", South = \"#56B4E9\",\n      Midwest = \"#009E73\", Northeast = \"#F0E442\"\n    )\n  )"
+    "text": "Examples\n\nggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +\n  geom_point(size = 4) +\n  scale_x_log10() +\n  scale_color_manual(\n    values = c(\n      West = \"#E69F00\", South = \"#56B4E9\",\n      Midwest = \"#009E73\", Northeast = \"#F0E442\"\n    )\n  )"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#okabe-ito-rgb-codes",
@@ -3344,5 +3344,12 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
+  },
+  {
+    "objectID": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
+    "href": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
+    "title": "Optimizing color spaces",
+    "section": "Use quantitative for ordinal variables",
+    "text": "Use quantitative for ordinal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
   }
 ]

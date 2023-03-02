@@ -36,6 +36,7 @@ library(patchwork)
 
 ```{r}
 #| cache: false
+#| echo: true
 # load packages
 library(tidyverse)
 library(readxl)
@@ -676,6 +677,9 @@ gg_color_gradient(n = 200) +
 
 ## When to use quantitative or qualitative color scales?
 
+- Quantitative $\equiv$ numerical
+- Qualitative $\equiv$ categorical
+
 ```{r}
 include_graphics(path = "images/11/quant-qual.png")
 ```
@@ -694,7 +698,7 @@ include_graphics(path = "images/11/unordered.png")
 Source: [Lisa Charlotte Muth](https://blog.datawrapper.de/category/color-in-data-vis/)
 :::
 
-## Use qualitative for nominal variables
+## Use quantitative for ordinal variables
 
 ```{r}
 include_graphics(path = "images/11/unemp-best.png")
@@ -804,51 +808,23 @@ Scale function            | Aesthetic &nbsp;&nbsp;&nbsp;   | Data type     | Pal
 
 ## Examples
 
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles1-out
-#| ref.label: temps-tiles1
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
-
 ```{r}
 #| label: temps-tiles1
-#| eval: false
 #| echo: true
+#| fig.asp: 0.3
+
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
   geom_tile(width = 0.95, height = 0.95) + 
   coord_fixed(expand = FALSE) +
   theme_classic()
-  # no fill scale defined, default is scale_fill_gradient()
 ```
-
-:::
 
 ## Examples
 
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles2-out
-#| ref.label: temps-tiles2
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
-
 ```{r}
 #| label: temps-tiles2
-#| eval: false
 #| echo: true
+#| fig.asp: 0.3
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
   geom_tile(width = 0.95, height = 0.95) + 
@@ -857,26 +833,11 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   scale_fill_gradient()
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles3-out
-#| ref.label: temps-tiles3
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
 
 ```{r}
 #| label: temps-tiles3
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -886,26 +847,11 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   scale_fill_viridis_c()
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles4-out
-#| ref.label: temps-tiles4
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
 
 ```{r}
 #| label: temps-tiles4
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -915,26 +861,11 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   scale_fill_viridis_c(option = "B", begin = 0.15)
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles5-out
-#| ref.label: temps-tiles5
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
 
 ```{r}
 #| label: temps-tiles5
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -943,8 +874,6 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   theme_classic() +
   scale_fill_distiller(palette = "YlGnBu")
 ```
-
-:::
 
 ## The `colorspace` package creates some order
 
@@ -966,22 +895,9 @@ Scale function                       | Aesthetic &nbsp;&nbsp;&nbsp; | Data type 
 
 ## Examples
 
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles6-out
-#| ref.label: temps-tiles6
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
-
 ```{r}
 #| label: temps-tiles6
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -991,26 +907,11 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   scale_fill_continuous_sequential(palette = "YlGnBu")
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles7-out
-#| ref.label: temps-tiles7
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
 
 ```{r}
 #| label: temps-tiles7
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -1020,26 +921,11 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   scale_fill_continuous_sequential(palette = "Viridis")
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: temps-tiles8-out
-#| ref.label: temps-tiles8
-#| echo: false
-#| fig.asp: 0.3
-```
-
-### Code
 
 ```{r}
 #| label: temps-tiles8
-#| eval: false
+#| fig.asp: 0.3
 #| echo: true
 #| code-line-numbers: "5"
 ggplot(temps_months, aes(x = month, y = location, fill = mean)) + 
@@ -1048,8 +934,6 @@ ggplot(temps_months, aes(x = month, y = location, fill = mean)) +
   theme_classic() +
   scale_fill_continuous_sequential(palette = "Inferno", begin = 0.15)
 ```
-
-:::
 
 ---
 
@@ -1083,49 +967,20 @@ colorspace::hcl_palettes(type = "qualitative", plot = TRUE) # all qualitative pa
 
 ## Examples
 
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: qual-scales-example1-out
-#| ref.label: qual-scales-example1
-#| echo: false
-#| out.width: 70%
-```
-
-### Code
-
 ```{r}
 #| label: qual-scales-example1
-#| eval: false
+#| out.width: "40%"
 #| echo: true
 ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
   geom_point(size = 4) +
   scale_x_log10()
-  # no color scale defined, default is scale_color_hue()
 ```
-
-:::
 
 ## Examples
 
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: qual-scales-example2-out
-#| ref.label: qual-scales-example2
-#| echo: false
-#| out.width: 70%
-```
-
-### Code
-
 ```{r}
 #| label: qual-scales-example2
-#| eval: false
+#| out.width: "40%"
 #| echo: true
 #| code-line-numbers: "4"
 ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
@@ -1134,26 +989,11 @@ ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
   scale_color_hue()
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: qual-scales-example3a-out
-#| ref.label: qual-scales-example3a
-#| echo: false
-#| out.width: 70%
-```
-
-### Code
 
 ```{r}
 #| label: qual-scales-example3a
-#| eval: false
+#| out.width: "40%"
 #| echo: true
 #| code-line-numbers: "4"
 ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
@@ -1162,26 +1002,11 @@ ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
   scale_color_discrete_qualitative(palette = "Dark 2")
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: qual-scales-example3-out
-#| ref.label: qual-scales-example3
-#| echo: false
-#| out.width: 70%
-```
-
-### Code
 
 ```{r}
 #| label: qual-scales-example3
-#| eval: false
+#| out.width: "40%"
 #| echo: true
 #| code-line-numbers: "1,6"
 library(ggthemes)  # for scale_color_colorblind()
@@ -1192,26 +1017,11 @@ ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
   scale_color_colorblind()
 ```
 
-:::
-
 ## Examples
-
-::: panel-tabset
-
-### Output
-
-```{r}
-#| label: qual-scales-example4-out
-#| ref.label: qual-scales-example4
-#| echo: false
-#| out.width: 70%
-```
-
-### Code
 
 ```{r}
 #| label: qual-scales-example4
-#| eval: false
+#| out.width: "40%"
 #| echo: true
 #| code-line-numbers: "4-9"
 ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
@@ -1224,8 +1034,6 @@ ggplot(popgrowth, aes(x = pop2000, y = popgrowth, color = region)) +
     )
   )
 ```
-
-:::
 
 ## Okabe-Ito RGB codes
 
