@@ -1,0 +1,334 @@
+---
+title: "A deep dive into Quarto"
+subtitle: "Lecture 12"
+date: "March 7, 2023"
+format: revealjs
+execute:
+  echo: false
+---
+
+```{r}
+#| label: setup
+#| include: false
+#| cache: false
+
+source(here::here("slides", "_R", "slide-opts.R"))
+library(patchwork)
+```
+
+# Announcements
+
+## Announcements
+
+TODO
+
+# Setup
+
+## Packages + figures
+
+```{r}
+#| cache: false
+#| echo: true
+# load packages
+library(tidyverse)
+library(rcis)
+library(here)
+library(ymlthis)
+library(countdown)
+
+# set default theme for ggplot2
+theme_set(theme_minimal(base_size = 12))
+```
+
+## YAML options
+
+```yaml
+knitr:
+  opts_chunk:
+    fig.width: 7
+    fig.asp: 0.618
+    fig.retina: 2
+    dpi: 150
+    out.width: "80%"
+    fig.showtext: true
+```
+
+# Quarto
+
+---
+
+![](images/12/data-science/base.png)
+
+---
+
+## Quarto basics {.smaller}
+
+```{embed}
+#| file: "extras/gun-deaths.qmd"
+#| echo: true
+```
+
+## Major components
+
+1. A **YAML header** surrounded by `---`s
+1. **Chunks** of code surounded by ` ``` `
+1. Text mixed with simple text formatting using the [Markdown syntax](https://quarto.org/docs/authoring/markdown-basics.html)
+
+# Quarto code chunks
+
+## Rendering process
+
+![](images/12/qmd_render_schema.png){fig-alt="A schematic representing rendering of Quarto documents from .qmd, to knitr or jupyter, to plain text markdown, then converted by pandoc into any number of output types including html, PDF, or Word document."}
+
+::: aside
+Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.
+:::
+
+## Rendering process
+
+![](images/12/quarto_schematic.png){fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto."}
+
+::: aside
+Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.
+:::
+
+## 🤔 AE: Edit the Quarto document
+
+* Render `gun-deaths.qmd` as an HTML document
+* Add text describing the frequency polygon
+
+```{r}
+#| cache: false
+countdown(minutes = 5)
+```
+
+## Code chunks
+
+````{verbatim}
+#| lang: "markdown"
+#| echo: TRUE
+```{r}
+#| label: youth-dist
+#| echo: false
+#| message: false
+#| warning: false
+
+# code goes here
+```
+````
+
+::: incremental
+
+* Naming code chunks
+* Code chunk options
+* `eval: false`
+* `include: false`
+* `echo: false`
+* `message: false` or `warning: false`
+* `error: true`
+* `cache: true`
+
+:::
+
+## Dependencies
+
+::: panel-tabset
+
+### Incorrect caching
+
+````{verbatim}
+#| echo: true
+```{r}
+#| label: raw-data
+rawdata <- readr::read_csv("a_very_large_file.csv")
+```
+    
+```{r}
+#| label: processed-data
+#| cache: true
+processed_data <- rawdata |> 
+  filter(!is.na(import_var)) |> 
+  mutate(new_variable = complicated_transformation(x, y, z))
+```
+````
+
+### Caching with dependencies
+
+````{verbatim}
+#| echo: true
+#| code-line-numbers: "9"
+```{r}
+#| label: raw-data
+rawdata <- readr::read_csv("a_very_large_file.csv")
+```
+
+```{r}
+#| label: processed-data
+#| cache: true
+#| dependson: "raw-data"
+processed_data <- rawdata |> 
+  filter(!is.na(import_var)) |> 
+  mutate(new_variable = complicated_transformation(x, y, z))
+```
+````
+
+:::
+
+## Inline code
+
+```{r}
+#| label: youth
+#| include: false
+youth <- gun_deaths |>
+  filter(age <= 65)
+```
+
+````{verbatim}
+#| lang: "markdown"
+#| echo: true
+We have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:
+````
+
+. . .
+
+We have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65.
+
+## 🤔 Modify chunk options
+
+* Set `echo: false` as a global option
+* Adjust the figure height and width options for the code chunks with plots
+* Enable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?
+
+```{r}
+#| cache: false
+countdown(minutes = 7)
+```
+
+# YAML header
+
+
+## YAML header
+
+```verbatim
+---
+title: Gun deaths
+author: Benjamin Soltoff
+date: March 07, 2023
+format: html
+---
+```
+
+* **Y**et **A**nother **M**arkup **L**anguage
+* Standardized format for storing hierarchical data in a human-readable syntax
+* Defines how `quarto` renders your `.qmd` file
+
+## HTML document
+
+```verbatim
+---
+title: Gun deaths
+author: Benjamin Soltoff
+date: March 07, 2023
+format: html
+---
+```
+
+## Table of contents
+
+```verbatim
+---
+title: Gun deaths
+author: Benjamin Soltoff
+date: March 07, 2023
+format:
+  html:
+    toc: true
+    toc-depth: 2
+---
+```
+
+## Appearance and style
+
+```verbatim
+---
+title: Gun deaths
+author: Benjamin Soltoff
+date: March 07, 2023
+format:
+  html:
+    theme: superhero
+    highlight-style: github
+---
+```
+
+## Global options
+
+````verbatim
+---
+title: "My Document"
+format: html
+execute:
+  echo: true
+  message: false
+knitr:
+  opts_chunk: 
+    fig-width: 7
+---
+````
+
+- Default document-level options
+- Some options are set with [`execute`](https://quarto.org/docs/reference/formats/html.html#execution)
+
+## 🤔 Modify YAML options
+
+* Add a table of contents
+* Use the `"minty"` theme
+* Modify the figures so they are 8 inches wide by 6 inches tall
+* Set code chunk options globally
+
+```{r}
+#| cache = FALSE,
+#| echo = FALSE
+countdown(minutes = 7)
+```
+
+## PDF document
+
+```verbatim
+---
+title: Gun deaths
+author: Benjamin Soltoff
+date: March 07, 2023
+format: pdf
+---
+```
+
+## `render()`
+
+```r
+quarto::quarto_render("my-document.qmd", output_format = "html")
+quarto::quarto_render("my-document.qmd", output_format = "all")
+```
+
+---
+
+## R scripts {.smaller}
+
+```{embed}
+#| file: "extras/gun-deaths.R"
+#| echo: true
+```
+
+## When to use a script
+
+* For troubleshooting
+* Initial stages of project
+* Building a reproducible pipeline
+* It depends
+
+. . .
+
+#### Running scripts
+
+* Interactively
+* Programmatically using `source()`

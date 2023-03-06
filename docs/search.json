@@ -3351,5 +3351,159 @@
     "title": "Optimizing color spaces",
     "section": "Use quantitative for ordinal variables",
     "text": "Use quantitative for ordinal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
+    "title": "A deep dive into Quarto",
+    "section": "Announcements",
+    "text": "Announcements\nTODO"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
+    "href": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
+    "title": "A deep dive into Quarto",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(ymlthis)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#yaml-options",
+    "title": "A deep dive into Quarto",
+    "section": "YAML options",
+    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
+    "href": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
+    "title": "A deep dive into Quarto",
+    "section": "Quarto basics",
+    "text": "Quarto basics\n\n---\ntitle: \"Gun deaths\"\ndate: \"`r lubridate::today()`\"\nformat: html\n---\n\n```{r setup}\n#| include: false\nlibrary(tidyverse)\nlibrary(rcis)\n\nyouth <- gun_deaths |>\n  filter(age <= 65)\n```\n\n# Gun deaths by age\n\nWe have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\n```{r youth-dist}\n#| echo: false\nyouth |> \n  ggplot(aes(age)) + \n  geom_freqpoly(binwidth = 1)\n```\n\n# Gun deaths by race\n\n```{r race-dist}\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")\n```"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#major-components",
+    "href": "slides/12-a-deep-dive-into-quarto.html#major-components",
+    "title": "A deep dive into Quarto",
+    "section": "Major components",
+    "text": "Major components\n\nA YAML header surrounded by ---s\nChunks of code surounded by ```\nText mixed with simple text formatting using the Markdown syntax"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
+    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
+    "title": "A deep dive into Quarto",
+    "section": "Rendering process",
+    "text": "Rendering process\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
+    "title": "A deep dive into Quarto",
+    "section": "Rendering process",
+    "text": "Rendering process\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 AE: Edit the Quarto document",
+    "text": "🤔 AE: Edit the Quarto document\n\nRender gun-deaths.qmd as an HTML document\nAdd text describing the frequency polygon\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
+    "href": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
+    "title": "A deep dive into Quarto",
+    "section": "Code chunks",
+    "text": "Code chunks\n```{r}\n#| label: youth-dist\n#| echo: false\n#| message: false\n#| warning: false\n\n# code goes here\n```\n\n\nNaming code chunks\nCode chunk options\neval: false\ninclude: false\necho: false\nmessage: false or warning: false\nerror: true\ncache: true"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#dependencies",
+    "href": "slides/12-a-deep-dive-into-quarto.html#dependencies",
+    "title": "A deep dive into Quarto",
+    "section": "Dependencies",
+    "text": "Dependencies\n\nIncorrect cachingCaching with dependencies\n\n\n```{r}\n#| label: raw-data\nrawdata <- readr::read_csv(\"a_very_large_file.csv\")\n```\n    \n```{r}\n#| label: processed-data\n#| cache: true\nprocessed_data <- rawdata |> \n  filter(!is.na(import_var)) |> \n  mutate(new_variable = complicated_transformation(x, y, z))\n```\n\n\n```{r}\n#| label: raw-data\nrawdata <- readr::read_csv(\"a_very_large_file.csv\")\n```\n\n```{r}\n#| label: processed-data\n#| cache: true\n#| dependson: \"raw-data\"\nprocessed_data <- rawdata |> \n  filter(!is.na(import_var)) |> \n  mutate(new_variable = complicated_transformation(x, y, z))\n```"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#inline-code",
+    "href": "slides/12-a-deep-dive-into-quarto.html#inline-code",
+    "title": "A deep dive into Quarto",
+    "section": "Inline code",
+    "text": "Inline code\nWe have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\nWe have data about 100798 individuals killed by guns. Only 15687 are older than 65."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#modify-chunk-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#modify-chunk-options",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 Modify chunk options",
+    "text": "🤔 Modify chunk options\n\nSet echo: false as a global option\nEnable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
+    "title": "A deep dive into Quarto",
+    "section": "YAML header",
+    "text": "YAML header\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---\n\nYet Another Markup Language\nStandardized format for storing hierarchical data in a human-readable syntax\nDefines how quarto renders your .qmd file"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#html-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#html-document",
+    "title": "A deep dive into Quarto",
+    "section": "HTML document",
+    "text": "HTML document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
+    "href": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
+    "title": "A deep dive into Quarto",
+    "section": "Table of contents",
+    "text": "Table of contents\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    toc: true\n    toc-depth: 2\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
+    "href": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
+    "title": "A deep dive into Quarto",
+    "section": "Appearance and style",
+    "text": "Appearance and style\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    theme: superhero\n    highlight-style: github\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#global-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#global-options",
+    "title": "A deep dive into Quarto",
+    "section": "Global options",
+    "text": "Global options\n---\ntitle: \"My Document\"\nformat: html\nexecute:\n  echo: true\n  message: false\nknitr:\n  opts_chunk: \n    fig-width: 7\n---\n\nDefault document-level options\nSome options are set with execute"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#modify-yaml-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#modify-yaml-options",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 Modify YAML options",
+    "text": "🤔 Modify YAML options\n\nAdd a table of contents\nUse the \"minty\" theme\nModify the figures so they are 8 inches wide by 6 inches tall\nSet code chunk options globally\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
+    "title": "A deep dive into Quarto",
+    "section": "PDF document",
+    "text": "PDF document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: pdf\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#render",
+    "href": "slides/12-a-deep-dive-into-quarto.html#render",
+    "title": "A deep dive into Quarto",
+    "section": "render()",
+    "text": "render()\nquarto::quarto_render(\"my-document.qmd\", output_format = \"html\")\nquarto::quarto_render(\"my-document.qmd\", output_format = \"all\")"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
+    "href": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
+    "title": "A deep dive into Quarto",
+    "section": "R scripts",
+    "text": "R scripts\n\n# gun-deaths.R\n# 2017-02-01\n# Examine the distribution of age of victims in gun_deaths\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# filter data for under 65\nyouth <- gun_deaths %>%\n  filter(age <= 65)\n\n# number of individuals under 65 killed\nnrow(gun_deaths) - nrow(youth)\n\n# graph the distribution of youth\nyouth %>% \n  ggplot(aes(age)) + \n  geom_freqpoly(binwidth = 1)\n\n# graph the distribution of youth, by race\nyouth %>%\n  ggplot(aes(fct_infreq(race) %>% fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
+    "href": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
+    "title": "A deep dive into Quarto",
+    "section": "When to use a script",
+    "text": "When to use a script\n\nFor troubleshooting\nInitial stages of project\nBuilding a reproducible pipeline\nIt depends\n\n\nRunning scripts\n\nInteractively\nProgrammatically using source()\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   }
 ]
