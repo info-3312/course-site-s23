@@ -20,7 +20,7 @@ library(patchwork)
 
 ## Announcements
 
-TODO
+- Not much happening this week
 
 # Setup
 

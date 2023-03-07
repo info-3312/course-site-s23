@@ -1,0 +1,14 @@
+{
+  "hash": "eaba4fa1c76d30d24745852958077b67",
+  "result": {
+    "markdown": "---\ntitle: Gun deaths\nauthor: Your name\ndate: March 7, 2023\nformat: html\n---\n\n\n\n\n# Gun deaths by age\n\nWe have data about 100798 individuals killed by guns. Only 15687 are older than 65. The distribution of the remainder is shown below:\n\n\n::: {.cell layout-align=\"center\" hash='gun-deaths_cache/html/youth-dist_94c4b5f8042ef7c661709bea1b3baea3'}\n::: {.cell-output-display}\n![](gun-deaths_files/figure-html/youth-dist-1.png){fig-align='center' width=80%}\n:::\n:::\n\n\n# Gun deaths by race\n\n\n::: {.cell layout-align=\"center\" hash='gun-deaths_cache/html/race-dist_52a44cb4d14af411443952a64f5cafa9'}\n\n```{.r .cell-code}\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")\n```\n\n::: {.cell-output-display}\n![](gun-deaths_files/figure-html/race-dist-1.png){fig-align='center' width=80%}\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

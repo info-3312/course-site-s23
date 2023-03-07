@@ -1,6 +1,7 @@
 ---
-title: "Gun deaths"
-date: "`r lubridate::today()`"
+title: Gun deaths
+author: Your name
+date: March 7, 2023
 format: html
 ---
 
