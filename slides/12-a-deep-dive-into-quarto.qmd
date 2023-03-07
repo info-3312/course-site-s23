@@ -24,6 +24,13 @@ library(patchwork)
 
 # Setup
 
+## `ae-quarto`
+
+::: appex
+- Go to the course [GitHub org](https://github.coecis.cornell.edu/info2950-s23/) and find your `ae-quarto` (repo name will be suffixed with your GitHub name).
+- Clone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises.
+:::
+
 ## Packages + figures
 
 ```{r}
@@ -33,7 +40,6 @@ library(patchwork)
 library(tidyverse)
 library(rcis)
 library(here)
-library(ymlthis)
 library(countdown)
 
 # set default theme for ggplot2

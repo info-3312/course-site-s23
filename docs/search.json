@@ -3364,7 +3364,7 @@
     "href": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
     "title": "A deep dive into Quarto",
     "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(ymlthis)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))"
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))"
   },
   {
     "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-options",
@@ -3512,5 +3512,12 @@
     "title": "Gun deaths",
     "section": "",
     "text": "Gun deaths by age\nWe have data about 100798 individuals killed by guns. Only 15687 are older than 65. The distribution of the remainder is shown below:\n\n\n\n\n\n\n\n\n\n\n\nGun deaths by race\n\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
+    "title": "A deep dive into Quarto",
+    "section": "ae-quarto",
+    "text": "ae-quarto\n\n\nGo to the course GitHub org and find your ae-quarto (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises."
   }
 ]
