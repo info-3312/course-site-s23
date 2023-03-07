@@ -3,8 +3,6 @@ title: "A deep dive into Quarto"
 subtitle: "Lecture 12"
 date: "March 7, 2023"
 format: revealjs
-execute:
-  echo: false
 ---
 
 ```{r}
@@ -46,7 +44,7 @@ library(countdown)
 theme_set(theme_minimal(base_size = 12))
 ```
 
-## YAML options
+### YAML options
 
 ```yaml
 knitr:
@@ -71,7 +69,6 @@ knitr:
 
 ```{embed}
 #| file: "extras/gun-deaths.qmd"
-#| echo: true
 ```
 
 ## Major components
@@ -92,7 +89,7 @@ Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel
 
 ## Rendering process
 
-![](images/12/quarto_schematic.png){fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto."}
+![](images/12/quarto_schematic.png){fig-align=center fig-alt="A schematic representing the multi-language input (e.g. Python, R, Observable, Julia) and multi-format output (e.g. PDF, html, Word documents, and more) versatility of Quarto." width=1100}
 
 ::: aside
 Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.
@@ -105,28 +102,25 @@ Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel
 
 ```{r}
 #| cache: false
+#| echo: false
 countdown(minutes = 5)
 ```
 
 ## Code chunks
 
-````{verbatim}
-#| lang: "markdown"
-#| echo: TRUE
 ```{r}
 #| label: youth-dist
-#| echo: false
+#| echo: fenced
 #| message: false
 #| warning: false
 
 # code goes here
 ```
-````
 
 ::: incremental
 
 * Naming code chunks
-* Code chunk options
+* [Code chunk options](https://quarto.org/docs/computations/r.html#knitr-options)
 * `eval: false`
 * `include: false`
 * `echo: false`
@@ -142,41 +136,40 @@ countdown(minutes = 5)
 
 ### Incorrect caching
 
-````{verbatim}
-#| echo: true
 ```{r}
+#| echo: fenced
 #| label: raw-data
-rawdata <- readr::read_csv("a_very_large_file.csv")
+#| cache: true
+scdb_case <- read_csv("data/scdb-case.csv") |>
+  filter(term >= 1945)
 ```
     
 ```{r}
+#| echo: fenced
 #| label: processed-data
 #| cache: true
-processed_data <- rawdata |> 
-  filter(!is.na(import_var)) |> 
-  mutate(new_variable = complicated_transformation(x, y, z))
+scdb_clean <- scdb_case |> 
+  mutate(one_vote = majVotes - minVotes == 1)
 ```
-````
 
 ### Caching with dependencies
 
-````{verbatim}
-#| echo: true
-#| code-line-numbers: "9"
 ```{r}
-#| label: raw-data
-rawdata <- readr::read_csv("a_very_large_file.csv")
-```
-
-```{r}
-#| label: processed-data
+#| echo: fenced
+#| label: raw-data-cache
 #| cache: true
-#| dependson: "raw-data"
-processed_data <- rawdata |> 
-  filter(!is.na(import_var)) |> 
-  mutate(new_variable = complicated_transformation(x, y, z))
+scdb_case <- read_csv("data/scdb-case.csv") |>
+  filter(term >= 1945)
 ```
-````
+    
+```{r}
+#| echo: fenced
+#| label: processed-data-cache
+#| cache: true
+#| dependson: "raw-data-cache"
+scdb_clean <- scdb_case |> 
+  mutate(one_vote = majVotes - minVotes == 1)
+```
 
 :::
 
@@ -192,21 +185,26 @@ youth <- gun_deaths |>
 ````{verbatim}
 #| lang: "markdown"
 #| echo: true
-We have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:
+We have data about `r nrow(gun_deaths)` individuals killed by guns.
+
+Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:
 ````
 
 . . .
 
-We have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65.
+We have data about `r nrow(gun_deaths)` individuals killed by guns.
 
-## 🤔 Modify chunk options
+Only `r nrow(gun_deaths) - nrow(youth)` are older than 65.
 
-* Set `echo: false` as a global option
+## 🤔 AE: Modify chunk options
+
+* Set `echo: false` for each code chunk
 * Adjust the figure height and width options for the code chunks with plots
 * Enable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?
 
 ```{r}
 #| cache: false
+#| echo: false
 countdown(minutes = 7)
 ```
 
@@ -224,7 +222,7 @@ format: html
 ---
 ```
 
-* **Y**et **A**nother **M**arkup **L**anguage
+* [YAML Ain't Markup Language](https://yaml.org/)
 * Standardized format for storing hierarchical data in a human-readable syntax
 * Defines how `quarto` renders your `.qmd` file
 
@@ -285,16 +283,16 @@ knitr:
 - Default document-level options
 - Some options are set with [`execute`](https://quarto.org/docs/reference/formats/html.html#execution)
 
-## 🤔 Modify YAML options
+## 🤔 AE: Modify YAML options
 
 * Add a table of contents
-* Use the `"minty"` theme
+* Use themes for [light and dark mode](https://quarto.org/docs/output-formats/html-themes.html)
 * Modify the figures so they are 8 inches wide by 6 inches tall
 * Set code chunk options globally
 
 ```{r}
-#| cache = FALSE,
-#| echo = FALSE
+#| cache: false
+#| echo: false
 countdown(minutes = 7)
 ```
 
