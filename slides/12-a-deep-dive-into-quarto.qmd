@@ -18,7 +18,7 @@ library(patchwork)
 
 ## Announcements
 
-- Not much happening this week
+- [Project \#1 peer evaluation survey](https://forms.gle/HUbAHbdX4jM3DjnT8)
 
 # Setup
 
