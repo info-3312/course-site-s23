@@ -11,7 +11,7 @@ website:
   site-url: "https://info3312.infosci.cornell.edu/"
 
   repo-url: https://github.com/info-3312/course-site-s23
-  repo-actions: []
+  repo-actions: [source, issue]
 
   open-graph: true
 

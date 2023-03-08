@@ -306,7 +306,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
   <li><a href="#gun-deaths-by-age" id="toc-gun-deaths-by-age" class="nav-link active" data-scroll-target="#gun-deaths-by-age">Gun deaths by age</a></li>
   <li><a href="#gun-deaths-by-race" id="toc-gun-deaths-by-race" class="nav-link" data-scroll-target="#gun-deaths-by-race">Gun deaths by race</a></li>
   </ul>
-</nav>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/info-3312/course-site-s23/blob/main/slides/extras/gun-deaths.qmd" class="toc-action">View source</a></p><p><a href="https://github.com/info-3312/course-site-s23/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -350,7 +350,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <section id="gun-deaths-by-age" class="level1">
 <h1>Gun deaths by age</h1>
 <p>We have data about 100798 individuals killed by guns. Only 15687 are older than 65. The distribution of the remainder is shown below:</p>
-<div class="cell" data-layout-align="center" data-hash="gun-deaths_cache/html/youth-dist_94c4b5f8042ef7c661709bea1b3baea3">
+<div class="cell" data-layout-align="center" data-hash="gun-deaths_cache/html/youth-dist_09cc2f40f728a73c2e3465ddb06aae33">
 <div class="cell-output-display">
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
@@ -362,7 +362,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 </section>
 <section id="gun-deaths-by-race" class="level1">
 <h1>Gun deaths by race</h1>
-<div class="cell" data-layout-align="center" data-hash="gun-deaths_cache/html/race-dist_52a44cb4d14af411443952a64f5cafa9">
+<div class="cell" data-layout-align="center" data-hash="gun-deaths_cache/html/race-dist_065bcacb52953f757a3f0696cf7494be">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>youth <span class="sc">|&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="fu">fct_infreq</span>(race) <span class="sc">|&gt;</span> <span class="fu">fct_rev</span>())) <span class="sc">+</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>

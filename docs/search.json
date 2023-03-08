@@ -777,6 +777,230 @@
     "text": "Asking good questions\n\nDescribe what you want\nDescribe where you are\nCreate a minimal reproducible example: reprex::reprex()"
   },
   {
+    "objectID": "slides/13-quarto-websites.html#announcements-1",
+    "href": "slides/13-quarto-websites.html#announcements-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Announcements",
+    "text": "Announcements\nTODO"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#websites",
+    "href": "slides/13-quarto-websites.html#websites",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Websites",
+    "text": "Websites\n\nWebsites are essentially format: html + a Quarto Project\n\n\n\nWebsite is different than format: html in that it has multiple pages\nWebsite is our first exploration into Quarto Projects\n\nSimilar to R Projects, but for Quarto!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
+    "href": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1",
+    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1\n\nNo Quarto support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nFrom Yihui: https://slides.yihui.name/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
+    "href": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "RStudio > New Project > New Quarto Blog",
+    "text": "RStudio > New Project > New Quarto Blog"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#navigation-structure",
+    "href": "slides/13-quarto-websites.html#navigation-structure",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Navigation & Structure",
+    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nBlog home page.\n\n\nabout.qmd\nBlog about page.\n\n\nposts/\nDirectory containing posts\n\n\nposts/_metadata.yml\nShared options for posts\n\n\nstyles.css\nCustom CSS for website"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#create-a-blog",
+    "href": "slides/13-quarto-websites.html#create-a-blog",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Create a blog",
+    "text": "Create a blog\n\nA blog is a website with specific “opinions” already made\nIncludes a listing automatically from posts directory\nCan build custom listings in several ways"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#core-blog-workflow",
+    "href": "slides/13-quarto-websites.html#core-blog-workflow",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Core blog workflow",
+    "text": "Core blog workflow\n\nCreate a new folder under /posts - this folder will be the “slug” URL (like bensoltoff.com/2022-07-25-new-post/)\nCreate a new index.qmd within the new folder"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn",
+    "href": "slides/13-quarto-websites.html#your-turn",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nCreate a new RStudio project (in a separate RStudio session) and select Quarto blog\nGive it a name\nExplore the directory"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#rendering-posts",
+    "href": "slides/13-quarto-websites.html#rendering-posts",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Rendering posts",
+    "text": "Rendering posts\n\nOn a specific post, Render with RStudio > Render\nBuild tab > Render/Preview Website\n\nThese will preview the entire website\n\nWhen you render the website, it will re-execute code in older posts. Not ideal in many situations!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-1",
+    "href": "slides/13-quarto-websites.html#your-turn-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nLet’s render the index.qmd together!\nNow, let’s try Build > Render Website"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#freeze",
+    "href": "slides/13-quarto-websites.html#freeze",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Freeze",
+    "text": "Freeze\n\nYou can use the freeze option to denote that computational documents should never be re-rendered during a global project render, or alternatively only be re-rendered when their source file changes\n\n\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto  # re-render only when source changes\n\n\nfreeze: true is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nIn the case of a blog - the _metadata.yml is saved at the root of the posts directory. You can have it only within specific subdirectories for more complex sites."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#cache",
+    "href": "slides/13-quarto-websites.html#cache",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Cache",
+    "text": "Cache\nCache on the other hand, stores the results of computations for a specific file.\n\nNote that cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).\n\nexecute:\n  cache: true\n\nI typically use cache throughout various types of outputs when I have computationally expensive chunks."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-2",
+    "href": "slides/13-quarto-websites.html#your-turn-2",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nRender index.qmd in the project directory and note the items that are built\nExplore the _freeze directory\n\n\n\nMarvel at the “beautiful” JSON - it’s not for you, it’s for the machine"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#themes",
+    "href": "slides/13-quarto-websites.html#themes",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Themes",
+    "text": "Themes\nhttps://quarto.org/docs/websites/website-blog.html#themes\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nTo change theme, modify the bottom of your website’s _quarto.yml\nformat:\n  html:\n    theme: cosmo"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#themes-1",
+    "href": "slides/13-quarto-websites.html#themes-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-3",
+    "href": "slides/13-quarto-websites.html#your-turn-3",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen _quarto.yml and change the theme to one of the support Bootswatch themes\nCreate a new folder in /posts/ - title it 2023-03-09-my-first-post\nCreate a new blank index.qmd in that folder, add a format: html YAML header\nAdd some text and a markdown image: ![](), along with maybe some code\nRender it!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#adding-an-about-page",
+    "href": "slides/13-quarto-websites.html#adding-an-about-page",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Adding an About page",
+    "text": "Adding an About page\ntwitter-card:\n  image: images/profile-preview.png\n  creator: \"@soltoffbc\"\nopen-graph: true\ntitle: \"Benjamin Soltoff\"\nimage: images/profile-preview.png\nabout:\n  template: trestles\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/soltoffbc\n    - icon: github\n      text: Github\n      href: https://github.com/bensoltoff"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#about-page-templates",
+    "href": "slides/13-quarto-websites.html#about-page-templates",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "About page templates",
+    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-4",
+    "href": "slides/13-quarto-websites.html#your-turn-4",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen your about page (about.qmd)\nChange some of the details, add more details and choose a specific template (jolla, trestles, solana, marquee, broadside)\nRender it!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#landing-page",
+    "href": "slides/13-quarto-websites.html#landing-page",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Landing page",
+    "text": "Landing page\n\nThe landing page for your website defaults to the blog/listings page\nyour-proj/index.qmd becomes your “home page”\n\n\n\nIf you want your “About Me” page to be the landing page, rename your index.qmd -> blog.qmd and about.qmd -> index.qmd\n\n\n\n\nRe-structuring your website also requires modifying your _quarto.yml\n\nwebsite:\n  title: \"My blog name\"\n  site-url: \"https://MyBlogSiteUrl.com\"\n  navbar:\n    right:\n     - blog.qmd\n     - icon: twitter\n       href: \"https://twitter.com/my_user_name\"\nExample: https://www.ericekholm.com/posts/demo-quarto-site/"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings",
+    "href": "slides/13-quarto-websites.html#listings",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings-1",
+    "href": "slides/13-quarto-websites.html#listings-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings\n\n\n\nType\nDescription\n\n\n\n\ndefault\nA blog style list of items.\n\n\ntable\nA table of listings.\n\n\ngrid\nA grid of listing cards."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings-2",
+    "href": "slides/13-quarto-websites.html#listings-2",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings\n\nDefaultGridTable\n\n\n\nBy default, listings will appear in full width rows that display the item’s metadata (author and date), title, description, and image.\n\n\n\n\n\nGrid style listings display a card for each item.\n\n\n\n\n\nThe table listing style provides a traditional tabular layout."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-5",
+    "href": "slides/13-quarto-websites.html#your-turn-5",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen your existing Quarto blog from before\nLet’s change the listing type of our blog - change from default to grid\nRe-render the index.qmd"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#publishing",
+    "href": "slides/13-quarto-websites.html#publishing",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\n\n\n\nDestination\nDescription\n\n\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#publishing-1",
+    "href": "slides/13-quarto-websites.html#publishing-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\nStatic Only\n\nquarto R package: quarto::quarto_publish_???()\n\nCode\n\nEvaluate R/Python code and render on a schedule\nRStudio Connect\nrsconnect::deployDoc(quarto = \"path/to/quarto\")\n\nrsconnect::deployDoc(quarto = quarto::quarto_path())"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#static-publish",
+    "href": "slides/13-quarto-websites.html#static-publish",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Static Publish",
+    "text": "Static Publish\n\nquarto::quarto_publish_???()\n\nquarto_publish_site(server = \"rstudioconnect.example.com\")\nquarto_publish_doc(server = \"rpubs.com\")\nquarto_publish_app(server = \"shinyapps.io\")"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#netlify",
+    "href": "slides/13-quarto-websites.html#netlify",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Netlify",
+    "text": "Netlify\n\nCheat code: Netlify drop"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#github-pages",
+    "href": "slides/13-quarto-websites.html#github-pages",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n\nRender contents locally with the “Build Website” button\nStage/commit/push the rendered files to GitHub – site built automatically"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#websites-1",
+    "href": "slides/13-quarto-websites.html#websites-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Websites",
+    "text": "Websites\nSimilar to blog, but less of a focus on listing/posts and more focus on individual pages and overall navigation."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#quarto-project",
+    "href": "slides/13-quarto-websites.html#quarto-project",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Quarto Project",
+    "text": "Quarto Project\n\nhttps://quarto.org/docs/projects/quarto-projects.html\n\n\nWhen you create a project, a _quarto.yml config file is created. Here is an example of what the _quarto.yml looks like:\n\nproject:\n  output-dir: _output\n\ntoc: true\nnumber-sections: true\nbibliography: references.bib  \n  \nformat: #< default format inherited by other documents\n  html:\n    css: styles.css"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#quarto-projects",
+    "href": "slides/13-quarto-websites.html#quarto-projects",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Quarto Projects",
+    "text": "Quarto Projects\n\nMinimal project has at least 1x file and 1x _quarto.yml\nA project is a directory (and can have sub-directories)\n\n\nA typical project is used to:\n\nAggregate content (website/blog/book)\n\nShare metadata (YAML config) across multiple files\n\nRender an entire directory together or redirect output to another directory\n\nFreeze computation across a project or team\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "slides/01-welcome-info3312.html#agenda-1",
     "href": "slides/01-welcome-info3312.html#agenda-1",
     "title": "Welcome to INFO 3312/5312",
@@ -2387,6 +2611,160 @@
     "text": "Splitting legend labels\n\n\np_pctpell_avgfacsal_type +\n  labs(\n    x = \"Percent of students receiving a Pell grant\",\n    y = \"Average faculty salary (USD)\",\n    color = \"College type\"\n  )\n\n\n\n\n\n\n\n\n\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
+    "title": "A deep dive into Quarto",
+    "section": "Announcements",
+    "text": "Announcements\n\nProject #1 peer evaluation survey"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
+    "title": "A deep dive into Quarto",
+    "section": "ae-quarto",
+    "text": "ae-quarto\n\n\nGo to the course GitHub org and find your ae-quarto (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
+    "href": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
+    "title": "A deep dive into Quarto",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
+    "href": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
+    "title": "A deep dive into Quarto",
+    "section": "Quarto basics",
+    "text": "Quarto basics\n\n---\ntitle: Gun deaths\nauthor: Your name\ndate: March 7, 2023\nformat: html\n---\n\n```{r}\n#| label: setup\n#| include: false\nlibrary(tidyverse)\nlibrary(rcis)\n\nyouth <- gun_deaths |>\n  filter(age <= 65)\n```\n\n# Gun deaths by age\n\nWe have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\n```{r}\n#| label: youth-dist\n#| echo: false\nyouth |> \n  ggplot(aes(age)) + \n  geom_freqpoly(binwidth = 1)\n```\n\n# Gun deaths by race\n\n```{r}\n#| label: race-dist\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")\n```"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#major-components",
+    "href": "slides/12-a-deep-dive-into-quarto.html#major-components",
+    "title": "A deep dive into Quarto",
+    "section": "Major components",
+    "text": "Major components\n\nA YAML header surrounded by ---s\nChunks of code surounded by ```\nText mixed with simple text formatting using the Markdown syntax"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
+    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
+    "title": "A deep dive into Quarto",
+    "section": "Rendering process",
+    "text": "Rendering process\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
+    "title": "A deep dive into Quarto",
+    "section": "Rendering process",
+    "text": "Rendering process\n\n\n\n\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 AE: Edit the Quarto document",
+    "text": "🤔 AE: Edit the Quarto document\n\nRender gun-deaths.qmd as an HTML document\nAdd text describing the frequency polygon\n\n\n\n\n−+\n05:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
+    "href": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
+    "title": "A deep dive into Quarto",
+    "section": "Code chunks",
+    "text": "Code chunks\n\n```{r}\n#| label: youth-dist\n#| message: false\n#| warning: false\n\n# code goes here\n```\n\n\n\nNaming code chunks\nCode chunk options\neval: false\ninclude: false\necho: false\nmessage: false or warning: false\nerror: true\ncache: true"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#dependencies",
+    "href": "slides/12-a-deep-dive-into-quarto.html#dependencies",
+    "title": "A deep dive into Quarto",
+    "section": "Dependencies",
+    "text": "Dependencies\n\nIncorrect cachingCaching with dependencies\n\n\n\n```{r}\n#| label: raw-data\n#| cache: true\nscdb_case <- read_csv(\"data/scdb-case.csv\") |>\n  filter(term >= 1945)\n```\n\n\n```{r}\n#| label: processed-data\n#| cache: true\nscdb_clean <- scdb_case |> \n  mutate(one_vote = majVotes - minVotes == 1)\n```\n\n\n\n\n```{r}\n#| label: raw-data-cache\n#| cache: true\nscdb_case <- read_csv(\"data/scdb-case.csv\") |>\n  filter(term >= 1945)\n```\n\n\n```{r}\n#| label: processed-data-cache\n#| cache: true\n#| dependson: \"raw-data-cache\"\nscdb_clean <- scdb_case |> \n  mutate(one_vote = majVotes - minVotes == 1)\n```"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#inline-code",
+    "href": "slides/12-a-deep-dive-into-quarto.html#inline-code",
+    "title": "A deep dive into Quarto",
+    "section": "Inline code",
+    "text": "Inline code\nWe have data about `r nrow(gun_deaths)` individuals killed by guns.\n\nOnly `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\nWe have data about 100798 individuals killed by guns.\nOnly 15687 are older than 65."
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-modify-chunk-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-modify-chunk-options",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 AE: Modify chunk options",
+    "text": "🤔 AE: Modify chunk options\n\nSet echo: false for each code chunk\nAdjust the figure height and width options for the code chunks with plots\nEnable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
+    "href": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
+    "title": "A deep dive into Quarto",
+    "section": "YAML header",
+    "text": "YAML header\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---\n\nYAML Ain’t Markup Language\nStandardized format for storing hierarchical data in a human-readable syntax\nDefines how quarto renders your .qmd file"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#html-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#html-document",
+    "title": "A deep dive into Quarto",
+    "section": "HTML document",
+    "text": "HTML document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
+    "href": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
+    "title": "A deep dive into Quarto",
+    "section": "Table of contents",
+    "text": "Table of contents\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    toc: true\n    toc-depth: 2\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
+    "href": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
+    "title": "A deep dive into Quarto",
+    "section": "Appearance and style",
+    "text": "Appearance and style\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    theme: superhero\n    highlight-style: github\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#global-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#global-options",
+    "title": "A deep dive into Quarto",
+    "section": "Global options",
+    "text": "Global options\n---\ntitle: \"My Document\"\nformat: html\nexecute:\n  echo: true\n  message: false\nknitr:\n  opts_chunk: \n    fig-width: 7\n---\n\nDefault document-level options\nSome options are set with execute"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-modify-yaml-options",
+    "href": "slides/12-a-deep-dive-into-quarto.html#ae-modify-yaml-options",
+    "title": "A deep dive into Quarto",
+    "section": "🤔 AE: Modify YAML options",
+    "text": "🤔 AE: Modify YAML options\n\nAdd a table of contents\nUse themes for light and dark mode\nModify the figures so they are 8 inches wide by 6 inches tall\nSet code chunk options globally\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
+    "href": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
+    "title": "A deep dive into Quarto",
+    "section": "PDF document",
+    "text": "PDF document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: pdf\n---"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#render",
+    "href": "slides/12-a-deep-dive-into-quarto.html#render",
+    "title": "A deep dive into Quarto",
+    "section": "render()",
+    "text": "render()\nquarto::quarto_render(\"my-document.qmd\", output_format = \"html\")\nquarto::quarto_render(\"my-document.qmd\", output_format = \"all\")"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
+    "href": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
+    "title": "A deep dive into Quarto",
+    "section": "R scripts",
+    "text": "R scripts\n\n# gun-deaths.R\n# 2022-03-07\n# Examine the distribution of age of victims in gun_deaths\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# filter data for under 65\nyouth <- gun_deaths |>\n  filter(age <= 65)\n\n# number of individuals under 65 killed\nnrow(gun_deaths) - nrow(youth)\n\n# graph the distribution of youth\nyouth |>\n  ggplot(aes(age)) +\n  geom_freqpoly(binwidth = 1)\n\n# graph the distribution of youth, by race\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
+  },
+  {
+    "objectID": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
+    "href": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
+    "title": "A deep dive into Quarto",
+    "section": "When to use a script",
+    "text": "When to use a script\n\nFor troubleshooting\nInitial stages of project\nBuilding a reproducible pipeline\nIt depends\n\n\nRunning scripts\n\nInteractively\nProgrammatically using source()\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
     "objectID": "slides/11-optimizing-color-spaces.html#announcements-1",
     "href": "slides/11-optimizing-color-spaces.html#announcements-1",
     "title": "Optimizing color spaces",
@@ -2534,11 +2912,11 @@
     "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
   },
   {
-    "objectID": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
-    "href": "slides/11-optimizing-color-spaces.html#use-qualitative-for-nominal-variables-1",
+    "objectID": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
+    "href": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
     "title": "Optimizing color spaces",
-    "section": "Use qualitative for nominal variables",
-    "text": "Use qualitative for nominal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
+    "section": "Use quantitative for ordinal variables",
+    "text": "Use quantitative for ordinal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
   },
   {
     "objectID": "slides/11-optimizing-color-spaces.html#quantitative-neq-continuous",
@@ -3192,6 +3570,13 @@
     "text": "Wrap up\n\nThink back to all the plots you saw in the lecture, without flipping back through the slides. Which plot first comes to mind? Describe it in words.\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
+    "objectID": "slides/extras/gun-deaths.html",
+    "href": "slides/extras/gun-deaths.html",
+    "title": "Gun deaths",
+    "section": "",
+    "text": "Gun deaths by age\nWe have data about 100798 individuals killed by guns. Only 15687 are older than 65. The distribution of the remainder is shown below:\n\n\n\n\n\n\n\n\n\n\n\nGun deaths by race\n\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
+  },
+  {
     "objectID": "course-faq.html",
     "href": "course-faq.html",
     "title": "FAQ",
@@ -3344,432 +3729,5 @@
     "title": "Syllabus",
     "section": "Course policies",
     "text": "Course policies\n\nAcademic honesty\nTL;DR: Don’t cheat!\nPlease abide by the following as you work on assignments in this course:\n\nYou may discuss individual homework assignments with other students; however, you may not directly share (or copy) code or write up with other students. Unauthorized sharing (or copying) of the code or write up will be considered a violation for all students involved.\nReusing code: Unless explicitly stated otherwise, you may make use of online resources (e.g. StackOverflow) for coding examples on assignments. You may not directly copy and paste from these sources, but instead you need to adapt the code to fit your specific task. You must explicitly cite where you obtained the code using a code comment # immediately near the appearance of the reused code in the file. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nAutomated help: you may use AI code helpers such as GitHub CoPilot and ChatGPT as reference tools only. We recognize that these tools are becoming quite powerful, but relying on them prevents you from meeting the core learning objectives of this course. All code you submit in this class must be written by a human being – you.\n\nAny violations in academic honesty standards as outlined in the Cornell University Code of Academic Integrity and those specific to this course will result in a 0 for the assignment (or possibly more) and will be reported to the College of Engineering Academic Integrity Hearing Board.\n\n\nLate work & extensions\nThe due dates for assignments are there to help you keep up with the course material and to ensure the course staff can provide feedback within a timely manner. We understand that things come up periodically that could make it difficult to submit an assignment by the deadline.\n\nLate work\n\nHomework assignments: A slip day allows you to submit an assignment 24 hours after the deadline and still receive credit without a late penalty. You are provided with a total of 3 slip days for the entire semester. Slip days may be used on homework assignments. You can use up to 1 slip day for a given homework assignment. Note that the lowest homework assignment will be dropped at the end of the semester.\nTo use your slip days, just submit your assignment late. No need to email telling us you are submitting using your slip days. Check Canvas to see how many of your slip days you have used before submitting an assignment late.\nIf you use a slip day, do not submit anything to Gradescope before the submission deadline. We may begin grading before the slip day deadline and we will grade whatever submission we see in Gradescope.\nIf you run out of slip days or submit after the slip day deadline, you may submit your homework assignment for up to 70% credit.\nProjects: Late work is not accepted.\n\n\n\n\nRegrade requests\n\nHomework assignments: Regrade requests must be submitted on Gradescope within a week of when an assignment is returned. Regrade requests will be considered if there was an error in the grade calculation or if you feel a correct answer was mistakenly marked as incorrect. Requests to dispute the number of points deducted for an incorrect response will not be considered. Note that by submitting a regrade request, the entire question will be graded which could potentially result in losing points.\nProjects: Copy the template below into an email. Send that email to soltoffbc@cornell.edu.\nSubject:\n\nINFO 3312/5312 (REQUEST) Regrade\n\nEmail Message Template:\n\nNetID: TODO  Team Name: TODO  Assignment: TODO\nDirectly state the mistake(s) in the grading of your assignment. Be specific and specify the total points that you believed should be returned for each mistake. (1-3 brief and concise bullets):\nTODO\n(optional) If necessary, briefly explain why your approach to this assignment is a good choice (1-3 brief and concise bullets):\nTODO\n\nTips:\n\nWhen writing, please be respectful, thoughtful, and professional.\nBe brief and concise. Bullet points are encouraged. Please do not write a lengthy explanation.\nForm and ground your argument based on ideas and principles presented in this course. This is the primary criteria we use to evaluate your regrade request.\nAssume that we made a mistake; avoid accusing us being unfair or punishing you."
-  },
-  {
-    "objectID": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
-    "href": "slides/11-optimizing-color-spaces.html#use-quantitative-for-ordinal-variables",
-    "title": "Optimizing color spaces",
-    "section": "Use quantitative for ordinal variables",
-    "text": "Use quantitative for ordinal variables\n\n\n\n\n\n\n\n\n\n\n\nSource: Lisa Charlotte Muth"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
-    "href": "slides/12-a-deep-dive-into-quarto.html#announcements-1",
-    "title": "A deep dive into Quarto",
-    "section": "Announcements",
-    "text": "Announcements\n\nProject #1 peer evaluation survey"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
-    "href": "slides/12-a-deep-dive-into-quarto.html#packages-figures",
-    "title": "A deep dive into Quarto",
-    "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#yaml-options",
-    "title": "A deep dive into Quarto",
-    "section": "YAML options",
-    "text": "YAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
-    "href": "slides/12-a-deep-dive-into-quarto.html#quarto-basics",
-    "title": "A deep dive into Quarto",
-    "section": "Quarto basics",
-    "text": "Quarto basics\n\n---\ntitle: Gun deaths\nauthor: Your name\ndate: March 7, 2023\nformat: html\n---\n\n```{r}\n#| label: setup\n#| include: false\nlibrary(tidyverse)\nlibrary(rcis)\n\nyouth <- gun_deaths |>\n  filter(age <= 65)\n```\n\n# Gun deaths by age\n\nWe have data about `r nrow(gun_deaths)` individuals killed by guns. Only `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\n```{r}\n#| label: youth-dist\n#| echo: false\nyouth |> \n  ggplot(aes(age)) + \n  geom_freqpoly(binwidth = 1)\n```\n\n# Gun deaths by race\n\n```{r}\n#| label: race-dist\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")\n```"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#major-components",
-    "href": "slides/12-a-deep-dive-into-quarto.html#major-components",
-    "title": "A deep dive into Quarto",
-    "section": "Major components",
-    "text": "Major components\n\nA YAML header surrounded by ---s\nChunks of code surounded by ```\nText mixed with simple text formatting using the Markdown syntax"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
-    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process",
-    "title": "A deep dive into Quarto",
-    "section": "Rendering process",
-    "text": "Rendering process\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
-    "href": "slides/12-a-deep-dive-into-quarto.html#rendering-process-1",
-    "title": "A deep dive into Quarto",
-    "section": "Rendering process",
-    "text": "Rendering process\n\n\n\n\n\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
-    "href": "slides/12-a-deep-dive-into-quarto.html#ae-edit-the-quarto-document",
-    "title": "A deep dive into Quarto",
-    "section": "🤔 AE: Edit the Quarto document",
-    "text": "🤔 AE: Edit the Quarto document\n\nRender gun-deaths.qmd as an HTML document\nAdd text describing the frequency polygon\n\n\n\n\n−+\n05:00"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
-    "href": "slides/12-a-deep-dive-into-quarto.html#code-chunks",
-    "title": "A deep dive into Quarto",
-    "section": "Code chunks",
-    "text": "Code chunks\n\n```{r}\n#| label: youth-dist\n#| message: false\n#| warning: false\n\n# code goes here\n```\n\n\n\nNaming code chunks\nCode chunk options\neval: false\ninclude: false\necho: false\nmessage: false or warning: false\nerror: true\ncache: true"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#dependencies",
-    "href": "slides/12-a-deep-dive-into-quarto.html#dependencies",
-    "title": "A deep dive into Quarto",
-    "section": "Dependencies",
-    "text": "Dependencies\n\nIncorrect cachingCaching with dependencies\n\n\n\n```{r}\n#| label: raw-data\n#| cache: true\nscdb_case <- read_csv(\"data/scdb-case.csv\") |>\n  filter(term >= 1945)\n```\n\n\n```{r}\n#| label: processed-data\n#| cache: true\nscdb_clean <- scdb_case |> \n  mutate(one_vote = majVotes - minVotes == 1)\n```\n\n\n\n\n```{r}\n#| label: raw-data-cache\n#| cache: true\nscdb_case <- read_csv(\"data/scdb-case.csv\") |>\n  filter(term >= 1945)\n```\n\n\n```{r}\n#| label: processed-data-cache\n#| cache: true\n#| dependson: \"raw-data-cache\"\nscdb_clean <- scdb_case |> \n  mutate(one_vote = majVotes - minVotes == 1)\n```"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#inline-code",
-    "href": "slides/12-a-deep-dive-into-quarto.html#inline-code",
-    "title": "A deep dive into Quarto",
-    "section": "Inline code",
-    "text": "Inline code\nWe have data about `r nrow(gun_deaths)` individuals killed by guns.\n\nOnly `r nrow(gun_deaths) - nrow(youth)` are older than 65. The distribution of the remainder is shown below:\n\nWe have data about 100798 individuals killed by guns.\nOnly 15687 are older than 65."
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#modify-chunk-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#modify-chunk-options",
-    "title": "A deep dive into Quarto",
-    "section": "🤔 Modify chunk options",
-    "text": "🤔 Modify chunk options\n\nSet echo: false as a global option\nAdjust the figure height and width options for the code chunks with plots\nEnable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
-    "href": "slides/12-a-deep-dive-into-quarto.html#yaml-header-1",
-    "title": "A deep dive into Quarto",
-    "section": "YAML header",
-    "text": "YAML header\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---\n\nYAML Ain’t Markup Language\nStandardized format for storing hierarchical data in a human-readable syntax\nDefines how quarto renders your .qmd file"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#html-document",
-    "href": "slides/12-a-deep-dive-into-quarto.html#html-document",
-    "title": "A deep dive into Quarto",
-    "section": "HTML document",
-    "text": "HTML document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: html\n---"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
-    "href": "slides/12-a-deep-dive-into-quarto.html#table-of-contents",
-    "title": "A deep dive into Quarto",
-    "section": "Table of contents",
-    "text": "Table of contents\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    toc: true\n    toc-depth: 2\n---"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
-    "href": "slides/12-a-deep-dive-into-quarto.html#appearance-and-style",
-    "title": "A deep dive into Quarto",
-    "section": "Appearance and style",
-    "text": "Appearance and style\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat:\n  html:\n    theme: superhero\n    highlight-style: github\n---"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#global-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#global-options",
-    "title": "A deep dive into Quarto",
-    "section": "Global options",
-    "text": "Global options\n---\ntitle: \"My Document\"\nformat: html\nexecute:\n  echo: true\n  message: false\nknitr:\n  opts_chunk: \n    fig-width: 7\n---\n\nDefault document-level options\nSome options are set with execute"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#modify-yaml-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#modify-yaml-options",
-    "title": "A deep dive into Quarto",
-    "section": "🤔 Modify YAML options",
-    "text": "🤔 Modify YAML options\n\nAdd a table of contents\nUse the \"minty\" theme\nModify the figures so they are 8 inches wide by 6 inches tall\nSet code chunk options globally\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
-    "href": "slides/12-a-deep-dive-into-quarto.html#pdf-document",
-    "title": "A deep dive into Quarto",
-    "section": "PDF document",
-    "text": "PDF document\n---\ntitle: Gun deaths\nauthor: Benjamin Soltoff\ndate: March 07, 2023\nformat: pdf\n---"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#render",
-    "href": "slides/12-a-deep-dive-into-quarto.html#render",
-    "title": "A deep dive into Quarto",
-    "section": "render()",
-    "text": "render()\nquarto::quarto_render(\"my-document.qmd\", output_format = \"html\")\nquarto::quarto_render(\"my-document.qmd\", output_format = \"all\")"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
-    "href": "slides/12-a-deep-dive-into-quarto.html#r-scripts",
-    "title": "A deep dive into Quarto",
-    "section": "R scripts",
-    "text": "R scripts\n\n# gun-deaths.R\n# 2022-03-07\n# Examine the distribution of age of victims in gun_deaths\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\n\n# filter data for under 65\nyouth <- gun_deaths |>\n  filter(age <= 65)\n\n# number of individuals under 65 killed\nnrow(gun_deaths) - nrow(youth)\n\n# graph the distribution of youth\nyouth |>\n  ggplot(aes(age)) +\n  geom_freqpoly(binwidth = 1)\n\n# graph the distribution of youth, by race\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
-    "href": "slides/12-a-deep-dive-into-quarto.html#when-to-use-a-script",
-    "title": "A deep dive into Quarto",
-    "section": "When to use a script",
-    "text": "When to use a script\n\nFor troubleshooting\nInitial stages of project\nBuilding a reproducible pipeline\nIt depends\n\n\nRunning scripts\n\nInteractively\nProgrammatically using source()\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
-  },
-  {
-    "objectID": "slides/extras/gun-deaths.html",
-    "href": "slides/extras/gun-deaths.html",
-    "title": "Gun deaths",
-    "section": "",
-    "text": "Gun deaths by age\nWe have data about 100798 individuals killed by guns. Only 15687 are older than 65. The distribution of the remainder is shown below:\n\n\n\n\n\n\n\n\n\n\n\nGun deaths by race\n\nyouth |>\n  ggplot(aes(fct_infreq(race) |> fct_rev())) +\n  geom_bar() +\n  coord_flip() +\n  labs(x = \"Victim race\")"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
-    "href": "slides/12-a-deep-dive-into-quarto.html#ae-quarto",
-    "title": "A deep dive into Quarto",
-    "section": "ae-quarto",
-    "text": "ae-quarto\n\n\nGo to the course GitHub org and find your ae-quarto (repo name will be suffixed with your GitHub name).\nClone the repo in RStudio Workbench, open the Quarto document in the repo, and follow along and complete the exercises."
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-modify-chunk-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#ae-modify-chunk-options",
-    "title": "A deep dive into Quarto",
-    "section": "🤔 AE: Modify chunk options",
-    "text": "🤔 AE: Modify chunk options\n\nSet echo: false for each code chunk\nAdjust the figure height and width options for the code chunks with plots\nEnable caching for each chunk and render the document. Look at the file structure for the cache. Now render the document again. Does it run faster?\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "slides/12-a-deep-dive-into-quarto.html#ae-modify-yaml-options",
-    "href": "slides/12-a-deep-dive-into-quarto.html#ae-modify-yaml-options",
-    "title": "A deep dive into Quarto",
-    "section": "🤔 AE: Modify YAML options",
-    "text": "🤔 AE: Modify YAML options\n\nAdd a table of contents\nUse themes for light and dark mode\nModify the figures so they are 8 inches wide by 6 inches tall\nSet code chunk options globally\n\n\n\n\n−+\n07:00"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#announcements-1",
-    "href": "slides/13-quarto-websites.html#announcements-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Announcements",
-    "text": "Announcements\nTODO"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#packages-figures",
-    "href": "slides/13-quarto-websites.html#packages-figures",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Packages + figures",
-    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#websites",
-    "href": "slides/13-quarto-websites.html#websites",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Websites",
-    "text": "Websites\n\nWebsites are essentially format: html + a Quarto Project\n\n\n\nWebsite is different than format: html in that it has multiple pages\nWebsite is our first exploration into Quarto Projects\n\nSimilar to R Projects, but for Quarto!"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
-    "href": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1",
-    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1\n\nNo Quarto support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nFrom Yihui: https://slides.yihui.name/2017-rmarkdown-UNL-Yihui-Xie.html#36"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#section",
-    "href": "slides/13-quarto-websites.html#section",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "",
-    "text": "RStudio > New Project > New Quarto Blog"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#navigation-structure",
-    "href": "slides/13-quarto-websites.html#navigation-structure",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Navigation & Structure",
-    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nBlog home page.\n\n\nabout.qmd\nBlog about page.\n\n\nposts/\nDirectory containing posts\n\n\nposts/_metadata.yml\nShared options for posts\n\n\nstyles.css\nCustom CSS for website"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#create-a-blog",
-    "href": "slides/13-quarto-websites.html#create-a-blog",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Create a blog",
-    "text": "Create a blog\n\nA blog is a website with specific “opinions” already made\nIncludes a listing automatically from posts directory\nCan build custom listings in several ways"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#core-blog-workflow",
-    "href": "slides/13-quarto-websites.html#core-blog-workflow",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Core blog workflow",
-    "text": "Core blog workflow\n\nCreate a new folder under /posts - this folder will be the “slug” URL (like bensoltoff.com/2022-07-25-new-post/)\nCreate a new index.qmd within the new folder"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn",
-    "href": "slides/13-quarto-websites.html#your-turn",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nCreate a new RStudio project (in a separate RStudio session) and select Quarto blog\nGive it a name\nExplore the directory"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#rendering-posts",
-    "href": "slides/13-quarto-websites.html#rendering-posts",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Rendering posts",
-    "text": "Rendering posts\n\nOn a specific post, Render with RStudio > Render\nBuild tab > Render/Preview Website\n\nThese will preview the entire website\n\nWhen you render the website, it will re-execute code in older posts. Not ideal in many situations!"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn-1",
-    "href": "slides/13-quarto-websites.html#your-turn-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nLet’s render the index.qmd together!\nNow, let’s try Build > Render Website"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#freeze",
-    "href": "slides/13-quarto-websites.html#freeze",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Freeze",
-    "text": "Freeze\n\nYou can use the freeze option to denote that computational documents should never be re-rendered during a global project render, or alternatively only be re-rendered when their source file changes\n\n\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto  # re-render only when source changes\n\n\nfreeze: true is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nIn the case of a blog - the _metadata.yml is saved at the root of the posts directory. You can have it only within specific subdirectories for more complex sites."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#cache",
-    "href": "slides/13-quarto-websites.html#cache",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Cache",
-    "text": "Cache\nCache on the other hand, stores the results of computations for a specific file.\n\nNote that cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).\n\nexecute:\n  cache: true\n\nI typically use cache throughout various types of outputs when I have computationally expensive chunks."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn-2",
-    "href": "slides/13-quarto-websites.html#your-turn-2",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nRender index.qmd in the project directory and note the items that are built\nExplore the _freeze directory\n\n\n\nMarvel at the “beautiful” JSON - it’s not for you, it’s for the machine"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#themes",
-    "href": "slides/13-quarto-websites.html#themes",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Themes",
-    "text": "Themes\nhttps://quarto.org/docs/websites/website-blog.html#themes\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nTo change theme, modify the bottom of your website’s _quarto.yml\nformat:\n  html:\n    theme: cosmo"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#themes-1",
-    "href": "slides/13-quarto-websites.html#themes-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Themes",
-    "text": "Themes"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn-3",
-    "href": "slides/13-quarto-websites.html#your-turn-3",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nOpen _quarto.yml and change the theme to one of the support Bootswatch themes\nCreate a new folder in /posts/ - title it 2023-03-09-my-first-post\nCreate a new blank index.qmd in that folder, add a format: html YAML header\nAdd some text and a markdown image: ![](), along with maybe some code\nRender it!"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#adding-an-about-page",
-    "href": "slides/13-quarto-websites.html#adding-an-about-page",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Adding an About page",
-    "text": "Adding an About page\ntwitter-card:\n  image: images/profile-preview.png\n  creator: \"@soltoffbc\"\nopen-graph: true\ntitle: \"Benjamin Soltoff\"\nimage: images/profile-preview.png\nabout:\n  template: trestles\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/soltoffbc\n    - icon: github\n      text: Github\n      href: https://github.com/bensoltoff"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#about-page-templates",
-    "href": "slides/13-quarto-websites.html#about-page-templates",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "About page templates",
-    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn-4",
-    "href": "slides/13-quarto-websites.html#your-turn-4",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nOpen your about page (about.qmd)\nChange some of the details, add more details and choose a specific template (jolla, trestles, solana, marquee, broadside)\nRender it!"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#landing-page",
-    "href": "slides/13-quarto-websites.html#landing-page",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Landing page",
-    "text": "Landing page\n\nThe landing page for your website defaults to the blog/listings page\nyour-proj/index.qmd becomes your “home page”\n\n\n\nIf you want your “About Me” page to be the landing page, rename your index.qmd -> blog.qmd and about.qmd -> index.qmd\n\n\n\n\nRe-structuring your website also requires modifying your _quarto.yml\n\nwebsite:\n  title: \"My blog name\"\n  site-url: \"https://MyBlogSiteUrl.com\"\n  navbar:\n    right:\n     - blog.qmd\n     - icon: twitter\n       href: \"https://twitter.com/my_user_name\"\nExample: https://www.ericekholm.com/posts/demo-quarto-site/"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#listings",
-    "href": "slides/13-quarto-websites.html#listings",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Listings",
-    "text": "Listings"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#listings-1",
-    "href": "slides/13-quarto-websites.html#listings-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Listings",
-    "text": "Listings\n\n\n\nType\nDescription\n\n\n\n\ndefault\nA blog style list of items.\n\n\ntable\nA table of listings.\n\n\ngrid\nA grid of listing cards."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#listings-2",
-    "href": "slides/13-quarto-websites.html#listings-2",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Listings",
-    "text": "Listings\n\nDefaultGridTable\n\n\n\nBy default, listings will appear in full width rows that display the item’s metadata (author and date), title, description, and image.\n\n\n\n\n\nGrid style listings display a card for each item.\n\n\n\n\n\nThe table listing style provides a traditional tabular layout."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#your-turn-5",
-    "href": "slides/13-quarto-websites.html#your-turn-5",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": " Your Turn",
-    "text": "Your Turn\n\nOpen your existing Quarto blog from before\nLet’s change the listing type of our blog - change from default to grid\nRe-render the index.qmd"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#publishing",
-    "href": "slides/13-quarto-websites.html#publishing",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Publishing",
-    "text": "Publishing\n\n\n\nDestination\nDescription\n\n\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#publishing-1",
-    "href": "slides/13-quarto-websites.html#publishing-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Publishing",
-    "text": "Publishing\nStatic Only\n\nquarto R package: quarto::quarto_publish_???()\n\nCode\n\nEvaluate R/Python code and render on a schedule\nRStudio Connect\nrsconnect::deployDoc(quarto = \"path/to/quarto\")\n\nrsconnect::deployDoc(quarto = quarto::quarto_path())"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#static-publish",
-    "href": "slides/13-quarto-websites.html#static-publish",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Static Publish",
-    "text": "Static Publish\n\nquarto::quarto_publish_???()\n\nquarto_publish_site(server = \"rstudioconnect.example.com\")\nquarto_publish_doc(server = \"rpubs.com\")\nquarto_publish_app(server = \"shinyapps.io\")"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#netlify",
-    "href": "slides/13-quarto-websites.html#netlify",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Netlify",
-    "text": "Netlify\n\nCheat code: Netlify drop"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#github-pages",
-    "href": "slides/13-quarto-websites.html#github-pages",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "GitHub Pages",
-    "text": "GitHub Pages\n\nRender contents locally with the “Build Website” button\nStage/commit/push the rendered files to GitHub – site built automatically"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#websites-1",
-    "href": "slides/13-quarto-websites.html#websites-1",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Websites",
-    "text": "Websites\nSimilar to blog, but less of a focus on listing/posts and more focus on individual pages and overall navigation."
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#quarto-project",
-    "href": "slides/13-quarto-websites.html#quarto-project",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Quarto Project",
-    "text": "Quarto Project\n\nhttps://quarto.org/docs/projects/quarto-projects.html\n\n\nWhen you create a project, a _quarto.yml config file is created. Here is an example of what the _quarto.yml looks like:\n\nproject:\n  output-dir: _output\n\ntoc: true\nnumber-sections: true\nbibliography: references.bib  \n  \nformat: #< default format inherited by other documents\n  html:\n    css: styles.css"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#quarto-projects",
-    "href": "slides/13-quarto-websites.html#quarto-projects",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "Quarto Projects",
-    "text": "Quarto Projects\n\nMinimal project has at least 1x file and 1x _quarto.yml\nA project is a directory (and can have sub-directories)\n\n\nA typical project is used to:\n\nAggregate content (website/blog/book)\n\nShare metadata (YAML config) across multiple files\n\nRender an entire directory together or redirect output to another directory\n\nFreeze computation across a project or team\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
-  },
-  {
-    "objectID": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
-    "href": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
-    "title": "Publishing reproducible websites with Quarto",
-    "section": "RStudio > New Project > New Quarto Blog",
-    "text": "RStudio > New Project > New Quarto Blog"
   }
 ]
