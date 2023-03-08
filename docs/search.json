@@ -3533,5 +3533,243 @@
     "title": "A deep dive into Quarto",
     "section": "🤔 AE: Modify YAML options",
     "text": "🤔 AE: Modify YAML options\n\nAdd a table of contents\nUse themes for light and dark mode\nModify the figures so they are 8 inches wide by 6 inches tall\nSet code chunk options globally\n\n\n\n\n−+\n07:00"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#announcements-1",
+    "href": "slides/13-quarto-websites.html#announcements-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Announcements",
+    "text": "Announcements\nTODO"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#packages-figures",
+    "href": "slides/13-quarto-websites.html#packages-figures",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Packages + figures",
+    "text": "Packages + figures\n\n# load packages\nlibrary(tidyverse)\nlibrary(rcis)\nlibrary(here)\nlibrary(countdown)\n\n# set default theme for ggplot2\ntheme_set(theme_minimal(base_size = 12))\n\nYAML options\nknitr:\n  opts_chunk:\n    fig.width: 7\n    fig.asp: 0.618\n    fig.retina: 2\n    dpi: 150\n    out.width: \"80%\"\n    fig.showtext: true"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#websites",
+    "href": "slides/13-quarto-websites.html#websites",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Websites",
+    "text": "Websites\n\nWebsites are essentially format: html + a Quarto Project\n\n\n\nWebsite is different than format: html in that it has multiple pages\nWebsite is our first exploration into Quarto Projects\n\nSimilar to R Projects, but for Quarto!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
+    "href": "slides/13-quarto-websites.html#why-not-wordpress-tumblr-medium.com-blogger.com-etc1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1",
+    "text": "Why not WordPress, Tumblr, Medium.com, Blogger.com, etc?1\n\nNo Quarto support (even math support is often nonexistent or awkward)\nHuge benefits of static websites compared to dynamic websites\nall static files, no PHP or databases, no login/password, work everywhere (even offline)\ntypically fast to visit (no computation needed on the server side), and easy to speed up via CDN\n\nFrom Yihui: https://slides.yihui.name/2017-rmarkdown-UNL-Yihui-Xie.html#36"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#section",
+    "href": "slides/13-quarto-websites.html#section",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "",
+    "text": "RStudio > New Project > New Quarto Blog"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#navigation-structure",
+    "href": "slides/13-quarto-websites.html#navigation-structure",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Navigation & Structure",
+    "text": "Navigation & Structure\n\n\n\nFile\nDescription\n\n\n\n\n_quarto.yml\nQuarto project file.\n\n\nindex.qmd\nBlog home page.\n\n\nabout.qmd\nBlog about page.\n\n\nposts/\nDirectory containing posts\n\n\nposts/_metadata.yml\nShared options for posts\n\n\nstyles.css\nCustom CSS for website"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#create-a-blog",
+    "href": "slides/13-quarto-websites.html#create-a-blog",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Create a blog",
+    "text": "Create a blog\n\nA blog is a website with specific “opinions” already made\nIncludes a listing automatically from posts directory\nCan build custom listings in several ways"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#core-blog-workflow",
+    "href": "slides/13-quarto-websites.html#core-blog-workflow",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Core blog workflow",
+    "text": "Core blog workflow\n\nCreate a new folder under /posts - this folder will be the “slug” URL (like bensoltoff.com/2022-07-25-new-post/)\nCreate a new index.qmd within the new folder"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn",
+    "href": "slides/13-quarto-websites.html#your-turn",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nCreate a new RStudio project (in a separate RStudio session) and select Quarto blog\nGive it a name\nExplore the directory"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#rendering-posts",
+    "href": "slides/13-quarto-websites.html#rendering-posts",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Rendering posts",
+    "text": "Rendering posts\n\nOn a specific post, Render with RStudio > Render\nBuild tab > Render/Preview Website\n\nThese will preview the entire website\n\nWhen you render the website, it will re-execute code in older posts. Not ideal in many situations!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-1",
+    "href": "slides/13-quarto-websites.html#your-turn-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nLet’s render the index.qmd together!\nNow, let’s try Build > Render Website"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#freeze",
+    "href": "slides/13-quarto-websites.html#freeze",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Freeze",
+    "text": "Freeze\n\nYou can use the freeze option to denote that computational documents should never be re-rendered during a global project render, or alternatively only be re-rendered when their source file changes\n\n\nexecute:\n  freeze: true  # never re-render during project render\nexecute:\n  freeze: auto  # re-render only when source changes\n\n\nfreeze: true is typically added to a _metadata.yml file within a specific directory, affecting all files in that directory.\nIn the case of a blog - the _metadata.yml is saved at the root of the posts directory. You can have it only within specific subdirectories for more complex sites."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#cache",
+    "href": "slides/13-quarto-websites.html#cache",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Cache",
+    "text": "Cache\nCache on the other hand, stores the results of computations for a specific file.\n\nNote that cache invalidation is triggered by changes in chunk source code (or other cache attributes you’ve defined).\n\nexecute:\n  cache: true\n\nI typically use cache throughout various types of outputs when I have computationally expensive chunks."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-2",
+    "href": "slides/13-quarto-websites.html#your-turn-2",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nRender index.qmd in the project directory and note the items that are built\nExplore the _freeze directory\n\n\n\nMarvel at the “beautiful” JSON - it’s not for you, it’s for the machine"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#themes",
+    "href": "slides/13-quarto-websites.html#themes",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Themes",
+    "text": "Themes\nhttps://quarto.org/docs/websites/website-blog.html#themes\ndefault, cerulean, cosmo, cyborg, darkly, flatly, journal, litera, lumen, lux, materia, minty, morph, pulse, quartz, sandstone, simplex, sketchy, slate, solar, spacelab, superhero, united, vapor, yeti, zephyr\n\nTo change theme, modify the bottom of your website’s _quarto.yml\nformat:\n  html:\n    theme: cosmo"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#themes-1",
+    "href": "slides/13-quarto-websites.html#themes-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Themes",
+    "text": "Themes"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-3",
+    "href": "slides/13-quarto-websites.html#your-turn-3",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen _quarto.yml and change the theme to one of the support Bootswatch themes\nCreate a new folder in /posts/ - title it 2023-03-09-my-first-post\nCreate a new blank index.qmd in that folder, add a format: html YAML header\nAdd some text and a markdown image: ![](), along with maybe some code\nRender it!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#adding-an-about-page",
+    "href": "slides/13-quarto-websites.html#adding-an-about-page",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Adding an About page",
+    "text": "Adding an About page\ntwitter-card:\n  image: images/profile-preview.png\n  creator: \"@soltoffbc\"\nopen-graph: true\ntitle: \"Benjamin Soltoff\"\nimage: images/profile-preview.png\nabout:\n  template: trestles\n  links:\n    - icon: twitter\n      text: Twitter\n      href: https://twitter.com/soltoffbc\n    - icon: github\n      text: Github\n      href: https://github.com/bensoltoff"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#about-page-templates",
+    "href": "slides/13-quarto-websites.html#about-page-templates",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "About page templates",
+    "text": "About page templates\nabout:\n  template: trestles\n\njollatrestlessolanamarqueebroadside"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-4",
+    "href": "slides/13-quarto-websites.html#your-turn-4",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen your about page (about.qmd)\nChange some of the details, add more details and choose a specific template (jolla, trestles, solana, marquee, broadside)\nRender it!"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#landing-page",
+    "href": "slides/13-quarto-websites.html#landing-page",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Landing page",
+    "text": "Landing page\n\nThe landing page for your website defaults to the blog/listings page\nyour-proj/index.qmd becomes your “home page”\n\n\n\nIf you want your “About Me” page to be the landing page, rename your index.qmd -> blog.qmd and about.qmd -> index.qmd\n\n\n\n\nRe-structuring your website also requires modifying your _quarto.yml\n\nwebsite:\n  title: \"My blog name\"\n  site-url: \"https://MyBlogSiteUrl.com\"\n  navbar:\n    right:\n     - blog.qmd\n     - icon: twitter\n       href: \"https://twitter.com/my_user_name\"\nExample: https://www.ericekholm.com/posts/demo-quarto-site/"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings",
+    "href": "slides/13-quarto-websites.html#listings",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings-1",
+    "href": "slides/13-quarto-websites.html#listings-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings\n\n\n\nType\nDescription\n\n\n\n\ndefault\nA blog style list of items.\n\n\ntable\nA table of listings.\n\n\ngrid\nA grid of listing cards."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#listings-2",
+    "href": "slides/13-quarto-websites.html#listings-2",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Listings",
+    "text": "Listings\n\nDefaultGridTable\n\n\n\nBy default, listings will appear in full width rows that display the item’s metadata (author and date), title, description, and image.\n\n\n\n\n\nGrid style listings display a card for each item.\n\n\n\n\n\nThe table listing style provides a traditional tabular layout."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#your-turn-5",
+    "href": "slides/13-quarto-websites.html#your-turn-5",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": " Your Turn",
+    "text": "Your Turn\n\nOpen your existing Quarto blog from before\nLet’s change the listing type of our blog - change from default to grid\nRe-render the index.qmd"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#publishing",
+    "href": "slides/13-quarto-websites.html#publishing",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\n\n\n\nDestination\nDescription\n\n\n\n\nGitHub Pages\nPublish content based on source code managed within a GitHub repository. Use GitHub Pages when the source code for your document or site is hosted on GitHub.\n\n\nRStudio Connect\nPublishing platform for secure sharing of data products within an organization. Use RStudio Connect when you want to publish content within an organization rather than on the public internet.\n\n\nNetlify\nProfessional web publishing platform. Use Netlify when you want support for custom domains, authentication, previewing branches, and other more advanced capabilities.\n\n\nOther Services\nContent rendered with Quarto uses standard formats (HTML, PDFs, MS Word, etc.) that can be published anywhere. Use this if one of the methods above don’t meet your requirements."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#publishing-1",
+    "href": "slides/13-quarto-websites.html#publishing-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Publishing",
+    "text": "Publishing\nStatic Only\n\nquarto R package: quarto::quarto_publish_???()\n\nCode\n\nEvaluate R/Python code and render on a schedule\nRStudio Connect\nrsconnect::deployDoc(quarto = \"path/to/quarto\")\n\nrsconnect::deployDoc(quarto = quarto::quarto_path())"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#static-publish",
+    "href": "slides/13-quarto-websites.html#static-publish",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Static Publish",
+    "text": "Static Publish\n\nquarto::quarto_publish_???()\n\nquarto_publish_site(server = \"rstudioconnect.example.com\")\nquarto_publish_doc(server = \"rpubs.com\")\nquarto_publish_app(server = \"shinyapps.io\")"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#netlify",
+    "href": "slides/13-quarto-websites.html#netlify",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Netlify",
+    "text": "Netlify\n\nCheat code: Netlify drop"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#github-pages",
+    "href": "slides/13-quarto-websites.html#github-pages",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "GitHub Pages",
+    "text": "GitHub Pages\n\nRender contents locally with the “Build Website” button\nStage/commit/push the rendered files to GitHub – site built automatically"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#websites-1",
+    "href": "slides/13-quarto-websites.html#websites-1",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Websites",
+    "text": "Websites\nSimilar to blog, but less of a focus on listing/posts and more focus on individual pages and overall navigation."
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#quarto-project",
+    "href": "slides/13-quarto-websites.html#quarto-project",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Quarto Project",
+    "text": "Quarto Project\n\nhttps://quarto.org/docs/projects/quarto-projects.html\n\n\nWhen you create a project, a _quarto.yml config file is created. Here is an example of what the _quarto.yml looks like:\n\nproject:\n  output-dir: _output\n\ntoc: true\nnumber-sections: true\nbibliography: references.bib  \n  \nformat: #< default format inherited by other documents\n  html:\n    css: styles.css"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#quarto-projects",
+    "href": "slides/13-quarto-websites.html#quarto-projects",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "Quarto Projects",
+    "text": "Quarto Projects\n\nMinimal project has at least 1x file and 1x _quarto.yml\nA project is a directory (and can have sub-directories)\n\n\nA typical project is used to:\n\nAggregate content (website/blog/book)\n\nShare metadata (YAML config) across multiple files\n\nRender an entire directory together or redirect output to another directory\n\nFreeze computation across a project or team\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+  },
+  {
+    "objectID": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
+    "href": "slides/13-quarto-websites.html#rstudio-new-project-new-quarto-blog",
+    "title": "Publishing reproducible websites with Quarto",
+    "section": "RStudio > New Project > New Quarto Blog",
+    "text": "RStudio > New Project > New Quarto Blog"
   }
 ]
