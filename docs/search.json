@@ -781,7 +781,7 @@
     "href": "slides/13-quarto-websites.html#announcements-1",
     "title": "Publishing reproducible websites with Quarto",
     "section": "Announcements",
-    "text": "Announcements\nTODO"
+    "text": "Announcements\n\nNo lab tomorrow\nWorking on project #1 grades"
   },
   {
     "objectID": "slides/13-quarto-websites.html#websites",
@@ -823,7 +823,7 @@
     "href": "slides/13-quarto-websites.html#core-blog-workflow",
     "title": "Publishing reproducible websites with Quarto",
     "section": "Core blog workflow",
-    "text": "Core blog workflow\n\nCreate a new folder under /posts - this folder will be the “slug” URL (like bensoltoff.com/2022-07-25-new-post/)\nCreate a new index.qmd within the new folder"
+    "text": "Core blog workflow\n\nCreate a new folder under /posts - this folder will be the “slug” URL (like bensoltoff.com/2023-03-09-new-post/)\nCreate a new index.qmd within the new folder"
   },
   {
     "objectID": "slides/13-quarto-websites.html#your-turn",
@@ -998,7 +998,7 @@
     "href": "slides/13-quarto-websites.html#quarto-projects",
     "title": "Publishing reproducible websites with Quarto",
     "section": "Quarto Projects",
-    "text": "Quarto Projects\n\nMinimal project has at least 1x file and 1x _quarto.yml\nA project is a directory (and can have sub-directories)\n\n\nA typical project is used to:\n\nAggregate content (website/blog/book)\n\nShare metadata (YAML config) across multiple files\n\nRender an entire directory together or redirect output to another directory\n\nFreeze computation across a project or team\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
+    "text": "Quarto Projects\n\nMinimal project has at least 1x file and 1x _quarto.yml\nA project is a directory (and can have sub-directories)\n\n\nA typical project is used to:\n\nAggregate content (website/blog/book)\n\nShare metadata (YAML config) across multiple files\n\nRender an entire directory together or redirect output to another directory\n\nFreeze computation across a project or team\n\n\n\n\nOur course website\n\n\n\n\n🔗 info3312.infosci.cornell.edu"
   },
   {
     "objectID": "slides/01-welcome-info3312.html#agenda-1",

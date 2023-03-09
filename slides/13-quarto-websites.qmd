@@ -18,7 +18,8 @@ library(patchwork)
 
 ## Announcements
 
-TODO
+- No lab tomorrow
+- Working on project \#1 grades
 
 # Websites using Quarto
 
@@ -71,7 +72,7 @@ TODO
 
 ## Core blog workflow
 
--   Create a new folder under `/posts` - this folder will be the "slug" URL (like `bensoltoff.com/2022-07-25-new-post/`)
+-   Create a new folder under `/posts` - this folder will be the "slug" URL (like `bensoltoff.com/2023-03-09-new-post/`)
 -   Create a new `index.qmd` within the new folder
 
 ## `r fontawesome::fa("laptop-code")` Your Turn
@@ -383,3 +384,7 @@ A typical project is used to:
 -   Share metadata (YAML config) across multiple files\
 -   Render an entire directory together or redirect output to another directory\
 -   Freeze computation across a project or team
+
+. . .
+
+- [Our course website](https://github.com/info-3312/course-site-s23)
