@@ -75,6 +75,8 @@ website:
         contents:
           - href: project-1.qmd
             text: Project 1
+          - href: project-ind.qmd
+            text: Individual project
           - href: project-2.qmd
             text: Project 2
           - href: project-tips-resources.qmd

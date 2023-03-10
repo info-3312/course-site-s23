@@ -1,0 +1,189 @@
+---
+title: "Individual project (5312 only)"
+---
+
+::: callout-important
+This project is due Friday, March 31 at 11:59pm ET.
+:::
+
+::: callout-important
+This project is only for students registered for INFO 5312.
+:::
+
+For your individual project, you will create a website using Quarto to create a **data visualization portfolio**. This portfolio should incorporate a range of visualization projects you have developed. Some can be directly from this class (e.g. samples from a homework assignment, project #1), while others will be original creations for this project.
+
+# Core requirements
+
+Your website should contain (at minimum):
+
+-   A home page
+-   An about page
+-   A portfolio of six data visualization projects. You are welcome to **reuse and extend** analysis you wrote for previous homework assignments or projects in this class with the following caveats:
+    -   You must have at least two original analyses in your website. That is, two of the analyses must be created specifically for this assignment.
+    -   You must have at least two data visualization **critiques** and extensions. That is, two of your analyses must take an existing data visualization that someone else created where you critique the original design and create an original extension of that visualization using **ggplot2**.[^1]
+
+[^1]: We will be performing these types of critiques during week 8 of the course.
+
+## Data analyses
+
+Your analyses can use the skills and techniques you have learned so far in this class, however you are welcome and encouraged to implement new visualization techniques or **ggplot2** extension packages.
+
+Each of your original analyses should include:
+
+-   **Introduction** (1-2 paragraphs): Introduction to the question and the dataset you are using to answer the question.
+    Also discuss why you're interested in this question.
+
+-   **Approach** (1-2 paragraphs): Describe what types of plots you are going to make to address your question.
+    For each plot, provide a clear explanation as to why this plot (e.g. boxplot, barplot, histogram, etc.) is best for providing the information you are asking about.
+    The two plots should be of different types, and at least one of the two plots needs to use either color mapping or facets.
+
+-   **Analysis** (2-3 code blocks, 2 figures, text/code comments as needed): In this section, provide the code that generates your plots.
+    Use best practices to create effective, thoughtful, aesthetically pleasing visualizations that allow you to answer your question.
+    
+    ::: callout-tip
+    
+    You do not need to print the code in the output HTML file unless you think it is relevant to your audience.
+    
+    :::
+
+-   **Discussion** (1-3 paragraphs): Interpret the results of your analysis.
+    Identify any trends revealed (or not revealed) by the plots.
+    Speculate about why the data looks the way it does.
+
+## Visualization critiques
+
+Each of your visualization critiques should include:
+
+-   **Introduction** (1-2 paragraphs): Introduction to the original chart. Include a copy of the chart and appropriate attribution.^[I strongly encourage you to store a copy of it in your repo rather than hotlinking to the original image] Describe the original purpose of the chart and the question it is attempting to answer.
+
+-   **Critique** (2-3 paragraphs): Identify the strengths and weaknesses of the chart. Give thoughtful, constructive, and considerate comments. Connect your critique to principles of visual design and effective data communication that we have learned in this class.
+
+    Effective critiques are challenging to write. You are not attempting to be mean or "tear down" the original visualization. The goal of critiquing something is to improve on it.
+
+-   **Extension** (2-3 code blocks, 1 figure, text/code comments as needed): In this section, use the original data and code to generate an improved version of the visualization based on your critique.
+
+-   **Discussion** (1-3 paragraphs): Interpret the results of your analysis. Does it lead to different conclusions from the original visualization? How is your redesigned chart more effective than the original?
+
+## Publishing the website
+
+You can structure the website in a number of ways. One conventional approach would be to create a **blog** and include all of your analyses as separate posts. Alternatively you could construct a generic website with a series of pages for each visualization project[^2]
+
+[^2]: More along the lines of the [INFO 3312/5312 course site](index.qmd) or a [project portfolio](https://bensoltoff.com/project/).
+
+You will publish your website using GitHub Pages. I will make sure your repository is configured to use GitHub Pages for publication. The publication URL will be `https://pages.github.coecis.cornell.edu/info3312-s23/proj-ind-NETID/`. You need to make sure to [follow the instructions to render the site within RStudio to the `docs` directory.](https://quarto.org/docs/publishing/github-pages.html).
+
+# What data should I use?
+
+You can find data wherever you like, but here are some recommendations to get you started. You shouldn't feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.
+
+-   Check out [this archive of datasets](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0) from the Data Is Plural Newsletter
+
+-   Likewise, #TidyTuesday is a weekly data analysis challenge for individuals to practice and develop their data analysis skills in R. They post a new challenge every Tuesday, and publish [a complete archive of all of their past challenges and source data](https://github.com/rfordatascience/tidytuesday).
+
+-   [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
+
+-   [Bikeshare data portal](https://www.bikeshare.com/data/)
+
+-   [CDC](https://www.cdc.gov/datastatistics/)
+
+-   [CORGIS: The Collection of Really Great, Interesting, Situated Datasets](https://think.cs.vt.edu/corgis/csv/)
+
+-   [Cornell's Conversational Analysis Toolkit](https://convokit.cornell.edu/s)
+
+-   [Data.gov](https://www.data.gov/)
+
+-   [Data is Plural](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
+
+-   [Durham Open Data Portal](https://live-durhamnc.opendata.arcgis.com/)
+
+-   [Edinburgh Open Data](https://edinburghopendata.info/)
+
+-   [Election Studies](https://electionstudies.org//)
+
+-   [European Statistics](https://ec.europa.eu/eurostat/)
+
+-   [FiveThirtyEight](https://data.fivethirtyeight.com/)
+
+-   [General Social Survey](https://gss.norc.org/)
+
+-   [Goodreads](https://www.goodreads.com/api)
+
+-   [Google Dataset Search](https://datasetsearch.research.google.com/)
+
+-   [Harvard Dataverse](https://dataverse.harvard.edu/)
+
+-   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
+
+-   [IPUMS survey data from around the world](https://ipums.org/)
+
+-   [Los Angeles Open Data](https://data.lacity.org/browse)
+
+-   [National Weather Service](https://www.weather.gov/)
+
+-   [NHS Scotland Open Data](https://www.opendata.nhs.scot/)
+
+-   [NYC OpenData](https://opendata.cityofnewyork.us/)
+
+-   [Open access to Scotland's official statistics](https://statistics.gov.scot/home)
+
+-   [Pew Research](https://www.pewresearch.org/download-datasets/)
+
+-   [Project Gutenberg](https://www.gutenberg.org/)
+
+-   [PRISM Data Archive Project](https://www.icpsr.umich.edu/icpsrweb/content/ICPSR/fenway.html)
+
+-   [Reddit posts and/or comments](https://www.reddit.com/dev/api/)
+
+-   [Sports Reference](https://www.sports-reference.com/)
+
+-   [Statistics Canada](https://www.statcan.gc.ca/en/start)
+
+-   [The National Bureau of Economic Research](https://www.nber.org/research/data?page=1&perPage=50)
+
+-   [UCI Machine Learning Repository](https://archive.ics.uci.edu/ml/index.php)
+
+-   [UK Government Data](https://data.gov.uk/)
+
+-   [UNICEF Data](https://data.unicef.org/)
+
+-   [United Nations Data](http://data.un.org/)
+
+-   [United Nations Statistics Division](https://unstats.un.org/UNSDWebsite/)
+
+-   [US Census Data](https://www.census.gov/data.html)
+
+-   [US Government Data](https://sctyner.github.io/static/presentations/Misc/GraphicsGroupISU/2018-11-16-us-govt-data.html)
+
+-   [World Bank Data](https://datacatalog.worldbank.org/home)
+
+-   [Youth Risk Behavior Surveillance System (YRBSS)](https://chronicdata.cdc.gov/Youth-Risk-Behaviors/DASH-Youth-Risk-Behavior-Surveillance-System-YRBSS/q6p7-56au)
+
+# Repo organization
+
+Your starter repo will be structured using the default template for a Quarto blog. However you have complete freedom on the organization of your repository so feel free to adjust it as necessary. But... at the end of the day it needs to be a) a website, and b) reproducible.
+
+# Overall grading
+
+| Total           | 100 pts |
+|-----------------|---------|
+| Visualizations  | 30 pts  |
+| Critiques       | 20 pts  |
+| Code            | 20 pts  |
+| Website         | 20 pts  |
+| Reproducibility | 10 pts  |
+
+Grading of the project will take into account the following:
+
+-   Visualizations -- are the visualizations are appropriate, insightful, and follow best practices?
+-   Critiques -- are the critiques thoughtful, respectful, and constructive?
+-   Code -- does the student use appropriate techniques to implement the analysis? Does the student write efficient code for their operations? Does it comply with a [style guide](https://style.tidyverse.org/)?
+-   Website -- is the website structured in an intuitive and accessible manner? Does it look aesthetically pleasing?
+-   Reproduciblility -- are all required files provided in the repo? Does the Quarto website render without issues? Are documents well structured and easy to follow?
+
+# Guidelines
+
+-   Please use the project repository that has been created for you to complete your project. Everything should be done reproducibly. This means that I should be able to clone your repo and reproduce everything you've submitted as part of your project.
+
+-   The communication format is a website. **You do not have to publish the code in the output HTML files unless it is relevant to your audience.** We will still be able to see it in the source code Quarto files (`*.qmd`).
+
+-   All code reported in your final project documents should work properly. Please do not include any extraneous code or code which produces error messages. Code which produces certain warnings and messages is acceptable, as long as you understand what the warnings mean. In such cases you can add `warning: false` and `message: false` in the relevant R chunks. Warnings that signal lifecycle changes (e.g., a function is deprecated and there's a newer/better function out there) should generally be addressed by updating your code, not just by hiding the warning.
